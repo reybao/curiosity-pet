@@ -1,0 +1,583 @@
+{
+  "label": "B",
+  "model": "pet-chat",
+  "samples": [
+    {
+      "n": 0,
+      "size_gb": 4.065474064,
+      "swap_gb": 1.81396484375
+    },
+    {
+      "n": 10,
+      "size_gb": 5.558261264,
+      "swap_gb": 1.80615234375
+    },
+    {
+      "n": 20,
+      "size_gb": 6.891181584,
+      "swap_gb": 1.80615234375
+    },
+    {
+      "n": 30,
+      "size_gb": 8.380589584,
+      "swap_gb": 1.79833984375
+    },
+    {
+      "n": 40,
+      "size_gb": 9.865549328,
+      "swap_gb": 1.79833984375
+    },
+    {
+      "n": 50,
+      "size_gb": 11.252225552,
+      "swap_gb": 1.79833984375
+    },
+    {
+      "n": 60,
+      "size_gb": 12.582841872,
+      "swap_gb": 3.0259375
+    }
+  ],
+  "rows": [
+    {
+      "question": "为什么月亮白天也会出现?",
+      "lang": "zh",
+      "answer": "因为月亮其实一直都在天上，只是太阳把天空照得太亮了，我们白天就看不太清楚它啦。不过有时候月亮会躲在云彩后面或者藏在太阳的另一边，所以看起来像是“消失”了。你知道为什么星星晚上才更亮吗？",
+      "lang_ok": true,
+      "first_token_s": 0.5947081670001353,
+      "first_chunk_s": 0.7667795840006875,
+      "gen_tok_s": 28.277899915362966
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "月亮其实一直都在天上转圈，只是白天太阳光太强，把它的影子遮住了，所以我们看不见它。有时候它会躲在云朵后面，就像玩捉迷藏一样。你知道为什么太阳会发光吗？",
+      "lang_ok": true,
+      "first_token_s": 0.7592428330008261,
+      "first_chunk_s": 0.9670746249994409,
+      "gen_tok_s": 28.20255060299703
+    },
+    {
+      "question": "蚂蚁为什么排队走路?",
+      "lang": "zh",
+      "answer": "蚂蚁排队走是因为它们靠闻气味来找朋友，就像我们玩捉迷藏时留下的标记一样。这种味道叫信息素，是蚂蚁身上天然的小信号。其实我也不确定是不是所有蚂蚁都这样，这只是我的猜想哦。你知道蚂蚁有没有眼睛吗？",
+      "lang_ok": true,
+      "first_token_s": 0.6094553330003691,
+      "first_chunk_s": 0.957900207999046,
+      "gen_tok_s": 28.3423215211045
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "蚂蚁排队是因为它们能闻到彼此留下的气味标记，就像我们在路上留下的脚印一样方便找到同伴。这种味道叫做信息素，是大自然给小蚂蚁的信号棒。我不确定是不是所有蚂蚁都这样，这只是我的猜想哦。你知道蚂蚁有几条腿吗？",
+      "lang_ok": true,
+      "first_token_s": 0.3203399169997283,
+      "first_chunk_s": 0.6843206670000654,
+      "gen_tok_s": 27.934997367931533
+    },
+    {
+      "question": "彩虹是怎么来的?",
+      "lang": "zh",
+      "answer": "彩虹是阳光穿过雨滴后，把光分成七种颜色形成的。就像你看到的红橙黄绿青蓝紫，其实都是阳光里藏着的秘密伙伴。这是大自然的小魔术哦。如果你看到彩虹了，你会觉得它像什么形状呢？",
+      "lang_ok": true,
+      "first_token_s": 0.16482995800106437,
+      "first_chunk_s": 0.40475058300035016,
+      "gen_tok_s": 28.380531416141956
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "彩虹是雨滴把阳光分成了七种颜色。这就像把白光拆开了一样神奇。不知道你是怎么看到它的呢？",
+      "lang_ok": true,
+      "first_token_s": 0.31996508299926063,
+      "first_chunk_s": 0.7026971659997798,
+      "gen_tok_s": 27.75991732685362
+    },
+    {
+      "question": "为什么冬天会下雪?",
+      "lang": "zh",
+      "answer": "因为天太冷了，云朵里的水珠就会变成小冰晶掉下来，这就是雪。你知道“雪”字怎么写吗？如果不知道也没关系，我们可以一起画出来。你觉得雪是软绵绵的还是硬邦邦的呢？",
+      "lang_ok": true,
+      "first_token_s": 0.16665858299893443,
+      "first_chunk_s": 0.6828561249985796,
+      "gen_tok_s": 28.25577679673119
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "因为天气冷的时候，云朵里的水会变成小冰晶掉在地上。这就是“下雪”，意思是雪花从天上落下来。你见过白色的雪吗？你知道冬天为什么要穿厚衣服吗？",
+      "lang_ok": true,
+      "first_token_s": 0.3141018750011426,
+      "first_chunk_s": 0.45295749999968393,
+      "gen_tok_s": 28.19520717384641
+    },
+    {
+      "question": "小鸟为什么会飞?",
+      "lang": "zh",
+      "answer": "小鸟身体很轻，翅膀能拍动空气向上推它，就像你吹气球那样。它们用翅膀和尾巴控制方向，所以能飞得很高很远。不知道小鸟是不是在天上玩捉迷藏呢？你觉得小鸟的翅膀像什么形状呢？",
+      "lang_ok": true,
+      "first_token_s": 0.16454454099948634,
+      "first_chunk_s": 0.6166968750003434,
+      "gen_tok_s": 28.18977259991611
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "小鸟有两只大大的翅膀，一扇一扇就能飞起来了。它们身体很轻，所以不用花很大力气也能飞到天空里。你是不是很想变成小鸟去飞翔呀？",
+      "lang_ok": true,
+      "first_token_s": 0.3186557080007333,
+      "first_chunk_s": 0.49004470799991395,
+      "gen_tok_s": 28.202710825564832
+    },
+    {
+      "question": "我们为什么要睡觉?",
+      "lang": "zh",
+      "answer": "你好呀，小朋友！睡觉是为了让大脑和身体休息，就像小汽车需要加油一样，人也需要能量才能长大。科学家说我们的身体在睡觉时会修补伤口，所以这是很重要的事情哦。你现在是不是也想睡一会儿啦？明天我们要一起探索什么有趣的问题呢？",
+      "lang_ok": true,
+      "first_token_s": 0.1440171249996638,
+      "first_chunk_s": 1.015795249999428,
+      "gen_tok_s": 28.302187740276732
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "睡觉是为了让大脑休息，就像小树苗晚上要睡觉才能白天长高一样。身体在睡觉时会修补自己，让我们明天更有精神。你现在是不是也想躺下休息一下啦？明天我们想聊什么有趣的问题呢？",
+      "lang_ok": true,
+      "first_token_s": 0.3200003750007454,
+      "first_chunk_s": 0.49387633300102607,
+      "gen_tok_s": 28.14727101352858
+    },
+    {
+      "question": "为什么海水是咸的?",
+      "lang": "zh",
+      "answer": "海水喝起来咸咸的，是因为海里有很多小鱼小虾留下的盐分，还有雨水带来的矿物质混合在一起。我的猜想是很久以前地球上的水都流进了大海，把盐留下来变成了现在的海水。你知道吗，为什么我们的眼泪也是咸的呢？",
+      "lang_ok": true,
+      "first_token_s": 0.17477291700015485,
+      "first_chunk_s": 0.37381037500017555,
+      "gen_tok_s": 28.385950106202955
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "海水咸是因为很多小鱼小虾在水里留下盐分，雨水也带来矿物质混合在一起。我的猜想是很久以前地球上的水都流进大海，把盐留下来变成了现在的海水。你知道吗，为什么我们的眼泪也是咸的呢？",
+      "lang_ok": true,
+      "first_token_s": 0.3188594169987482,
+      "first_chunk_s": 0.7013501669989637,
+      "gen_tok_s": 28.259777607666607
+    },
+    {
+      "question": "星星为什么一闪一闪?",
+      "lang": "zh",
+      "answer": "星星其实一直都在发光，但因为它们离我们特别远，光在穿过大气层时会被风吹得乱晃，就像透过波浪看东西一样。科学家猜可能是大气层让星星看起来忽明忽暗，但我也不完全确定哦。如果你晚上抬头看天，是不是觉得星星在动呀？",
+      "lang_ok": true,
+      "first_token_s": 0.16513458299959893,
+      "first_chunk_s": 0.33701004199974705,
+      "gen_tok_s": 28.314991698201737
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "星星其实一直在发光，但因为地球的大气层像一层厚被子，让光线变得忽明忽暗。这就像隔着波浪看远处的灯一样，所以看起来一闪一闪的。你小时候晚上睡觉前看过星星吗？",
+      "lang_ok": true,
+      "first_token_s": 0.3205072500004462,
+      "first_chunk_s": 0.4575307499999326,
+      "gen_tok_s": 28.057805153429367
+    },
+    {
+      "question": "为什么树叶是绿色的?",
+      "lang": "zh",
+      "answer": "树叶看起来是绿色的，是因为它里面有一种叫叶绿素的物质，就像衣服上的染料一样，专门用来吸收阳光的能量去制造食物。不过啊，其实树叶也反射了其他颜色的光，只是我们眼睛看到的绿色最亮，所以觉得它是绿的。如果叶子生病了或者冬天到了，叶绿素少了一些，我们就看不到那么绿了。你觉得如果把树叶涂成红色会是什么样子呢？",
+      "lang_ok": true,
+      "first_token_s": 0.15435674999935145,
+      "first_chunk_s": 0.29393741700005194,
+      "gen_tok_s": 28.349119751292832
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "因为树叶里有叶绿素，它就像小工厂的工人一样，专门用阳光做东西吃。我们眼睛看到的绿色，其实是它把其他颜色的光都挡住了，只让绿色光跑出来。如果叶子生病了或者冬天到了，叶绿素少了，叶子就会变色哦。你觉得如果把树叶涂成红色会是什么样子呢？",
+      "lang_ok": true,
+      "first_token_s": 0.3900659170012659,
+      "first_chunk_s": 0.5634597919997759,
+      "gen_tok_s": 28.459052141365806
+    },
+    {
+      "question": "打雷是怎么回事?",
+      "lang": "zh",
+      "answer": "打雷是因为天上的云撞在一起，把空气震得叮当响，就像我们玩积木时用力拍一下发出的声音。云朵里有很多看不见的电在跑来跑去，有时候它们跑得很快就把空气烧了一下，所以会有“咔嚓”的闪电声和轰隆隆的雷声。这是大自然在给我们讲天气的故事哦。你想猜猜看，为什么下雨的时候雷声会更大呢？",
+      "lang_ok": true,
+      "first_token_s": 0.16416270900117524,
+      "first_chunk_s": 0.4075703340004111,
+      "gen_tok_s": 28.490964487598305
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "打雷是因为天上的云撞在一起，把空气震得叮当响。云朵里有很多看不见的电在跑来跑去，有时候它们跑得很快就把空气烧了一下，所以会有“咔嚓”的闪电声和轰隆隆的雷声。你是怎么知道今天会下雨的呢？",
+      "lang_ok": true,
+      "first_token_s": 0.39208125000004657,
+      "first_chunk_s": 0.6353613749997749,
+      "gen_tok_s": 28.41274757514957
+    },
+    {
+      "question": "为什么会有回声?",
+      "lang": "zh",
+      "answer": "声音像小石子一样在空气中跑，遇到墙壁或大山就会反弹回来，这就叫回声。就像你拍手时，声音碰到墙又跳回耳朵里，听起来好像有人在后面说话。\n\n你知道声音是怎么从你的嘴里出来的吗？",
+      "lang_ok": true,
+      "first_token_s": 0.14617374999943422,
+      "first_chunk_s": 0.42422574999909557,
+      "gen_tok_s": 28.134488288942293
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "声音在空气里跑着跑着撞到东西就弹回来了，就像皮球撞墙会反弹一样，回声就是声音回来的样子。你觉得如果在大海里拍手会有回声吗？",
+      "lang_ok": true,
+      "first_token_s": 0.31510145900028874,
+      "first_chunk_s": 0.7632213340002636,
+      "gen_tok_s": 28.0098623664101
+    },
+    {
+      "question": "鱼会睡觉吗?",
+      "lang": "zh",
+      "answer": "鱼也会睡觉哦，不过它们没有眼睛要闭上，只是游得慢一点或者不动了。有些鱼比如睡美人鱼，真的会在洞里打瞌睡呢。你是想问为什么鱼有时候一动不动吗？",
+      "lang_ok": true,
+      "first_token_s": 0.1656375830007164,
+      "first_chunk_s": 0.5487305419992481,
+      "gen_tok_s": 28.240166454957198
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "鱼也会休息，但不会像我们那样闭着眼睛。有的鱼会把身体藏起来不动，就像在睡觉一样。你见过鱼什么时候不动的吗？",
+      "lang_ok": true,
+      "first_token_s": 0.31366816599984304,
+      "first_chunk_s": 0.6964028330003202,
+      "gen_tok_s": 27.77991292452271
+    },
+    {
+      "question": "Why is the sky blue?",
+      "lang": "en",
+      "answer": "The sky looks blue because sunlight has many colors inside it, and some bounce off air particles without changing color. This makes the sky look blue to our eyes when we look up outside. Did you know that sometimes the sun looks orange or red at sunset?",
+      "lang_ok": true,
+      "first_token_s": 0.6881854999992356,
+      "first_chunk_s": 1.0718147089992272,
+      "gen_tok_s": 28.320307313583427
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "The sky is blue because sunlight has many colors, and air makes some of them bounce away so we only see blue. Scientists call this light scattering, but it just means the sun's colors are playing hide-and-seek with the air. Do you think other planets have a blue sky too?",
+      "lang_ok": true,
+      "first_token_s": 0.835759458001121,
+      "first_chunk_s": 1.149039707999691,
+      "gen_tok_s": 28.390485052697855
+    },
+    {
+      "question": "How do fish breathe under water?",
+      "lang": "en",
+      "answer": "Fish use special gills to take in oxygen from the water they swim in. Gills are like tiny filters that let them breathe without using their lungs. Do you wonder how birds fly without touching the ground?",
+      "lang_ok": true,
+      "first_token_s": 0.689277667001079,
+      "first_chunk_s": 1.2454874580016622,
+      "gen_tok_s": 28.164645032140328
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Fish use gills to get oxygen from the water they swim in. Gills are special parts on their sides that let them breathe while underwater. Do you wonder how fish can see when they are so deep?",
+      "lang_ok": true,
+      "first_token_s": 0.31974279199857847,
+      "first_chunk_s": 0.8047315839994553,
+      "gen_tok_s": 28.115987821760704
+    },
+    {
+      "question": "Why do leaves change color?",
+      "lang": "en",
+      "answer": "Leaves change color because of sunlight and cold weather making them stop making green food for the tree. The green part is called chlorophyll, which helps plants grow but fades away when it gets chilly. This lets us see other colors like red and yellow that were hidden before. Do you think trees rest during winter just like people sleep sometimes?",
+      "lang_ok": true,
+      "first_token_s": 0.16880079200018372,
+      "first_chunk_s": 0.8647756669997761,
+      "gen_tok_s": 28.388837796980933
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Leaves turn different colors because the sun gets weaker and it gets colder outside. The green part inside the leaf fades away so we can see reds and yellows now. Do you know what happens to your clothes when they get very wet?",
+      "lang_ok": true,
+      "first_token_s": 0.38773783299984643,
+      "first_chunk_s": 0.7701919999999518,
+      "gen_tok_s": 28.308879527170674
+    },
+    {
+      "question": "Where does rain come from?",
+      "lang": "en",
+      "answer": "Rain comes from water vapor rising up and turning back into liquid drops in the sky. This happens because warm air holds some water that cools down to make clouds and then fall as rain.\nWhat do you think makes the water go up into the sky?",
+      "lang_ok": true,
+      "first_token_s": 0.14676679100011825,
+      "first_chunk_s": 0.7391714579989639,
+      "gen_tok_s": 28.112916434961946
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Rain comes from water vapor going up and turning back into drops. Warm air holds water that cools down to make clouds and then fall as rain. What makes the water go up into the sky?",
+      "lang_ok": true,
+      "first_token_s": 0.3208797500010405,
+      "first_chunk_s": 0.7677558750001481,
+      "gen_tok_s": 28.229878139139338
+    },
+    {
+      "question": "Why do cats purr?",
+      "lang": "en",
+      "answer": "Cats make a special sound called purring when they are happy or trying to heal themselves. This sound happens because their vocal cords vibrate up and down very fast while they breathe. Some scientists think the vibrations help fix broken bones inside their bodies. Do you know if your cat makes this sound when it is hungry too?",
+      "lang_ok": true,
+      "first_token_s": 0.16819616700013285,
+      "first_chunk_s": 0.6559647500016581,
+      "gen_tok_s": 28.41052043757228
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Cats purr because their voices shake back and forth to feel good or heal themselves. Sometimes they do this even when they are not happy. Do you know what sound a dog makes when it is hungry?",
+      "lang_ok": true,
+      "first_token_s": 0.38712929200119106,
+      "first_chunk_s": 0.9115385000004608,
+      "gen_tok_s": 28.012695970092956
+    },
+    {
+      "question": "How big is the sun?",
+      "lang": "en",
+      "answer": "The sun is huge, about as wide as 100 Earths put together. It shines so bright that we call its light energy to warm our planet. Since you are asking, would you like to know how long it takes for sunlight to reach us?",
+      "lang_ok": true,
+      "first_token_s": 0.1677408329996979,
+      "first_chunk_s": 0.7873750409999047,
+      "gen_tok_s": 28.38430637056301
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "The sun is very big, about 100 times bigger than Earth. Its light travels fast but still takes eight days to get here. Would you like to know what happens when the sun goes down?",
+      "lang_ok": true,
+      "first_token_s": 0.32075945799988403,
+      "first_chunk_s": 0.8772335419998853,
+      "gen_tok_s": 28.194505264299796
+    },
+    {
+      "question": "Why do we have seasons?",
+      "lang": "en",
+      "answer": "The Earth spins around the Sun while also tilting its head on its axis, which makes some parts get more sunlight than others at different times of the year. This tilt causes the weather to change between warm summers and cold winters as the Earth moves along its path. Do you wonder why the stars look different when we travel to another planet?",
+      "lang_ok": true,
+      "first_token_s": 0.16429854200032423,
+      "first_chunk_s": 0.6830874999996013,
+      "gen_tok_s": 28.33025881560392
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "The Earth spins like a top while tilted on its side, so sometimes it faces the Sun more and gets warmer. This tilt makes our year have four seasons instead of just one hot day or cold night all the time. Would you like to know why the moon changes shape?",
+      "lang_ok": true,
+      "first_token_s": 0.3879385829986859,
+      "first_chunk_s": 0.7659726659985608,
+      "gen_tok_s": 28.312125054195135
+    },
+    {
+      "question": "How do bees make honey?",
+      "lang": "en",
+      "answer": "Bees collect sweet flowers and turn them into sticky honey using their tiny bodies. They fly around many gardens to find food that tastes good for them. This special treat helps bees stay strong so they can keep working hard for the garden. Do you wonder how other animals make things like honey?",
+      "lang_ok": true,
+      "first_token_s": 0.1680850829998235,
+      "first_chunk_s": 0.7228209580007388,
+      "gen_tok_s": 28.443411027537135
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Bees fly around to find sweet flowers and carry them back to their hive. They mix up the flower juice to make sticky honey that tastes good. Do you know what a flower is?",
+      "lang_ok": true,
+      "first_token_s": 0.38032887500048673,
+      "first_chunk_s": 0.9378164579993609,
+      "gen_tok_s": 27.9794750846813
+    },
+    {
+      "question": "Why is the ocean salty?",
+      "lang": "en",
+      "answer": "The ocean is salty because big rivers carry dirt and salt from land into the water, and when the sun warms the sea, some of the water turns to steam and leaves behind the salt. This happens over many years so the water gets thicker with salt. Would you like to know how fish swim in salty water?",
+      "lang_ok": true,
+      "first_token_s": 0.14709666599992488,
+      "first_chunk_s": 0.4918414160001703,
+      "gen_tok_s": 28.285333159791026
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "The ocean is salty because rain washes salt from rocks and plants into the sea, and the sun makes some water disappear as steam. This leaves the salt behind so the water tastes different. Would you like to know why fish don't float away?",
+      "lang_ok": true,
+      "first_token_s": 0.3878705000006448,
+      "first_chunk_s": 0.7996915000003355,
+      "gen_tok_s": 28.30469257254145
+    },
+    {
+      "question": "What makes thunder?",
+      "lang": "en",
+      "answer": "Thunder happens when lightning heats the air so fast that it makes a loud crackle sound. This heat expands and then quickly squeezes back together, which creates the noise you hear. Sometimes people write this in Chinese as 雷声 (léi shēng), which means thunder sound. You can listen for it after seeing a bright flash of light in the sky. Would you like to know why lightning is so bright?",
+      "lang_ok": true,
+      "first_token_s": 0.16609524999876157,
+      "first_chunk_s": 0.7925065419985913,
+      "gen_tok_s": 28.432813825405546
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Thunder happens when lightning heats the air very fast, making it crackle loudly like a balloon popping. This hot air then squeezes back together quickly to make the sound you hear. Would you like to know why lightning is so bright?",
+      "lang_ok": true,
+      "first_token_s": 0.39465620900045906,
+      "first_chunk_s": 0.7080699590005679,
+      "gen_tok_s": 28.3107829303469
+    },
+    {
+      "question": "Why do zebras have stripes?",
+      "lang": "en",
+      "answer": "Zebras have stripes that might help them hide from dangerous animals by blending in with tall grass. Some scientists think these lines also stop bugs from landing on their skin, but we are not sure yet. Do you wonder if other animals have special tricks to stay safe?",
+      "lang_ok": true,
+      "first_token_s": 0.16569200000049022,
+      "first_chunk_s": 0.8272317499995552,
+      "gen_tok_s": 28.186813424235805
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Zebras have stripes that help them hide in tall grass so lions cannot see them easily. Some people think the stripes also stop bugs from bothering the zebra, but scientists are still guessing about this part. Do you wonder if other animals have special ways to stay safe?",
+      "lang_ok": true,
+      "first_token_s": 0.32063845800075796,
+      "first_chunk_s": 0.7325947080007609,
+      "gen_tok_s": 28.344603015392405
+    },
+    {
+      "question": "How do plants drink water?",
+      "lang": "en",
+      "answer": "Plants use special tubes inside their stems called xylem to move water up from the ground. The water goes through these tubes until it reaches the leaves where it can be used for growth. This process does not feel like drinking because plants do not have mouths or tongues, but they still absorb liquid just like a sponge. Would you like to know how plants make their own food using sunlight?",
+      "lang_ok": true,
+      "first_token_s": 0.16547545899993565,
+      "first_chunk_s": 0.8607532090009045,
+      "gen_tok_s": 28.49565315728125
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Plants drink water through tiny holes on the bottom of their roots called root hairs. This lets liquid go into special tubes that carry it up to the leaves. Plants do not have mouths, so they absorb water just like a sponge soaking up water from the ground. Would you like to know how plants make food using sunlight?",
+      "lang_ok": true,
+      "first_token_s": 0.39284774999941874,
+      "first_chunk_s": 0.984562375000678,
+      "gen_tok_s": 28.46326918695828
+    },
+    {
+      "question": "恐龙为什么会 extinct 呢?",
+      "lang": "zh",
+      "answer": "恐龙消失是因为很久以前地球发生了大灾难，比如火山爆发或者小行星撞击，这些大事让气候变得很冷，植物都长不好了，恐龙就没办法生存了。科学家有个猜想说可能是小石头从太空掉下来撞到了地球，但这还没完全确定呢。你觉得那时候的小恐龙会不会躲到山洞里等天晴呀？",
+      "lang_ok": true,
+      "first_token_s": 0.16365808299997298,
+      "first_chunk_s": 0.47704179199899954,
+      "gen_tok_s": 28.420496395904586
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "恐龙消失可能是因为很久以前有小石头从天上掉下来砸到地球，或者火山喷出了很多灰，把太阳挡住了，让植物长不出来。大家觉得这很可怕，但科学家还在研究具体原因呢。你觉得如果天气突然变冷，小动物们会躲在哪里呀？",
+      "lang_ok": true,
+      "first_token_s": 0.38839533399914217,
+      "first_chunk_s": 0.8402676249988872,
+      "gen_tok_s": 28.369613596833446
+    },
+    {
+      "question": "Why do 熊猫 eat bamboo all day?",
+      "lang": "en",
+      "answer": "Pandas have big bellies that need lots of bamboo for energy, so they eat a lot every day. Bamboo is the main food because it grows everywhere and gives them what their bodies need to stay strong. Do you know why pandas also sleep so much?",
+      "lang_ok": true,
+      "first_token_s": 0.1457018330002029,
+      "first_chunk_s": 0.5984038749993488,
+      "gen_tok_s": 28.137084224975435
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Pandas eat bamboo all day because it takes a long time for them to digest the tough leaves. They need to eat many meals to get enough energy from that food. Do you know what \"digest\" means?",
+      "lang_ok": true,
+      "first_token_s": 0.321097332998761,
+      "first_chunk_s": 1.0080836249999265,
+      "gen_tok_s": 28.309489778585824
+    },
+    {
+      "question": "What is a 黑洞 made of?",
+      "lang": "en",
+      "answer": "A black hole is not made of any normal stuff like rocks or water; it is a place where gravity is so strong that nothing can escape from it, including light. Because no light gets out, it looks dark and empty to us, but scientists think the very tiny particles called quarks might be inside it. I am a computer program, so I do not know everything about the universe yet; this is my best guess based on what we have learned so far. Would you like to know how stars become black holes?",
+      "lang_ok": true,
+      "first_token_s": 0.16954208300012397,
+      "first_chunk_s": 0.5521065829998406,
+      "gen_tok_s": 28.492332948061907
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "A black hole is a space where gravity pulls everything so hard that nothing can escape, not even light. It is not made of normal things like rocks or air, but scientists think it holds very tiny particles called quarks inside. Since I am a computer program, this is my best guess based on what we have learned about the universe. Would you like to know how stars turn into black holes?",
+      "lang_ok": true,
+      "first_token_s": 0.8450496250006836,
+      "first_chunk_s": 1.2245960420004849,
+      "gen_tok_s": 28.3619556854518
+    },
+    {
+      "question": "为什么 volcano 会喷火?",
+      "lang": "zh",
+      "answer": "火山喷火是因为地底下的岩浆热得像烤面包，它想跑出来就带着石头和热气冲上来了。火山就像地球身体上的一个冒烟的小嘴巴，把里面热热的东西吐出来。你知道为什么火山口是圆的吗？",
+      "lang_ok": true,
+      "first_token_s": 0.16721529100141197,
+      "first_chunk_s": 0.5449394160004886,
+      "gen_tok_s": 28.237371667573843
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "火山喷火是因为地底下很热，岩浆像融化的巧克力一样往上跑。它带着石头和热气冲出来，就像地球在打喷嚏一样。你觉得火山喷出来的东西会是什么颜色呢？",
+      "lang_ok": true,
+      "first_token_s": 0.32101200000033714,
+      "first_chunk_s": 0.6024018749994866,
+      "gen_tok_s": 27.789957314718198
+    },
+    {
+      "question": "How do 蜜蜂 talk to each other?",
+      "lang": "en",
+      "answer": "Bees use tiny wings and special smells to send messages, but they don't have voices like humans. They leave sticky drops of sugar water on leaves so other bees can find food easily. Did you know that \"bee\" means an insect with six legs and a stinger?",
+      "lang_ok": true,
+      "first_token_s": 0.15887349999866274,
+      "first_chunk_s": 0.5469499169994378,
+      "gen_tok_s": 27.881154265806195
+    },
+    {
+      "question": "Can you make it simpler?",
+      "lang": "en",
+      "answer": "Bees do not speak with their mouths like people do. Instead, they use special smells to tell each other where food is hidden. Do you wonder what bees eat for breakfast?",
+      "lang_ok": true,
+      "first_token_s": 0.31291412500104343,
+      "first_chunk_s": 0.7342209580001509,
+      "gen_tok_s": 27.637667492182043
+    },
+    {
+      "question": "为什么 octopus 有八条腿?",
+      "lang": "zh",
+      "answer": "章鱼叫 octopus，意思是“八只脚”，因为它的身体周围正好长着八条腿，就像数数一样从一到八。科学家觉得这是为了在水里灵活地爬行和抓住东西，具体原因我还不太确定，这是我的猜想。你知道为什么螃蟹也有硬壳吗？",
+      "lang_ok": true,
+      "first_token_s": 0.1612642500003858,
+      "first_chunk_s": 0.5122442080009932,
+      "gen_tok_s": 27.976272985236548
+    },
+    {
+      "question": "再简单一点",
+      "lang": "zh",
+      "answer": "章鱼叫 octopus，意思是“八只脚”，因为它身上正好长着八条腿，就像数数一样从一到八。科学家觉得这是为了在水里灵活地爬行和抓住东西，具体原因我还不太确定，这是我的猜想。你知道为什么螃蟹也有硬壳吗？",
+      "lang_ok": true,
+      "first_token_s": 0.3214204169998993,
+      "first_chunk_s": 0.6736276249994262,
+      "gen_tok_s": 27.898446752382863
+    }
+  ]
+}

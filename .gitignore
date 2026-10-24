@@ -1,0 +1,26 @@
+# 真实数据与密钥,永不入库
+.env
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+logs/
+evals/audio/
+evals/real_questions/
+data/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+
+# macOS / 编辑器
+.DS_Store
+.claude/settings.local.json

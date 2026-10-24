@@ -1,0 +1,33 @@
+[project]
+name = "curiosity-pet"
+version = "0.1.0"
+description = "本地 AI 学习宠物(好奇心伙伴)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "en-core-web-sm",
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "misaki[en,zh]>=0.9.4",
+    "mlx-audio>=0.6.1",
+    "numpy>=2.5.4",
+    "silero-vad>=6.2.3",
+    "sounddevice>=0.5.6",
+    "soundfile>=0.14.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+
+[project.scripts]
+pet = "curiosity_pet.cli:main"
+pet-server = "curiosity_pet.server:main"

@@ -1,0 +1,4 @@
+# 对照组,仅用于盲测;参数与 pet-chat 一致
+FROM gemma4:e4b
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.6

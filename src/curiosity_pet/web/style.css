@@ -1,0 +1,195 @@
+/* 只用系统字体,不加载任何外部资源 */
+:root {
+  --bg: #fdf6ec;
+  --ink: #3b3530;
+  --ink-soft: #8a7f75;
+  --fur: #8d9cb0;        /* 英短蓝猫的灰蓝色 */
+  --fur-dark: #75859a;
+  --fur-light: #b4c1d0;
+  --ear-inner: #c9a7b0;
+  --eye: #e8a33c;        /* 橙铜色眼睛 */
+  --pupil: #2f2a26;
+  --nose: #8a6e78;
+  --mouth: #7a4b55;
+  --whisker: #eef2f6;
+  --collar: #e07a5f;
+  --cheek: #f2a9a6;
+  --light-idle: #f3d77a;
+  --light-listen: #6fcf8e;
+  --light-think: #b59cf0;
+  --light-speak: #f39a6b;
+  --highlight: #ffe39a;
+  --btn: #ffffff;
+  --btn-ink: #3b3530;
+  --start: #6fcf8e;
+  --font: -apple-system, "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  overscroll-behavior: none;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: max(16px, env(safe-area-inset-top)) 24px max(16px, env(safe-area-inset-bottom));
+  gap: 12px;
+}
+
+.stage { display: flex; flex-direction: column; align-items: center; }
+
+.pet { width: min(46vh, 70vw); height: auto; overflow: visible; }
+
+.status { margin: 4px 0 0; font-size: 22px; color: var(--ink-soft); min-height: 1.4em; }
+
+/* min-height: 0 让这一行在网格里可以缩小并滚动,长回答不会盖住按钮 */
+.words { overflow-y: auto; min-height: 0; padding: 0 4px; text-align: center; }
+.heard { font-size: 22px; color: var(--ink-soft); margin: 0 0 12px; min-height: 1.3em; }
+.answer { font-size: 32px; line-height: 1.6; margin: 0; }
+.answer span { border-radius: 8px; padding: 0 2px; transition: background-color 0.2s; }
+.answer span.now { background: var(--highlight); }
+.answer span.later { color: var(--ink-soft); }
+.answer .source { display: block; font-size: 18px; color: var(--ink-soft); margin-top: 8px; }
+
+.controls { display: flex; gap: 16px; justify-content: center; }
+
+/* 右上角的界面语言切换,小一点,主要给大人用 */
+.lang-toggle {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: 16px;
+  z-index: 2;
+  font: inherit;
+  font-size: 16px;
+  min-width: 48px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--btn);
+  color: var(--ink-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+  font: inherit;
+  font-size: 24px;
+  border: 0;
+  border-radius: 999px;
+  padding: 18px 32px;
+  min-width: 140px;
+  background: var(--btn);
+  color: var(--btn-ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  touch-action: none;
+}
+.btn:disabled { opacity: 0.4; }
+.btn.ptt.holding { background: var(--light-listen); color: #fff; }
+
+.start {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--start);
+  color: #fff;
+  font: inherit;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.start-icon { font-size: 48px; }
+main:not([data-state="off"]) .start { display: none; }
+
+.debug { display: flex; gap: 8px; justify-content: center; }
+.debug input { font: inherit; font-size: 20px; padding: 10px 14px; border-radius: 12px; border: 1px solid #d8cfc4; width: min(60vw, 480px); -webkit-user-select: text; user-select: text; }
+.debug button { font: inherit; font-size: 20px; border: 0; border-radius: 12px; padding: 10px 18px; background: var(--btn); }
+
+/* ---------- 宠物:英短蓝猫 ---------- */
+.fur { fill: var(--fur); }
+.fur-light { fill: var(--fur-light); }
+.tail, .paw { fill: var(--fur-dark); }
+.ear-inner { fill: var(--ear-inner); }
+.iris { fill: var(--eye); }
+.pupil { fill: var(--pupil); }
+.glint { fill: #fff; }
+.cheek { fill: var(--cheek); opacity: 0.55; }
+.nose { fill: var(--nose); }
+.mouth.smile { fill: none; stroke: var(--pupil); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.mouth.talk { fill: var(--mouth); display: none; }
+.whiskers line { stroke: var(--whisker); stroke-width: 2.5; stroke-linecap: round; }
+.collar { fill: var(--collar); }
+/* 项圈小灯:程序的标记,随状态变色 */
+.tag-light { fill: var(--light-idle); stroke: #fff; stroke-width: 2.5; transition: fill 0.3s; }
+.sound-rings path { fill: none; stroke: var(--light-listen); stroke-width: 5; stroke-linecap: round; opacity: 0; }
+.thinking-dots circle { fill: var(--light-think); opacity: 0; }
+
+.body, .head, .ear, .eye, .tail, .whiskers, .thinking-dots circle, .sound-rings path, .mouth.talk {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.tail { transform-origin: 0% 100%; }
+.ear.left { transform-origin: 100% 100%; }
+.ear.right { transform-origin: 0% 100%; }
+.whiskers.left { transform-origin: 100% 50%; }
+.whiskers.right { transform-origin: 0% 50%; }
+
+/* 待机:慢慢呼吸、偶尔眨眼、尾巴轻摇 */
+.body { animation: breathe 4s ease-in-out infinite; }
+.eye { animation: blink 5s infinite; }
+.tail { animation: sway 3s ease-in-out infinite; }
+@keyframes breathe { 50% { transform: translateY(2px) scale(1.01, 0.99); } }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+@keyframes sway { 50% { transform: rotate(-8deg); } }
+
+/* 在听:耳朵竖起来,项圈绿灯,两侧声波 */
+[data-state="listening"] .tag-light { fill: var(--light-listen); animation: glow 1.4s ease-in-out infinite; }
+[data-state="listening"] .ear { transform: translateY(-5px) scaleY(1.08); transition: transform 0.25s; }
+[data-state="listening"] .sound-rings path { animation: ring 1.6s ease-out infinite; }
+[data-state="listening"] .sound-rings path:nth-child(2n) { animation-delay: 0.4s; }
+@keyframes glow { 50% { opacity: 0.45; } }
+@keyframes ring { 0% { opacity: 0; transform: scale(0.85); } 40% { opacity: 0.9; } 100% { opacity: 0; transform: scale(1.1); } }
+
+/* 在想:歪头,眼睛往上看,头顶冒点点,尾巴摇得快一点 */
+[data-state="thinking"] .tag-light { fill: var(--light-think); animation: glow 0.8s ease-in-out infinite; }
+[data-state="thinking"] .head { transform: rotate(-7deg); transition: transform 0.3s; }
+[data-state="thinking"] .pupil, [data-state="thinking"] .glint { transform: translate(3px, -5px); transition: transform 0.3s; }
+[data-state="thinking"] .tail { animation-duration: 1.2s; }
+[data-state="thinking"] .thinking-dots circle { animation: dot 1.2s ease-in-out infinite; }
+[data-state="thinking"] .thinking-dots circle:nth-child(2) { animation-delay: 0.2s; }
+[data-state="thinking"] .thinking-dots circle:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dot { 0%, 100% { opacity: 0.3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-8px); } }
+
+/* 在说:嘴巴一张一合,胡须抖动,身体轻轻弹 */
+[data-state="speaking"] .tag-light { fill: var(--light-speak); }
+[data-state="speaking"] .mouth.smile { display: none; }
+[data-state="speaking"] .mouth.talk { display: block; animation: talk 0.28s ease-in-out infinite alternate; }
+[data-state="speaking"] .whiskers { animation: twitch 0.56s ease-in-out infinite alternate; }
+[data-state="speaking"] .body { animation: bounce 0.6s ease-in-out infinite; }
+@keyframes talk { from { transform: scaleY(0.35); } to { transform: scaleY(1.1); } }
+@keyframes twitch { to { transform: rotate(4deg); } }
+@keyframes bounce { 50% { transform: translateY(-3px); } }
+
+/* 未开始或连接中:灰一点 */
+[data-state="off"] .pet, [data-state="connecting"] .pet { filter: saturate(0.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

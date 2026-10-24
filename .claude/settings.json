@@ -1,0 +1,57 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(uv *)",
+      "Bash(ollama *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(pytest *)",
+      "Bash(python *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(brew install *)",
+      "Bash(brew list *)",
+      "Bash(launchctl load *)",
+      "Bash(launchctl unload *)",
+      "Bash(launchctl list *)",
+      "Bash(tailscale *)",
+      "Bash(curl -fsSL https://claude.ai/*)",
+      "Bash(ffmpeg *)",
+      "Bash(sqlite3 *)",
+      "Bash(lsof *)",
+      "Bash(kill *)",
+      "WebFetch(domain:code.claude.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:huggingface.co)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:ollama.com)",
+      "WebFetch(domain:docs.pipecat.ai)",
+      "WebFetch(domain:pypi.org)",
+      "WebSearch"
+    ],
+    "ask": [
+      "Bash(rm -rf *)",
+      "Bash(git push *)",
+      "Bash(git reset --hard *)",
+      "Bash(brew uninstall *)",
+      "Bash(pip *)"
+    ],
+    "deny": [
+      "Bash(sudo *)",
+      "Read(~/pet-evals/audio/**)",
+      "Read(~/Library/Application Support/CuriosityPet/**)",
+      "Read(./.env)",
+      "Read(~/.ssh/**)",
+      "Edit(~/Library/Application Support/CuriosityPet/**)"
+    ],
+    "additionalDirectories": [
+      "~/pet-data-dev",
+      "~/Library/LaunchAgents",
+      "~/Library/Logs/CuriosityPet"
+    ]
+  }
+}

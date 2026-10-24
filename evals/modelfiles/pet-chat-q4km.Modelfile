@@ -1,0 +1,4 @@
+# llama.cpp 对照:同一模型的 GGUF q4_K_M 版,参数与 pet-chat 一致
+FROM qwen3.5:4b-q4_K_M
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.6

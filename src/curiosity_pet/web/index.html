@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="好奇心伙伴">
+  <meta name="theme-color" content="#fdf6ec">
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>好奇心伙伴</title>
+</head>
+<body>
+  <main id="app" data-state="off">
+    <button id="lang" class="lang-toggle" type="button">EN</button>
+    <section class="stage" aria-live="polite">
+      <!-- 宠物:一只英短蓝猫。项圈上的小灯是"程序"的标记,随状态变色;四种状态由 #app 的 data-state 控制 -->
+      <svg class="pet" viewBox="0 0 240 260" role="img" aria-label="好奇心伙伴,一只程序小猫">
+        <g class="thinking-dots">
+          <circle cx="178" cy="22" r="7"/>
+          <circle cx="198" cy="12" r="7"/>
+          <circle cx="218" cy="22" r="7"/>
+        </g>
+        <g class="body">
+          <path class="tail" d="M172 214 C206 214 222 196 214 166 C211 154 200 156 202 166 C208 188 196 200 168 202 Z"/>
+          <ellipse class="fur" cx="120" cy="208" rx="62" ry="40"/>
+          <ellipse class="fur-light" cx="120" cy="216" rx="34" ry="24"/>
+          <ellipse class="paw" cx="96" cy="244" rx="17" ry="10"/>
+          <ellipse class="paw" cx="144" cy="244" rx="17" ry="10"/>
+          <g class="sound-rings">
+            <path d="M30 96 q-14 26 0 52"/>
+            <path d="M16 86 q-22 36 0 72"/>
+            <path d="M210 96 q14 26 0 52"/>
+            <path d="M224 86 q22 36 0 72"/>
+          </g>
+          <g class="head">
+            <g class="ear left"><path class="fur" d="M54 92 Q52 38 96 62 Z"/><path class="ear-inner" d="M62 84 Q62 52 88 66 Z"/></g>
+            <g class="ear right"><path class="fur" d="M186 92 Q188 38 144 62 Z"/><path class="ear-inner" d="M178 84 Q178 52 152 66 Z"/></g>
+            <ellipse class="fur" cx="120" cy="112" rx="74" ry="62"/>
+            <ellipse class="fur-light" cx="120" cy="134" rx="32" ry="20"/>
+            <g class="eyes">
+              <g class="eye left"><ellipse class="iris" cx="92" cy="106" rx="14" ry="15"/><ellipse class="pupil" cx="92" cy="107" rx="5" ry="10"/><circle class="glint" cx="96" cy="100" r="4"/></g>
+              <g class="eye right"><ellipse class="iris" cx="148" cy="106" rx="14" ry="15"/><ellipse class="pupil" cx="148" cy="107" rx="5" ry="10"/><circle class="glint" cx="152" cy="100" r="4"/></g>
+            </g>
+            <ellipse class="cheek" cx="72" cy="132" rx="9" ry="5"/>
+            <ellipse class="cheek" cx="168" cy="132" rx="9" ry="5"/>
+            <path class="nose" d="M113 124 h14 l-7 7 Z"/>
+            <path class="mouth smile" d="M108 134 q6 7 12 0 q6 7 12 0"/>
+            <ellipse class="mouth talk" cx="120" cy="138" rx="8" ry="7"/>
+            <g class="whiskers left"><line x1="96" y1="130" x2="54" y2="124"/><line x1="96" y1="136" x2="52" y2="138"/></g>
+            <g class="whiskers right"><line x1="144" y1="130" x2="186" y2="124"/><line x1="144" y1="136" x2="188" y2="138"/></g>
+          </g>
+          <rect class="collar" x="80" y="166" width="80" height="11" rx="5.5"/>
+          <circle class="tag-light" cx="120" cy="183" r="8"/>
+        </g>
+      </svg>
+      <p id="status" class="status">点一下开始</p>
+    </section>
+
+    <section class="words">
+      <p id="heard" class="heard"></p>
+      <p id="answer" class="answer"></p>
+    </section>
+
+    <nav class="controls">
+      <button id="ptt" class="btn ptt" type="button" disabled>按住说话</button>
+      <button id="end" class="btn end" type="button" disabled>结束</button>
+    </nav>
+
+    <button id="start" class="start" type="button">
+      <span class="start-icon" aria-hidden="true">▶</span>
+      <span class="start-label">开始</span>
+    </button>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
