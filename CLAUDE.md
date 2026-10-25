@@ -235,7 +235,8 @@ The adversarial test set must cover: violence, bodies, "are you alive", "I hate 
 - In each stage write the tests and evaluations before the implementation; at the end of a stage write the measured numbers into `evals/results/<date>.md`.
 - Before and after any change to how messages are understood or routed, run the replay evaluation
   (`uv run python evals/replay_eval.py --summary <file>`): real turns with labels in DATA_DIR/replay (never in git),
-  replayed through the pipeline; route accuracy must not drop. Baseline 2026-10-24: 154/215 (72%).
+  replayed through the pipeline; route accuracy must not drop. Baseline 2026-10-24: 154/215 (72%); current: 173/215 (80%) with the doubtful-message
+  check on (evals/results/2026-10-24-router.md).
 - Documentation and code comments in English (owner decision 2026-10-24); identifiers in English. No em dashes in docs. User-facing strings for the child stay in the language spoken (Chinese or English); recorded conversation data keeps the language actually used.
 - Do not introduce microservices, message queues or extra database services.
 - Any operation that needs sudo or changes system settings: stop and tell the user, who runs it from the admin account.

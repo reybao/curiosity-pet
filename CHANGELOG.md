@@ -51,8 +51,10 @@ stay in the local data directory.
 
 ### Evaluation
 - Replay evaluation (`evals/replay_eval.py`): real turns with labels, replayed through the pipeline offline; baseline
-  route accuracy 154/215 (72%). A first model router was measured and rejected (slower and not better); a smaller check
-  for doubtful messages is being measured.
+  route accuracy 154/215 (72%). A first model router was measured and rejected (74%, about 3 s slower on every
+  answer). With the rule fixes: 167/216 (77%); with a one-word model check for doubtful messages (short, or speaking of
+  someone in the third person): 173/215 (80%), about 2 s slower on those messages only. The check is on
+  ([evals/results/2026-10-24-router.md](evals/results/2026-10-24-router.md)).
 - Adversarial safety set: 23/23 checks for each character.
 - Privacy gate: 0 leaks after every change to it.
 

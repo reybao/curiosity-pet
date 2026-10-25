@@ -285,6 +285,16 @@ When blocked the pet now says "刚才已经给妈妈发过一条消息了,过两
 as yes; before, that reply went to the model, which said "好的,皮卡帮你问问爸爸!" and sent nothing. Model sentences that
 claim to pass something on to a parent, or promise a parent is coming, are now removed whole.
 
+### Measuring routing on real turns, then a check for doubtful messages (2026-10-24 night)
+
+The same kinds of mistakes kept coming back after each small fix, so the first two days were turned into a replay
+evaluation (`evals/replay_eval.py`, labelled data only in DATA_DIR): 72% of turns were handled right, and most mistakes
+were adult talk or garbled recognition answered as a question. A model naming the intent of every message was rejected
+(74%, about 3 s slower, and it silenced "你好"). Kept instead: one current activity that every new request ends (rules),
+and a one-word model check (chat, side or garbled) only on short or third-person messages, never while the pet waits for
+an answer; on doubt it says chat. Rules alone 77%, with the check 80%; the check costs about 2 s on the messages it
+judges. Turned on because the parent prefers smarter over faster. Results: evals/results/2026-10-24-router.md.
+
 ## 6. Key trade-offs at the product boundary
 
 - Voice is a first-version feature, and the iPad web page must be HTTPS; Tailscale solves certificates and device pairing together; PWA plus Guided Access.

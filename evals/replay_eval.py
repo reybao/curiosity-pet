@@ -33,7 +33,7 @@ from pathlib import Path
 import numpy as np
 
 # Allowed routes per labelled intent. "side" is talk not addressed to the pet (adults, a car's navigation voice):
-# ideally ignored; nothing in the pipeline detects it yet, so it is scored but expected to fail for now.
+# ideally ignored; router.py catches some of it (short or third-person messages).
 ROUTES = {
     "noise": {"ignore"},
     "garbled": {"ignore", "clarify"},
