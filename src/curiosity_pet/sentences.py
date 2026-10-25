@@ -1,20 +1,20 @@
-"""流式断句。
+"""Streaming sentence splitting.
 
-模型逐块输出文字,凑够一句就交给 TTS,不等整段生成完。
-Kokoro 念很短的句子效果差,所以第一句太短时与第二句合并后再合成。
-实测 TTS 与生成同时跑时抢 GPU,合成耗时约变成 3 倍,第一块越长开口越晚;
-所以第一块在够长(SHORT_FIRST_CHARS 以上)时也可以在逗号处断开。
+The model emits text chunk by chunk; as soon as a sentence is complete it goes to TTS, without waiting for the whole answer.
+Kokoro reads very short sentences poorly, so a too-short first sentence is merged with the second before synthesis.
+Measured: when TTS and generation run together they fight for the GPU and synthesis takes about 3 times longer, and the longer the first chunk the later speech starts;
+so once the first chunk is long enough (SHORT_FIRST_CHARS or more) it may also be split at a comma.
 """
 
 import re
 
-# 中文标点直接断;英文 . ! ? 后面需要空白(或在 flush 时位于末尾),避免把 3.5 断开
-ZH_END = "\u3002\uff01\uff1f\uff1b!?;\u2026"  # 句号 叹号 问号 分号(全角与半角)、省略号
+# Chinese punctuation splits directly; English . ! ? must be followed by whitespace (or sit at the end on flush), so 3.5 is not split
+ZH_END = "\u3002\uff01\uff1f\uff1b!?;\u2026"  # period, exclamation, question, semicolon (full-width and half-width), ellipsis
 EN_END = ".!?"
-COMMA = "\uff0c\u3001,"  # 全角逗号、顿号、半角逗号
+COMMA = "\uff0c\u3001,"  # full-width comma, enumeration comma, half-width comma
 SHORT_FIRST_CHARS = 8
 EN_FIRST_MIN_WORDS = 8
-# 连词前要有空格、后面也要有空格,保证这个词已经完整生成
+# Conjunctions need a space before and after, which guarantees the word is fully generated
 EN_CONJUNCTION = re.compile(r"(?<=\s)(?:when|because|and|but|so|which|while|like|or)(?=\s)")
 
 
@@ -53,7 +53,7 @@ class SentenceSplitter:
         first = self.merge_short_first and self.emitted == 0 and self.pending_first is None
         cut = self._punctuation_cut(first)
         if first:
-            # 英文回答很少有早出现的逗号:第一块够 EN_FIRST_MIN_WORDS 个词后,可在连词前断开
+            # English answers rarely have an early comma: once the first chunk has EN_FIRST_MIN_WORDS words, it may be split before a conjunction
             for m in EN_CONJUNCTION.finditer(self.buf):
                 if cut is not None and m.start() >= cut:
                     break
@@ -66,7 +66,7 @@ class SentenceSplitter:
             if first and ch in COMMA and _length(self.buf[: i + 1]) >= self.short_first_chars:
                 return i + 1
             if ch in ZH_END:
-                # 连续标点(如 "?!" "……")一起归到这一句
+                # Consecutive punctuation (e.g. "?!" "……") stays with this sentence
                 j = i + 1
                 while j < len(self.buf) and self.buf[j] in ZH_END + EN_END:
                     j += 1
@@ -93,8 +93,8 @@ class SentenceSplitter:
 
 
 def _length(s: str) -> int:
-    """中文按字数,英文按字母数的一半粗算,和中文字数大致可比。"""
-    cjk = len(re.findall(r"[一-鿿]", s))
+    """Chinese counts by characters, English by half the letter count, roughly comparable to Chinese character counts."""
+    cjk = len(re.findall(r"[\u4e00-\u9fff]", s))
     latin = len(re.findall(r"[A-Za-z]", s))
     return cjk + latin // 2
 

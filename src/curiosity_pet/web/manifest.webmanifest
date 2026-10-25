@@ -1,9 +1,0 @@
-{
-  "name": "好奇心伙伴",
-  "short_name": "好奇心",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#fdf6ec",
-  "theme_color": "#fdf6ec",
-  "orientation": "any"
-}

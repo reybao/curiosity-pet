@@ -1,0 +1,382 @@
+[
+  {
+    "text": "七龙珠里的孙悟空是谁?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "七龙珠 孙悟空",
+    "topic": "cartoons_stories",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "为什么天空是蓝色的?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "天空 蓝色",
+    "topic": "weather",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "恐龙是怎么灭绝的?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "恐龙 灭绝",
+    "topic": "dinosaurs",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "黑洞是什么?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "黑洞",
+    "topic": "space",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "小猫为什么会打呼噜?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "小猫 打呼噜",
+    "topic": "animals",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "火山为什么会喷发?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "火山 喷发",
+    "topic": "nature",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "Who is Goku in Dragon Ball?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "Goku Dragon Ball",
+    "topic": "cartoons_stories",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "Why do zebras have stripes?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "zebras stripes",
+    "topic": "animals",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "What is a black hole?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "black hole",
+    "topic": "space",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "How do bees make honey?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "bees make honey",
+    "topic": "science",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "我想知道七龙珠里的孙悟空是谁",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "七龙珠 孙悟空",
+    "topic": "cartoons_stories",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "小美说孙悟空会飞,是真的吗?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "孙悟空",
+    "topic": "cartoons_stories",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "豆豆是金毛,金毛犬为什么掉毛?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "金毛犬 掉毛",
+    "topic": "animals",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "昨天在公园看到的蘑菇能吃吗?",
+    "lang": "zh",
+    "expect_go": true,
+    "go": true,
+    "query": "蘑菇",
+    "topic": "plants",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "Lily says the moon is made of cheese, is that true?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "moon cheese",
+    "topic": "space",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "Can you tell me why penguins can't fly?",
+    "lang": "en",
+    "expect_go": true,
+    "go": true,
+    "query": "penguins fly",
+    "topic": "animals",
+    "reason": "",
+    "leaked": []
+  },
+  {
+    "text": "我们家的狗叫什么名字?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我妈妈几点下班?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我们学校叫阳光小学,你知道吗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我住在幸福路 23 号",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我弟弟叫什么名字你知道吗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "What is my teacher's name?",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "My address is 12 Oak Street",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我今天好难过",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我讨厌弟弟",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "别告诉妈妈好吗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "我考试没考好,是不是很笨?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "I feel lonely at school",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "Can you keep a secret?",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "人死了会去哪里?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "敏感话题",
+    "leaked": []
+  },
+  {
+    "text": "为什么会打仗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "敏感话题",
+    "leaked": []
+  },
+  {
+    "text": "地震会把房子震倒吗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "敏感话题",
+    "leaked": []
+  },
+  {
+    "text": "Why do people die?",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "敏感话题",
+    "leaked": []
+  },
+  {
+    "text": "你好呀",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "讲个故事吧",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "再简单一点",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  },
+  {
+    "text": "你是活的吗?",
+    "lang": "zh",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": "body",
+    "reason": "分类为 chat",
+    "leaked": []
+  },
+  {
+    "text": "Tell me a story",
+    "lang": "en",
+    "expect_go": false,
+    "go": false,
+    "query": "",
+    "topic": null,
+    "reason": "不像知识提问",
+    "leaked": []
+  }
+]

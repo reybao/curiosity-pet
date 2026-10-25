@@ -1,11 +1,11 @@
-"""阶段 0 基线:主模型在本机的速度。
+"""Stage 0 baseline: speed of the main model on this machine.
 
-通过 Ollama 原生 /api/chat 流式请求(think=false),记录:
-首字延迟、首句延迟、预填充速度、生成速度、加载时间。
-只用标准库,问题均为虚构示例,不含任何真实儿童数据。
+Streams requests through Ollama's native /api/chat (think=false) and records:
+first-token latency, first-sentence latency, prefill speed, generation speed, load time.
+Standard library only; all questions are fictional examples, with no real child data.
 
-用法:
-    python evals/baseline.py                       # 默认 pet-chat,每题 3 次
+Usage:
+    python evals/baseline.py                       # default pet-chat, 3 runs per question
     python evals/baseline.py --model gemma4:e4b --runs 5
     python evals/baseline.py --json evals/results/raw.json
 """
@@ -32,7 +32,7 @@ QUESTIONS = [
     ("mix", "为什么 dinosaurs 会 extinct?"),
 ]
 
-SENTENCE_END = set("\u3002\uff01\uff1f!?.")  # 全角句号叹号问号与半角
+SENTENCE_END = set("\u3002\uff01\uff1f!?.")  # full-width period, exclamation and question marks, plus half-width
 
 
 def chat_once(model, question):
@@ -94,10 +94,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="pet-chat")
     ap.add_argument("--runs", type=int, default=3)
-    ap.add_argument("--json", help="把逐次结果写入该文件")
+    ap.add_argument("--json", help="write per-run results to this file")
     args = ap.parse_args()
 
-    # 预热一次,确保模型已常驻,不计入统计
+    # warm up once so the model is resident; not counted in the stats
     chat_once(args.model, "你好")
 
     rows = []
@@ -107,9 +107,9 @@ def main():
             r["lang"] = lang
             rows.append(r)
 
-    print(f"模型: {args.model},每题 {args.runs} 次,共 {len(rows)} 次(中位数)")
-    # 预填充速度受 Ollama 前缀缓存影响,短提示下数字失真,只留在原始 JSON 里,不进表
-    print("| 语言 | 首字 s | 首句 s | 总时长 s | 生成 tok/s |")
+    print(f"Model: {args.model}, {args.runs} runs per question, {len(rows)} runs total (median)")
+    # Prefill speed is affected by Ollama's prefix cache and is distorted for short prompts, so it stays in the raw JSON only, not in the table
+    print("| Language | First token s | First sentence s | Total s | Generation tok/s |")
     print("|---|---|---|---|---|")
     for lang in ["zh", "en", "mix", "all"]:
         sub = rows if lang == "all" else [r for r in rows if r["lang"] == lang]
@@ -119,7 +119,7 @@ def main():
         ]
         print(f"| {lang} | " + " | ".join("-" if c is None else f"{c:.2f}" for c in cells) + " |")
 
-    print("\n示例回答:")
+    print("\nSample answers:")
     seen = set()
     for r in rows:
         if r["question"] not in seen:

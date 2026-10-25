@@ -1,4 +1,4 @@
-# 真实数据与密钥,永不入库
+# Real data and secrets, never committed
 .env
 *.db
 *.sqlite
@@ -8,7 +8,7 @@
 logs/
 evals/audio/
 evals/real_questions/
-data/
+/data/
 
 # Python
 .venv/
@@ -21,6 +21,12 @@ __pycache__/
 node_modules/
 dist/
 
-# macOS / 编辑器
+# macOS / editors
 .DS_Store
 .claude/settings.local.json
+
+# Watch app: local address and signing, generated Xcode project and build output
+watch/Config.local.xcconfig
+watch/*.xcodeproj/
+watch/build/
+watch/CuriosityCat/Info.plist

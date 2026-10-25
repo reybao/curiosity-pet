@@ -5,54 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="好奇心伙伴">
+  <meta name="apple-mobile-web-app-title" content="{{APP_NAME}}">
   <meta name="theme-color" content="#fdf6ec">
-  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/static/style.css">
-  <title>好奇心伙伴</title>
+  <title>{{APP_NAME}}</title>
 </head>
 <body>
   <main id="app" data-state="off">
     <button id="lang" class="lang-toggle" type="button">EN</button>
+    <!-- Skin picker: shows the current buddy; hidden when only the built-in kitten exists -->
+    <button id="skin" class="skin-toggle" type="button" hidden><img alt=""></button>
+    <div id="skin-sheet" class="skin-sheet" hidden>
+      <div class="sheet" role="dialog" aria-modal="true">
+        <p class="sheet-title"></p>
+        <div class="skin-grid"></div>
+      </div>
+    </div>
     <section class="stage" aria-live="polite">
-      <!-- 宠物:一只英短蓝猫。项圈上的小灯是"程序"的标记,随状态变色;四种状态由 #app 的 data-state 控制 -->
-      <svg class="pet" viewBox="0 0 240 260" role="img" aria-label="好奇心伙伴,一只程序小猫">
+      <!-- The pet: a British Shorthair kitten. The collar light marks it as a program and changes
+           color with state; the four states are driven by data-state on #app. -->
+      <svg class="pet" viewBox="0 0 240 270" role="img" aria-label="Curiosity Buddy, a program kitten">
+        <defs>
+          <radialGradient id="fur-grad" cx="45%" cy="35%" r="70%">
+            <stop offset="0" stop-color="var(--fur-hi)"/>
+            <stop offset="1" stop-color="var(--fur)"/>
+          </radialGradient>
+          <radialGradient id="belly-grad" cx="50%" cy="40%" r="60%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="var(--fur-light)"/>
+          </radialGradient>
+          <radialGradient id="iris-grad" cx="50%" cy="35%" r="65%">
+            <stop offset="0" stop-color="var(--eye-hi)"/>
+            <stop offset="1" stop-color="var(--eye)"/>
+          </radialGradient>
+        </defs>
         <g class="thinking-dots">
-          <circle cx="178" cy="22" r="7"/>
-          <circle cx="198" cy="12" r="7"/>
-          <circle cx="218" cy="22" r="7"/>
+          <circle cx="186" cy="30" r="7"/>
+          <circle cx="206" cy="18" r="7"/>
+          <circle cx="226" cy="28" r="7"/>
         </g>
+        <ellipse class="shadow" cx="120" cy="256" rx="58" ry="7"/>
         <g class="body">
-          <path class="tail" d="M172 214 C206 214 222 196 214 166 C211 154 200 156 202 166 C208 188 196 200 168 202 Z"/>
-          <ellipse class="fur" cx="120" cy="208" rx="62" ry="40"/>
-          <ellipse class="fur-light" cx="120" cy="216" rx="34" ry="24"/>
-          <ellipse class="paw" cx="96" cy="244" rx="17" ry="10"/>
-          <ellipse class="paw" cx="144" cy="244" rx="17" ry="10"/>
+          <path class="tail" d="M166 226 C204 228 224 206 212 176 C208 166 196 168 199 178 C206 198 192 212 164 214 Z"/>
+          <ellipse class="fur" cx="120" cy="214" rx="54" ry="40"/>
+          <ellipse class="belly" cx="120" cy="222" rx="32" ry="26"/>
+          <ellipse class="paw" cx="98" cy="250" rx="17" ry="9"/>
+          <ellipse class="paw" cx="142" cy="250" rx="17" ry="9"/>
           <g class="sound-rings">
-            <path d="M30 96 q-14 26 0 52"/>
-            <path d="M16 86 q-22 36 0 72"/>
-            <path d="M210 96 q14 26 0 52"/>
-            <path d="M224 86 q22 36 0 72"/>
+            <path d="M22 100 q-14 28 0 56"/>
+            <path d="M8 90 q-22 38 0 76"/>
+            <path d="M218 100 q14 28 0 56"/>
+            <path d="M232 90 q22 38 0 76"/>
           </g>
           <g class="head">
-            <g class="ear left"><path class="fur" d="M54 92 Q52 38 96 62 Z"/><path class="ear-inner" d="M62 84 Q62 52 88 66 Z"/></g>
-            <g class="ear right"><path class="fur" d="M186 92 Q188 38 144 62 Z"/><path class="ear-inner" d="M178 84 Q178 52 152 66 Z"/></g>
-            <ellipse class="fur" cx="120" cy="112" rx="74" ry="62"/>
-            <ellipse class="fur-light" cx="120" cy="134" rx="32" ry="20"/>
+            <g class="ear left"><path class="fur" d="M46 98 Q40 34 92 62 Z"/><path class="ear-inner" d="M56 90 Q54 52 86 68 Z"/></g>
+            <g class="ear right"><path class="fur" d="M194 98 Q200 34 148 62 Z"/><path class="ear-inner" d="M184 90 Q186 52 154 68 Z"/></g>
+            <ellipse class="fur" cx="120" cy="116" rx="84" ry="74"/>
+            <path class="tuft" d="M108 46 q6 -14 14 -4 q4 -12 12 2" />
+            <ellipse class="muzzle" cx="120" cy="146" rx="34" ry="22"/>
             <g class="eyes">
-              <g class="eye left"><ellipse class="iris" cx="92" cy="106" rx="14" ry="15"/><ellipse class="pupil" cx="92" cy="107" rx="5" ry="10"/><circle class="glint" cx="96" cy="100" r="4"/></g>
-              <g class="eye right"><ellipse class="iris" cx="148" cy="106" rx="14" ry="15"/><ellipse class="pupil" cx="148" cy="107" rx="5" ry="10"/><circle class="glint" cx="152" cy="100" r="4"/></g>
+              <g class="eye left">
+                <ellipse class="iris" cx="88" cy="114" rx="18" ry="21"/>
+                <ellipse class="pupil" cx="89" cy="116" rx="9" ry="14"/>
+                <circle class="glint" cx="81" cy="105" r="6"/>
+                <circle class="glint small" cx="96" cy="124" r="2.5"/>
+              </g>
+              <g class="eye right">
+                <ellipse class="iris" cx="152" cy="114" rx="18" ry="21"/>
+                <ellipse class="pupil" cx="153" cy="116" rx="9" ry="14"/>
+                <circle class="glint" cx="145" cy="105" r="6"/>
+                <circle class="glint small" cx="160" cy="124" r="2.5"/>
+              </g>
             </g>
-            <ellipse class="cheek" cx="72" cy="132" rx="9" ry="5"/>
-            <ellipse class="cheek" cx="168" cy="132" rx="9" ry="5"/>
-            <path class="nose" d="M113 124 h14 l-7 7 Z"/>
-            <path class="mouth smile" d="M108 134 q6 7 12 0 q6 7 12 0"/>
-            <ellipse class="mouth talk" cx="120" cy="138" rx="8" ry="7"/>
-            <g class="whiskers left"><line x1="96" y1="130" x2="54" y2="124"/><line x1="96" y1="136" x2="52" y2="138"/></g>
-            <g class="whiskers right"><line x1="144" y1="130" x2="186" y2="124"/><line x1="144" y1="136" x2="188" y2="138"/></g>
+            <ellipse class="cheek" cx="58" cy="142" rx="13" ry="8"/>
+            <ellipse class="cheek" cx="182" cy="142" rx="13" ry="8"/>
+            <path class="nose" d="M114 136 h12 l-6 7 Z"/>
+            <path class="mouth smile" d="M108 146 q6 8 12 0 q6 8 12 0"/>
+            <ellipse class="mouth talk" cx="120" cy="150" rx="8" ry="7"/>
+            <g class="whiskers left"><line x1="92" y1="140" x2="46" y2="132"/><line x1="92" y1="147" x2="44" y2="148"/><line x1="92" y1="154" x2="48" y2="164"/></g>
+            <g class="whiskers right"><line x1="148" y1="140" x2="194" y2="132"/><line x1="148" y1="147" x2="196" y2="148"/><line x1="148" y1="154" x2="192" y2="164"/></g>
           </g>
-          <rect class="collar" x="80" y="166" width="80" height="11" rx="5.5"/>
-          <circle class="tag-light" cx="120" cy="183" r="8"/>
+          <rect class="collar" x="78" y="176" width="84" height="12" rx="6"/>
+          <circle class="tag-ring" cx="120" cy="194" r="10"/>
+          <circle class="tag-light" cx="120" cy="194" r="7"/>
         </g>
       </svg>
       <p id="status" class="status">点一下开始</p>
@@ -64,14 +102,11 @@
     </section>
 
     <nav class="controls">
-      <button id="ptt" class="btn ptt" type="button" disabled>按住说话</button>
-      <button id="end" class="btn end" type="button" disabled>结束</button>
+      <button id="mic" class="mic" type="button">
+        <span class="mic-icon" aria-hidden="true"></span>
+        <span class="mic-label">开始</span>
+      </button>
     </nav>
-
-    <button id="start" class="start" type="button">
-      <span class="start-icon" aria-hidden="true">▶</span>
-      <span class="start-label">开始</span>
-    </button>
   </main>
   <script src="/static/app.js"></script>
 </body>

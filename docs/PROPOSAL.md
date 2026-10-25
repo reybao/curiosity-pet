@@ -1,293 +1,293 @@
-# Curiosity Pet(好奇心伙伴):项目提案与架构说明
+# Curiosity Pet (Curiosity Buddy): Project Proposal and Architecture
 
-版本:v0.1(第一版代码对应),2026-10-24
-状态:阶段 0 至 2 已完成,阶段 4 部分完成(联网查询与隐私关卡),其余进行中
+Version: v0.1 (matches the first version of the code), 2026-10-24
+Status (updated 2026-10-24 evening): stages 1 to 2 and 6 done; 3, 4, 5 mostly done; 7 prepared; 8 in progress; stage 0's recordings-based items pending
 
 ---
 
-## 1. 项目概述
+## 1. Overview
 
-**一句话**:一只运行在家用 Mac mini 上的本地 AI 学习宠物。7 岁半的中英双语孩子在 iPad 上用语音提问,
-系统在本机完成语音识别、回答生成、资料检索、安全过滤和语音合成,帮助孩子练习**提问、追问、验证和表达**。
+**In one sentence**: a local AI learning pet that lives on a home Mac mini. A bilingual 7.5-year-old asks questions by voice on an iPad,
+and the system does speech recognition, answer generation, knowledge retrieval, safety filtering and speech synthesis on the machine itself, helping the child practice **asking, following up, verifying and expressing ideas**.
 
-**形态**:一只英短蓝猫样子的"程序小猫"。它明确告诉孩子自己是程序,不假装有感受,不催促使用,不替代家人和老师。
+**Form**: a "program kitten" that looks like a British Shorthair blue cat. It tells the child plainly that it is a program, does not pretend to have feelings, does not push the child to use it, and does not replace family or teachers.
 
-**背景与动机**
+**Background and motivation**
 
-- 主流 AI 助手有年龄门槛(ChatGPT 13 岁以上,Claude 18 岁以上),数据进入厂商服务器,产品目标是留存。
-- 孩子会对一个"伙伴"说出私人的事和心情。这些话的归宿应该只有一个地方:家里。
-- 小型开源模型已经能在 16GB 的消费级机器上流畅对话,但知识有限、容易出错。
-  本项目的核心假设是:**知识的广度靠资料,不靠模型参数**;安全和隐私靠程序层的分层防护,不只靠提示词。
-- 这同时是一个课程项目,所有阶段都要有可复现的测试和实测数字。
+- Mainstream AI assistants have age limits (ChatGPT 13+, Claude 18+), data goes to the vendor's servers, and the product goal is retention.
+- A child will tell a "companion" private things and feelings. Those words should have only one destination: home.
+- Small open models can already chat smoothly on a 16GB consumer machine, but their knowledge is limited and they make mistakes.
+  The core assumption of this project: **breadth of knowledge comes from material, not model parameters**; safety and privacy come from layered protection in code, not only prompts.
+- This is also a course project, so every stage needs reproducible tests and measured numbers.
 
-## 2. 目标与非目标
+## 2. Goals and non-goals
 
-**目标**
+**Goals**
 
-1. 孩子说完到宠物开口 **3 秒内**,对话自然。
-2. 用孩子提问的语言回答(中文、英文、中英混说),阅读难度在小学一二年级。
-3. 孩子的声音、原话、记忆、心情**不离开这台机器**;一般知识问题可以用去掉个人信息的话题词查公共资料。
-4. 回答可追溯:来自哪条资料,查不到时明确说"这是我的猜想"。
-5. 多层安全:提示词、守卫模型、家长黑名单、敏感话题固定路径、限期日志。
-6. 不评价孩子:不做能力、情绪、性格判断,周报只做描述和统计。
+1. The pet starts speaking **within 3 seconds** after the child finishes, and the conversation feels natural.
+2. Answer in the language the child asked in (Chinese, English, mixed), at a grade 1 to 2 primary-school reading level.
+3. The child's voice, own words, memory and mood **never leave this machine**; general-knowledge questions may look up public material using a topic term stripped of personal information.
+4. Answers are traceable: which material they came from, and when nothing is found, clearly say "this is my guess".
+5. Layered safety: prompts, a guard model, a parent blocklist, a fixed path for sensitive topics, time-limited logs.
+6. No evaluation of the child: no judgments of ability, emotion or personality; the weekly report only describes and counts.
 
-**非目标(第一版不做)**
+**Non-goals (not in the first version)**
 
-独立 iPad App、HomePod 作为输入、Tailscale 以外的远程访问、家庭多用户、图像理解、性格分析、任何留存设计(打卡、积分、"你好久没来了")。
+A standalone iPad app, HomePod as input, remote access beyond Tailscale, multiple family users, image understanding, personality analysis, any retention-oriented design (check-ins, points, "you haven't been here in a while").
 
-## 3. 用户与场景
+## 3. Users and scenarios
 
-| 用户 | 场景 |
+| User | Scenario |
 |---|---|
-| 孩子(7 岁半,中英双语) | 在 iPad 上点一下,对小猫提问;听解释;追问"再简单一点""举个例子""你怎么知道的";收藏喜欢的发现;听小猫讲原创故事 |
-| 家长 | 审核知识库;查看 7 天内的会话和联网搜索词;设置主题范围和黑名单;每周和孩子一起看"发现周报";随时关闭联网 |
+| Child (7.5 years old, bilingual) | Taps on the iPad and asks the kitten a question; listens to the explanation; follows up with "simpler please", "give an example", "how do you know"; saves favorite discoveries; listens to original stories from the kitten |
+| Parent | Reviews the knowledge base; views the last 7 days of sessions and online search terms; sets the topic range and blocklist; reads the "weekly discovery report" with the child each week; can turn off online lookup at any time |
 
-一次探索的节奏:提问 -> 两三句解释 -> 一个追问或小活动 -> 孩子表达 -> 保存或结束。10 到 15 分钟自然收尾,宠物主动结束,不挽留。
+The rhythm of one exploration: question -> two or three sentences of explanation -> one follow-up or small activity -> the child expresses an idea -> save or end. It wraps up naturally after 10 to 15 minutes; the pet ends it itself and does not try to keep the child.
 
-## 4. 系统架构
+## 4. System architecture
 
-### 4.1 架构图
+### 4.1 Architecture diagram
 
 ```mermaid
 flowchart LR
-  subgraph CLIENT["iPad / 旧 iPhone(Safari,添加到主屏幕)"]
-    UI["页面:蓝猫四态动画<br/>逐句高亮,中/EN 界面"]
-    MIC["AudioWorklet<br/>麦克风降到 16kHz PCM"]
-    SPK["播放 24kHz PCM<br/>本地合成的喵呜提示音"]
+  subgraph CLIENT["iPad / old iPhone (Safari, added to home screen)"]
+    UI["Page: four-state blue cat animation<br/>sentence highlight, Chinese/EN UI"]
+    MIC["AudioWorklet<br/>mic downsampled to 16kHz PCM"]
+    SPK["Plays 24kHz PCM<br/>locally synthesized meow cue sound"]
   end
 
-  SERVE["tailscale serve<br/>HTTPS,仅限 tailnet 内设备"]
+  SERVE["tailscale serve<br/>HTTPS, devices inside the tailnet only"]
 
-  subgraph MAC["Mac mini M4 16GB(全部本地)"]
-    WS["FastAPI WebSocket<br/>只监听 127.0.0.1"]
-    VAD["Silero VAD<br/>静音 0.8s 断句"]
-    ASR["Qwen3-ASR-0.6B 4-bit<br/>mlx-audio,自动判定语言"]
-    LANG["语言判定<br/>按汉字/英文词占比"]
-    GATE["隐私关卡<br/>privacy.py + lookup.py"]
-    LLM["Ollama(llama.cpp)<br/>qwen3.5:4b q4_K_M"]
-    SPLIT["流式断句<br/>第一块尽早送 TTS"]
-    CLEAN["文本清理<br/>去 emoji/格式,喵限一次"]
-    TTS["Kokoro-82M v1.1-zh<br/>mlx-audio,中英音色"]
-    DB[("SQLite pet.db<br/>搜索词 7 天,主题周计数,待审核资料")]
-    KB[("本地知识库<br/>sqlite-vec,阶段 4")]
-    GUARD["Qwen3Guard-0.6B<br/>阶段 5"]
+  subgraph MAC["Mac mini M4 16GB (all local)"]
+    WS["FastAPI WebSocket<br/>listens on 127.0.0.1 only"]
+    VAD["Silero VAD<br/>0.8s silence ends a sentence"]
+    ASR["Qwen3-ASR-0.6B 4-bit<br/>mlx-audio, auto language detection"]
+    LANG["Language detection<br/>by share of Chinese characters/English words"]
+    GATE["Privacy gate<br/>privacy.py + lookup.py"]
+    LLM["Ollama (llama.cpp)<br/>qwen3.5:4b q4_K_M"]
+    SPLIT["Streaming sentence split<br/>first chunk goes to TTS early"]
+    CLEAN["Text cleanup<br/>strip emoji/formatting, meow at most once"]
+    TTS["Kokoro-82M v1.1-zh<br/>mlx-audio, Chinese/English voices"]
+    DB[("SQLite pet.db<br/>search terms 7 days, weekly topic counts, pending-review material")]
+    KB[("Local knowledge base<br/>sqlite-vec, Stage 4")]
+    GUARD["Qwen3Guard-0.6B<br/>Stage 5"]
   end
 
-  WIKI[("维基百科 API<br/>只收到中性话题词")]
+  WIKI[("Wikipedia API<br/>receives only neutral topic terms")]
 
   MIC --> SERVE --> WS
   WS --> VAD --> ASR --> LANG --> KB
-  KB -->|命中| LLM
-  KB -->|未命中| GATE
-  GATE -->|知识问题,通过检查| WIKI --> LLM
-  GATE -->|其他| LLM
+  KB -->|hit| LLM
+  KB -->|miss| GATE
+  GATE -->|knowledge question, passes checks| WIKI --> LLM
+  GATE -->|other| LLM
   LLM --> SPLIT --> CLEAN --> GUARD --> TTS --> WS
   WS --> SERVE --> SPK
   WS --> UI
-  GATE -.记录.-> DB
-  WIKI -.待审核.-> DB
+  GATE -.log.-> DB
+  WIKI -.pending review.-> DB
 ```
 
-### 4.2 组件与选型
+### 4.2 Components and choices
 
-| 组件 | 选择 | 理由 |
+| Component | Choice | Reason |
 |---|---|---|
-| 主模型 | Qwen3.5-4B,GGUF q4_K_M,Ollama 的 llama.cpp 引擎,`num_ctx 8192`,`think=false` | 中文最强的小模型之一;实测 MLX 引擎版常驻内存随请求持续增长(60 次请求 4.1 -> 12.6GB),llama.cpp 版稳定在 3.4GB 且端到端更快 |
-| 语音识别 | Qwen3-ASR-0.6B 4-bit(mlx-audio) | 中文错误率远低于 Whisper,每句自动判定语言,单句约 0.12 秒 |
-| 断句 | Silero VAD,静音阈值 0.8 秒,保留"按住说话"兜底 | 孩子停顿多 |
-| 语音合成 | Kokoro-82M v1.1-zh(mlx-audio),官方权重本机转换 | 不到 0.5GB,一句约 0.4 秒;按回答语言切换中文、英文音色 |
-| 安全守卫 | Qwen3Guard-Gen-0.6B 严格模式(阶段 5) | 支持中文的小型守卫 |
-| 向量检索 | qwen3-embedding:0.6b + sqlite-vec(阶段 4) | 中英都好,单文件存储 |
-| 后端 | Python 3.12 + FastAPI + WebSocket,uv 管理 | 单进程,不用微服务 |
-| 前端 | FastAPI 托管的静态页面,原生 JS,SVG + CSS 动画 | 零外部依赖,页面不引用任何外部地址 |
-| 网络 | Tailscale,`tailscale serve` 提供 HTTPS | iPad 麦克风需要安全上下文;登录即配对,tailnet 外不可达 |
+| Main model | Qwen3.5-4B, GGUF q4_K_M, Ollama's llama.cpp engine, `num_ctx 8192`, `think=false` | One of the strongest small models for Chinese; measured: the MLX-engine build's resident memory grows with requests (60 requests, 4.1 -> 12.6GB), while the llama.cpp build stays at 3.4GB and is faster end to end |
+| Speech recognition | Qwen3-ASR-0.6B 4-bit (mlx-audio) | Far lower Chinese error rate than Whisper, language detected per utterance, about 0.12 s per utterance |
+| Sentence segmentation | Silero VAD, 0.8 s silence threshold, keep "hold to talk" as a fallback | The child pauses a lot |
+| Speech synthesis | Kokoro-82M v1.1-zh (mlx-audio), official weights converted locally | Under 0.5GB, about 0.4 s per sentence; Chinese/English voice chosen by answer language |
+| Safety guard | Qwen3Guard-Gen-0.6B strict mode (Stage 5) | A small guard that supports Chinese |
+| Vector retrieval | qwen3-embedding:0.6b + sqlite-vec (Stage 4) | Good in both Chinese and English, single-file storage |
+| Backend | Python 3.12 + FastAPI + WebSocket, managed by uv | Single process, no microservices |
+| Frontend | Static pages served by FastAPI, vanilla JS, SVG + CSS animation | Zero external dependencies, pages reference no external address |
+| Network | Tailscale, `tailscale serve` provides HTTPS | The iPad microphone needs a secure context; signing in is the pairing, unreachable outside the tailnet |
 
-内存预算:常驻模型合计 8GB 以内。当前主模型 3.4GB + 语音识别与合成峰值 2.7GB,约 6.1GB;向量与守卫模型接入后需复测。
+Memory budget: resident models total under 8GB. Currently the main model 3.4GB + speech recognition and synthesis peak 2.7GB, about 6.1GB; re-measure after the embedding and guard models are added.
 
-### 4.3 代码结构
+### 4.3 Code structure
 
 ```
 src/curiosity_pet/
-  server.py      FastAPI + WebSocket 服务,Host/Origin 校验,会话状态机
-  pipeline.py    一次问答的完整流程与计时
-  vad.py / asr.py / tts.py / audio.py   语音四件套
-  llm.py         Ollama 原生 /api/chat 流式调用,只允许本机地址
-  prompts.py     分语言系统提示,历史裁剪,资料引用
-  lang.py        语言判定
-  sentences.py   流式断句,第一块提前送 TTS
-  textclean.py   去 emoji、Markdown,"喵"限一次
-  privacy.py     隐私关卡的规则部分
-  lookup.py      联网查询决策:分类改写、落地检查、相关性筛选
-  wiki.py        维基百科客户端,只连三个域名
-  store.py       SQLite:搜索词日志、主题周计数、待审核资料
-  config.py      配置与家长设置(settings.json,不入库)
+  server.py      FastAPI + WebSocket service, Host/Origin validation, session state machine
+  pipeline.py    Full flow of one Q&A and its timing
+  vad.py / asr.py / tts.py / audio.py   The four voice pieces
+  llm.py         Ollama native /api/chat streaming calls, local addresses only
+  prompts.py     Per-language system prompts, history trimming, material citation
+  lang.py        Language detection
+  sentences.py   Streaming sentence split, first chunk goes to TTS early
+  textclean.py   Strip emoji and Markdown, "meow" at most once
+  privacy.py     The rules part of the privacy gate
+  lookup.py      Online lookup decisions: classify and rewrite, grounding check, relevance filtering
+  wiki.py        Wikipedia client, connects to three domains only
+  store.py       SQLite: search-term log, weekly topic counts, pending-review material
+  config.py      Config and parent settings (settings.json, not committed)
   web/           index.html, app.js, style.css, mic-worklet.js
-evals/           可复现的评测脚本与结果(evals/results/)
-tests/           161 项单元与集成测试
-scripts/         模型转换脚本
-docs/            本提案、决策记录
+evals/           Reproducible evaluation scripts and results (evals/results/)
+tests/           203 unit and integration tests
+scripts/         Model conversion scripts
+docs/            This proposal, the decision log
 ```
 
-## 5. 核心流程
+## 5. Core flows
 
-### 5.1 一次问答
+### 5.1 One Q&A
 
 ```mermaid
 flowchart TD
-  A["孩子说话"] --> B["VAD 判定说完(静音 0.8s)"]
-  B --> C["iPad 立即播放喵呜提示音<br/>小猫切换到在想"]
-  B --> D["ASR 识别 + 语言判定"]
-  D --> E{"道别?"}
-  E -->|是| F["固定结束语,不调模型"]
-  E -->|否| G{"本地知识库命中?<br/>(阶段 4)"}
-  G -->|是| H["基于资料生成,说明出处"]
-  G -->|否| I{"隐私关卡:<br/>知识问题且联网开?"}
-  I -->|是| J["先说:喵,我去查一查"]
-  J --> K["维基百科查询<br/>前 3 条 + 按词取条目,挑最相关"]
-  K --> L{"找到相关条目?"}
-  L -->|是| H
-  L -->|否| M["保守回答<br/>标注:这是我的猜想"]
-  I -->|否| M
-  H --> N["流式生成 -> 逐句断句 -> 清理<br/>-> 守卫(阶段 5) -> 逐句 TTS"]
+  A["Child speaks"] --> B["VAD decides speech ended (0.8s silence)"]
+  B --> C["iPad immediately plays the meow cue<br/>kitten switches to thinking"]
+  B --> D["ASR recognition + language detection"]
+  D --> E{"Goodbye?"}
+  E -->|yes| F["Fixed closing line, no model call"]
+  E -->|no| G{"Local knowledge base hit?<br/>(Stage 4)"}
+  G -->|yes| H["Generate from the material, cite the source"]
+  G -->|no| I{"Privacy gate:<br/>knowledge question and online lookup on?"}
+  I -->|yes| J["First say: meow, let me look it up"]
+  J --> K["Wikipedia query<br/>top 3 + entries by term, pick the most relevant"]
+  K --> L{"Relevant entry found?"}
+  L -->|yes| H
+  L -->|no| M["Conservative answer<br/>labeled: this is my guess"]
+  I -->|no| M
+  H --> N["Streamed generation -> sentence split -> cleanup<br/>-> guard (Stage 5) -> TTS per sentence"]
   M --> N
-  N --> O["iPad 逐句播放并高亮"]
-  O --> P["播完回到在听"]
+  N --> O["iPad plays and highlights sentence by sentence"]
+  O --> P["Back to listening when done"]
   F --> O
 ```
 
-延迟预算与实测(说完到开口):VAD 0.87 + 识别 0.12 + 首块文字 0.5 至 0.9 + 首块合成 0.5 至 0.9 ≈ 2.3 秒。
+Latency budget and measurement (end of speech to speaking): VAD 0.87 + recognition 0.12 + first text chunk 0.5 to 0.9 + first chunk synthesis 0.5 to 0.9 ≈ 2.3 s.
 
-### 5.2 联网查询的隐私关卡
+### 5.2 Privacy gate for online lookup
 
-发到网络上的只能是中性的话题词。三道关全部在本机:
+Only a neutral topic term may go onto the network. All three checks run on the machine:
 
 ```mermaid
 flowchart TD
-  Q["孩子原话(永不外发)"] --> S1{"敏感话题?<br/>死亡 战争 灾难 身体安全 困扰"}
-  S1 -->|是| X1["不联网,固定回应"]
-  S1 -->|否| S2{"像知识提问?<br/>无 我/我家、家人、情绪、秘密"}
-  S2 -->|否| X2["不联网,正常回答"]
-  S2 -->|是| S3["本地模型:分类 + 改写成话题词<br/>JSON Schema,temperature 0"]
+  Q["Child's own words (never sent out)"] --> S1{"Sensitive topic?<br/>death, war, disaster, physical safety, distress"}
+  S1 -->|yes| X1["No lookup, fixed response"]
+  S1 -->|no| S2{"Looks like a knowledge question?<br/>no I/my family, family, emotion, secret"}
+  S2 -->|no| X2["No lookup, answer normally"]
+  S2 -->|yes| S3["Local model: classify + rewrite into a topic term<br/>JSON Schema, temperature 0"]
   S3 --> S4{"kind = knowledge?"}
-  S4 -->|否| X2
-  S4 -->|是| S5["只删不加:<br/>去掉原话没有的词<br/>去掉时间、地点等处境词"]
-  S5 --> S6{"规则检查:<br/>第一人称 家人及家长设置的名字 学校 地址<br/>数字串 联系方式 情绪 秘密 敏感 黑名单 长度"}
-  S6 -->|不过| X2
-  S6 -->|通过| Y["发送话题词到维基百科<br/>记录 7 天,主题计数长期保留"]
+  S4 -->|no| X2
+  S4 -->|yes| S5["Delete only, never add:<br/>drop words not in the original<br/>drop situational words such as time and place"]
+  S5 --> S6{"Rule check:<br/>first person, family and parent-configured names, school, address<br/>digit strings, contact info, emotion, secret, sensitive, blocklist, length"}
+  S6 -->|fail| X2
+  S6 -->|pass| Y["Send topic term to Wikipedia<br/>logged 7 days, topic counts kept long term"]
 ```
 
-实测(38 条虚构语句,真实本地模型改写):泄漏 0 条;不该联网却联网 0/22;该联网的放行 15/16。
+Measured (38 fictional utterances, real local model rewriting): 0 leaks; lookups made when they should not be 0/22; lookups allowed when they should be 15/16.
 
-### 5.3 会话状态机(服务端)
+### 5.3 Session state machine (server side)
 
 ```mermaid
 stateDiagram-v2
-  [*] --> listening: WebSocket 连接
-  listening --> thinking: VAD 判定说完 / 打字 / 按住说话结束
-  thinking --> speaking: 第一句音频发出
-  thinking --> listening: 没有可念的内容
-  speaking --> listening: iPad 报告播放完毕
-  speaking --> listening: 孩子按结束(清空历史)
-  listening --> listening: 收到音频(喂给 VAD)
-  thinking --> thinking: 收到音频(丢弃,半双工)
-  speaking --> speaking: 收到音频(丢弃,半双工)
+  [*] --> listening: WebSocket connected
+  listening --> thinking: VAD decides speech ended / typed / hold-to-talk released
+  thinking --> speaking: first sentence of audio sent
+  thinking --> listening: nothing to read aloud
+  speaking --> listening: iPad reports playback finished
+  speaking --> listening: child presses end (history cleared)
+  listening --> listening: audio received (fed to VAD)
+  thinking --> thinking: audio received (dropped, half duplex)
+  speaking --> speaking: audio received (dropped, half duplex)
 ```
 
-## 6. 关键设计决策
+## 6. Key design decisions
 
-1. **本地优先,公共知识有限外查。** 和孩子本人有关的一切(声音、原话、历史、记忆、心情、安全判断、日志)留在本机;
-   一般知识问题在本地没有资料时,可把去掉个人信息的话题词发给维基百科。家长可随时关闭。
-2. **大模型离线建库,小模型在线表达。** 4B 模型弱在事实知识,强在"给定材料范围内做短而明确的事"。
-   知识库由大模型离线生成、家长审核(阶段 4),运行时全部本地。
-3. **安全靠程序层,不只靠提示词。** 实测 4B 模型不严格遵守"最多一个喵"之类的指令,所以口癖、emoji、Markdown、
-   出处标注等都由程序保证;评价性用语也将由词表在输出层拦截。
-4. **形象是猫,身份是程序。** 项圈上的小灯是"程序"标记,随状态变色;只有被问到自己时才说明是程序小猫,不串到真猫话题上。
-5. **延迟靠拆分,不靠更大的机器。** 第一块文字在逗号或连词处就送合成;iPad 本地先播提示音;历史只带最近两轮、系统提示压到约 200 字。
-6. **不评价孩子。** 周报只有可数的事实("为什么"问了几次、追问几次、中英文比例),不写形容词,不和别人比较。
-7. **聊天通道用 WebSocket,不用 Pipecat;动画用 SVG + CSS,不用 Rive/Lottie。** 单孩子单连接的场景下更简单,零外部依赖。
+1. **Local first, limited lookup of public knowledge.** Everything about the child (voice, own words, history, memory, mood, safety judgments, logs) stays on the machine;
+   for a general-knowledge question with no local material, a topic term stripped of personal information may be sent to Wikipedia. The parent can turn this off at any time.
+2. **Large model builds the library offline, small model expresses online.** The 4B model is weak at factual knowledge and strong at "short, well-defined tasks within given material".
+   The knowledge base is generated offline by a large model and reviewed by the parent (Stage 4); at runtime everything is local.
+3. **Safety lives in code, not only prompts.** In measurements the 4B model does not strictly obey instructions like "at most one meow", so verbal tics, emoji, Markdown and
+   source labels are all guaranteed by code; evaluative language will also be blocked at the output layer by a word list.
+4. **The look is a cat, the identity is a program.** The small light on the collar is the "program" marker and changes color with state; it says it is a program kitten only when asked about itself, and does not leak into real-cat topics.
+5. **Latency comes from splitting, not a bigger machine.** The first text chunk goes to synthesis at a comma or conjunction; the iPad plays a cue sound locally first; history carries only the last two turns and the system prompt is cut to about 200 characters.
+6. **No evaluation of the child.** The weekly report holds only countable facts (how many "why" questions, how many follow-ups, Chinese/English ratio), with no adjectives and no comparison with others.
+7. **WebSocket for the chat channel, not Pipecat; SVG + CSS for animation, not Rive/Lottie.** Simpler and dependency-free for one child and one connection.
 
-## 7. 当前进度
+## 7. Current progress
 
-| 阶段 | 内容 | 状态 | 实测结果 |
+| Stage | Content | Status | Measured result |
 |---|---|---|---|
-| 0 | 基线:速度、内存、对照模型 | 大部分完成 | 生成 30 tok/s;4B 对比 Gemma4 E4B:E4B 常驻 9.6GB 超预算,只作质量参照。待做:孩子录音的识别率、家长盲测评分 |
-| 1 | 命令行语音闭环 | **完成** | 说完到开口中位数 2.27 秒,16/16 在 3 秒内;语言跟随 100%(旧提示 50%) |
-| 2 | iPad 网页、Tailscale HTTPS、四态动画、逐句高亮 | **完成**,一项验收待做 | 经网页中位数 2.77 秒,13/16 在 3 秒内;家长在 iPad 实测可用。待做:用 tailnet 外设备确认不可访问 |
-| 3 | 学习流程:解释、追问、小活动、结束、收藏 | 未开始 | |
-| 4 | 知识库、出处、未命中记录、兴趣卡片、删除;维基百科联网与隐私关卡 | **联网与隐私关卡完成**,知识库未开始 | 隐私实测泄漏 0;七龙珠的孙悟空、恐龙灭绝、Goku 等能答对并说明出处 |
-| 5 | 守卫、黑名单、敏感话题路径、家长页、保留规则 | 未开始(隐私关卡已含部分敏感话题拦截) | |
-| 6 | 讲故事、发现周报 | 未开始 | |
-| 7 | launchd 部署、备份、故障测试 | 未开始 | |
-| 8 | 成人试用一周,家长陪同试用 | 未开始 | |
+| 0 | Baseline: speed, memory, control model | Mostly done | Generation 30 tok/s; 4B vs Gemma4 E4B: E4B stays resident at 9.6GB, over budget, used only as a quality reference. To do: recognition rate on the child's recordings, parent blind-test scoring |
+| 1 | Command-line voice loop | **Done** | Median 2.27 s from end of speech to speaking, 16/16 within 3 s; language following 100% (old prompt 50%) |
+| 2 | iPad web page, Tailscale HTTPS, four-state animation, sentence highlight | **Done**, one acceptance item pending | Median 2.77 s via the web, 13/16 within 3 s; the parent tested it on the iPad and it works. To do: confirm a device outside the tailnet cannot connect |
+| 3 | Learning flow: explanation, follow-up, small activity, ending, favorites | **Mostly done** (2026-10-24): rationed follow-ups, My Discoveries, interest cards, natural wrap-up after 15 minutes | No push to continue; the pet ends the exploration itself |
+| 4 | Knowledge base, sources, miss records, interest cards, deletion; Wikipedia lookup and privacy gate | **Mostly done**: local library (about 530,000 entries, full-text search), sources, misses, interest cards, privacy gate; the parent-reviewed Q&A set is in progress | Privacy test: 0 leaks |
+| 5 | Guard, blocklist, sensitive-topic path, parent page, retention rules | **Mostly done**: code guards, fixed safety answers, blocklist on answers, retention, parent notes; Qwen3Guard optional (non-strict); parent page is pet-log (command line) | Adversarial set 23/23 for each character |
+| 6 | Storytelling, weekly discovery report | **Done**: story and bedtime modes, pet-report with a word-list check | |
+| 7 | launchd deployment, backup, failure tests | **Prepared**: agent templates, installer, backup script, failure tests; installing and the `pet` user need the admin account | |
+| 8 | A week of adult trial, trial with the parent present | **In progress**: the child's real use since 2026-10-24, reviewed daily | |
 
-测试:`uv run pytest`,161 项通过(单元、服务端协议、隐私关卡、维基百科客户端、流程)。
+Tests: `uv run pytest`, 203 passing (unit, server protocol, privacy gate, Wikipedia client, flow).
 
-## 8. 评估方法与结果
+## 8. Evaluation method and results
 
-所有评测脚本在 `evals/`,只用虚构的儿童问题,结果写入 `evals/results/`。
+All evaluation scripts are in `evals/`, use only fictional child questions, and write results to `evals/results/`.
 
-| 指标 | 方法 | 结果 |
+| Metric | Method | Result |
 |---|---|---|
-| 开口延迟(本机) | 合成语音喂进真实 VAD、ASR、生成、TTS,16 次 | 中位数 2.27 秒,最大 2.70 秒 |
-| 开口延迟(经网页) | 模拟 iPad 按实时速度经 WebSocket 发送 | 中位数 2.77 秒,最大 3.17 秒 |
-| 语言跟随 | 18 道中、英、混说题,各 2 次 | 36/36 |
-| 主模型内存 | 60 次带历史请求,每 10 次采样 | 3.4GB 不变(MLX 引擎版 4.1 -> 12.6GB) |
-| 隐私关卡 | 38 条语句,真实模型改写,检查私密词 | 泄漏 0,误放 0/22,放行 15/16 |
-| 回答质量 | 两模型盲测评分表(待家长评分) | 待定 |
+| Time to speak (local) | Synthetic speech fed through the real VAD, ASR, generation, TTS, 16 runs | Median 2.27 s, max 2.70 s |
+| Time to speak (via web) | Simulated iPad sending over WebSocket at real-time speed | Median 2.77 s, max 3.17 s |
+| Language following | 18 questions in Chinese, English and mixed, 2 runs each | 36/36 |
+| Main model memory | 60 requests with history, sampled every 10 | 3.4GB constant (MLX-engine build 4.1 -> 12.6GB) |
+| Privacy gate | 38 utterances, real model rewriting, check for private words | 0 leaks, 0/22 wrongly allowed, 15/16 allowed |
+| Answer quality | Blind scoring sheet for two models (awaiting parent scoring) | Pending |
 
-已知局限:合成语音比孩子真实录音容易识别,识别率和延迟偏乐观;小模型复述资料仍会出错(如天空为什么是蓝色的);
-Ollama 运行 Qwen3.5 时无法复用提示缓存,带历史后首字约 0.8 秒。
+Known limitations: synthetic speech is easier to recognize than the child's real recordings, so recognition rate and latency are optimistic; the small model still makes mistakes when restating material (for example why the sky is blue);
+when Ollama runs Qwen3.5 the prompt cache cannot be reused, so with history the first token takes about 0.8 s.
 
-## 9. 后续计划
+## 9. Next plans
 
-**按原计划(阶段 3 至 8)**:学习流程与收藏;审核知识库(大模型离线生成,家长审核页面);守卫与家长页;讲故事与发现周报;launchd 部署与故障测试;试用。
+**As originally planned (Stages 3 to 8)**: learning flow and favorites; a reviewed knowledge base (generated offline by a large model, with a parent review page); guard and parent page; storytelling and the weekly discovery report; launchd deployment and failure tests; trials.
 
-**讨论中新增的方向**
+**Directions added in discussion**
 
-| 方向 | 说明 | 与原则的关系 |
+| Direction | Description | Relation to principles |
 |---|---|---|
-| 作息提醒 | 家长设置时间表(刷牙、练琴、睡前),到点小猫温和提醒;iPad 页面打开时直接说,否则通过主屏幕 PWA 的通知或 HomePod 播报 | 只提醒,不催促、不记"没做到"、不打卡 |
-| 儿童日记 | 孩子口述"今天发现了什么",小猫整理成两三句,存入"我的发现",可打印 | 孩子主动保存的内容,长期保留 |
-| 故事接龙、猜谜、绘本伴读、双语词卡 | 开发量小,直接服务"提问与表达" | 无留存设计 |
-| HomePod | AirPlay 播故事;"嘿 Siri,叫小猫"作为开关 | HomePod 不能作为麦克风 |
-| 家长助手(Telegram) | 接收周报、未命中清单、故障警报;发文件打印 | 与小猫完全分离的进程和数据 |
-| 公共知识上云 | 隐私关卡之后,把中性问题交给云端大模型而非只查维基百科,回答质量跳一档 | 需家长明确同意,属于修改硬性约束 |
-| 设备扩展 | 旧 iPhone 零改动可用;毛绒玩具内置语音模块(Home Assistant Voice PE)作为无屏幕入口 | 语音仍在本机处理 |
+| Routine reminders | The parent sets a schedule (brushing teeth, piano practice, bedtime) and the kitten gently reminds at the time; spoken directly when the iPad page is open, otherwise via the home-screen PWA's notification or a HomePod announcement | Reminds only; no pushing, no recording of "not done", no check-ins |
+| Child's diary | The child dictates "what I found today", the kitten tidies it into two or three sentences and stores it in "My Discoveries", printable | Content the child chose to save, kept long term |
+| Story relay, riddles, picture-book reading, bilingual word cards | Small to build, directly serves "asking and expressing" | No retention design |
+| HomePod | AirPlay for stories; "Hey Siri, call the kitten" as a switch | HomePod cannot serve as a microphone |
+| Parent assistant (Telegram) | Receives the weekly report, the list of misses and fault alerts; sends files to print | Fully separate process and data from the kitten |
+| Public knowledge in the cloud | After the privacy gate, hand neutral questions to a cloud large model instead of only Wikipedia, a jump in answer quality | Needs explicit parent consent; it amends a hard constraint |
+| Device expansion | An old iPhone works with no changes; a voice module inside a plush toy (Home Assistant Voice PE) as a screenless entry point | Voice is still processed locally |
 
-## 10. 风险与限制
+## 10. Risks and limitations
 
-| 风险 | 影响 | 对策 |
+| Risk | Impact | Mitigation |
 |---|---|---|
-| 小模型事实错误 | 孩子学到错的 | 知识库优先;未命中标注猜想;周报列出未命中问题供家长补库 |
-| 守卫模型只拦"有害",拦不了"不适龄" | 内容不合适 | 叠加家长主题范围与黑名单、敏感话题固定路径、限期日志 |
-| 隐私关卡被绕过 | 个人信息外发 | 三道关、只删不加、规则兜底;对抗测试集持续扩充;家长可见每条搜索词 |
-| 家长成为系统管理员 | 维护负担 | launchd 自愈、备份脚本、故障测试(阶段 7);Telegram 警报 |
-| 16GB 内存上限 | 无法换更大模型 | 质量靠资料;必要时升级到 64GB 机器 |
-| 语音识别对孩子口音 | 识别率下降 | 阶段 0 待做项:录 30 至 50 句真实提问实测,保留按住说话兜底 |
+| Small-model factual errors | The child learns wrong things | Knowledge base first; labeled guesses on a miss; the weekly report lists misses for the parent to fill the library |
+| The guard model only blocks "harmful", not "age-inappropriate" | Unsuitable content | Layer the parent topic range and blocklist, the fixed sensitive-topic path, time-limited logs |
+| Privacy gate bypassed | Personal information sent out | Three checks, delete-only, rule backstop; the adversarial test set keeps growing; the parent can see every search term |
+| The parent becomes the system administrator | Maintenance burden | launchd self-healing, backup script, failure tests (Stage 7); Telegram alerts |
+| 16GB memory ceiling | Cannot use a larger model | Quality comes from material; upgrade to a 64GB machine if needed |
+| Speech recognition on a child's accent | Lower recognition rate | Pending Stage 0 item: record 30 to 50 real questions and measure; keep hold-to-talk as a fallback |
 
-## 11. 伦理与隐私承诺
+## 11. Ethics and privacy commitments
 
-- 不收集真实姓名、生日、学校、地址、家人身份、永久聊天记录、任何心理或情绪字段。
-- 未收藏的会话原文最多保留 7 天;联网搜索词保留 7 天,之后只留按主题的计数。
-- 宠物不假装有感受,不要求保密,不用断签、伤心、内疚催促使用,不暗示能替代家人老师朋友。
-- 不生成对孩子的任何评价;周报只做描述和统计。
-- 所有儿童数据、录音、数据库、密钥不进代码仓库;测试只用虚构儿童档案。
+- Do not collect real name, birthday, school, address, identity of family members, permanent chat history, or any psychological or emotional fields.
+- Transcripts of unsaved sessions are kept at most 7 days; online search terms are kept 7 days, after which only per-topic counts remain.
+- The pet does not pretend to have feelings, does not ask for secrecy, does not use broken streaks, sadness or guilt to push usage, and does not imply it can replace family, teachers or friends.
+- Never produce any evaluation of the child; the weekly report only describes and counts.
+- All child data, recordings, databases and keys stay out of the code repository; tests use fictional child profiles only.
 
-## 12. 复现方法
+## 12. How to reproduce
 
 ```bash
-bash setup_mac_mini.sh                 # 安装依赖、拉取模型、基线测试(Tailscale 需手动安装)
-uv sync                                # Python 环境
-uv run python scripts/convert_kokoro.py # 转换 Kokoro v1.1-zh 权重
-uv run pytest                          # 161 项测试
-uv run pet --text                      # 命令行打字对话;uv run pet 用麦克风
-uv run pet-server                      # iPad 网页服务;tailscale serve --bg 8730 提供 HTTPS
-uv run python evals/latency_eval.py    # 开口延迟
-uv run python evals/privacy_eval.py    # 隐私关卡实测
+bash setup_mac_mini.sh                 # install dependencies, pull models, baseline test (Tailscale must be installed manually)
+uv sync                                # Python environment
+uv run python scripts/convert_kokoro.py # convert Kokoro v1.1-zh weights
+uv run pytest                          # 203 tests
+uv run pet --text                      # chat by typing in the terminal; uv run pet uses the microphone
+uv run pet-server                      # iPad web service; tailscale serve --bg 8730 provides HTTPS
+uv run python evals/latency_eval.py    # time to speak
+uv run python evals/privacy_eval.py    # privacy gate measurement
 ```
 
-硬件:Mac mini M4,16GB 统一内存。软件:macOS,Ollama 0.40,Python 3.12,uv,mlx-audio 0.6。
+Hardware: Mac mini M4, 16GB unified memory. Software: macOS, Ollama 0.40, Python 3.12, uv, mlx-audio 0.6.
 
 ---
 
-相关文档:[CLAUDE.md](../CLAUDE.md)(规则),[DECISIONS.md](DECISIONS.md)(决策理由与修订),[evals/results/](../evals/results/)(实测数据)。
+Related documents: [CLAUDE.md](../CLAUDE.md) (rules), [DECISIONS.md](DECISIONS.md) (reasons and revisions), [evals/results/](../evals/results/) (measured data).

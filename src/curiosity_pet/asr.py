@@ -1,4 +1,4 @@
-"""语音识别:Qwen3-ASR-0.6B 4-bit(mlx-audio),每句自动判定语言。"""
+"""Speech recognition: Qwen3-ASR-0.6B 4-bit (mlx-audio), detecting the language of each utterance automatically."""
 
 import numpy as np
 
@@ -13,7 +13,7 @@ class ASR:
         self.model = load(model)
 
     def transcribe(self, audio: np.ndarray) -> tuple[str, str | None]:
-        """输入 16kHz float32 单声道,返回(文字, zh/en/None)。"""
+        """Takes 16 kHz float32 mono audio, returns (text, zh/en/None)."""
         result = self.model.generate(audio.astype(np.float32))
         label = result.language
         if isinstance(label, list):

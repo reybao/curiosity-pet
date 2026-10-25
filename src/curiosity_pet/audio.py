@@ -1,4 +1,4 @@
-"""放音:后台线程按顺序播放,合成下一句时上一句照常在播。"""
+"""Playback: a background thread plays in order, so the previous sentence keeps playing while the next is synthesized."""
 
 import queue
 import threading
@@ -8,9 +8,9 @@ import numpy as np
 
 
 def thinking_cue(sample_rate: int = 24000) -> np.ndarray:
-    """VAD 判定说完后立即播放的本地提示音:短促的"喵呜",约 0.35 秒,与 iPad 端 playCue 相同思路。
+    """Local cue sound played right after the VAD decides the child is done: a short "meow", about 0.35 s, same idea as playCue on the iPad side.
 
-    音高 520 -> 820 -> 600 Hz,用几个泛音近似锯齿波,不用任何录音素材。
+    Pitch 520 -> 820 -> 600 Hz, approximating a sawtooth wave with a few harmonics; no recorded material is used.
     """
     n = int(0.35 * sample_rate)
     t = np.arange(n) / sample_rate
@@ -47,6 +47,6 @@ class Player:
                     sd.play(audio, self.sr)
                     sd.wait()
                 elif len(audio):
-                    time.sleep(0)  # 不放音时不占用时长,只保留回调顺序
+                    time.sleep(0)  # When not playing, take no time; only preserve callback order
             finally:
                 self.q.task_done()

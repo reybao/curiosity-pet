@@ -1,10 +1,10 @@
-"""主模型常驻内存是否随请求增长,以及不同引擎和 KV 缓存设置下的速度。
+"""Does the main model's resident memory grow with requests, and how fast is it under different engines and KV cache settings.
 
-模拟真实使用:每道题先单独问,再追问"再简单一点"(带历史),共 --requests 次请求。
-每 10 次记录一次 Ollama 报告的模型占用(/api/ps)和系统交换区用量。
-同时检查回答语言是否正确,防止量化影响质量。问题均为虚构示例。
+Simulates real use: each question is asked alone, then followed up with "再简单一点" (with history), for --requests requests in total.
+Every 10 requests, records the model memory reported by Ollama (/api/ps) and system swap usage.
+Also checks that the answer language is correct, to catch quality loss from quantization. Questions are fictional examples.
 
-用法(先用临时 ollama serve 起一个端口,见 evals/results 里的说明):
+Usage (first start a temporary ollama serve on its own port, see the notes in evals/results):
     uv run python evals/memory_eval.py --url http://127.0.0.1:11435 --model pet-chat --label A
 """
 
@@ -84,7 +84,7 @@ def main():
     ap.add_argument("--json")
     args = ap.parse_args()
 
-    chat(args.url, args.model, [{"role": "user", "content": "你好"}])  # 加载并预热
+    chat(args.url, args.model, [{"role": "user", "content": "你好"}])  # load and warm up
     samples = [{"n": 0, "size_gb": ps_size(args.url, args.model), "swap_gb": swap_used_gb()}]
     rows = []
     i = 0
@@ -111,11 +111,11 @@ def main():
     med = lambda k: statistics.median(r[k] for r in rows)  # noqa: E731
     sizes = " -> ".join(f"{s['size_gb']:.1f}" for s in samples)
     print(f"[{args.label}] {args.model} @ {args.url}")
-    print(f"  内存(GB,每 10 次): {sizes}")
-    print(f"  交换区(GB): {samples[0]['swap_gb']:.1f} -> {samples[-1]['swap_gb']:.1f}")
+    print(f"  memory (GB, every 10 requests): {sizes}")
+    print(f"  swap (GB): {samples[0]['swap_gb']:.1f} -> {samples[-1]['swap_gb']:.1f}")
     print(
-        f"  首字 {med('first_token_s'):.2f}s | 第一块 {med('first_chunk_s'):.2f}s | "
-        f"生成 {med('gen_tok_s'):.1f} tok/s | 语言正确 {sum(r['lang_ok'] for r in rows)}/{len(rows)}"
+        f"  first token {med('first_token_s'):.2f}s | first chunk {med('first_chunk_s'):.2f}s | "
+        f"generation {med('gen_tok_s'):.1f} tok/s | correct language {sum(r['lang_ok'] for r in rows)}/{len(rows)}"
     )
     if args.json:
         with open(args.json, "w", encoding="utf-8") as f:

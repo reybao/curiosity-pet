@@ -1,11 +1,11 @@
-// 麦克风采集:把设备采样率(通常 48kHz)降到 16kHz,攒够 512 个采样发一帧 PCM16。
-// 降采样前先做简单的盒式低通(取区间平均),足够语音识别用。
+// Microphone capture: downsample the device rate (usually 48kHz) to 16kHz and send a PCM16 frame once 512 samples have accumulated.
+// A simple box low-pass filter (interval average) runs before downsampling, which is enough for speech recognition.
 class MicProcessor extends AudioWorkletProcessor {
   constructor() {
     super();
     this.ratio = sampleRate / 16000;
-    this.pos = 0;        // 下一个输出采样在输入流中的位置
-    this.acc = 0;        // 当前区间的累加
+    this.pos = 0;        // position of the next output sample in the input stream
+    this.acc = 0;        // running sum of the current interval
     this.count = 0;
     this.out = new Int16Array(512);
     this.n = 0;

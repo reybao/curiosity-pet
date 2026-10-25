@@ -1,4 +1,4 @@
-# 对照:默认 nvfp4 版,走 MLX 引擎(已弃用,仅用于 engine_matrix.sh 复现内存对比)
+# Control: default nvfp4 build on the MLX engine (deprecated, kept only to reproduce the memory comparison in engine_matrix.sh)
 FROM qwen3.5:4b
 PARAMETER num_ctx 8192
 PARAMETER temperature 0.6

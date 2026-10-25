@@ -1,7 +1,7 @@
-"""主模型调用:Ollama 原生 /api/chat,流式文本,think=false。
+"""Main model call: native Ollama /api/chat, streaming text, think=false.
 
-只允许本机地址。连不上本地模型时抛 PetUnavailable,由上层显示并朗读固定提示,
-不回退到任何外部服务(硬性约束第 1 条)。
+Only local addresses are allowed. If the local model is unreachable, raise PetUnavailable so the caller shows and reads aloud a fixed notice,
+and never falls back to any external service (hard constraint 1).
 """
 
 import json
@@ -31,12 +31,12 @@ def stream_chat(
     timeout: float = 60,
 ) -> Iterator[str]:
     if urlparse(base_url).hostname not in LOCAL_HOSTS:
-        raise ValueError(f"只允许本机模型服务: {base_url}")
+        raise ValueError(f"Only a local model service is allowed: {base_url}")
     body = {"model": model, "messages": messages, "stream": True, "think": False}
     try:
         with httpx.stream("POST", f"{base_url}/api/chat", json=body, timeout=timeout) as resp:
             if resp.status_code != 200:
-                raise PetUnavailable(f"Ollama 返回 {resp.status_code}")
+                raise PetUnavailable(f"Ollama returned {resp.status_code}")
             for line in resp.iter_lines():
                 if not line:
                     continue

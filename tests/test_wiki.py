@@ -1,4 +1,4 @@
-"""维基百科查询:只连维基百科,只带搜索词,失败不抛错。"""
+"""Wikipedia lookup: connects only to Wikipedia, sends only the search terms, and does not raise on failure."""
 
 import httpx
 import pytest
@@ -42,11 +42,11 @@ def test_english_tries_simple_wikipedia_first_then_english():
     def handler(req):
         hosts.append(req.url.host)
         if req.url.host == "simple.wikipedia.org":
-            return httpx.Response(200, json={"batchcomplete": True})  # 没找到
+            return httpx.Response(200, json={"batchcomplete": True})  # not found
         return httpx.Response(200, json=page_json("Goku", "Goku is the main character of Dragon Ball."))
 
     r = wiki.search("Goku Dragon Ball", "en", client=make_client(handler))
-    # 每个站点先全文搜索,再按条目名直接取;Simple English 都没有才查英文维基
+    # Each site first does a full-text search, then fetches directly by title; English Wikipedia is queried only if Simple English has neither
     assert hosts == ["simple.wikipedia.org"] * 2 + ["en.wikipedia.org"] * 2
     assert r.title == "Goku"
 
@@ -61,7 +61,7 @@ def test_request_carries_no_cookies_and_only_the_query():
     wiki.search("恐龙 灭绝", "zh", client=make_client(handler))
     for req in seen:
         assert "cookie" not in {k.lower() for k in req.headers}
-    # 参数里除了固定的接口参数,唯一的自由文本就是搜索词(全文搜索)或搜索词里的词(按条目名取)
+    # Besides the fixed API parameters, the only free text in the params is the search terms (full-text search) or words from them (fetch by title)
     free = [{k: v for k, v in req.url.params.items() if k not in wiki.FIXED_PARAM_KEYS} for req in seen]
     assert free == [{"gsrsearch": "恐龙 灭绝"}, {"titles": "恐龙|灭绝"}]
 
@@ -92,7 +92,7 @@ def test_long_extract_is_trimmed():
 
 
 def test_no_contact_means_no_network():
-    # 没给联系方式时不发任何请求
+    # No request is sent when no contact is given
     assert wiki.search("恐龙", "zh", contact=None) is None
 
 

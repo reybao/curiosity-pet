@@ -1,13 +1,13 @@
-"""送 TTS 前的文字清理:去掉 emoji 和 Markdown 符号。"""
+"""Text cleanup before TTS: strip emoji and Markdown symbols."""
 
 import re
 
 EMOJI = re.compile(
     "["
-    "\U0001f000-\U0001faff"  # 各类 emoji、符号、表情
-    "☀-➿"  # 杂项符号与装饰符号(☀ ☄ ✨ 等)
+    "\U0001f000-\U0001faff"  # assorted emoji, symbols, emoticons
+    "☀-➿"  # miscellaneous and dingbat symbols (☀ ☄ ✨ etc.)
     "⬀-⯿"
-    "️‍"  # 变体选择符与零宽连接符
+    "️‍"  # variation selector and zero-width joiner
     "]+"
 )
 MARKDOWN_INLINE = re.compile(r"(\*\*|__|\*|`|~~)")
@@ -22,15 +22,32 @@ def clean_for_speech(text: str) -> str:
     return text.strip()
 
 
-# 猫咪口癖:一次回答只留第一个"喵"。4B 模型不太遵守"最多一个"的要求(实测 13/36 次回答喵了不止一次),由程序保证。
-MEOW = re.compile(r"[,，]?\s*(喵+|\bmeow\b)[~～]?(?=[\s。.!！?？,，]|$)", re.IGNORECASE)
+# Cat verbal tic: keep only the first "meow" per answer. The 4B model does not reliably obey "at most one" (measured: 13 of 36 answers meowed more than once), so code enforces it.
+def sound_pattern(sounds) -> re.Pattern:
+    """One regex matching any of the pet's catchphrases ("喵", "meow", or a skin's own), with optional trailing ~ ."""
+    alts = []
+    for s in sounds:
+        if re.search(r"[\u4e00-\u9fff]", s):
+            alts.append(f"(?:{re.escape(s)})+")
+        else:
+            alts.append(rf"\b{re.escape(s)}\b")
+    return re.compile(r"[,，]?\s*(" + "|".join(alts) + r")[~～]?(?=[\s。.!！?？,，]|$)", re.IGNORECASE)
+
+
+DEFAULT_SOUNDS = ("喵", "meow")
+MEOW = sound_pattern(DEFAULT_SOUNDS)
 
 
 class MeowLimiter:
-    """逐句调用;整轮回答里只保留第一个喵。"""
+    """Call per sentence; keeps only the first catchphrase of the whole answer."""
 
-    def __init__(self):
+    def __init__(self, sounds=None):
         self.used = False
+        if sounds is None:
+            from curiosity_pet import config
+
+            sounds = set(DEFAULT_SOUNDS) | set(config.PERSONA["sound"].values())
+        self.pattern = sound_pattern(sorted(sounds, key=len, reverse=True))
 
     def __call__(self, sentence: str) -> str:
         def keep_first(m):
@@ -39,8 +56,8 @@ class MeowLimiter:
             self.used = True
             return m.group(0)
 
-        out = MEOW.sub(keep_first, sentence)
-        # 删掉喵后可能留下孤立的标点或空格,比如英文的 "Meow." 单独成句
+        out = self.pattern.sub(keep_first, sentence)
+        # Removing the meow can leave stray punctuation or spaces, e.g. an English "Meow." standing alone as a sentence
         out = re.sub(r"^\s*[。.!！,，]\s*", "", out)
         out = re.sub(r"\s+([。.!！?？,，])", r"\1", out)
         return re.sub(r"\s{2,}", " ", out).strip()

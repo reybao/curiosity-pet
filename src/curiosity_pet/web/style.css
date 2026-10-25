@@ -1,19 +1,21 @@
-/* 只用系统字体,不加载任何外部资源 */
+/* System fonts only; no external resources are loaded */
 :root {
   --bg: #fdf6ec;
   --ink: #3b3530;
   --ink-soft: #8a7f75;
-  --fur: #8d9cb0;        /* 英短蓝猫的灰蓝色 */
-  --fur-dark: #75859a;
-  --fur-light: #b4c1d0;
-  --ear-inner: #c9a7b0;
-  --eye: #e8a33c;        /* 橙铜色眼睛 */
-  --pupil: #2f2a26;
-  --nose: #8a6e78;
+  --fur: #8a9bb3;        /* British Shorthair blue-grey */
+  --fur-hi: #b7c4d4;     /* highlight for the radial fur gradient */
+  --fur-dark: #70819a;
+  --fur-light: #cdd7e2;
+  --ear-inner: #f0b9c4;
+  --eye: #e0892b;        /* copper eyes */
+  --eye-hi: #ffd27a;
+  --pupil: #2b2521;
+  --nose: #d98b95;
   --mouth: #7a4b55;
-  --whisker: #eef2f6;
-  --collar: #e07a5f;
-  --cheek: #f2a9a6;
+  --whisker: #f4f7fa;
+  --collar: #f26b5b;
+  --cheek: #f7a6a6;
   --light-idle: #f3d77a;
   --light-listen: #6fcf8e;
   --light-think: #b59cf0;
@@ -53,7 +55,7 @@ main {
 
 .status { margin: 4px 0 0; font-size: 22px; color: var(--ink-soft); min-height: 1.4em; }
 
-/* min-height: 0 让这一行在网格里可以缩小并滚动,长回答不会盖住按钮 */
+/* min-height: 0 lets this row shrink and scroll within the grid, so a long answer does not cover the buttons */
 .words { overflow-y: auto; min-height: 0; padding: 0 4px; text-align: center; }
 .heard { font-size: 22px; color: var(--ink-soft); margin: 0 0 12px; min-height: 1.3em; }
 .answer { font-size: 32px; line-height: 1.6; margin: 0; }
@@ -64,7 +66,7 @@ main {
 
 .controls { display: flex; gap: 16px; justify-content: center; }
 
-/* 右上角的界面语言切换,小一点,主要给大人用 */
+/* UI language switch in the top right, kept small, mainly for adults */
 .lang-toggle {
   position: fixed;
   top: max(12px, env(safe-area-inset-top));
@@ -81,63 +83,127 @@ main {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-.btn {
-  font: inherit;
-  font-size: 24px;
+/* Skin picker in the top left: the current buddy's face; tap to choose another */
+.skin-toggle {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: 16px;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  padding: 0;
   border: 0;
-  border-radius: 999px;
-  padding: 18px 32px;
-  min-width: 140px;
+  border-radius: 50%;
+  overflow: hidden;
   background: var(--btn);
-  color: var(--btn-ink);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  touch-action: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  touch-action: manipulation;
 }
-.btn:disabled { opacity: 0.4; }
-.btn.ptt.holding { background: var(--light-listen); color: #fff; }
-
-.start {
+.skin-toggle img { width: 100%; height: 100%; object-fit: cover; }
+.skin-toggle[hidden], .skin-sheet[hidden] { display: none; }
+.skin-sheet {
   position: fixed;
   inset: 0;
-  margin: auto;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 0;
-  background: var(--start);
-  color: #fff;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(59, 53, 48, 0.35);
+}
+.sheet {
+  width: 100%;
+  max-width: 640px;
+  padding: 24px;
+  border-radius: 28px;
+  background: var(--bg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+.sheet-title { margin: 0 0 16px; font-size: 22px; color: var(--ink-soft); text-align: center; }
+.skin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+.skin-tile {
   font: inherit;
-  font-size: 36px;
+  font-size: 22px;
+  color: var(--ink);
+  border: 0;
+  border-radius: 22px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  gap: 8px;
+  background: var(--btn);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  touch-action: manipulation;
 }
-.start-icon { font-size: 48px; }
-main:not([data-state="off"]) .start { display: none; }
+.skin-tile img { width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 16px; }
+.skin-tile.active { outline: 4px solid var(--start); }
+.skin-tile:active { transform: scale(0.97); }
+
+/* The one button: tap to start listening, tap again to stop */
+.mic {
+  font: inherit;
+  font-size: 26px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 40px;
+  height: 84px;
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--start);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  touch-action: manipulation;
+  transition: background 0.2s, transform 0.1s;
+}
+.mic:active { transform: scale(0.97); }
+.mic:disabled { opacity: 0.5; }
+.mic-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35);
+}
+[data-state="listening"] .mic, [data-state="thinking"] .mic, [data-state="speaking"] .mic {
+  background: var(--collar);
+}
+[data-state="listening"] .mic-icon { animation: glow 1.4s ease-in-out infinite; }
+[data-state="listening"] .mic-icon, [data-state="thinking"] .mic-icon, [data-state="speaking"] .mic-icon {
+  border-radius: 6px;  /* a square: "stop" */
+}
+
+
+
 
 .debug { display: flex; gap: 8px; justify-content: center; }
 .debug input { font: inherit; font-size: 20px; padding: 10px 14px; border-radius: 12px; border: 1px solid #d8cfc4; width: min(60vw, 480px); -webkit-user-select: text; user-select: text; }
 .debug button { font: inherit; font-size: 20px; border: 0; border-radius: 12px; padding: 10px 18px; background: var(--btn); }
 
-/* ---------- 宠物:英短蓝猫 ---------- */
-.fur { fill: var(--fur); }
-.fur-light { fill: var(--fur-light); }
+/* ---------- The pet: a British Shorthair kitten ---------- */
+.fur { fill: url(#fur-grad); }
+.belly { fill: url(#belly-grad); }
+.muzzle { fill: var(--fur-light); opacity: 0.8; }
 .tail, .paw { fill: var(--fur-dark); }
 .ear-inner { fill: var(--ear-inner); }
-.iris { fill: var(--eye); }
+.tuft { fill: none; stroke: var(--fur-dark); stroke-width: 3; stroke-linecap: round; }
+.shadow { fill: rgba(0, 0, 0, 0.08); }
+.iris { fill: url(#iris-grad); }
 .pupil { fill: var(--pupil); }
 .glint { fill: #fff; }
 .cheek { fill: var(--cheek); opacity: 0.55; }
 .nose { fill: var(--nose); }
-.mouth.smile { fill: none; stroke: var(--pupil); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.mouth.smile { fill: none; stroke: var(--pupil); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .mouth.talk { fill: var(--mouth); display: none; }
-.whiskers line { stroke: var(--whisker); stroke-width: 2.5; stroke-linecap: round; }
+.whiskers line { stroke: var(--whisker); stroke-width: 2.2; stroke-linecap: round; opacity: 0.9; }
 .collar { fill: var(--collar); }
-/* 项圈小灯:程序的标记,随状态变色 */
-.tag-light { fill: var(--light-idle); stroke: #fff; stroke-width: 2.5; transition: fill 0.3s; }
+/* Collar light: the "program" marker, changes color with state */
+.tag-ring { fill: #fff; }
+.tag-light { fill: var(--light-idle); transition: fill 0.3s; }
 .sound-rings path { fill: none; stroke: var(--light-listen); stroke-width: 5; stroke-linecap: round; opacity: 0; }
 .thinking-dots circle { fill: var(--light-think); opacity: 0; }
 
@@ -151,15 +217,15 @@ main:not([data-state="off"]) .start { display: none; }
 .whiskers.left { transform-origin: 100% 50%; }
 .whiskers.right { transform-origin: 0% 50%; }
 
-/* 待机:慢慢呼吸、偶尔眨眼、尾巴轻摇 */
+/* Idle: slow breathing, occasional blink, tail sway */
 .body { animation: breathe 4s ease-in-out infinite; }
 .eye { animation: blink 5s infinite; }
 .tail { animation: sway 3s ease-in-out infinite; }
 @keyframes breathe { 50% { transform: translateY(2px) scale(1.01, 0.99); } }
-@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.08); } }
 @keyframes sway { 50% { transform: rotate(-8deg); } }
 
-/* 在听:耳朵竖起来,项圈绿灯,两侧声波 */
+/* Listening: ears perk up, green collar light, sound rings */
 [data-state="listening"] .tag-light { fill: var(--light-listen); animation: glow 1.4s ease-in-out infinite; }
 [data-state="listening"] .ear { transform: translateY(-5px) scaleY(1.08); transition: transform 0.25s; }
 [data-state="listening"] .sound-rings path { animation: ring 1.6s ease-out infinite; }
@@ -167,17 +233,17 @@ main:not([data-state="off"]) .start { display: none; }
 @keyframes glow { 50% { opacity: 0.45; } }
 @keyframes ring { 0% { opacity: 0; transform: scale(0.85); } 40% { opacity: 0.9; } 100% { opacity: 0; transform: scale(1.1); } }
 
-/* 在想:歪头,眼睛往上看,头顶冒点点,尾巴摇得快一点 */
+/* Thinking: head tilt, eyes look up, dots above the head, faster tail */
 [data-state="thinking"] .tag-light { fill: var(--light-think); animation: glow 0.8s ease-in-out infinite; }
 [data-state="thinking"] .head { transform: rotate(-7deg); transition: transform 0.3s; }
-[data-state="thinking"] .pupil, [data-state="thinking"] .glint { transform: translate(3px, -5px); transition: transform 0.3s; }
+[data-state="thinking"] .pupil, [data-state="thinking"] .glint { transform: translate(3px, -6px); transition: transform 0.3s; }
 [data-state="thinking"] .tail { animation-duration: 1.2s; }
 [data-state="thinking"] .thinking-dots circle { animation: dot 1.2s ease-in-out infinite; }
 [data-state="thinking"] .thinking-dots circle:nth-child(2) { animation-delay: 0.2s; }
 [data-state="thinking"] .thinking-dots circle:nth-child(3) { animation-delay: 0.4s; }
 @keyframes dot { 0%, 100% { opacity: 0.3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-8px); } }
 
-/* 在说:嘴巴一张一合,胡须抖动,身体轻轻弹 */
+/* Speaking: mouth opens and closes, whiskers twitch, gentle bounce */
 [data-state="speaking"] .tag-light { fill: var(--light-speak); }
 [data-state="speaking"] .mouth.smile { display: none; }
 [data-state="speaking"] .mouth.talk { display: block; animation: talk 0.28s ease-in-out infinite alternate; }
@@ -187,8 +253,30 @@ main:not([data-state="off"]) .start { display: none; }
 @keyframes twitch { to { transform: rotate(4deg); } }
 @keyframes bounce { 50% { transform: translateY(-3px); } }
 
-/* 未开始或连接中:灰一点 */
+/* Not started or connecting: greyed out */
 [data-state="off"] .pet, [data-state="connecting"] .pet { filter: saturate(0.4); }
+
+/* ---------- Private skin: a picture per state plus the program badge ---------- */
+.skin-wrap { position: relative; width: min(46vh, 70vw); animation: breathe 4s ease-in-out infinite; }
+.skin-img { display: block; width: 100%; height: auto; -webkit-user-drag: none; }
+.badge {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 11%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--light-idle);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+[data-state="listening"] .badge { background: var(--light-listen); animation: glow 1.4s ease-in-out infinite; }
+[data-state="thinking"] .badge { background: var(--light-think); animation: glow 0.8s ease-in-out infinite; }
+[data-state="speaking"] .badge { background: var(--light-speak); }
+[data-state="thinking"] .skin-wrap { animation: float 1.6s ease-in-out infinite; }
+[data-state="speaking"] .skin-wrap { animation: bounce 0.6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-6px) rotate(-3deg); } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }

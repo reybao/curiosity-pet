@@ -1,12 +1,12 @@
-"""语言判定:按文字占比决定回答语言。
+"""Language detection: pick the answer language by the share of text in each language.
 
-中文按汉字个数计,英文按单词个数计;数字、标点不计。打平或无字时用 fallback
-(通常是 ASR 给出的语言标签)。
+Chinese is counted by characters, English by words; digits and punctuation are ignored. On a tie or when there is no text, use fallback
+(usually the language label from ASR).
 """
 
 import re
 
-CJK_CHAR = re.compile(r"[㐀-䶿一-鿿豈-﫿]")
+CJK_CHAR = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 EN_WORD = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)?")
 
 
@@ -21,7 +21,7 @@ def detect_language(text: str, fallback: str = "zh") -> str:
 
 
 def from_asr_label(label: str | None) -> str | None:
-    """把 Qwen3-ASR 的语言名(如 'Chinese'、'English')转成 zh/en。"""
+    """Convert a Qwen3-ASR language name (e.g. 'Chinese', 'English') to zh/en."""
     if not label:
         return None
     label = label.lower()

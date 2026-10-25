@@ -1,24 +1,30 @@
-// 好奇心伙伴 iPad 页面:麦克风 -> WebSocket -> 服务端;服务端逐句回传文字和音频,这里播放并高亮。
-// 不加载任何外部资源。协议见 server.py。
+// Curiosity Pet iPad page: microphone -> WebSocket -> server; the server sends back text and audio sentence by sentence, and this page plays and highlights them.
+// Loads no external resources. See server.py for the protocol.
+//
+// One button does everything: tap to start (microphone permission, connect, listen), tap again to stop
+// (the server cancels any running answer, forgets the conversation and goes idle). The VAD decides when the
+// child has finished speaking, so there is no push-to-talk.
 "use strict";
 
 const TTS_RATE = 24000;
 
-// 界面文字(中 / EN)。只管按钮和提示;宠物回答的语言仍跟随孩子提问的语言
+// UI strings (zh / EN). Covers buttons and prompts only; the pet's answer language still follows the language of the child's question
 const STRINGS = {
   zh: {
     status: { off: "点一下开始", connecting: "正在连接...", listening: "我在听,说吧", thinking: "让我想一想", speaking: "", ended: "下次见!" },
-    start: "开始", ptt: "按住说话", end: "结束", ask: "打字提问", send: "发送",
+    start: "开始", stop: "停止", ask: "打字提问", send: "发送",
     micDenied: "需要麦克风权限:请让大人在设置里打开",
-    source: (t) => `资料来源:维基百科《${t}》`,
+    source: (t) => `资料来源:${t}`,
     toggle: "EN", toggleLabel: "Switch to English",
+    chooseSkin: "选一个伙伴",
   },
   en: {
     status: { off: "Tap to start", connecting: "Connecting...", listening: "I'm listening!", thinking: "Let me think", speaking: "", ended: "See you next time!" },
-    start: "Start", ptt: "Hold to talk", end: "Done", ask: "Type a question", send: "Send",
+    start: "Start", stop: "Stop", ask: "Type a question", send: "Send",
     micDenied: "Microphone access is needed: ask a grown-up to turn it on in Settings",
-    source: (t) => `Source: Wikipedia, "${t}"`,
+    source: (t) => `Source: ${t}`,
     toggle: "中", toggleLabel: "切换到中文",
+    chooseSkin: "Choose a buddy",
   },
 };
 
@@ -26,7 +32,7 @@ function savedLang() {
   try {
     const v = localStorage.getItem("uiLang");
     if (v === "zh" || v === "en") return v;
-  } catch (e) { /* 隐私模式等情况下存储不可用,用默认值 */ }
+  } catch (e) { /* storage is unavailable in private mode etc.; use the default */ }
   return (navigator.language || "zh").toLowerCase().startsWith("zh") ? "zh" : "en";
 }
 let uiLang = savedLang();
@@ -36,31 +42,78 @@ const app = document.getElementById("app");
 const statusEl = document.getElementById("status");
 const heardEl = document.getElementById("heard");
 const answerEl = document.getElementById("answer");
-const startBtn = document.getElementById("start");
-const pttBtn = document.getElementById("ptt");
-const endBtn = document.getElementById("end");
+const micBtn = document.getElementById("mic");
+const micLabel = micBtn.querySelector(".mic-label");
 
-let ctx = null;          // AudioContext,必须在点击里创建(iOS 限制)
+let ctx = null;          // AudioContext, must be created inside a tap (iOS restriction)
 let ws = null;
-let state = "off";
-let holding = false;     // 按住说话中
-let playEnd = 0;         // 已排队音频的结束时刻
-let pending = 0;         // 还没播完的句子数
-let turnDone = false;    // 服务端这一轮已发完
-const sources = new Set(); // 正在播或排队的音频,结束时可以停掉
+let state = "off";       // off | connecting | listening | thinking | speaking | ended
+let started = false;     // microphone and socket are set up
+let playEnd = 0;         // end time of the audio queued so far
+let pending = 0;         // number of sentences not yet finished playing
+let turnDone = false;    // server has finished sending this turn
+const sources = new Set(); // audio playing or queued, so it can be stopped at the end
 let heardLang = "zh";
+
+const ACTIVE = new Set(["listening", "thinking", "speaking"]);
 
 function setState(s) {
   state = s;
   app.dataset.state = s;
+  updateSkin(s);
   statusEl.textContent = T().status[s] ?? "";
-  pttBtn.disabled = !(s === "listening");
-  endBtn.disabled = s === "off" || s === "connecting";
+  micBtn.disabled = s === "connecting";
+  micLabel.textContent = ACTIVE.has(s) ? T().stop : T().start;
 }
 
-// VAD 判定说完后立即在本地播放提示音,不等服务端。
-// 声音是本机合成的短促"喵呜":锯齿波经带通滤波,音高先升后降,约 0.35 秒,不用任何录音素材
+// Play a cue sound locally as soon as the VAD decides the child has finished, without waiting for the server.
+// Each buddy has its own: the kitten meows (synthesized here), a skin plays /cue.wav (its own recording, or its
+// catchphrase in its voice, e.g. Goku "嘿!", Pikachu "皮卡!"), decoded once so it starts instantly.
+let cueUrl = null;   // null: the built-in kitten
+let cueBuf = null;   // the skin's decoded cue
+
+async function loadCue() {
+  cueBuf = null;
+  if (!cueUrl || !ctx) return;
+  try {
+    const r = await fetch(`${cueUrl}?lang=${uiLang}`, { cache: "no-cache" });
+    if (r.ok) cueBuf = await ctx.decodeAudioData(await r.arrayBuffer());
+  } catch (e) { cueBuf = null; /* fall back to the chime */ }
+}
+
 function playCue() {
+  if (!ctx) return;
+  if (cueBuf) {
+    const s = ctx.createBufferSource();
+    s.buffer = cueBuf;
+    s.connect(ctx.destination);
+    s.start();
+  } else if (cueUrl) {
+    playChime();  // a skin whose cue could not be loaded: a neutral "ding", never a meow
+  } else {
+    playMeow();
+  }
+}
+
+// Two soft sine notes
+function playChime() {
+  const t = ctx.currentTime;
+  [[880, 0], [1320, 0.12]].forEach(([f, d]) => {
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.type = "sine";
+    o.frequency.value = f;
+    g.gain.setValueAtTime(0, t + d);
+    g.gain.linearRampToValueAtTime(0.2, t + d + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.001, t + d + 0.3);
+    o.connect(g).connect(ctx.destination);
+    o.start(t + d);
+    o.stop(t + d + 0.32);
+  });
+}
+
+// The kitten's "meow": a sawtooth wave through a band-pass filter, pitch rising then falling, about 0.35 seconds, with no recorded samples
+function playMeow() {
   const t = ctx.currentTime;
   const o = ctx.createOscillator();
   const bp = ctx.createBiquadFilter();
@@ -87,7 +140,7 @@ function addSentence(id, text) {
   const span = document.createElement("span");
   span.id = "s" + id;
   span.className = "later";
-  // 英文句子之间要有空格,中文不用
+  // English sentences need a space between them; Chinese does not
   span.textContent = /[A-Za-z.!?,]$/.test(text) ? text + " " : text;
   answerEl.appendChild(span);
 }
@@ -109,7 +162,7 @@ function playSentence(buf) {
   pending++;
   sources.add(src);
 
-  // 开始播放时高亮这一句
+  // Highlight this sentence when playback starts
   setTimeout(() => {
     answerEl.querySelectorAll("span.now").forEach((s) => (s.className = ""));
     const span = document.getElementById("s" + id);
@@ -121,6 +174,13 @@ function playSentence(buf) {
     pending--;
     maybeFinished();
   };
+}
+
+function stopAudio() {
+  sources.forEach((s) => { try { s.stop(); } catch (e) { /* already finished */ } });
+  sources.clear();
+  pending = 0;
+  playEnd = 0;
 }
 
 function maybeFinished() {
@@ -136,7 +196,7 @@ function send(obj) {
 
 function onMessage(ev) {
   if (ev.data instanceof ArrayBuffer) {
-    playSentence(ev.data);
+    if (ACTIVE.has(state)) playSentence(ev.data);
     return;
   }
   const msg = JSON.parse(ev.data);
@@ -148,14 +208,14 @@ function onMessage(ev) {
         answerEl.textContent = "";
         turnDone = false;
       }
-      setState(msg.state);
+      setState(msg.state === "idle" ? "ended" : msg.state);
       break;
     case "heard":
       heardEl.textContent = msg.text;
       heardLang = msg.lang;
       break;
     case "sentence":
-      addSentence(msg.id, msg.text);
+      if (ACTIVE.has(state)) addSentence(msg.id, msg.text);
       break;
     case "done":
       if (msg.source) {
@@ -168,10 +228,7 @@ function onMessage(ev) {
       maybeFinished();
       break;
     case "session_ended":
-      sources.forEach((s) => s.stop());
-      sources.clear();
-      pending = 0;
-      playEnd = 0;
+      stopAudio();
       heardEl.textContent = "";
       answerEl.textContent = "";
       setState("ended");
@@ -186,65 +243,101 @@ function connect() {
   ws.binaryType = "arraybuffer";
   ws.onmessage = onMessage;
   ws.onclose = () => {
+    stopAudio();
     if (state !== "off") setTimeout(connect, 2000);
     setState("connecting");
   };
 }
 
-async function start() {
-  ctx = new AudioContext({ latencyHint: "interactive" });
-  await ctx.resume();
-  let stream;
+// Microphone and audio output. iOS suspends the AudioContext and ends the microphone track when the iPad
+// locks or the page goes to the background; before this, a later "start" left the pet deaf until the page
+// was reopened. ensureAudio() checks both and rebuilds what is gone, on every start and when the page returns.
+let stream = null;
+let micSource = null;
+let micNode = null;
+let workletReady = false;
+
+function micAlive() {
+  return !!stream && stream.getAudioTracks().some((t) => t.readyState === "live" && t.enabled);
+}
+
+async function openMic() {
+  if (micSource) { try { micSource.disconnect(); } catch (e) { /* already gone */ } }
+  if (stream) stream.getTracks().forEach((t) => t.stop());
+  stream = await navigator.mediaDevices.getUserMedia({
+    audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
+  });
+  if (!workletReady) {
+    await ctx.audioWorklet.addModule("/static/mic-worklet.js");
+    micNode = new AudioWorkletNode(ctx, "mic-processor");
+    // Send only while listening; not while the pet thinks or speaks (it would hear its own voice), not when stopped
+    micNode.port.onmessage = (e) => {
+      if (state === "listening" && ws && ws.readyState === WebSocket.OPEN) ws.send(e.data);
+    };
+    // The node must be connected to the output to run; attach a muted gain so the microphone sound is not played back
+    const mute = ctx.createGain();
+    mute.gain.value = 0;
+    micNode.connect(mute).connect(ctx.destination);
+    workletReady = true;
+  }
+  micSource = ctx.createMediaStreamSource(stream);
+  micSource.connect(micNode);
+}
+
+async function ensureAudio() {
+  if (!ctx || ctx.state === "closed") {
+    ctx = new AudioContext({ latencyHint: "interactive" });
+    workletReady = false;
+    micSource = null;
+    loadCue();
+  }
+  if (ctx.state !== "running") {
+    try { await ctx.resume(); } catch (e) { /* resumed on the next tap */ }
+  }
+  if (!micAlive()) await openMic();
+  return ctx.state === "running" && micAlive();
+}
+
+async function setup() {
   try {
-    stream = await navigator.mediaDevices.getUserMedia({
-      audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
-    });
+    await ensureAudio();
   } catch (e) {
-    // 没有麦克风时仍可连接(打字调试),否则提示打开权限
+    // Without a microphone we can still connect (typed debugging); otherwise prompt for permission
     statusEl.textContent = T().micDenied;
-    if (new URLSearchParams(location.search).has("text")) connect();
+    if (new URLSearchParams(location.search).has("text")) { started = true; connect(); }
+    micBtn.disabled = false;
     return;
   }
-  await ctx.audioWorklet.addModule("/static/mic-worklet.js");
-  const mic = ctx.createMediaStreamSource(stream);
-  const node = new AudioWorkletNode(ctx, "mic-processor");
-  // 只在"在听"或按住说话时发送;宠物说话时不发,避免录到自己的声音
-  node.port.onmessage = (e) => {
-    if ((state === "listening" || holding) && ws && ws.readyState === WebSocket.OPEN) ws.send(e.data);
-  };
-  mic.connect(node);
-  // 节点需要连到输出才会运行;接一个静音增益,不会把麦克风声音放出来
-  const mute = ctx.createGain();
-  mute.gain.value = 0;
-  node.connect(mute).connect(ctx.destination);
+  started = true;
   connect();
 }
 
-startBtn.addEventListener("click", () => {
-  startBtn.disabled = true;
-  start();
+micBtn.addEventListener("click", async () => {
+  if (!started) {
+    micBtn.disabled = true;
+    setup();
+  } else if (ACTIVE.has(state)) {
+    send({ type: "end_session" });
+  } else if (state === "ended") {
+    heardEl.textContent = "";
+    answerEl.textContent = "";
+    try {
+      await ensureAudio();
+    } catch (e) {
+      statusEl.textContent = T().micDenied;
+      return;
+    }
+    send({ type: "start" });
+  }
 });
 
-pttBtn.addEventListener("pointerdown", (e) => {
-  e.preventDefault();
-  if (state !== "listening") return;
-  holding = true;
-  pttBtn.classList.add("holding");
-  send({ type: "ptt_start" });
+// Coming back from the lock screen or another app: the iPad may have stopped the microphone; reopen it
+// (no permission prompt for an already allowed site) so the next tap just works
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && started) ensureAudio().catch(() => {});
 });
-const release = () => {
-  if (!holding) return;
-  holding = false;
-  pttBtn.classList.remove("holding");
-  send({ type: "ptt_end" });
-};
-pttBtn.addEventListener("pointerup", release);
-pttBtn.addEventListener("pointercancel", release);
-pttBtn.addEventListener("pointerleave", release);
 
-endBtn.addEventListener("click", () => send({ type: "end_session" }));
-
-// 调试:地址加 ?text=1 显示打字框,不用麦克风也能测(Mac mini 没有麦克风)
+// Debugging: add ?text=1 to the URL to show the typing box, so it can be tested without a microphone (the Mac mini has none)
 if (new URLSearchParams(location.search).has("text")) {
   const form = document.createElement("form");
   form.className = "debug";
@@ -261,17 +354,15 @@ if (new URLSearchParams(location.search).has("text")) {
   document.querySelector(".controls").after(form);
 }
 
-// 界面语言切换
+// UI language switch
 const langBtn = document.getElementById("lang");
 function applyLang() {
   const t = T();
   document.documentElement.lang = uiLang;
-  document.querySelector(".start-label").textContent = t.start;
-  pttBtn.textContent = t.ptt;
-  endBtn.textContent = t.end;
   langBtn.textContent = t.toggle;
   langBtn.setAttribute("aria-label", t.toggleLabel);
   statusEl.textContent = t.status[state] ?? "";
+  micLabel.textContent = ACTIVE.has(state) ? t.stop : t.start;
   const q = document.getElementById("q");
   if (q) {
     q.placeholder = t.ask;
@@ -280,12 +371,93 @@ function applyLang() {
 }
 langBtn.addEventListener("click", () => {
   uiLang = uiLang === "zh" ? "en" : "zh";
-  try { localStorage.setItem("uiLang", uiLang); } catch (e) { /* 存不了就只在本次有效 */ }
+  try { localStorage.setItem("uiLang", uiLang); } catch (e) { /* if it cannot be saved, it only applies to this visit */ }
   applyLang();
+  loadCue();  // the cue follows the page language ("嘿!" / "Hey!")
 });
 applyLang();
 
-// "下次见"之后,点宠物重新开始在听
-document.querySelector(".pet").addEventListener("click", () => {
-  if (state === "ended") setState("listening");
-});
+// Private skin: artwork from the Mac's data directory (never in the repo). When /skin.json lists
+// images, the SVG cat is replaced by the picture for the current state, plus a round badge that
+// plays the role of the collar light: the "this is a program" marker, colored by state.
+let skin = null;
+let skinImg = null;
+function updateSkin(s) {
+  if (!skin || !skinImg) return;
+  skinImg.src = skin.images[s] || skin.images.idle;
+}
+fetch("/skin.json", { cache: "no-cache" })
+  .then((r) => (r.ok ? r.json() : { default: true }))
+  .then((m) => {
+    cueUrl = m.cue || null;
+    if (ctx) loadCue();
+    if (m.default || !m.images || !m.images.idle) return;
+    skin = m;
+    const wrap = document.createElement("div");
+    wrap.className = "skin-wrap";
+    skinImg = document.createElement("img");
+    skinImg.className = "skin-img";
+    skinImg.alt = (m.name && m.name[uiLang]) || "";
+    skinImg.draggable = false;
+    const badge = document.createElement("span");
+    badge.className = "badge";
+    badge.setAttribute("aria-hidden", "true");
+    wrap.append(skinImg, badge);
+    const pet = document.querySelector(".pet");
+    pet.style.display = "none";
+    pet.before(wrap);
+    Object.values(m.images).forEach((src) => { new Image().src = src; });  // preload all states
+    updateSkin(state);
+  })
+  .catch(() => {});
+
+// Skin picker: a round button with the current buddy; tap it, pick another, and the page reloads as that buddy.
+// Switching ends a running exploration (the server stops it), like pressing stop.
+const skinBtn = document.getElementById("skin");
+const sheet = document.getElementById("skin-sheet");
+let skinList = null;
+
+function renderSheet() {
+  sheet.querySelector(".sheet-title").textContent = T().chooseSkin;
+  const grid = sheet.querySelector(".skin-grid");
+  grid.textContent = "";
+  for (const s of skinList.skins) {
+    const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = "skin-tile" + (s.id === skinList.active ? " active" : "");
+    const img = document.createElement("img");
+    img.src = s.thumb;
+    img.alt = "";
+    img.draggable = false;
+    const name = document.createElement("span");
+    name.textContent = s.name[uiLang] || s.name.zh;
+    tile.append(img, name);
+    tile.addEventListener("click", () => chooseSkin(s.id));
+    grid.append(tile);
+  }
+}
+
+async function chooseSkin(id) {
+  if (id === skinList.active) { sheet.hidden = true; return; }
+  try {
+    const r = await fetch("/skin", {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }),
+    });
+    if (r.ok) { state = "off"; location.reload(); }
+  } catch (e) { /* offline: keep the current buddy */ }
+}
+
+skinBtn.addEventListener("click", () => { renderSheet(); sheet.hidden = false; });
+sheet.addEventListener("click", (e) => { if (e.target === sheet) sheet.hidden = true; });
+
+fetch("/skins.json", { cache: "no-cache" })
+  .then((r) => (r.ok ? r.json() : null))
+  .then((m) => {
+    if (!m || !Array.isArray(m.skins) || m.skins.length < 2) return;
+    skinList = m;
+    const cur = m.skins.find((s) => s.id === m.active) || m.skins[0];
+    skinBtn.querySelector("img").src = cur.thumb;
+    skinBtn.setAttribute("aria-label", T().chooseSkin);
+    skinBtn.hidden = false;
+  })
+  .catch(() => {});
