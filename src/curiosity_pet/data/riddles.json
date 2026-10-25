@@ -1,0 +1,3381 @@
+{
+ "zh": [
+  {
+   "id": "zh-001",
+   "q": "什么东西越洗越脏?",
+   "a": "水",
+   "accept": [
+    "水",
+    "洗澡水"
+   ],
+   "hint": "想想你洗手的时候,是什么变脏了?"
+  },
+  {
+   "id": "zh-002",
+   "q": "什么东西有四条腿,却从来不会自己走路?",
+   "a": "桌子",
+   "accept": [
+    "桌子",
+    "椅子",
+    "板凳"
+   ],
+   "hint": "吃饭和写作业的时候,你常常会用到它。"
+  },
+  {
+   "id": "zh-003",
+   "q": "什么东西有五个手指,却不是真的手?",
+   "a": "手套",
+   "accept": [
+    "手套",
+    "棉手套"
+   ],
+   "hint": "冬天天气冷的时候,你会把它戴上。"
+  },
+  {
+   "id": "zh-004",
+   "q": "什么东西越用越小,还能把你洗得香香的?",
+   "a": "肥皂",
+   "accept": [
+    "肥皂",
+    "香皂",
+    "香胰子"
+   ],
+   "hint": "洗手的时候,它会搓出很多泡泡。"
+  },
+  {
+   "id": "zh-005",
+   "q": "什么门永远关不上?",
+   "a": "球门",
+   "accept": [
+    "球门",
+    "足球门"
+   ],
+   "hint": "踢足球的时候,大家都想把球踢进去。"
+  },
+  {
+   "id": "zh-006",
+   "q": "什么东西有一只眼睛,却什么也看不见?",
+   "a": "针",
+   "accept": [
+    "针",
+    "缝衣针",
+    "绣花针"
+   ],
+   "hint": "妈妈缝衣服的时候会用到它,线要穿过它的小洞。"
+  },
+  {
+   "id": "zh-007",
+   "q": "什么动物的耳朵长长的,爱吃胡萝卜,跑起来一蹦一跳?",
+   "a": "兔子",
+   "accept": [
+    "兔子",
+    "小白兔",
+    "白兔"
+   ],
+   "hint": "它的尾巴短短的,像一个小棉球。"
+  },
+  {
+   "id": "zh-008",
+   "q": "什么东西你喊它,它就会学你说话,可是你看不到它?",
+   "a": "回声",
+   "accept": [
+    "回声",
+    "回音"
+   ],
+   "hint": "在山谷里或者空空的大房间里喊一声,试试看。"
+  },
+  {
+   "id": "zh-009",
+   "q": "什么东西飞得很高,线却在你手里?",
+   "a": "风筝",
+   "accept": [
+    "风筝",
+    "纸风筝"
+   ],
+   "hint": "春天的时候,大家喜欢到草地上放它。"
+  },
+  {
+   "id": "zh-010",
+   "q": "什么东西外面白白的,里面黄黄的,敲开才能吃?",
+   "a": "鸡蛋",
+   "accept": [
+    "鸡蛋",
+    "蛋",
+    "煮鸡蛋"
+   ],
+   "hint": "早餐的时候,爸爸妈妈常常会给你煮一个。"
+  },
+  {
+   "id": "zh-011",
+   "q": "麻屋子,红帐子,里面住着白胖子,是什么?",
+   "a": "花生",
+   "accept": [
+    "花生",
+    "落花生",
+    "花生米"
+   ],
+   "hint": "它长在土里面,剥开壳就可以吃。"
+  },
+  {
+   "id": "zh-012",
+   "q": "什么水果又圆又脆,有红的也有绿的,天天吃一个对身体好?",
+   "a": "苹果",
+   "accept": [
+    "苹果",
+    "红苹果"
+   ],
+   "hint": "你咬一口的时候,会发出咔嚓的声音。"
+  },
+  {
+   "id": "zh-013",
+   "q": "什么东西晚上出来,有时弯弯像小船,有时圆圆像盘子?",
+   "a": "月亮",
+   "accept": [
+    "月亮",
+    "月球",
+    "月儿"
+   ],
+   "hint": "中秋节的时候,大家会一起抬头看它。"
+  },
+  {
+   "id": "zh-014",
+   "q": "什么东西夜晚挂满天空,像一闪一闪的小眼睛?",
+   "a": "星星",
+   "accept": [
+    "星星",
+    "星",
+    "小星星"
+   ],
+   "hint": "晚上抬头看天空,它们像撒了一地的小钻石。"
+  },
+  {
+   "id": "zh-015",
+   "q": "什么东西没有脚,却一直在跑,最后跑进大海?",
+   "a": "河",
+   "accept": [
+    "河",
+    "小河",
+    "河水",
+    "河流"
+   ],
+   "hint": "它弯弯曲曲,里面有小鱼在游。"
+  },
+  {
+   "id": "zh-016",
+   "q": "什么东西有牙齿,却从来不吃东西?",
+   "a": "梳子",
+   "accept": [
+    "梳子",
+    "木梳"
+   ],
+   "hint": "早上起床后,妈妈用它把你的头发理整齐。"
+  },
+  {
+   "id": "zh-017",
+   "q": "什么东西夏天最受欢迎,放在太阳下就会流眼泪?",
+   "a": "冰棒",
+   "accept": [
+    "冰棒",
+    "冰淇淋",
+    "雪糕",
+    "冰激凌"
+   ],
+   "hint": "它冰冰凉凉,甜甜的,要快点吃。"
+  },
+  {
+   "id": "zh-018",
+   "q": "什么东西专门帮你擦掉写错的字,自己却越用越小?",
+   "a": "橡皮",
+   "accept": [
+    "橡皮",
+    "橡皮擦",
+    "擦子"
+   ],
+   "hint": "它常常躺在你的文具盒里。"
+  },
+  {
+   "id": "zh-019",
+   "q": "什么东西只要你一说话,它就不见了?",
+   "a": "安静",
+   "accept": [
+    "安静",
+    "寂静",
+    "沉默"
+   ],
+   "hint": "图书馆里的人,都希望有很多这个。"
+  },
+  {
+   "id": "zh-020",
+   "q": "什么东西白天挂在天上,又圆又亮,给大地送来温暖?",
+   "a": "太阳",
+   "accept": [
+    "太阳",
+    "日头",
+    "太阳公公"
+   ],
+   "hint": "它每天早上从东边升起来。"
+  },
+  {
+   "id": "zh-021",
+   "q": "什么花不用浇水,只在夜空里开一小会儿,还会砰砰响?",
+   "a": "烟花",
+   "accept": [
+    "烟花",
+    "烟火",
+    "焰火"
+   ],
+   "hint": "过年的时候,大家会一起抬头看它。"
+  },
+  {
+   "id": "zh-022",
+   "q": "什么东西有很多页,里面住着许多故事,却从来不会说话?",
+   "a": "书",
+   "accept": [
+    "书",
+    "书本",
+    "故事书"
+   ],
+   "hint": "睡觉前,爸爸妈妈会翻开它读给你听。"
+  },
+  {
+   "id": "zh-023",
+   "q": "什么东西下雨时就开花,雨停了就合起来?",
+   "a": "雨伞",
+   "accept": [
+    "雨伞",
+    "伞",
+    "小伞"
+   ],
+   "hint": "出门遇到下雨,你可以把它举在头上。"
+  },
+  {
+   "id": "zh-024",
+   "q": "什么动物有黑眼圈,身体胖胖的,最爱吃竹子?",
+   "a": "熊猫",
+   "accept": [
+    "熊猫",
+    "大熊猫",
+    "猫熊"
+   ],
+   "hint": "它是中国的国宝,住在四川的山里。"
+  },
+  {
+   "id": "zh-025",
+   "q": "什么动物脖子最长,能吃到树顶上的叶子?",
+   "a": "长颈鹿",
+   "accept": [
+    "长颈鹿",
+    "长脖子鹿"
+   ],
+   "hint": "它身上有一块一块的花纹,个子非常高。"
+  },
+  {
+   "id": "zh-026",
+   "q": "什么小动物走得慢吞吞,还背着自己的房子?",
+   "a": "蜗牛",
+   "accept": [
+    "蜗牛",
+    "小蜗牛"
+   ],
+   "hint": "下雨以后,它常常爬到叶子上,头上有两只小触角。"
+  },
+  {
+   "id": "zh-027",
+   "q": "龟兔赛跑的故事里,最后赢得比赛的是谁?",
+   "a": "乌龟",
+   "accept": [
+    "乌龟",
+    "龟",
+    "小乌龟"
+   ],
+   "hint": "它虽然走得很慢,但是一直没有停下来。"
+  },
+  {
+   "id": "zh-028",
+   "q": "什么动物小时候有尾巴,长大后尾巴不见了,还会呱呱叫?",
+   "a": "青蛙",
+   "accept": [
+    "青蛙",
+    "蛙",
+    "小青蛙"
+   ],
+   "hint": "它喜欢住在池塘边,会一蹦一跳。"
+  },
+  {
+   "id": "zh-029",
+   "q": "什么鸟住在冰天雪地里,走路摇摇摆摆,却不会飞?",
+   "a": "企鹅",
+   "accept": [
+    "企鹅",
+    "小企鹅"
+   ],
+   "hint": "它穿着黑白相间的衣服,像个小绅士。"
+  },
+  {
+   "id": "zh-030",
+   "q": "什么昆虫小时候是毛毛虫,长大后穿着花衣服飞来飞去?",
+   "a": "蝴蝶",
+   "accept": [
+    "蝴蝶",
+    "花蝴蝶",
+    "蝶"
+   ],
+   "hint": "它常常停在花朵上。"
+  },
+  {
+   "id": "zh-031",
+   "q": "什么小虫夏天夜里,提着小灯笼飞来飞去?",
+   "a": "萤火虫",
+   "accept": [
+    "萤火虫",
+    "萤火",
+    "小萤火虫"
+   ],
+   "hint": "它的尾巴会一闪一闪地发光。"
+  },
+  {
+   "id": "zh-032",
+   "q": "什么小昆虫天天忙着采花,还会酿出甜甜的东西?",
+   "a": "蜜蜂",
+   "accept": [
+    "蜜蜂",
+    "小蜜蜂",
+    "蜂"
+   ],
+   "hint": "它嗡嗡嗡地飞,做出来的东西可以涂在面包上。"
+  },
+  {
+   "id": "zh-033",
+   "q": "什么小虫吃桑叶,吐出细细的丝,丝可以做漂亮的衣服?",
+   "a": "蚕",
+   "accept": [
+    "蚕",
+    "蚕宝宝"
+   ],
+   "hint": "它的丝很长很长,可以织成软软的布。"
+  },
+  {
+   "id": "zh-034",
+   "q": "什么动物鼻子最长,耳朵像大扇子,身体像一座小山?",
+   "a": "大象",
+   "accept": [
+    "大象",
+    "象",
+    "小象"
+   ],
+   "hint": "它用长长的鼻子喝水,还能给自己洗澡。"
+  },
+  {
+   "id": "zh-035",
+   "q": "什么动物爱吃桃子,爬树又快又灵活,长得有点像人?",
+   "a": "猴子",
+   "accept": [
+    "猴子",
+    "小猴子",
+    "猴"
+   ],
+   "hint": "孙悟空和它是同一类。"
+  },
+  {
+   "id": "zh-036",
+   "q": "什么动物每天早上喔喔喔,叫大家起床?",
+   "a": "公鸡",
+   "accept": [
+    "公鸡",
+    "大公鸡",
+    "鸡"
+   ],
+   "hint": "它头上戴着一顶红红的帽子。"
+  },
+  {
+   "id": "zh-037",
+   "q": "什么动物会看家,见到主人就摇尾巴?",
+   "a": "小狗",
+   "accept": [
+    "小狗",
+    "狗",
+    "狗狗"
+   ],
+   "hint": "它的叫声很响,还喜欢和你一起玩球。"
+  },
+  {
+   "id": "zh-038",
+   "q": "什么动物胡子翘翘,爱晒太阳,走路没有声音,还会捉老鼠?",
+   "a": "猫",
+   "accept": [
+    "猫",
+    "小猫",
+    "猫咪"
+   ],
+   "hint": "它爱用舌头舔自己的毛,把自己洗得干干净净。"
+  },
+  {
+   "id": "zh-039",
+   "q": "什么动物一辈子住在水里,不会说话,只会吐泡泡?",
+   "a": "鱼",
+   "accept": [
+    "鱼",
+    "小鱼",
+    "金鱼"
+   ],
+   "hint": "它用尾巴和鳍游来游去。"
+  },
+  {
+   "id": "zh-040",
+   "q": "什么东西你走它也走,你停它也停,可是你永远摸不到它?",
+   "a": "影子",
+   "accept": [
+    "影子",
+    "影",
+    "人影"
+   ],
+   "hint": "在太阳底下,它总是跟在你的脚边。"
+  },
+  {
+   "id": "zh-041",
+   "q": "什么东西你笑它也笑,你做鬼脸它也做鬼脸,可是从来不说话?",
+   "a": "镜子",
+   "accept": [
+    "镜子",
+    "镜",
+    "小镜子"
+   ],
+   "hint": "每天早上刷牙的时候,你都会看到它。"
+  },
+  {
+   "id": "zh-042",
+   "q": "什么东西没有腿,却会滴答滴答地一直走?",
+   "a": "钟",
+   "accept": [
+    "钟",
+    "时钟",
+    "闹钟",
+    "钟表"
+   ],
+   "hint": "它告诉你什么时候该起床,什么时候该吃饭。"
+  },
+  {
+   "id": "zh-043",
+   "q": "什么东西穿着木头衣服,肚子里有黑黑的芯,专门用来写字?",
+   "a": "铅笔",
+   "accept": [
+    "铅笔",
+    "笔",
+    "铅笔头"
+   ],
+   "hint": "写错了的时候,你需要另一样东西来帮忙。"
+  },
+  {
+   "id": "zh-044",
+   "q": "什么东西从天上掉下来,滴滴答答,花草树木最爱它?",
+   "a": "雨",
+   "accept": [
+    "雨",
+    "下雨",
+    "雨水",
+    "小雨"
+   ],
+   "hint": "它落在地上,会变成一个一个小水坑。"
+  },
+  {
+   "id": "zh-045",
+   "q": "什么东西有时像棉花,有时像小羊,在天上慢慢飘?",
+   "a": "云",
+   "accept": [
+    "云",
+    "白云",
+    "云朵"
+   ],
+   "hint": "下雨之前,天上常常有很多灰色的它。"
+  },
+  {
+   "id": "zh-046",
+   "q": "什么东西雨后挂在天上,像一座七彩的大桥?",
+   "a": "彩虹",
+   "accept": [
+    "彩虹",
+    "虹"
+   ],
+   "hint": "它有红橙黄绿青蓝紫,一共七种颜色。"
+  },
+  {
+   "id": "zh-047",
+   "q": "什么东西你看不见,可是它能让树叶沙沙响,让你的头发飘起来?",
+   "a": "风",
+   "accept": [
+    "风",
+    "微风",
+    "大风",
+    "刮风"
+   ],
+   "hint": "夏天的时候,它吹在脸上很凉快。"
+  },
+  {
+   "id": "zh-048",
+   "q": "什么东西冬天从天上飘下来,白白软软,落在手心里就化了?",
+   "a": "雪",
+   "accept": [
+    "雪",
+    "雪花",
+    "下雪"
+   ],
+   "hint": "冬天下得很多的时候,你可以在外面堆一个胖胖的人。"
+  },
+  {
+   "id": "zh-049",
+   "q": "什么东西天天早晚在你嘴巴里跳舞,让牙齿干干净净?",
+   "a": "牙刷",
+   "accept": [
+    "牙刷",
+    "小牙刷"
+   ],
+   "hint": "你要先挤一点牙膏在它上面。"
+  },
+  {
+   "id": "zh-050",
+   "q": "什么东西兄弟两个一样长,吃饭时总是一起上?",
+   "a": "筷子",
+   "accept": [
+    "筷子",
+    "一双筷子",
+    "竹筷"
+   ],
+   "hint": "我们吃面条的时候要用它。"
+  },
+  {
+   "id": "zh-051",
+   "q": "什么东西两个刀片连在一起,咔嚓咔嚓地剪纸?",
+   "a": "剪刀",
+   "accept": [
+    "剪刀",
+    "小剪刀"
+   ],
+   "hint": "做手工的时候,你一定会用到它。"
+  },
+  {
+   "id": "zh-052",
+   "q": "什么东西一头有小齿,专门给门开锁?",
+   "a": "钥匙",
+   "accept": [
+    "钥匙",
+    "钥匙串"
+   ],
+   "hint": "回到家的时候,爸爸妈妈会用它开门。"
+  },
+  {
+   "id": "zh-053",
+   "q": "什么东西一按开关,黑夜就变得亮亮的?",
+   "a": "灯",
+   "accept": [
+    "灯",
+    "电灯",
+    "台灯",
+    "灯泡"
+   ],
+   "hint": "睡觉前,你把它关上,房间就暗了。"
+  },
+  {
+   "id": "zh-054",
+   "q": "什么东西天天陪你走路,却总是被你踩在脚下?",
+   "a": "鞋子",
+   "accept": [
+    "鞋子",
+    "鞋",
+    "运动鞋"
+   ],
+   "hint": "出门前,你要把它穿好。"
+  },
+  {
+   "id": "zh-055",
+   "q": "什么东西闭上才能睡觉,睁开才能看见世界?",
+   "a": "眼睛",
+   "accept": [
+    "眼睛",
+    "眼",
+    "双眼"
+   ],
+   "hint": "它长在你的脸上,一共有两个。"
+  },
+  {
+   "id": "zh-056",
+   "q": "什么东西长在头的两边,专门用来听声音?",
+   "a": "耳朵",
+   "accept": [
+    "耳朵",
+    "耳",
+    "大耳朵"
+   ],
+   "hint": "听音乐,听故事,都要靠它。"
+  },
+  {
+   "id": "zh-057",
+   "q": "什么东西有五个兄弟,能拿东西,也能拍起来啪啪响?",
+   "a": "手",
+   "accept": [
+    "手",
+    "双手",
+    "小手"
+   ],
+   "hint": "吃饭前,要先把它洗干净。"
+  },
+  {
+   "id": "zh-058",
+   "q": "什么水果外面绿衣裳,里面红沙瓤,夏天吃了最凉快?",
+   "a": "西瓜",
+   "accept": [
+    "西瓜",
+    "大西瓜"
+   ],
+   "hint": "它圆滚滚的,里面有很多黑色的籽。"
+  },
+  {
+   "id": "zh-059",
+   "q": "什么水果弯弯的,剥掉黄色的皮,里面是软软的白肉?",
+   "a": "香蕉",
+   "accept": [
+    "香蕉",
+    "芭蕉"
+   ],
+   "hint": "它一串一串地长在树上。"
+  },
+  {
+   "id": "zh-060",
+   "q": "什么东西上面插着蜡烛,你吹灭蜡烛之前要先许个愿?",
+   "a": "生日蛋糕",
+   "accept": [
+    "生日蛋糕",
+    "蛋糕",
+    "生日"
+   ],
+   "hint": "一年只有一次,大家会围着你唱歌。"
+  },
+  {
+   "id": "zh-061",
+   "q": "一口咬掉牛尾巴,打一个字。",
+   "a": "告",
+   "accept": [
+    "告",
+    "告诉的告"
+   ],
+   "hint": "牛字去掉下面的尾巴,上面再加一个口。"
+  },
+  {
+   "id": "zh-062",
+   "q": "一人一张口,口下长只手,打一个字。",
+   "a": "拿",
+   "accept": [
+    "拿",
+    "拿东西的拿"
+   ],
+   "hint": "上面是合起来的合,下面是一只手。"
+  },
+  {
+   "id": "zh-063",
+   "q": "两个人坐在土堆上,打一个字。",
+   "a": "坐",
+   "accept": [
+    "坐",
+    "坐下的坐"
+   ],
+   "hint": "答案就藏在题目里,两个人加一个土。"
+  },
+  {
+   "id": "zh-064",
+   "q": "大口吃小口,打一个字。",
+   "a": "回",
+   "accept": [
+    "回",
+    "回家的回"
+   ],
+   "hint": "一个大口里面套着一个小口。"
+  },
+  {
+   "id": "zh-065",
+   "q": "一个人,他姓王,口袋里装着两块糖,打一个字。",
+   "a": "金",
+   "accept": [
+    "金",
+    "金子的金"
+   ],
+   "hint": "人字头,下面一个王,两点就是糖。"
+  },
+  {
+   "id": "zh-066",
+   "q": "上边毛,下边毛,中间一颗黑葡萄,打一个身体部位。",
+   "a": "眼睛",
+   "accept": [
+    "眼睛",
+    "眼"
+   ],
+   "hint": "上下的毛是睫毛。"
+  },
+  {
+   "id": "zh-067",
+   "q": "千里相逢,打一个字。",
+   "a": "重",
+   "accept": [
+    "重",
+    "重要的重"
+   ],
+   "hint": "把千和里叠在一起。"
+  },
+  {
+   "id": "zh-068",
+   "q": "王大娘,白大娘,一起坐在石头上,打一个字。",
+   "a": "碧",
+   "accept": [
+    "碧",
+    "碧绿的碧"
+   ],
+   "hint": "王、白、石三个字合在一起。"
+  },
+  {
+   "id": "zh-069",
+   "q": "日月同辉,打一个字。",
+   "a": "明",
+   "accept": [
+    "明",
+    "明天的明"
+   ],
+   "hint": "一边是日,一边是月。"
+  },
+  {
+   "id": "zh-070",
+   "q": "人在木旁,打一个字。",
+   "a": "休",
+   "accept": [
+    "休",
+    "休息的休"
+   ],
+   "hint": "一个人靠着大树歇一歇。"
+  },
+  {
+   "id": "zh-071",
+   "q": "三人同日去看花,打一个字。",
+   "a": "春",
+   "accept": [
+    "春",
+    "春天的春"
+   ],
+   "hint": "上面是三和人,下面一个日。"
+  },
+  {
+   "id": "zh-072",
+   "q": "十张口,一颗心,打一个字。",
+   "a": "思",
+   "accept": [
+    "思",
+    "思考的思"
+   ],
+   "hint": "十和口合成一个田,下面加一颗心。"
+  },
+  {
+   "id": "zh-073",
+   "q": "木字下面一个子,打一个字。",
+   "a": "李",
+   "accept": [
+    "李",
+    "李子的李"
+   ],
+   "hint": "是一种水果,也是一个常见的姓。"
+  },
+  {
+   "id": "zh-074",
+   "q": "鸟字下面换成山,打一个字。",
+   "a": "岛",
+   "accept": [
+    "岛",
+    "小岛的岛"
+   ],
+   "hint": "大海中间的一块陆地。"
+  },
+  {
+   "id": "zh-075",
+   "q": "门里有个口,打一个字。",
+   "a": "问",
+   "accept": [
+    "问",
+    "问问题的问"
+   ],
+   "hint": "门里有口,就要开口问。"
+  },
+  {
+   "id": "zh-076",
+   "q": "门里有个日,打一个字。",
+   "a": "间",
+   "accept": [
+    "间",
+    "房间的间"
+   ],
+   "hint": "门里藏着一个太阳。"
+  },
+  {
+   "id": "zh-077",
+   "q": "门里有匹马,打一个字。",
+   "a": "闯",
+   "accept": [
+    "闯",
+    "闯进来的闯"
+   ],
+   "hint": "一匹马冲进门里。"
+  },
+  {
+   "id": "zh-078",
+   "q": "半个月亮,打一个字。",
+   "a": "胖",
+   "accept": [
+    "胖",
+    "胖胖的胖"
+   ],
+   "hint": "月字旁边加一个半。"
+  },
+  {
+   "id": "zh-079",
+   "q": "一口咬住多半截,打一个字。",
+   "a": "名",
+   "accept": [
+    "名",
+    "名字的名"
+   ],
+   "hint": "多字只留上面的夕,下面加一个口。"
+  },
+  {
+   "id": "zh-080",
+   "q": "两棵树站在一起,打一个字。",
+   "a": "林",
+   "accept": [
+    "林",
+    "树林的林"
+   ],
+   "hint": "两个木字并排站。"
+  },
+  {
+   "id": "zh-081",
+   "q": "三棵树站在一起,打一个字。",
+   "a": "森",
+   "accept": [
+    "森",
+    "森林的森"
+   ],
+   "hint": "三个木字叠起来。"
+  },
+  {
+   "id": "zh-082",
+   "q": "三个太阳叠起来,打一个字。",
+   "a": "晶",
+   "accept": [
+    "晶",
+    "亮晶晶的晶"
+   ],
+   "hint": "三个日字叠在一起。"
+  },
+  {
+   "id": "zh-083",
+   "q": "三张嘴叠起来,打一个字。",
+   "a": "品",
+   "accept": [
+    "品",
+    "品尝的品"
+   ],
+   "hint": "三个口字叠在一起。"
+  },
+  {
+   "id": "zh-084",
+   "q": "三个人站在一起,打一个字。",
+   "a": "众",
+   "accept": [
+    "众",
+    "大众的众"
+   ],
+   "hint": "三个人字叠起来。"
+  },
+  {
+   "id": "zh-085",
+   "q": "三块石头叠起来,打一个字。",
+   "a": "磊",
+   "accept": [
+    "磊"
+   ],
+   "hint": "三个石字叠在一起。"
+  },
+  {
+   "id": "zh-086",
+   "q": "一人一口,打一个字。",
+   "a": "合",
+   "accept": [
+    "合",
+    "合作的合"
+   ],
+   "hint": "人字头下面一横,再加一个口。"
+  },
+  {
+   "id": "zh-087",
+   "q": "左边一个女,右边一个子,打一个字。",
+   "a": "好",
+   "accept": [
+    "好",
+    "好人的好"
+   ],
+   "hint": "女孩和男孩在一起。"
+  },
+  {
+   "id": "zh-088",
+   "q": "上面小,下面大,打一个字。",
+   "a": "尖",
+   "accept": [
+    "尖",
+    "尖尖的尖"
+   ],
+   "hint": "小字在上,大字在下。"
+  },
+  {
+   "id": "zh-089",
+   "q": "有水能养鱼虾,有土能种庄稼,有人不是你我,有马走遍天下,打一个字。",
+   "a": "也",
+   "accept": [
+    "也",
+    "也是的也"
+   ],
+   "hint": "加三点水是池,加土是地,加人是他。"
+  },
+  {
+   "id": "zh-090",
+   "q": "一块地分成四个格子,打一个字。",
+   "a": "田",
+   "accept": [
+    "田",
+    "田地的田"
+   ],
+   "hint": "种庄稼的地方。"
+  },
+  {
+   "id": "zh-091",
+   "q": "什么东西天越热,你身上冒出来的越多?",
+   "a": "汗",
+   "accept": [
+    "汗",
+    "汗水",
+    "出汗"
+   ],
+   "hint": "跑步跑得很热的时候,身上会冒出来。"
+  },
+  {
+   "id": "zh-092",
+   "q": "什么东西有头没有脚,一敲就往木头里钻?",
+   "a": "钉子",
+   "accept": [
+    "钉子",
+    "钉"
+   ],
+   "hint": "要用锤子敲它。"
+  },
+  {
+   "id": "zh-093",
+   "q": "什么东西白白一小根,在黑板上越写越短?",
+   "a": "粉笔",
+   "accept": [
+    "粉笔"
+   ],
+   "hint": "老师上课的时候常用它。"
+  },
+  {
+   "id": "zh-094",
+   "q": "什么东西身上全是小洞,却能吸住很多水?",
+   "a": "海绵",
+   "accept": [
+    "海绵"
+   ],
+   "hint": "洗碗或者洗澡时会用到它。"
+  },
+  {
+   "id": "zh-095",
+   "q": "什么动物穿着黑白条纹的衣服,长得像马?",
+   "a": "斑马",
+   "accept": [
+    "斑马"
+   ],
+   "hint": "它住在非洲大草原。"
+  },
+  {
+   "id": "zh-096",
+   "q": "什么动物咩咩叫,身上的毛可以织毛衣?",
+   "a": "羊",
+   "accept": [
+    "羊",
+    "绵羊",
+    "小羊",
+    "山羊"
+   ],
+   "hint": "它爱吃青草。"
+  },
+  {
+   "id": "zh-097",
+   "q": "什么动物一害怕就把自己缩成一个刺球?",
+   "a": "刺猬",
+   "accept": [
+    "刺猬"
+   ],
+   "hint": "它背上长满尖尖的刺。"
+  },
+  {
+   "id": "zh-098",
+   "q": "什么动物背上有驼峰,能在沙漠里走很久?",
+   "a": "骆驼",
+   "accept": [
+    "骆驼"
+   ],
+   "hint": "它被叫作沙漠之舟。"
+  },
+  {
+   "id": "zh-099",
+   "q": "什么动物肚子上有个口袋,可以装小宝宝?",
+   "a": "袋鼠",
+   "accept": [
+    "袋鼠"
+   ],
+   "hint": "它住在澳大利亚,跳得特别远。"
+  },
+  {
+   "id": "zh-100",
+   "q": "什么动物白天倒挂着睡觉,晚上出来飞?",
+   "a": "蝙蝠",
+   "accept": [
+    "蝙蝠"
+   ],
+   "hint": "它会飞,可它不是鸟。"
+  },
+  {
+   "id": "zh-101",
+   "q": "什么动物有八条腿,住在海里,还会喷墨汁?",
+   "a": "章鱼",
+   "accept": [
+    "章鱼",
+    "八爪鱼"
+   ],
+   "hint": "它的腿上有很多小吸盘。"
+  },
+  {
+   "id": "zh-102",
+   "q": "什么动物横着走路,还举着两把大钳子?",
+   "a": "螃蟹",
+   "accept": [
+    "螃蟹",
+    "蟹"
+   ],
+   "hint": "它住在海边的沙滩上。"
+  },
+  {
+   "id": "zh-103",
+   "q": "什么动物住在海里,比大象还大,还会从头顶喷水?",
+   "a": "鲸鱼",
+   "accept": [
+    "鲸鱼",
+    "鲸",
+    "蓝鲸"
+   ],
+   "hint": "它是世界上最大的动物。"
+  },
+  {
+   "id": "zh-104",
+   "q": "什么动物额头上像写着一个王字,被叫作森林之王?",
+   "a": "老虎",
+   "accept": [
+    "老虎",
+    "虎"
+   ],
+   "hint": "它身上有黑黄的条纹。"
+  },
+  {
+   "id": "zh-105",
+   "q": "什么动物会大声吼,爸爸头上有一圈长长的鬃毛?",
+   "a": "狮子",
+   "accept": [
+    "狮子",
+    "狮"
+   ],
+   "hint": "它被叫作草原之王。"
+  },
+  {
+   "id": "zh-106",
+   "q": "什么鸟会学人说话?",
+   "a": "鹦鹉",
+   "accept": [
+    "鹦鹉",
+    "八哥"
+   ],
+   "hint": "它的羽毛颜色很鲜艳。"
+  },
+  {
+   "id": "zh-107",
+   "q": "什么鸟的尾巴展开像一把彩色的大扇子?",
+   "a": "孔雀",
+   "accept": [
+    "孔雀"
+   ],
+   "hint": "开屏的时候特别漂亮。"
+  },
+  {
+   "id": "zh-108",
+   "q": "什么小动物尾巴毛茸茸的,爱吃松果,会把果子藏起来过冬?",
+   "a": "松鼠",
+   "accept": [
+    "松鼠"
+   ],
+   "hint": "它住在树上,跳来跳去。"
+  },
+  {
+   "id": "zh-109",
+   "q": "什么动物会织网,用网捉小虫子?",
+   "a": "蜘蛛",
+   "accept": [
+    "蜘蛛"
+   ],
+   "hint": "它有八条腿。"
+  },
+  {
+   "id": "zh-110",
+   "q": "什么小虫能搬比自己大的东西,还排着队走路?",
+   "a": "蚂蚁",
+   "accept": [
+    "蚂蚁"
+   ],
+   "hint": "它们住在地下的小洞里。"
+  },
+  {
+   "id": "zh-111",
+   "q": "什么动物身体长长的,没有脚,却会爬?",
+   "a": "蛇",
+   "accept": [
+    "蛇"
+   ],
+   "hint": "它会嘶嘶地吐舌头。"
+  },
+  {
+   "id": "zh-112",
+   "q": "什么动物哼哼叫,吃饱了就睡,鼻子圆圆的?",
+   "a": "猪",
+   "accept": [
+    "猪",
+    "小猪"
+   ],
+   "hint": "小猪佩奇就是它。"
+  },
+  {
+   "id": "zh-113",
+   "q": "什么动物跑得很快,人可以骑在它背上?",
+   "a": "马",
+   "accept": [
+    "马",
+    "小马"
+   ],
+   "hint": "它跑起来嗒嗒嗒。"
+  },
+  {
+   "id": "zh-114",
+   "q": "什么水果穿着毛毛的外衣,里面是绿色的?",
+   "a": "猕猴桃",
+   "accept": [
+    "猕猴桃",
+    "奇异果"
+   ],
+   "hint": "切开里面有一圈小黑籽。"
+  },
+  {
+   "id": "zh-115",
+   "q": "什么水果一串一串的,圆圆的,有紫的也有绿的?",
+   "a": "葡萄",
+   "accept": [
+    "葡萄",
+    "提子"
+   ],
+   "hint": "晒干了会变成葡萄干。"
+  },
+  {
+   "id": "zh-116",
+   "q": "什么水果头上戴着绿帽子,身上长满小芝麻?",
+   "a": "草莓",
+   "accept": [
+    "草莓"
+   ],
+   "hint": "红红的,酸酸甜甜。"
+  },
+  {
+   "id": "zh-117",
+   "q": "什么水果黄黄的,特别酸,吃一口会眯起眼睛?",
+   "a": "柠檬",
+   "accept": [
+    "柠檬"
+   ],
+   "hint": "人们常把它切片泡水喝。"
+  },
+  {
+   "id": "zh-118",
+   "q": "什么水果剥开外皮,里面是一瓣一瓣的?",
+   "a": "橘子",
+   "accept": [
+    "橘子",
+    "桔子",
+    "橙子",
+    "柑橘"
+   ],
+   "hint": "它的颜色和名字差不多。"
+  },
+  {
+   "id": "zh-119",
+   "q": "什么东西长在土里,红红长长的,兔子最爱吃?",
+   "a": "胡萝卜",
+   "accept": [
+    "胡萝卜",
+    "萝卜"
+   ],
+   "hint": "它的名字里有萝卜两个字。"
+  },
+  {
+   "id": "zh-120",
+   "q": "什么蔬菜切开的时候,会让人流眼泪?",
+   "a": "洋葱",
+   "accept": [
+    "洋葱"
+   ],
+   "hint": "它一层一层剥不完。"
+  },
+  {
+   "id": "zh-121",
+   "q": "什么蔬菜圆圆红红的,既能当水果吃,又能炒鸡蛋?",
+   "a": "西红柿",
+   "accept": [
+    "西红柿",
+    "番茄"
+   ],
+   "hint": "它红红的,有点酸。"
+  },
+  {
+   "id": "zh-122",
+   "q": "什么东西放进锅里一加热,就砰砰砰变成白白的花?",
+   "a": "爆米花",
+   "accept": [
+    "爆米花",
+    "玉米花"
+   ],
+   "hint": "看电影的时候常吃它。"
+  },
+  {
+   "id": "zh-123",
+   "q": "什么东西冷冰冰的,放进杯子里能让饮料变凉?",
+   "a": "冰块",
+   "accept": [
+    "冰块",
+    "冰"
+   ],
+   "hint": "放久了会化成水。"
+  },
+  {
+   "id": "zh-124",
+   "q": "什么东西夏天转啊转,给你送来凉风?",
+   "a": "电风扇",
+   "accept": [
+    "电风扇",
+    "风扇"
+   ],
+   "hint": "它有几片会转的叶子。"
+  },
+  {
+   "id": "zh-125",
+   "q": "什么东西在天上一闪一闪,接着就轰隆隆响?",
+   "a": "闪电",
+   "accept": [
+    "闪电",
+    "打雷",
+    "雷电",
+    "雷"
+   ],
+   "hint": "下大雨的时候常出现。"
+  },
+  {
+   "id": "zh-126",
+   "q": "什么东西早上挂在草叶上,一颗颗亮晶晶,太阳一出来就不见了?",
+   "a": "露珠",
+   "accept": [
+    "露珠",
+    "露水"
+   ],
+   "hint": "它是一小滴水。"
+  },
+  {
+   "id": "zh-127",
+   "q": "什么东西冬天挂在屋檐下,尖尖的,像透明的胡萝卜?",
+   "a": "冰柱",
+   "accept": [
+    "冰柱",
+    "冰锥",
+    "冰溜子",
+    "冰凌"
+   ],
+   "hint": "它是水结成的冰。"
+  },
+  {
+   "id": "zh-128",
+   "q": "什么东西像个大圆球,我们所有人都住在它上面?",
+   "a": "地球",
+   "accept": [
+    "地球"
+   ],
+   "hint": "从太空看它是蓝色的。"
+  },
+  {
+   "id": "zh-129",
+   "q": "什么东西圆圆的能转,上面画着全世界的国家?",
+   "a": "地球仪",
+   "accept": [
+    "地球仪"
+   ],
+   "hint": "它是地球的小模型。"
+  },
+  {
+   "id": "zh-130",
+   "q": "什么东西有两个轮子,要用脚踩着才能走?",
+   "a": "自行车",
+   "accept": [
+    "自行车",
+    "单车",
+    "脚踏车"
+   ],
+   "hint": "它有车铃,叮铃铃。"
+  },
+  {
+   "id": "zh-131",
+   "q": "什么东西长长的一节一节,在铁轨上跑?",
+   "a": "火车",
+   "accept": [
+    "火车",
+    "高铁",
+    "动车",
+    "地铁"
+   ],
+   "hint": "它会鸣笛呜呜呜。"
+  },
+  {
+   "id": "zh-132",
+   "q": "什么东西有翅膀不会扇,却能带着很多人飞上天?",
+   "a": "飞机",
+   "accept": [
+    "飞机"
+   ],
+   "hint": "它在机场起飞。"
+  },
+  {
+   "id": "zh-133",
+   "q": "什么东西在水上走,能装很多人和货物?",
+   "a": "船",
+   "accept": [
+    "船",
+    "轮船",
+    "小船"
+   ],
+   "hint": "它停在码头。"
+  },
+  {
+   "id": "zh-134",
+   "q": "什么车一路叫着呜哇呜哇,哪里着火去哪里?",
+   "a": "消防车",
+   "accept": [
+    "消防车",
+    "救火车"
+   ],
+   "hint": "车身是红色的。"
+  },
+  {
+   "id": "zh-135",
+   "q": "什么东西四四方方,一按遥控器就能看动画片?",
+   "a": "电视",
+   "accept": [
+    "电视",
+    "电视机"
+   ],
+   "hint": "它挂在客厅的墙上。"
+  },
+  {
+   "id": "zh-136",
+   "q": "什么东西肚子里冷冷的,放着牛奶和水果?",
+   "a": "冰箱",
+   "accept": [
+    "冰箱"
+   ],
+   "hint": "它在厨房里。"
+  },
+  {
+   "id": "zh-137",
+   "q": "什么东西一页一页撕掉,撕完一年就过完了?",
+   "a": "日历",
+   "accept": [
+    "日历",
+    "挂历",
+    "台历"
+   ],
+   "hint": "它告诉你今天几号。"
+  },
+  {
+   "id": "zh-138",
+   "q": "什么东西你越喂它,它越重,里面装的全是钱?",
+   "a": "存钱罐",
+   "accept": [
+    "存钱罐",
+    "储蓄罐",
+    "扑满"
+   ],
+   "hint": "它常常长得像一只小猪。"
+  },
+  {
+   "id": "zh-139",
+   "q": "什么东西装满了水,小鱼在里面游来游去,放在家里?",
+   "a": "鱼缸",
+   "accept": [
+    "鱼缸"
+   ],
+   "hint": "它常常是玻璃做的。"
+  },
+  {
+   "id": "zh-140",
+   "q": "什么东西有很多颜色,能在纸上画出彩虹?",
+   "a": "蜡笔",
+   "accept": [
+    "蜡笔",
+    "彩笔",
+    "水彩笔",
+    "彩色笔",
+    "画笔"
+   ],
+   "hint": "画画的时候要用它。"
+  },
+  {
+   "id": "zh-141",
+   "q": "什么东西白天叠起来,晚上盖在你身上暖暖的?",
+   "a": "被子",
+   "accept": [
+    "被子",
+    "棉被"
+   ],
+   "hint": "它在床上。"
+  },
+  {
+   "id": "zh-142",
+   "q": "什么东西天冷的时候围在脖子上?",
+   "a": "围巾",
+   "accept": [
+    "围巾"
+   ],
+   "hint": "它是长长软软的。"
+  },
+  {
+   "id": "zh-143",
+   "q": "什么东西戴在头上,冬天保暖,夏天遮太阳?",
+   "a": "帽子",
+   "accept": [
+    "帽子"
+   ],
+   "hint": "出门前可以戴上它。"
+  },
+  {
+   "id": "zh-144",
+   "q": "什么东西有两个镜片,架在鼻子上帮人看清楚?",
+   "a": "眼镜",
+   "accept": [
+    "眼镜"
+   ],
+   "hint": "看不清字的人会戴它。"
+  },
+  {
+   "id": "zh-145",
+   "q": "什么东西圆圆的,里面装着空气,大家追着用脚踢?",
+   "a": "足球",
+   "accept": [
+    "足球",
+    "球",
+    "皮球"
+   ],
+   "hint": "踢进球门就得分。"
+  },
+  {
+   "id": "zh-146",
+   "q": "什么东西两头有手柄,中间一根绳,甩起来呼呼转?",
+   "a": "跳绳",
+   "accept": [
+    "跳绳",
+    "绳子"
+   ],
+   "hint": "体育课上常用它。"
+  },
+  {
+   "id": "zh-147",
+   "q": "什么东西你坐上去,一推就前后荡来荡去?",
+   "a": "秋千",
+   "accept": [
+    "秋千",
+    "荡秋千"
+   ],
+   "hint": "公园里常常有它。"
+  },
+  {
+   "id": "zh-148",
+   "q": "什么东西上去要爬楼梯,下来哧溜一下就到底?",
+   "a": "滑梯",
+   "accept": [
+    "滑梯",
+    "滑滑梯"
+   ],
+   "hint": "游乐场里最受欢迎。"
+  },
+  {
+   "id": "zh-149",
+   "q": "什么东西有很多小块,拼来拼去能拼出一幅画?",
+   "a": "拼图",
+   "accept": [
+    "拼图"
+   ],
+   "hint": "先找四个角最容易。"
+  },
+  {
+   "id": "zh-150",
+   "q": "什么东西有很多黑白的键,弹起来叮叮咚咚?",
+   "a": "钢琴",
+   "accept": [
+    "钢琴",
+    "电子琴"
+   ],
+   "hint": "它是一种很大的乐器。"
+  },
+  {
+   "id": "zh-151",
+   "q": "什么东西不吃饭,只喝墨水,喝饱了就能写字?",
+   "a": "钢笔",
+   "accept": [
+    "钢笔"
+   ],
+   "hint": "它和铅笔不一样,写的字擦不掉。"
+  },
+  {
+   "id": "zh-152",
+   "q": "什么东西背在背上,里面装着课本和文具?",
+   "a": "书包",
+   "accept": [
+    "书包",
+    "背包"
+   ],
+   "hint": "上学的时候要带着它。"
+  },
+  {
+   "id": "zh-153",
+   "q": "什么东西是你的,可是别人用得比你多?",
+   "a": "名字",
+   "accept": [
+    "名字",
+    "姓名"
+   ],
+   "hint": "大家叫你的时候就要用它。"
+  },
+  {
+   "id": "zh-154",
+   "q": "什么人一年只在一个晚上工作,爬烟囱给小朋友送礼物?",
+   "a": "圣诞老人",
+   "accept": [
+    "圣诞老人"
+   ],
+   "hint": "他穿红衣服,有白胡子。"
+  },
+  {
+   "id": "zh-155",
+   "q": "什么节日要吃月饼,一家人一起看圆圆的月亮?",
+   "a": "中秋节",
+   "accept": [
+    "中秋节",
+    "中秋"
+   ],
+   "hint": "它在秋天。"
+  },
+  {
+   "id": "zh-156",
+   "q": "什么节日要贴春联、放鞭炮、拿红包?",
+   "a": "春节",
+   "accept": [
+    "春节",
+    "过年",
+    "新年",
+    "农历新年"
+   ],
+   "hint": "它是中国最热闹的节日。"
+  },
+  {
+   "id": "zh-157",
+   "q": "什么节日要吃粽子,还要划龙舟?",
+   "a": "端午节",
+   "accept": [
+    "端午节",
+    "端午"
+   ],
+   "hint": "它在夏天。"
+  },
+  {
+   "id": "zh-158",
+   "q": "什么东西春天长出来,夏天绿油油,秋天变黄掉下来?",
+   "a": "树叶",
+   "accept": [
+    "树叶",
+    "叶子",
+    "落叶"
+   ],
+   "hint": "它长在树枝上。"
+  },
+  {
+   "id": "zh-159",
+   "q": "什么东西在锅里咕嘟咕嘟冒泡,还冒出白白的气?",
+   "a": "开水",
+   "accept": [
+    "开水",
+    "热水",
+    "水"
+   ],
+   "hint": "烧开以后才能喝。"
+  },
+  {
+   "id": "zh-160",
+   "q": "什么东西黑黑的,天一黑就来,天一亮就走?",
+   "a": "黑夜",
+   "accept": [
+    "黑夜",
+    "晚上",
+    "夜晚",
+    "夜"
+   ],
+   "hint": "它来了,月亮和星星就出来了。"
+  }
+ ],
+ "en": [
+  {
+   "id": "en-001",
+   "q": "What has hands but cannot clap?",
+   "a": "a clock",
+   "accept": [
+    "clock",
+    "a clock",
+    "watch"
+   ],
+   "hint": "It helps you know what time it is."
+  },
+  {
+   "id": "en-002",
+   "q": "What has keys but cannot open a door?",
+   "a": "a piano",
+   "accept": [
+    "piano",
+    "a piano",
+    "keyboard"
+   ],
+   "hint": "You press them to make music."
+  },
+  {
+   "id": "en-003",
+   "q": "What has cities, roads, and mountains, but nobody lives in it?",
+   "a": "a map",
+   "accept": [
+    "map",
+    "a map",
+    "atlas"
+   ],
+   "hint": "You can look at it to find your way."
+  },
+  {
+   "id": "en-004",
+   "q": "What has to be cracked before you can use it?",
+   "a": "an egg",
+   "accept": [
+    "egg",
+    "an egg",
+    "eggs"
+   ],
+   "hint": "You might have it for breakfast."
+  },
+  {
+   "id": "en-005",
+   "q": "What gets wetter the more it dries?",
+   "a": "a towel",
+   "accept": [
+    "towel",
+    "a towel",
+    "bath towel"
+   ],
+   "hint": "You use it after a bath."
+  },
+  {
+   "id": "en-006",
+   "q": "What is full of holes but still soaks up water?",
+   "a": "a sponge",
+   "accept": [
+    "sponge",
+    "a sponge"
+   ],
+   "hint": "You might use it to wash the dishes."
+  },
+  {
+   "id": "en-007",
+   "q": "What has four legs but cannot walk?",
+   "a": "a table",
+   "accept": [
+    "table",
+    "a table",
+    "chair",
+    "a chair"
+   ],
+   "hint": "You eat your dinner at it."
+  },
+  {
+   "id": "en-008",
+   "q": "What has an eye but cannot see?",
+   "a": "a needle",
+   "accept": [
+    "needle",
+    "a needle",
+    "sewing needle"
+   ],
+   "hint": "A thread goes through its tiny hole."
+  },
+  {
+   "id": "en-009",
+   "q": "What follows you all day but disappears in the dark?",
+   "a": "a shadow",
+   "accept": [
+    "shadow",
+    "a shadow",
+    "my shadow"
+   ],
+   "hint": "It stretches long when the sun is low."
+  },
+  {
+   "id": "en-010",
+   "q": "What repeats whatever you shout in a canyon or a big empty hall?",
+   "a": "an echo",
+   "accept": [
+    "echo",
+    "an echo"
+   ],
+   "hint": "Try shouting in the mountains."
+  },
+  {
+   "id": "en-011",
+   "q": "What gets smaller as it glows on a birthday cake?",
+   "a": "a candle",
+   "accept": [
+    "candle",
+    "a candle",
+    "candles"
+   ],
+   "hint": "You blow it out after making a wish."
+  },
+  {
+   "id": "en-012",
+   "q": "What has a pointy tip and a little rubber hat, and helps you write?",
+   "a": "a pencil",
+   "accept": [
+    "pencil",
+    "a pencil"
+   ],
+   "hint": "You sharpen it when the tip gets dull."
+  },
+  {
+   "id": "en-013",
+   "q": "What makes mistakes disappear but gets smaller every time you use it?",
+   "a": "an eraser",
+   "accept": [
+    "eraser",
+    "an eraser",
+    "rubber"
+   ],
+   "hint": "You use it when you write the wrong word."
+  },
+  {
+   "id": "en-014",
+   "q": "What has a spine and pages, but no bones and no legs?",
+   "a": "a book",
+   "accept": [
+    "book",
+    "a book",
+    "storybook"
+   ],
+   "hint": "You read it before bed."
+  },
+  {
+   "id": "en-015",
+   "q": "What has a mouth but never eats, and a bed but never sleeps?",
+   "a": "a river",
+   "accept": [
+    "river",
+    "a river",
+    "stream"
+   ],
+   "hint": "It flows all the way to the sea."
+  },
+  {
+   "id": "en-016",
+   "q": "What shines at night, changes its shape, and has no feet?",
+   "a": "the moon",
+   "accept": [
+    "moon",
+    "the moon"
+   ],
+   "hint": "Sometimes it is thin and curved, and sometimes it is big and round."
+  },
+  {
+   "id": "en-017",
+   "q": "What rises every morning, warms the world, and goes to bed at night?",
+   "a": "the sun",
+   "accept": [
+    "sun",
+    "the sun"
+   ],
+   "hint": "It gives us daylight."
+  },
+  {
+   "id": "en-018",
+   "q": "What twinkles in the night sky like a tiny diamond?",
+   "a": "a star",
+   "accept": [
+    "star",
+    "a star",
+    "stars"
+   ],
+   "hint": "You can make a wish on the first one you see."
+  },
+  {
+   "id": "en-019",
+   "q": "What floats in the sky and looks like fluffy cotton?",
+   "a": "a cloud",
+   "accept": [
+    "cloud",
+    "a cloud",
+    "clouds"
+   ],
+   "hint": "Sometimes it looks like an animal."
+  },
+  {
+   "id": "en-020",
+   "q": "What falls from the clouds and fills up the puddles?",
+   "a": "rain",
+   "accept": [
+    "rain",
+    "raindrops",
+    "rain drops"
+   ],
+   "hint": "You need boots when there is a lot of it."
+  },
+  {
+   "id": "en-021",
+   "q": "What has seven colors and shows up after a rainy day?",
+   "a": "a rainbow",
+   "accept": [
+    "rainbow",
+    "a rainbow"
+   ],
+   "hint": "It makes a big colorful arch across the sky."
+  },
+  {
+   "id": "en-022",
+   "q": "What is white and cold, falls in winter, and melts in your hand?",
+   "a": "snow",
+   "accept": [
+    "snow",
+    "snowflakes",
+    "snowflake"
+   ],
+   "hint": "You can make angels or a big round man with it."
+  },
+  {
+   "id": "en-023",
+   "q": "What can push a sailboat and rustle the leaves, but can never be seen?",
+   "a": "the wind",
+   "accept": [
+    "wind",
+    "the wind",
+    "breeze"
+   ],
+   "hint": "You feel it on your face on a blowy day."
+  },
+  {
+   "id": "en-024",
+   "q": "What flies high in the sky but has no wings, and you hold its string?",
+   "a": "a kite",
+   "accept": [
+    "kite",
+    "a kite"
+   ],
+   "hint": "People fly it on a windy day."
+  },
+  {
+   "id": "en-025",
+   "q": "What gets bigger when you blow into it, and goes pop if you add too much?",
+   "a": "a balloon",
+   "accept": [
+    "balloon",
+    "a balloon"
+   ],
+   "hint": "You often see it at a birthday party."
+  },
+  {
+   "id": "en-026",
+   "q": "What opens up when it rains and keeps you dry?",
+   "a": "an umbrella",
+   "accept": [
+    "umbrella",
+    "an umbrella"
+   ],
+   "hint": "You hold it over your head on a wet day."
+  },
+  {
+   "id": "en-027",
+   "q": "What copies everything you do but never says a word?",
+   "a": "a mirror",
+   "accept": [
+    "mirror",
+    "a mirror"
+   ],
+   "hint": "You can see your own face in it."
+  },
+  {
+   "id": "en-028",
+   "q": "What comes in a pair, hides inside your shoes, and keeps your toes warm?",
+   "a": "socks",
+   "accept": [
+    "socks",
+    "a pair of socks",
+    "sock"
+   ],
+   "hint": "You put them on before your shoes."
+  },
+  {
+   "id": "en-029",
+   "q": "What has five fingers but is not alive?",
+   "a": "a glove",
+   "accept": [
+    "glove",
+    "a glove",
+    "gloves",
+    "mitten"
+   ],
+   "hint": "You wear it on a cold day."
+  },
+  {
+   "id": "en-030",
+   "q": "What has bristles and makes your teeth clean?",
+   "a": "a toothbrush",
+   "accept": [
+    "toothbrush",
+    "a toothbrush"
+   ],
+   "hint": "You use it every morning and every night with paste."
+  },
+  {
+   "id": "en-031",
+   "q": "What has teeth but cannot bite?",
+   "a": "a comb",
+   "accept": [
+    "comb",
+    "a comb",
+    "hairbrush"
+   ],
+   "hint": "It makes your hair neat."
+  },
+  {
+   "id": "en-032",
+   "q": "What has teeth, goes up and down, and keeps your jacket closed?",
+   "a": "a zipper",
+   "accept": [
+    "zipper",
+    "a zipper",
+    "zip"
+   ],
+   "hint": "You pull a tiny tab to make it move."
+  },
+  {
+   "id": "en-033",
+   "q": "What can open a lock but is not a hand?",
+   "a": "a key",
+   "accept": [
+    "key",
+    "a key",
+    "keys"
+   ],
+   "hint": "It is small and often hangs on a ring."
+  },
+  {
+   "id": "en-034",
+   "q": "What makes a ding-dong sound when you pull its rope or tap it?",
+   "a": "a bell",
+   "accept": [
+    "bell",
+    "a bell"
+   ],
+   "hint": "A school has one to tell you when class is over."
+  },
+  {
+   "id": "en-035",
+   "q": "What lets you talk to grandma far away even though it has no mouth?",
+   "a": "a telephone",
+   "accept": [
+    "telephone",
+    "a telephone",
+    "phone",
+    "a phone"
+   ],
+   "hint": "It rings when someone calls you."
+  },
+  {
+   "id": "en-036",
+   "q": "What sticks to an envelope and travels all around the world?",
+   "a": "a stamp",
+   "accept": [
+    "stamp",
+    "a stamp",
+    "postage stamp"
+   ],
+   "hint": "You need it to mail a letter."
+  },
+  {
+   "id": "en-037",
+   "q": "What is cold and sweet and melts if you wait too long on a hot day?",
+   "a": "ice cream",
+   "accept": [
+    "ice cream",
+    "ice-cream",
+    "an ice cream"
+   ],
+   "hint": "It comes in a cone or a cup."
+  },
+  {
+   "id": "en-038",
+   "q": "What is yellow and curved, and you peel it before you eat it?",
+   "a": "a banana",
+   "accept": [
+    "banana",
+    "a banana",
+    "bananas"
+   ],
+   "hint": "It grows in a bunch."
+  },
+  {
+   "id": "en-039",
+   "q": "What fruit is said to keep the doctor away if you eat one every day?",
+   "a": "an apple",
+   "accept": [
+    "apple",
+    "an apple",
+    "apples"
+   ],
+   "hint": "It can be red or green and makes a crunch."
+  },
+  {
+   "id": "en-040",
+   "q": "What has ears but cannot hear?",
+   "a": "corn",
+   "accept": [
+    "corn",
+    "corn on the cob",
+    "sweetcorn",
+    "maize"
+   ],
+   "hint": "It grows on a tall stalk in a farm field."
+  },
+  {
+   "id": "en-041",
+   "q": "What is green outside, red inside, and full of black seeds?",
+   "a": "a watermelon",
+   "accept": [
+    "watermelon",
+    "a watermelon"
+   ],
+   "hint": "It is a big juicy fruit for summer picnics."
+  },
+  {
+   "id": "en-042",
+   "q": "What grows under the ground and can be mashed or turned into fries?",
+   "a": "a potato",
+   "accept": [
+    "potato",
+    "a potato",
+    "potatoes"
+   ],
+   "hint": "It is a brown, lumpy vegetable."
+  },
+  {
+   "id": "en-043",
+   "q": "What is big and orange, and can become a pie or a lantern?",
+   "a": "a pumpkin",
+   "accept": [
+    "pumpkin",
+    "a pumpkin"
+   ],
+   "hint": "It grows on a vine and is popular in autumn."
+  },
+  {
+   "id": "en-044",
+   "q": "What buzzes from flower to flower and makes sweet honey?",
+   "a": "a bee",
+   "accept": [
+    "bee",
+    "a bee",
+    "honeybee",
+    "bumblebee"
+   ],
+   "hint": "It has yellow and black stripes."
+  },
+  {
+   "id": "en-045",
+   "q": "What starts as a caterpillar, sleeps in a cocoon, then flies away with colorful wings?",
+   "a": "a butterfly",
+   "accept": [
+    "butterfly",
+    "a butterfly"
+   ],
+   "hint": "It sips from flowers."
+  },
+  {
+   "id": "en-046",
+   "q": "What starts as a tadpole and grows up to jump and say ribbit?",
+   "a": "a frog",
+   "accept": [
+    "frog",
+    "a frog",
+    "toad"
+   ],
+   "hint": "It likes to sit on a lily pad."
+  },
+  {
+   "id": "en-047",
+   "q": "What gives us milk and says moo?",
+   "a": "a cow",
+   "accept": [
+    "cow",
+    "a cow"
+   ],
+   "hint": "It lives on a farm and eats grass."
+  },
+  {
+   "id": "en-048",
+   "q": "What waddles, says quack, and loves to swim in a pond?",
+   "a": "a duck",
+   "accept": [
+    "duck",
+    "a duck",
+    "ducks"
+   ],
+   "hint": "It has a flat orange bill."
+  },
+  {
+   "id": "en-049",
+   "q": "What animal has a trunk, big floppy ears, and is the largest on land?",
+   "a": "an elephant",
+   "accept": [
+    "elephant",
+    "an elephant"
+   ],
+   "hint": "It sprays water with its long nose."
+  },
+  {
+   "id": "en-050",
+   "q": "What animal has the longest neck and eats leaves from tall trees?",
+   "a": "a giraffe",
+   "accept": [
+    "giraffe",
+    "a giraffe"
+   ],
+   "hint": "It has spots and is very tall."
+  },
+  {
+   "id": "en-051",
+   "q": "What black and white bird can swim but cannot fly?",
+   "a": "a penguin",
+   "accept": [
+    "penguin",
+    "a penguin"
+   ],
+   "hint": "It lives where it is icy and it waddles."
+  },
+  {
+   "id": "en-052",
+   "q": "What bird says hoo-hoo and stays awake at night?",
+   "a": "an owl",
+   "accept": [
+    "owl",
+    "an owl"
+   ],
+   "hint": "It has big round eyes and is said to be wise."
+  },
+  {
+   "id": "en-053",
+   "q": "What carries its house on its back and moves very slowly?",
+   "a": "a snail",
+   "accept": [
+    "snail",
+    "a snail"
+   ],
+   "hint": "It leaves a shiny trail behind it."
+  },
+  {
+   "id": "en-054",
+   "q": "What slow animal has a hard shell and won a famous race against a rabbit?",
+   "a": "a turtle",
+   "accept": [
+    "turtle",
+    "a turtle",
+    "tortoise"
+   ],
+   "hint": "In the story, it never gave up."
+  },
+  {
+   "id": "en-055",
+   "q": "What has fins and scales and lives underwater but cannot talk?",
+   "a": "a fish",
+   "accept": [
+    "fish",
+    "a fish",
+    "goldfish"
+   ],
+   "hint": "It breathes with gills."
+  },
+  {
+   "id": "en-056",
+   "q": "What wags its tail when it is happy and is called our best friend?",
+   "a": "a dog",
+   "accept": [
+    "dog",
+    "a dog",
+    "puppy"
+   ],
+   "hint": "It barks and loves to play fetch."
+  },
+  {
+   "id": "en-057",
+   "q": "What has whiskers, purrs, and loves to chase a ball of yarn?",
+   "a": "a cat",
+   "accept": [
+    "cat",
+    "a cat",
+    "kitten"
+   ],
+   "hint": "It likes to nap in sunny spots."
+  },
+  {
+   "id": "en-058",
+   "q": "What has a bottom at the top?",
+   "a": "legs",
+   "accept": [
+    "legs",
+    "your legs",
+    "leg"
+   ],
+   "hint": "You use them for running and jumping."
+  },
+  {
+   "id": "en-059",
+   "q": "What has a head and a foot but no body, and you sleep in it?",
+   "a": "a bed",
+   "accept": [
+    "bed",
+    "a bed"
+   ],
+   "hint": "It has a soft pillow and blankets."
+  },
+  {
+   "id": "en-060",
+   "q": "What begins with T, ends with T, and is full of tea?",
+   "a": "a teapot",
+   "accept": [
+    "teapot",
+    "a teapot",
+    "tea pot",
+    "kettle"
+   ],
+   "hint": "It pours a warm drink at a tea party."
+  },
+  {
+   "id": "en-061",
+   "q": "What goes up but never comes down?",
+   "a": "your age",
+   "accept": [
+    "age",
+    "my age",
+    "your age"
+   ],
+   "hint": "It changes on your birthday."
+  },
+  {
+   "id": "en-062",
+   "q": "What can you catch but not throw?",
+   "a": "a cold",
+   "accept": [
+    "cold",
+    "a cold"
+   ],
+   "hint": "Achoo!"
+  },
+  {
+   "id": "en-063",
+   "q": "What has a neck but no head?",
+   "a": "a bottle",
+   "accept": [
+    "bottle",
+    "a bottle"
+   ],
+   "hint": "You drink juice or water out of it."
+  },
+  {
+   "id": "en-064",
+   "q": "What belongs to you, but other people use it more than you do?",
+   "a": "your name",
+   "accept": [
+    "name",
+    "my name",
+    "your name"
+   ],
+   "hint": "People say it when they call you."
+  },
+  {
+   "id": "en-065",
+   "q": "What goes through towns and fields but never moves?",
+   "a": "a road",
+   "accept": [
+    "road",
+    "street",
+    "path",
+    "a road"
+   ],
+   "hint": "Cars drive on it."
+  },
+  {
+   "id": "en-066",
+   "q": "What can you hold in your right hand but never in your left hand?",
+   "a": "your left hand",
+   "accept": [
+    "left hand",
+    "my left hand",
+    "your left hand"
+   ],
+   "hint": "Think about your own two hands."
+  },
+  {
+   "id": "en-067",
+   "q": "What kind of room has no doors and no windows?",
+   "a": "a mushroom",
+   "accept": [
+    "mushroom",
+    "a mushroom"
+   ],
+   "hint": "It grows in the forest after the rain."
+  },
+  {
+   "id": "en-068",
+   "q": "What has four wheels and flies?",
+   "a": "a garbage truck",
+   "accept": [
+    "garbage truck",
+    "trash truck",
+    "garbage"
+   ],
+   "hint": "Flies are little bugs that love smelly trash."
+  },
+  {
+   "id": "en-069",
+   "q": "What do you call a bear with no teeth?",
+   "a": "a gummy bear",
+   "accept": [
+    "gummy bear",
+    "gummy"
+   ],
+   "hint": "It's a chewy candy."
+  },
+  {
+   "id": "en-070",
+   "q": "What month of the year has 28 days?",
+   "a": "all of them",
+   "accept": [
+    "all",
+    "every month",
+    "all months",
+    "all of them"
+   ],
+   "hint": "Every month has at least 28 days."
+  },
+  {
+   "id": "en-071",
+   "q": "What is so fragile that saying its name breaks it?",
+   "a": "silence",
+   "accept": [
+    "silence",
+    "quiet"
+   ],
+   "hint": "Shhh..."
+  },
+  {
+   "id": "en-072",
+   "q": "What can fill a room but takes up no space?",
+   "a": "light",
+   "accept": [
+    "light"
+   ],
+   "hint": "You turn it on with a switch."
+  },
+  {
+   "id": "en-073",
+   "q": "What starts with E, ends with E, and has only one letter in it?",
+   "a": "an envelope",
+   "accept": [
+    "envelope",
+    "an envelope"
+   ],
+   "hint": "You put a letter inside and mail it."
+  },
+  {
+   "id": "en-074",
+   "q": "What gets bigger the more you take away from it?",
+   "a": "a hole",
+   "accept": [
+    "hole",
+    "a hole"
+   ],
+   "hint": "You dig it in the sand with a shovel."
+  },
+  {
+   "id": "en-075",
+   "q": "What can you break without touching it?",
+   "a": "a promise",
+   "accept": [
+    "promise",
+    "a promise"
+   ],
+   "hint": "You make it when you say I promise."
+  },
+  {
+   "id": "en-076",
+   "q": "What has lots of eyes but cannot see?",
+   "a": "a potato",
+   "accept": [
+    "potato",
+    "a potato"
+   ],
+   "hint": "Its eyes are little spots where it sprouts."
+  },
+  {
+   "id": "en-077",
+   "q": "What is orange and sounds like a parrot?",
+   "a": "a carrot",
+   "accept": [
+    "carrot",
+    "a carrot"
+   ],
+   "hint": "Rabbits love to munch it."
+  },
+  {
+   "id": "en-078",
+   "q": "What has bark but never barks?",
+   "a": "a tree",
+   "accept": [
+    "tree",
+    "a tree"
+   ],
+   "hint": "It has leaves and branches."
+  },
+  {
+   "id": "en-079",
+   "q": "What animal can jump higher than a house?",
+   "a": "any animal",
+   "accept": [
+    "any",
+    "any animal",
+    "all",
+    "every animal",
+    "houses can't jump",
+    "a house can't jump"
+   ],
+   "hint": "Can a house jump at all?"
+  },
+  {
+   "id": "en-080",
+   "q": "What has a head and a tail but no body?",
+   "a": "a coin",
+   "accept": [
+    "coin",
+    "a coin",
+    "penny",
+    "money"
+   ],
+   "hint": "You can flip it."
+  },
+  {
+   "id": "en-081",
+   "q": "What kind of tree can you carry in your hand?",
+   "a": "a palm",
+   "accept": [
+    "palm",
+    "a palm",
+    "palm tree"
+   ],
+   "hint": "Look at the inside of your hand."
+  },
+  {
+   "id": "en-082",
+   "q": "What is easy to get into but hard to get out of?",
+   "a": "trouble",
+   "accept": [
+    "trouble"
+   ],
+   "hint": "Grown-ups say: you'll get into it if you are naughty!"
+  },
+  {
+   "id": "en-083",
+   "q": "What do you call a dinosaur that is sleeping?",
+   "a": "a dino-snore",
+   "accept": [
+    "dino-snore",
+    "dinosnore",
+    "dino snore"
+   ],
+   "hint": "Listen to the sound it makes when it sleeps."
+  },
+  {
+   "id": "en-084",
+   "q": "What is always coming but never arrives?",
+   "a": "tomorrow",
+   "accept": [
+    "tomorrow"
+   ],
+   "hint": "When it comes, it becomes today."
+  },
+  {
+   "id": "en-085",
+   "q": "What can you hear but cannot see or touch?",
+   "a": "your voice",
+   "accept": [
+    "voice",
+    "my voice",
+    "your voice",
+    "sound"
+   ],
+   "hint": "You use it to sing and talk."
+  },
+  {
+   "id": "en-086",
+   "q": "What is white when it is dirty and black when it is clean?",
+   "a": "a chalkboard",
+   "accept": [
+    "chalkboard",
+    "blackboard",
+    "a chalkboard"
+   ],
+   "hint": "Teachers write on it with chalk."
+  },
+  {
+   "id": "en-087",
+   "q": "Which is heavier, a pound of feathers or a pound of rocks?",
+   "a": "they weigh the same",
+   "accept": [
+    "same",
+    "the same",
+    "they're the same",
+    "neither",
+    "equal",
+    "they weigh the same"
+   ],
+   "hint": "A pound is a pound."
+  },
+  {
+   "id": "en-088",
+   "q": "What has four legs and a back, but you sit on it and it never walks?",
+   "a": "a chair",
+   "accept": [
+    "chair",
+    "a chair",
+    "stool"
+   ],
+   "hint": "It is not a table."
+  },
+  {
+   "id": "en-089",
+   "q": "What kind of coat can you only put on when it is wet?",
+   "a": "a coat of paint",
+   "accept": [
+    "paint",
+    "a coat of paint"
+   ],
+   "hint": "You put it on with a brush."
+  },
+  {
+   "id": "en-090",
+   "q": "What has two wheels and pedals and you ride it to the park?",
+   "a": "a bicycle",
+   "accept": [
+    "bicycle",
+    "bike",
+    "a bike"
+   ],
+   "hint": "You ring its little bell."
+  },
+  {
+   "id": "en-091",
+   "q": "I have wings and a beak, I lay eggs, and I say cluck. What am I?",
+   "a": "a chicken",
+   "accept": [
+    "chicken",
+    "hen",
+    "a chicken"
+   ],
+   "hint": "My babies are called chicks."
+  },
+  {
+   "id": "en-092",
+   "q": "I have black and white stripes, I live in Africa, and I look like a horse. What am I?",
+   "a": "a zebra",
+   "accept": [
+    "zebra",
+    "a zebra"
+   ],
+   "hint": "Nobody can paint my stripes, I was born with them."
+  },
+  {
+   "id": "en-093",
+   "q": "I am big and gray and I have a horn on my nose. What am I?",
+   "a": "a rhinoceros",
+   "accept": [
+    "rhino",
+    "rhinoceros",
+    "a rhino"
+   ],
+   "hint": "My skin is thick like armor."
+  },
+  {
+   "id": "en-094",
+   "q": "I hop, I have a pouch, and I live in Australia. What am I?",
+   "a": "a kangaroo",
+   "accept": [
+    "kangaroo",
+    "a kangaroo"
+   ],
+   "hint": "My baby is called a joey."
+  },
+  {
+   "id": "en-095",
+   "q": "I am the king of the jungle and I roar. What am I?",
+   "a": "a lion",
+   "accept": [
+    "lion",
+    "a lion"
+   ],
+   "hint": "I have a big furry mane."
+  },
+  {
+   "id": "en-096",
+   "q": "I have eight arms and I live in the sea. What am I?",
+   "a": "an octopus",
+   "accept": [
+    "octopus",
+    "an octopus"
+   ],
+   "hint": "I can squirt ink."
+  },
+  {
+   "id": "en-097",
+   "q": "I sleep upside down all day and fly at night. What am I?",
+   "a": "a bat",
+   "accept": [
+    "bat",
+    "a bat"
+   ],
+   "hint": "I have wings, but I am not a bird."
+  },
+  {
+   "id": "en-098",
+   "q": "I am black and white and I eat bamboo all day. What am I?",
+   "a": "a panda",
+   "accept": [
+    "panda",
+    "giant panda",
+    "a panda"
+   ],
+   "hint": "I come from China."
+  },
+  {
+   "id": "en-099",
+   "q": "I swing from trees, I have a long tail, and I love bananas. What am I?",
+   "a": "a monkey",
+   "accept": [
+    "monkey",
+    "ape",
+    "chimpanzee",
+    "a monkey"
+   ],
+   "hint": "I go ooh ooh aah aah."
+  },
+  {
+   "id": "en-100",
+   "q": "I have a hard shell and two pinchers, and I walk sideways. What am I?",
+   "a": "a crab",
+   "accept": [
+    "crab",
+    "a crab"
+   ],
+   "hint": "You find me at the beach."
+  },
+  {
+   "id": "en-101",
+   "q": "I am the biggest animal in the ocean. What am I?",
+   "a": "a whale",
+   "accept": [
+    "whale",
+    "blue whale",
+    "a whale"
+   ],
+   "hint": "I spray water out of my blowhole."
+  },
+  {
+   "id": "en-102",
+   "q": "I spin a web to catch flies. What am I?",
+   "a": "a spider",
+   "accept": [
+    "spider",
+    "a spider"
+   ],
+   "hint": "I have eight legs."
+  },
+  {
+   "id": "en-103",
+   "q": "I have sharp quills on my back to keep me safe. What am I?",
+   "a": "a porcupine",
+   "accept": [
+    "porcupine",
+    "hedgehog",
+    "a porcupine"
+   ],
+   "hint": "Don't touch my spikes!"
+  },
+  {
+   "id": "en-104",
+   "q": "I light up and fly around on summer nights. What am I?",
+   "a": "a firefly",
+   "accept": [
+    "firefly",
+    "lightning bug",
+    "a firefly"
+   ],
+   "hint": "My tail glows in the dark."
+  },
+  {
+   "id": "en-105",
+   "q": "I am a fruit that grows in bunches, purple or green. What am I?",
+   "a": "grapes",
+   "accept": [
+    "grape",
+    "grapes"
+   ],
+   "hint": "When I dry up, I become raisins."
+  },
+  {
+   "id": "en-106",
+   "q": "I am red and I wear my seeds on the outside. What am I?",
+   "a": "a strawberry",
+   "accept": [
+    "strawberry",
+    "a strawberry"
+   ],
+   "hint": "I wear a little green hat."
+  },
+  {
+   "id": "en-107",
+   "q": "I am yellow and so sour that I make your face pucker. What am I?",
+   "a": "a lemon",
+   "accept": [
+    "lemon",
+    "a lemon"
+   ],
+   "hint": "My juice goes into a famous summer drink."
+  },
+  {
+   "id": "en-108",
+   "q": "I am a vegetable that makes you cry when you cut me. What am I?",
+   "a": "an onion",
+   "accept": [
+    "onion",
+    "an onion"
+   ],
+   "hint": "I have many layers."
+  },
+  {
+   "id": "en-109",
+   "q": "I pop when you heat me, and people eat me at the movies. What am I?",
+   "a": "popcorn",
+   "accept": [
+    "popcorn"
+   ],
+   "hint": "I start as a little corn kernel."
+  },
+  {
+   "id": "en-110",
+   "q": "I am made of snow and I have a carrot nose. What am I?",
+   "a": "a snowman",
+   "accept": [
+    "snowman",
+    "a snowman",
+    "snow man"
+   ],
+   "hint": "You build me in winter."
+  },
+  {
+   "id": "en-111",
+   "q": "I make a loud boom during a storm. What am I?",
+   "a": "thunder",
+   "accept": [
+    "thunder"
+   ],
+   "hint": "I come right after the lightning."
+  },
+  {
+   "id": "en-112",
+   "q": "I spin around and keep you cool on a hot day. What am I?",
+   "a": "a fan",
+   "accept": [
+    "fan",
+    "a fan",
+    "electric fan"
+   ],
+   "hint": "I have blades that go around."
+  },
+  {
+   "id": "en-113",
+   "q": "I keep your food cold in the kitchen. What am I?",
+   "a": "a fridge",
+   "accept": [
+    "fridge",
+    "refrigerator",
+    "a fridge"
+   ],
+   "hint": "Milk and juice live inside me."
+  },
+  {
+   "id": "en-114",
+   "q": "I have a screen and you watch cartoons on me. What am I?",
+   "a": "a television",
+   "accept": [
+    "tv",
+    "television",
+    "a tv",
+    "a television"
+   ],
+   "hint": "You change my channels with a remote."
+  },
+  {
+   "id": "en-115",
+   "q": "I have a page for every day and you flip me each month. What am I?",
+   "a": "a calendar",
+   "accept": [
+    "calendar",
+    "a calendar"
+   ],
+   "hint": "I tell you the date."
+  },
+  {
+   "id": "en-116",
+   "q": "I am a little house for coins with a slot on top. What am I?",
+   "a": "a piggy bank",
+   "accept": [
+    "piggy bank",
+    "money box",
+    "a piggy bank"
+   ],
+   "hint": "I often look like a little pig."
+  },
+  {
+   "id": "en-117",
+   "q": "I fly high in the sky and carry lots of people. What am I?",
+   "a": "an airplane",
+   "accept": [
+    "airplane",
+    "plane",
+    "jet",
+    "aeroplane",
+    "an airplane"
+   ],
+   "hint": "I take off from an airport."
+  },
+  {
+   "id": "en-118",
+   "q": "I run on tracks and say choo-choo. What am I?",
+   "a": "a train",
+   "accept": [
+    "train",
+    "a train"
+   ],
+   "hint": "I pull many cars in a line."
+  },
+  {
+   "id": "en-119",
+   "q": "I float on the water and carry people across the sea. What am I?",
+   "a": "a boat",
+   "accept": [
+    "boat",
+    "ship",
+    "a boat"
+   ],
+   "hint": "I might have a sail."
+  },
+  {
+   "id": "en-120",
+   "q": "I have a loud siren and I rush to put out fires. What am I?",
+   "a": "a fire truck",
+   "accept": [
+    "fire truck",
+    "fire engine",
+    "a fire truck"
+   ],
+   "hint": "Firefighters ride on me."
+  },
+  {
+   "id": "en-121",
+   "q": "I am round, people kick me, and they try to score goals with me. What am I?",
+   "a": "a soccer ball",
+   "accept": [
+    "soccer ball",
+    "ball",
+    "football",
+    "a ball"
+   ],
+   "hint": "Players chase me across a field."
+  },
+  {
+   "id": "en-122",
+   "q": "I go back and forth in the park and you sit on me. What am I?",
+   "a": "a swing",
+   "accept": [
+    "swing",
+    "a swing"
+   ],
+   "hint": "Pump your legs to go higher!"
+  },
+  {
+   "id": "en-123",
+   "q": "I have lots of pieces that fit together to make a picture. What am I?",
+   "a": "a puzzle",
+   "accept": [
+    "puzzle",
+    "jigsaw",
+    "a puzzle"
+   ],
+   "hint": "Find the corner pieces first."
+  },
+  {
+   "id": "en-124",
+   "q": "I am a bag you carry on your back to school. What am I?",
+   "a": "a backpack",
+   "accept": [
+    "backpack",
+    "schoolbag",
+    "bag",
+    "a backpack"
+   ],
+   "hint": "Your books and lunch go inside."
+  },
+  {
+   "id": "en-125",
+   "q": "I keep your neck warm in winter. What am I?",
+   "a": "a scarf",
+   "accept": [
+    "scarf",
+    "a scarf"
+   ],
+   "hint": "You wrap me around."
+  },
+  {
+   "id": "en-126",
+   "q": "I sit on your nose and help you see. What am I?",
+   "a": "glasses",
+   "accept": [
+    "glasses",
+    "eyeglasses",
+    "spectacles"
+   ],
+   "hint": "I have two lenses."
+  },
+  {
+   "id": "en-127",
+   "q": "I come on your birthday with wrapping paper and a bow. What am I?",
+   "a": "a present",
+   "accept": [
+    "present",
+    "gift",
+    "a present",
+    "a gift"
+   ],
+   "hint": "You open me to find a surprise."
+  },
+  {
+   "id": "en-128",
+   "q": "I am the holiday when you dress up and say trick or treat. What am I?",
+   "a": "Halloween",
+   "accept": [
+    "halloween"
+   ],
+   "hint": "Pumpkins and costumes!"
+  },
+  {
+   "id": "en-129",
+   "q": "I am a round sweet treat with a hole in the middle. What am I?",
+   "a": "a donut",
+   "accept": [
+    "donut",
+    "doughnut",
+    "a donut"
+   ],
+   "hint": "I am often covered in sprinkles."
+  },
+  {
+   "id": "en-130",
+   "q": "You chew me and blow me into a bubble. What am I?",
+   "a": "bubble gum",
+   "accept": [
+    "gum",
+    "bubble gum",
+    "chewing gum"
+   ],
+   "hint": "Chew me, but don't swallow me!"
+  },
+  {
+   "id": "en-131",
+   "q": "What has a head like a cat, feet like a cat, and a tail like a cat, but is not a cat?",
+   "a": "a kitten",
+   "accept": [
+    "kitten",
+    "kitty",
+    "a kitten"
+   ],
+   "hint": "It is a baby."
+  },
+  {
+   "id": "en-132",
+   "q": "What has many needles but never sews?",
+   "a": "a pine tree",
+   "accept": [
+    "pine tree",
+    "pine",
+    "christmas tree",
+    "tree",
+    "cactus"
+   ],
+   "hint": "It stays green all winter."
+  },
+  {
+   "id": "en-133",
+   "q": "What is as big as an elephant but weighs nothing at all?",
+   "a": "an elephant's shadow",
+   "accept": [
+    "shadow",
+    "elephant's shadow",
+    "its shadow"
+   ],
+   "hint": "It appears when the sun shines on the elephant."
+  },
+  {
+   "id": "en-134",
+   "q": "What goes up and down but never moves?",
+   "a": "the stairs",
+   "accept": [
+    "stairs",
+    "staircase",
+    "steps",
+    "the stairs"
+   ],
+   "hint": "You climb them to go upstairs."
+  },
+  {
+   "id": "en-135",
+   "q": "What can you make but never see?",
+   "a": "noise",
+   "accept": [
+    "noise",
+    "sound"
+   ],
+   "hint": "Banging on a drum makes a lot of it."
+  },
+  {
+   "id": "en-136",
+   "q": "Where does Friday come before Thursday?",
+   "a": "in the dictionary",
+   "accept": [
+    "dictionary",
+    "in the dictionary",
+    "a dictionary"
+   ],
+   "hint": "Think about the alphabet."
+  },
+  {
+   "id": "en-137",
+   "q": "What is light as a feather, but even the strongest person cannot hold it for long?",
+   "a": "your breath",
+   "accept": [
+    "breath",
+    "my breath",
+    "your breath"
+   ],
+   "hint": "Breathe in and try to hold it."
+  },
+  {
+   "id": "en-138",
+   "q": "What goes all the way around the yard but never moves?",
+   "a": "a fence",
+   "accept": [
+    "fence",
+    "a fence"
+   ],
+   "hint": "It keeps the dog inside the yard."
+  },
+  {
+   "id": "en-139",
+   "q": "What has a big mouth that never talks, and you put trash in it?",
+   "a": "a trash can",
+   "accept": [
+    "trash can",
+    "garbage can",
+    "bin",
+    "trash",
+    "a trash can"
+   ],
+   "hint": "Its lid goes up and down."
+  },
+  {
+   "id": "en-140",
+   "q": "What can be told, made, cracked and played?",
+   "a": "a joke",
+   "accept": [
+    "joke",
+    "a joke"
+   ],
+   "hint": "It makes people laugh."
+  },
+  {
+   "id": "en-141",
+   "q": "What kind of band never plays any music?",
+   "a": "a rubber band",
+   "accept": [
+    "rubber band",
+    "a rubber band"
+   ],
+   "hint": "It is stretchy."
+  },
+  {
+   "id": "en-142",
+   "q": "What sticky, sweet food do bees make?",
+   "a": "honey",
+   "accept": [
+    "honey"
+   ],
+   "hint": "Bears love it too."
+  },
+  {
+   "id": "en-143",
+   "q": "What is made of water, but dies if you put it in water?",
+   "a": "an ice cube",
+   "accept": [
+    "ice",
+    "ice cube",
+    "an ice cube"
+   ],
+   "hint": "It melts."
+  },
+  {
+   "id": "en-144",
+   "q": "What do you call a snowman in the summer?",
+   "a": "a puddle",
+   "accept": [
+    "puddle",
+    "water",
+    "a puddle"
+   ],
+   "hint": "The sun melts him."
+  },
+  {
+   "id": "en-145",
+   "q": "What kind of dog always knows what time it is?",
+   "a": "a watchdog",
+   "accept": [
+    "watchdog",
+    "watch dog",
+    "a watchdog"
+   ],
+   "hint": "A watch tells time."
+  },
+  {
+   "id": "en-146",
+   "q": "Why was six afraid of seven?",
+   "a": "because seven ate nine",
+   "accept": [
+    "seven ate nine",
+    "7 ate 9",
+    "seven eight nine",
+    "7 8 9"
+   ],
+   "hint": "Say the numbers out loud: seven, eight, nine."
+  },
+  {
+   "id": "en-147",
+   "q": "What has three feet but cannot walk?",
+   "a": "a yardstick",
+   "accept": [
+    "yardstick",
+    "ruler",
+    "a yardstick",
+    "a yard"
+   ],
+   "hint": "A yard is three feet long."
+  },
+  {
+   "id": "en-148",
+   "q": "What is at the end of a rainbow?",
+   "a": "the letter W",
+   "accept": [
+    "w",
+    "the letter w",
+    "letter w"
+   ],
+   "hint": "Look at how the word rainbow is spelled."
+  },
+  {
+   "id": "en-149",
+   "q": "What has a lid, holds soup, and sits on the stove?",
+   "a": "a pot",
+   "accept": [
+    "pot",
+    "saucepan",
+    "a pot"
+   ],
+   "hint": "You cook in it."
+  },
+  {
+   "id": "en-150",
+   "q": "What has keys and a screen and helps you type?",
+   "a": "a computer",
+   "accept": [
+    "computer",
+    "laptop",
+    "keyboard",
+    "a computer"
+   ],
+   "hint": "Grown-ups often use it at work."
+  },
+  {
+   "id": "en-151",
+   "q": "What wears a coat all winter and pants all summer?",
+   "a": "a dog",
+   "accept": [
+    "dog",
+    "a dog",
+    "puppy"
+   ],
+   "hint": "It has a furry coat and pants when it is hot."
+  },
+  {
+   "id": "en-152",
+   "q": "What has a tongue but cannot taste?",
+   "a": "a shoe",
+   "accept": [
+    "shoe",
+    "sneaker",
+    "boot",
+    "a shoe"
+   ],
+   "hint": "You tie its laces."
+  },
+  {
+   "id": "en-153",
+   "q": "What has a crown, is not a king, and you brush it twice a day?",
+   "a": "a tooth",
+   "accept": [
+    "tooth",
+    "teeth",
+    "a tooth"
+   ],
+   "hint": "It lives in your mouth."
+  },
+  {
+   "id": "en-154",
+   "q": "What is bought by the yard and worn by the foot?",
+   "a": "a carpet",
+   "accept": [
+    "carpet",
+    "rug",
+    "a carpet"
+   ],
+   "hint": "It covers the floor."
+  },
+  {
+   "id": "en-155",
+   "q": "What do you tie into a bow to keep your shoes on?",
+   "a": "shoelaces",
+   "accept": [
+    "shoelace",
+    "shoelaces",
+    "laces"
+   ],
+   "hint": "You learn to tie them."
+  },
+  {
+   "id": "en-156",
+   "q": "What can you hold to your ear to hear the ocean, even far away from the sea?",
+   "a": "a seashell",
+   "accept": [
+    "shell",
+    "seashell",
+    "conch",
+    "a shell"
+   ],
+   "hint": "You find it on the beach."
+  },
+  {
+   "id": "en-157",
+   "q": "What do you call a train that sneezes?",
+   "a": "an achoo-choo train",
+   "accept": [
+    "achoo-choo",
+    "achoo choo",
+    "achoochoo"
+   ],
+   "hint": "Say choo-choo with a sneeze."
+  },
+  {
+   "id": "en-158",
+   "q": "Which letter of the alphabet is a drink?",
+   "a": "T",
+   "accept": [
+    "t",
+    "the letter t",
+    "tea",
+    "letter t"
+   ],
+   "hint": "People drink it with honey and lemon."
+  },
+  {
+   "id": "en-159",
+   "q": "I am full of water and you jump into me on a hot day. What am I?",
+   "a": "a swimming pool",
+   "accept": [
+    "pool",
+    "swimming pool",
+    "a pool"
+   ],
+   "hint": "Don't forget your goggles!"
+  },
+  {
+   "id": "en-160",
+   "q": "I ring loudly every morning to wake you up. What am I?",
+   "a": "an alarm clock",
+   "accept": [
+    "alarm clock",
+    "alarm",
+    "an alarm clock"
+   ],
+   "hint": "You can press my snooze button."
+  }
+ ]
+}

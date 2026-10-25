@@ -1,0 +1,4986 @@
+[
+ {
+  "id": "en-qa-001",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is the sky blue?",
+  "alt": [
+   "How come the sky is blue?",
+   "Why is the sky blue and not green?",
+   "why blue sky"
+  ],
+  "a": "Sunlight looks white, but it has all the rainbow colors inside. When sunlight hits the air, blue light gets bounced around the most, so blue comes at us from all over the sky.",
+  "check": "Rayleigh scattering: air scatters short (blue) wavelengths much more than long ones."
+ },
+ {
+  "id": "en-qa-002",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is the sunset orange and red?",
+  "alt": [
+   "Why does the sky turn red at night?",
+   "Why is the sky pink when the sun goes down?",
+   "why orange sunset"
+  ],
+  "a": "When the sun is low, its light travels through much more air to reach you. Most of the blue gets bounced away on the trip, so reds and oranges are left for you to see.",
+  "check": "At low sun angles light crosses more air; blue is scattered out, leaving red and orange."
+ },
+ {
+  "id": "en-qa-003",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "How do rainbows happen?",
+  "alt": [
+   "Where do rainbows come from?",
+   "Why is there a rainbow after rain?",
+   "what makes a rainbow"
+  ],
+  "a": "A rainbow happens when sunshine meets raindrops. Each drop bends the sunlight and splits it into colors. You can see one when the sun is behind you and rain is in front of you.",
+  "check": "Raindrops refract and disperse sunlight; rainbows appear opposite the sun."
+ },
+ {
+  "id": "en-qa-004",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is a rainbow curved?",
+  "alt": [
+   "Why are rainbows shaped like an arch?",
+   "Why isn't a rainbow straight?",
+   "why rainbow round"
+  ],
+  "a": "A rainbow is really a circle of color! The ground gets in the way, so we usually see only the top part, an arch. From an airplane, people can sometimes see a whole round rainbow.",
+  "check": "A rainbow is a circle centered opposite the sun; the ground usually hides the lower part."
+ },
+ {
+  "id": "en-qa-005",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why are there two rainbows sometimes?",
+  "alt": [
+   "What is a double rainbow?",
+   "Why did I see two rainbows?",
+   "why double rainbow"
+  ],
+  "a": "Sometimes sunlight bounces twice inside the raindrops instead of once. That makes a second, fainter rainbow outside the first one, and its colors are in the opposite order.",
+  "check": "Secondary rainbow comes from two internal reflections; it is fainter, outside, with reversed colors."
+ },
+ {
+  "id": "en-qa-006",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why do I have a shadow?",
+  "alt": [
+   "Where do shadows come from?",
+   "What is a shadow?",
+   "why shadow"
+  ],
+  "a": "Light travels in straight lines. Your body blocks the light, so it can't reach the ground right behind you. That dark spot shaped like you is your shadow.",
+  "check": "Light travels in straight lines; an opaque object blocks it, creating a shadow."
+ },
+ {
+  "id": "en-qa-007",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is my shadow so long in the evening?",
+  "alt": [
+   "Why does my shadow change size during the day?",
+   "Why is my shadow short at lunchtime?",
+   "why long shadow"
+  ],
+  "a": "In the morning and evening, the sun is low in the sky, so its light comes from the side and stretches your shadow long. At midday the sun is high, so your shadow is short.",
+  "check": "Shadow length depends on sun height: low sun gives long shadows, high sun short ones."
+ },
+ {
+  "id": "en-qa-008",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why does my shadow get bigger when I get closer to the flashlight?",
+  "alt": [
+   "Why do shadows grow and shrink?",
+   "How do I make a giant shadow?",
+   "why big shadow"
+  ],
+  "a": "When you move closer to a flashlight, you block more of its light. So the shadow you make on the wall grows bigger. Step back toward the wall, and it shrinks.",
+  "check": "Closer to a point light source, an object blocks a wider cone of light, enlarging its shadow."
+ },
+ {
+  "id": "en-qa-009",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "How do mirrors work?",
+  "alt": [
+   "Why can I see myself in a mirror?",
+   "How does a mirror show me?",
+   "how mirror work"
+  ],
+  "a": "A mirror is very smooth and shiny, so light bounces off it neatly instead of scattering. Light from your face bounces straight back to your eyes, and you see yourself.",
+  "check": "A smooth shiny surface gives regular (specular) reflection, forming an image."
+ },
+ {
+  "id": "en-qa-010",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is writing backwards in a mirror?",
+  "alt": [
+   "Why do words look funny in the mirror?",
+   "Why does the mirror flip letters?",
+   "mirror words backwards"
+  ],
+  "a": "A mirror flips things front to back, so your reflection is facing you. That makes words look reversed. Hold a word up to a mirror and the letters look flipped around.",
+  "check": "A plane mirror reverses front-to-back, which makes text appear left-right reversed."
+ },
+ {
+  "id": "en-qa-011",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why am I upside down in a spoon?",
+  "alt": [
+   "Why does the spoon flip me over?",
+   "Why do I look upside down in a spoon?",
+   "spoon upside down"
+  ],
+  "a": "The inside of a spoon curves in like a little cave. It bounces light so the picture crosses over, and you look upside down. Turn the spoon over and you'll be right side up again.",
+  "check": "A concave mirror forms an inverted image of distant objects; a convex one forms an upright image."
+ },
+ {
+  "id": "en-qa-012",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why does a straw look broken in water?",
+  "alt": [
+   "Why does my pencil look bent in the glass?",
+   "Why do things look funny in water?",
+   "why straw bent"
+  ],
+  "a": "Light changes direction a little when it moves from water into air. That bending makes the part of the straw in the water look like it's in a different spot, so it looks broken.",
+  "check": "Refraction: light bends when passing between water and air."
+ },
+ {
+  "id": "en-qa-013",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why are things different colors?",
+  "alt": [
+   "Why is an apple red?",
+   "Where do colors come from?",
+   "why colors"
+  ],
+  "a": "Sunlight has all the colors in it. A red apple soaks up most colors and bounces red light back to your eyes. White things bounce back all the colors.",
+  "check": "Objects absorb some wavelengths and reflect others; the reflected light is the color we see."
+ },
+ {
+  "id": "en-qa-014",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why do black clothes get hot in the sun?",
+  "alt": [
+   "Why is my black shirt so hot?",
+   "Why do people wear white in summer?",
+   "why black hot"
+  ],
+  "a": "Black things soak up almost all the light that hits them, and that light turns into warmth. White things bounce most light away. That's why white clothes feel cooler on a sunny day.",
+  "check": "Dark surfaces absorb more light and convert it to heat; light surfaces reflect more."
+ },
+ {
+  "id": "en-qa-015",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why can I see through glass?",
+  "alt": [
+   "How come glass is see-through?",
+   "Why can't I see through walls?",
+   "why glass clear"
+  ],
+  "a": "Glass lets light pass right through it instead of blocking it. Things that let light through like that are called transparent. Wood and walls block light, so you can't see through them.",
+  "check": "Transparent materials transmit visible light; opaque materials block it."
+ },
+ {
+  "id": "en-qa-016",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why are clouds white?",
+  "alt": [
+   "How come clouds are white?",
+   "What makes clouds white?",
+   "why white clouds"
+  ],
+  "a": "Clouds are made of lots of tiny water drops. The drops bounce back all the colors of sunlight about the same, and all colors mixed together look white.",
+  "check": "Cloud droplets scatter all visible wavelengths about equally, so clouds look white."
+ },
+ {
+  "id": "en-qa-017",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why are rain clouds dark?",
+  "alt": [
+   "Why do clouds turn gray before it rains?",
+   "Why are storm clouds so dark?",
+   "why gray clouds"
+  ],
+  "a": "Rain clouds are very thick and full of water drops. They are so thick that sunlight can't get through well, so from below their bottoms look dark gray.",
+  "check": "Thick, dense clouds let little sunlight through, so their bases look dark gray."
+ },
+ {
+  "id": "en-qa-018",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is the sea blue?",
+  "alt": [
+   "Why is the ocean blue?",
+   "Is the ocean blue because of the sky?",
+   "why blue water"
+  ],
+  "a": "Water soaks up a little of the red light in sunlight, and lots of water leaves more blue behind. The sea also reflects the blue sky, like a giant mirror.",
+  "check": "Water absorbs red light slightly more than blue; the sea surface also reflects the sky."
+ },
+ {
+  "id": "en-qa-019",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why is snow white?",
+  "alt": [
+   "If snow is ice, why is it white?",
+   "What makes snow white?",
+   "why white snow"
+  ],
+  "a": "Snow is made of tons of tiny ice crystals. Light bounces off all their little sides in every direction, and when all the colors bounce back together, we see white.",
+  "check": "Many ice crystal surfaces scatter all wavelengths, so snow appears white."
+ },
+ {
+  "id": "en-qa-020",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "Why do bubbles have rainbow colors?",
+  "alt": [
+   "Why are bubbles swirly colors?",
+   "Why do bubbles change color?",
+   "bubble colors"
+  ],
+  "a": "A bubble's skin is super thin. Light bounces off the outside and the inside of that skin, and the two bounces mix to make swirly colors. As the skin gets thinner, the colors change.",
+  "check": "Thin-film interference between reflections from the two surfaces of the soap film."
+ },
+ {
+  "id": "en-qa-021",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "What is sound?",
+  "alt": [
+   "How is sound made?",
+   "Where does sound come from?",
+   "what makes noise"
+  ],
+  "a": "Sound is made when something shakes back and forth very fast. That's called vibrating. The shaking pushes the air, the air shakes all the way to your ears, and you hear it.",
+  "check": "Sound is produced by vibration and travels as vibrations through air."
+ },
+ {
+  "id": "en-qa-022",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "What is an echo?",
+  "alt": [
+   "Why do I hear my voice come back?",
+   "Why is there an echo in the mountains?",
+   "why echo"
+  ],
+  "a": "An echo is your sound bouncing back to you. When you shout near a big hard wall or cliff, the sound hits it and comes back, so you hear your voice again a moment later.",
+  "check": "An echo is sound reflected from a large hard surface."
+ },
+ {
+  "id": "en-qa-023",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What makes thunder?",
+  "alt": [
+   "Why is thunder so loud?",
+   "Where does thunder come from?",
+   "why thunder"
+  ],
+  "a": "Lightning is super hot. It heats the air around it so fast that the air bursts outward with a giant boom. That boom is thunder.",
+  "check": "Thunder is caused by rapid heating and expansion of air along a lightning channel."
+ },
+ {
+  "id": "en-qa-024",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why do I see lightning before I hear thunder?",
+  "alt": [
+   "Why does thunder come after lightning?",
+   "Why isn't thunder at the same time as lightning?",
+   "lightning first then thunder"
+  ],
+  "a": "Lightning and thunder happen at the same time. But light travels much, much faster than sound. The flash reaches you almost right away, while the sound takes longer to arrive.",
+  "check": "Light travels far faster than sound in air."
+ },
+ {
+  "id": "en-qa-025",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why does thunder rumble for so long?",
+  "alt": [
+   "Why is thunder a long rumble?",
+   "Why does thunder keep going?",
+   "why thunder rumble"
+  ],
+  "a": "Lightning is very long, so sound from the close parts reaches you first and sound from the far parts comes later. It also bounces off hills and clouds, making a long rumble.",
+  "check": "Sound from different parts of a long lightning channel arrives at different times and echoes."
+ },
+ {
+  "id": "en-qa-026",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why can I hear the ocean in a seashell?",
+  "alt": [
+   "Is the ocean really inside a shell?",
+   "Why does a shell make a whooshing sound?",
+   "ocean in shell"
+  ],
+  "a": "It's not really the ocean! The shell catches the quiet sounds around you, and its curvy inside makes some of them louder. That soft whooshing sounds like waves.",
+  "check": "The shell's cavity resonates and amplifies ambient noise; it is not the sea."
+ },
+ {
+  "id": "en-qa-027",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why do big drums sound low?",
+  "alt": [
+   "Why does a big drum go boom?",
+   "Why do small drums sound high?",
+   "why drum low"
+  ],
+  "a": "A big drum skin shakes more slowly than a small one. Slow shaking makes a low sound, like boom. Fast shaking makes a higher sound, like a small drum's tap.",
+  "check": "Larger drumheads vibrate at lower frequencies, producing lower pitch."
+ },
+ {
+  "id": "en-qa-028",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "How does a cup telephone work?",
+  "alt": [
+   "How can I hear through a string phone?",
+   "Why does the string telephone work?",
+   "cup phone"
+  ],
+  "a": "When you talk into one cup, your voice makes the bottom shake. The tight string carries that shaking to the other cup, which shakes too, so your friend hears you. A loose string doesn't work well.",
+  "check": "Vibrations travel along a taut string from one cup to the other."
+ },
+ {
+  "id": "en-qa-029",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why is my voice so loud in the bathroom?",
+  "alt": [
+   "Why does singing in the bathroom sound good?",
+   "Why is the bathroom echoey?",
+   "loud bathroom"
+  ],
+  "a": "Bathroom walls are usually hard and smooth, like tiles. Your voice bounces off them again and again instead of being soaked up, so it sounds louder and fuller.",
+  "check": "Hard smooth surfaces reflect sound instead of absorbing it, causing reverberation."
+ },
+ {
+  "id": "en-qa-030",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why is it so quiet after it snows?",
+  "alt": [
+   "Does snow make things quiet?",
+   "Why is everything hushed when it snows?",
+   "why snow quiet"
+  ],
+  "a": "Fresh, fluffy snow has lots of tiny air spaces between the flakes. Those spaces soak up sound like a sponge soaks up water, so the world sounds hushed and quiet.",
+  "check": "Fresh porous snow absorbs sound."
+ },
+ {
+  "id": "en-qa-031",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why does the kettle whistle?",
+  "alt": [
+   "Why does the teapot make that noise?",
+   "What makes the kettle sing?",
+   "kettle whistle"
+  ],
+  "a": "When water boils, it turns into steam that pushes out of the spout. The whistle has a tiny hole, and steam rushing through it makes the air shake fast, which makes a high whistle.",
+  "check": "Steam forced through a whistle's small opening sets air vibrating, producing a tone."
+ },
+ {
+  "id": "en-qa-032",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "Why does a rubber band make a sound when I pluck it?",
+  "alt": [
+   "Why does a stretched rubber band twang?",
+   "Why do tighter bands sound higher?",
+   "rubber band sound"
+  ],
+  "a": "When you pluck a rubber band, it wiggles back and forth very fast. That wiggling shakes the air and makes a sound. A tighter band wiggles faster and sounds higher.",
+  "check": "A plucked band vibrates; higher tension gives higher frequency and pitch."
+ },
+ {
+  "id": "en-qa-033",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does ice float?",
+  "alt": [
+   "Why don't ice cubes sink?",
+   "How come ice stays on top of water?",
+   "why ice floats"
+  ],
+  "a": "When water freezes, it spreads out and takes up a bit more space. So a piece of ice is lighter than the same amount of water, and it floats on top.",
+  "check": "Water expands when it freezes, so ice is less dense than liquid water."
+ },
+ {
+  "id": "en-qa-034",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does ice melt?",
+  "alt": [
+   "Why did my ice cube turn into water?",
+   "Why do snowmen melt?",
+   "why ice melts"
+  ],
+  "a": "Ice is frozen water. When the air around it is warmer than freezing, the ice soaks up that warmth and turns back into liquid water.",
+  "check": "Ice absorbs heat from warmer surroundings and melts above 0 C."
+ },
+ {
+  "id": "en-qa-035",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "How does water turn into ice?",
+  "alt": [
+   "Why does water freeze in the freezer?",
+   "How do ice cubes get made?",
+   "why water freezes"
+  ],
+  "a": "Water turns into ice when it gets cold enough, at zero degrees Celsius. A freezer is colder than that, so the water slowly turns hard and solid.",
+  "check": "Pure water freezes at 0 C at normal pressure; freezers are colder than that."
+ },
+ {
+  "id": "en-qa-036",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "What is steam?",
+  "alt": [
+   "What's the white smoke over the pot?",
+   "Where does steam come from?",
+   "what steam"
+  ],
+  "a": "When water gets very hot, it turns into an invisible gas called water vapor. The white puffy cloud you see above a pot is tiny water drops made when that vapor cools in the air.",
+  "check": "Water vapor is invisible; the visible white plume is condensed droplets."
+ },
+ {
+  "id": "en-qa-037",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does water boil?",
+  "alt": [
+   "Why does hot water bubble?",
+   "What does boiling mean?",
+   "why bubbles in pot"
+  ],
+  "a": "When you heat water, it gets hotter and hotter. At about 100 degrees Celsius, water starts turning into gas right inside the pot, and the gas bubbles up to the top. That's boiling.",
+  "check": "Water boils at about 100 C at sea level; bubbles are water vapor."
+ },
+ {
+  "id": "en-qa-038",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Where do puddles go?",
+  "alt": [
+   "Why do puddles dry up?",
+   "Where does the water go when it dries?",
+   "puddle disappear"
+  ],
+  "a": "The sun and wind slowly turn puddle water into an invisible gas that floats into the air. This is called evaporating. The water isn't gone, it's just in the air now.",
+  "check": "Evaporation turns liquid water into water vapor; sun and wind speed it up."
+ },
+ {
+  "id": "en-qa-039",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does my cold drink get wet on the outside?",
+  "alt": [
+   "Why is my cup sweating?",
+   "Where do the drops on my cold glass come from?",
+   "cold cup wet"
+  ],
+  "a": "The air has invisible water in it. When that air touches your cold cup, it cools and the water turns into tiny drops on the outside. The water came from the air, not from inside the cup.",
+  "check": "Condensation: water vapor in air turns to liquid on a cold surface."
+ },
+ {
+  "id": "en-qa-040",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do windows get foggy?",
+  "alt": [
+   "Why can I draw on the window in winter?",
+   "Why does the car window fog up?",
+   "foggy window"
+  ],
+  "a": "Warm air inside has invisible water in it. When it touches a cold window, it cools and turns into tiny water drops all over the glass. Those tiny drops make the window look foggy.",
+  "check": "Warm indoor air's water vapor condenses on cold glass."
+ },
+ {
+  "id": "en-qa-041",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does sugar disappear in water?",
+  "alt": [
+   "Where does the sugar go?",
+   "Why can't I see the sugar anymore?",
+   "sugar disappears"
+  ],
+  "a": "The sugar breaks into pieces so tiny you can't see them, and they spread all through the water. This is called dissolving. The sugar is still there, which is why the water tastes sweet.",
+  "check": "Dissolving: sugar disperses as particles too small to see; it is still present."
+ },
+ {
+  "id": "en-qa-042",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why is the sea salty?",
+  "alt": [
+   "Why is ocean water salty?",
+   "Where does the salt in the sea come from?",
+   "why salty sea"
+  ],
+  "a": "Rain and rivers wash tiny bits of salt out of rocks and carry them to the sea. When the sun warms the sea, water rises into the air but the salt stays behind. Over a very long time, the sea got salty.",
+  "check": "Rivers carry dissolved minerals to the sea; evaporation leaves salts behind."
+ },
+ {
+  "id": "en-qa-043",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do I float better in the sea?",
+  "alt": [
+   "Why is it easier to float in the ocean?",
+   "Does salt water help you float?",
+   "float in sea"
+  ],
+  "a": "Salty water is heavier than the same amount of plain water. Heavier water pushes up harder on you, so you float more easily in the sea than in a pool.",
+  "check": "Salt water is denser than fresh water, giving more buoyancy."
+ },
+ {
+  "id": "en-qa-044",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do boats float?",
+  "alt": [
+   "How can a big metal ship float?",
+   "Why don't ships sink?",
+   "why boat float"
+  ],
+  "a": "A boat is shaped like a big bowl with air inside. It pushes lots of water aside, and the water pushes back up on it. That push can hold up even a giant metal ship.",
+  "check": "Buoyancy: a hull displaces a weight of water equal to the ship's weight."
+ },
+ {
+  "id": "en-qa-045",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why does oil float on water?",
+  "alt": [
+   "Why don't oil and water mix?",
+   "Why is there oil on top of my soup?",
+   "oil on water"
+  ],
+  "a": "Oil is lighter than the same amount of water, and oil and water don't mix. So the oil stays on top, like a thin blanket over the water.",
+  "check": "Oil is less dense than water and does not mix with it."
+ },
+ {
+  "id": "en-qa-046",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do bubbles pop?",
+  "alt": [
+   "Why don't bubbles last forever?",
+   "What makes a bubble burst?",
+   "why bubbles pop"
+  ],
+  "a": "A bubble's skin is a thin layer of soapy water. Little by little, the water drains down and dries up, so the skin gets thinner until it breaks. Touching something dry can pop it too.",
+  "check": "Soap films thin by drainage and evaporation until they rupture; dry surfaces pop them."
+ },
+ {
+  "id": "en-qa-047",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why are bubbles round?",
+  "alt": [
+   "Why can't I blow a square bubble?",
+   "Why are bubbles always balls?",
+   "why round bubbles"
+  ],
+  "a": "A bubble's soapy skin pulls itself in tight, like a stretchy balloon. A ball shape holds the air inside using the least skin, so the bubble becomes round.",
+  "check": "Surface tension minimizes surface area; a sphere encloses a volume with the least area."
+ },
+ {
+  "id": "en-qa-048",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do people put salt on icy roads?",
+  "alt": [
+   "How does salt melt ice?",
+   "Why does salt make ice go away?",
+   "salt on ice"
+  ],
+  "a": "Salt mixes with the water on the ice. Salty water has to get much colder than plain water before it freezes. So the ice melts, and the road stays wet instead of icy.",
+  "check": "Salt lowers the freezing point of water."
+ },
+ {
+  "id": "en-qa-049",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why did my water bottle crack in the freezer?",
+  "alt": [
+   "Why does a frozen bottle bulge?",
+   "Can ice break a bottle?",
+   "bottle freezer crack"
+  ],
+  "a": "Water takes up more space when it turns into ice. If the bottle is full and closed, the growing ice pushes hard on the sides until the bottle bulges or cracks.",
+  "check": "Water expands by about a tenth in volume when it freezes."
+ },
+ {
+  "id": "en-qa-050",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "Why do ponds freeze on top first?",
+  "alt": [
+   "Why is there ice on top of the lake?",
+   "Does a pond freeze all the way down?",
+   "pond ice on top"
+  ],
+  "a": "The top of the pond touches the cold air, so it gets cold first. Ice is lighter than water, so it stays on top. The ice works like a lid, and the water underneath often stays liquid.",
+  "check": "Surface water cools first and ice floats, insulating water below."
+ },
+ {
+  "id": "en-qa-051",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why does it rain?",
+  "alt": [
+   "Where does rain come from?",
+   "How does rain get in the sky?",
+   "why rain"
+  ],
+  "a": "The sun warms water in seas and lakes, and it rises into the air as invisible vapor. High up, it cools into tiny drops that make clouds. When drops join and get too heavy, they fall as rain.",
+  "check": "Water cycle: evaporation, condensation into clouds, droplets grow and fall as rain."
+ },
+ {
+  "id": "en-qa-052",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What are clouds made of?",
+  "alt": [
+   "Are clouds made of cotton?",
+   "What's inside a cloud?",
+   "what clouds"
+  ],
+  "a": "Clouds are made of lots and lots of tiny water drops, or tiny bits of ice when it's very cold up high. Each drop is so small and light that it floats in the air.",
+  "check": "Clouds consist of tiny water droplets and/or ice crystals."
+ },
+ {
+  "id": "en-qa-053",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why do clouds move?",
+  "alt": [
+   "Where are the clouds going?",
+   "Why do clouds float away?",
+   "clouds moving"
+  ],
+  "a": "Clouds are carried by the wind. High up in the sky, the wind can blow very fast, so the clouds drift along with it, like leaves floating on a river.",
+  "check": "Clouds are carried by winds aloft."
+ },
+ {
+  "id": "en-qa-054",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What makes wind?",
+  "alt": [
+   "Where does wind come from?",
+   "Why is it windy today?",
+   "why windy"
+  ],
+  "a": "Wind is moving air. The sun warms some places more than others. Warm air rises, and cooler air rushes in to take its place. That moving air is the wind you feel.",
+  "check": "Uneven solar heating causes pressure differences; air moves, which is wind."
+ },
+ {
+  "id": "en-qa-055",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why does it snow?",
+  "alt": [
+   "Where does snow come from?",
+   "How is snow made?",
+   "why snow"
+  ],
+  "a": "When it's very cold up in the clouds, water vapor turns into tiny ice crystals instead of drops. They stick together into snowflakes, and if the air near the ground is cold too, they fall as snow.",
+  "check": "Ice crystals form in cold clouds and aggregate into snowflakes that fall if air below is cold."
+ },
+ {
+  "id": "en-qa-056",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why do snowflakes have six sides?",
+  "alt": [
+   "Why do snowflakes have six points?",
+   "Why are snowflakes shaped like stars?",
+   "snowflake six"
+  ],
+  "a": "Snowflakes are made of ice, and the tiny pieces of water in ice always link together in a six-sided pattern. So as a snowflake grows, it grows six sides or six arms.",
+  "check": "Ice has a hexagonal crystal structure, giving snowflakes six-fold symmetry."
+ },
+ {
+  "id": "en-qa-057",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What is lightning?",
+  "alt": [
+   "How does lightning happen?",
+   "Where does lightning come from?",
+   "why lightning"
+  ],
+  "a": "Lightning is a giant spark of electricity. Inside a storm cloud, tiny bits of ice bump and rub together, building up electricity. When there's too much, it jumps out in a bright flash.",
+  "check": "Collisions of ice particles in storm clouds separate charge; lightning is the discharge."
+ },
+ {
+  "id": "en-qa-058",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What is hail?",
+  "alt": [
+   "Why do balls of ice fall from the sky?",
+   "How is hail made?",
+   "why hail"
+  ],
+  "a": "Hail is balls of ice that fall from big storm clouds. Strong winds inside the cloud toss icy bits up and down, and each trip adds a new layer of ice until they're too heavy and fall.",
+  "check": "Hailstones grow in layers as updrafts carry them repeatedly through supercooled water."
+ },
+ {
+  "id": "en-qa-059",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What is fog?",
+  "alt": [
+   "Why is it foggy?",
+   "Is fog a cloud?",
+   "where fog come from"
+  ],
+  "a": "Fog is a cloud that sits right down near the ground. It forms when air near the ground cools and its invisible water turns into tiny floating drops. Walking in fog is like walking inside a cloud.",
+  "check": "Fog is a cloud at ground level formed when near-surface air cools and vapor condenses."
+ },
+ {
+  "id": "en-qa-060",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why is the grass wet in the morning?",
+  "alt": [
+   "What is dew?",
+   "Did it rain last night? The grass is wet.",
+   "morning wet grass"
+  ],
+  "a": "That water is called dew. At night the grass gets cold, and the invisible water in the air turns into little drops on it. Dew doesn't fall like rain. It comes out of the air.",
+  "check": "Dew forms when water vapor condenses on surfaces cooled overnight."
+ },
+ {
+  "id": "en-qa-061",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "What is frost?",
+  "alt": [
+   "Why is the grass white and crunchy in the morning?",
+   "Where does frost come from?",
+   "why frost"
+  ],
+  "a": "Frost is like dew, but frozen. On very cold nights, the water in the air turns straight into tiny ice crystals on grass, cars, and windows, making them sparkly white.",
+  "check": "Frost forms when water vapor deposits directly as ice on surfaces below freezing."
+ },
+ {
+  "id": "en-qa-062",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why can I see my breath when it's cold?",
+  "alt": [
+   "Why does my breath look like smoke in winter?",
+   "Why do I make little clouds when I breathe outside?",
+   "see my breath"
+  ],
+  "a": "Your breath is warm and has invisible water in it. When it meets cold air, it cools down fast and the water turns into tiny drops, making a little cloud.",
+  "check": "Warm moist breath condenses into droplets in cold air."
+ },
+ {
+  "id": "en-qa-063",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why does it rain sometimes and snow other times?",
+  "alt": [
+   "How does the sky decide rain or snow?",
+   "Why didn't it snow today?",
+   "rain or snow"
+  ],
+  "a": "It depends on how cold the air is. Snowflakes reach the ground when the air all the way down is cold enough. If the air near the ground is warmer, they melt on the way and land as rain.",
+  "check": "Precipitation type depends on temperatures between the cloud and the ground."
+ },
+ {
+  "id": "en-qa-064",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why is it colder on top of a mountain?",
+  "alt": [
+   "Why is there snow on mountain tops?",
+   "Why is it cold up high?",
+   "mountain cold"
+  ],
+  "a": "The sun mostly warms the ground, and the ground warms the air near it. As you go higher, the air gets colder. So mountain tops can be chilly and even snowy.",
+  "check": "In the lower atmosphere temperature decreases with altitude."
+ },
+ {
+  "id": "en-qa-065",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "How do people know what the weather will be tomorrow?",
+  "alt": [
+   "How does the weather forecast work?",
+   "How do they know it will rain?",
+   "weather report"
+  ],
+  "a": "Weather scientists measure the air, wind, and clouds all around the world with special tools. Then big computers use those numbers to figure out what the weather will probably do next.",
+  "check": "Forecasts combine global weather observations with computer models."
+ },
+ {
+  "id": "en-qa-066",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "Why is it always windy at the beach?",
+  "alt": [
+   "Where does the sea breeze come from?",
+   "Why is there wind by the ocean?",
+   "beach wind"
+  ],
+  "a": "On a sunny day, the land warms up faster than the sea. Warm air over the land rises, and cooler air from over the water rushes in to take its place. That makes a breeze from the sea.",
+  "check": "Sea breeze: land heats faster than water by day; cooler sea air flows inland."
+ },
+ {
+  "id": "en-qa-067",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "How does a thermometer work?",
+  "alt": [
+   "How does a thermometer know how hot it is?",
+   "Why does the line in the thermometer move?",
+   "thermometer"
+  ],
+  "a": "Some thermometers have a liquid inside a thin tube. When it's warm, the liquid spreads out and climbs up. When it's cold, it shrinks down. The numbers on the side tell you how warm it is.",
+  "check": "Liquid-in-glass thermometers work because liquids expand when warmed and contract when cooled."
+ },
+ {
+  "id": "en-qa-068",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "Why are there seasons?",
+  "alt": [
+   "Why do we have summer and winter?",
+   "Where do seasons come from?",
+   "why seasons"
+  ],
+  "a": "Earth is tilted a little as it travels around the sun all year. For part of the year, our side leans toward the sun and gets summer. Later it leans away and gets winter. Spring and fall come in between.",
+  "check": "Seasons are caused by Earth's axial tilt as it orbits the sun."
+ },
+ {
+  "id": "en-qa-069",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "Why is summer hot?",
+  "alt": [
+   "Why is it so hot in summer?",
+   "Why is winter cold?",
+   "why summer hot"
+  ],
+  "a": "In summer, our part of Earth leans toward the sun. The sun climbs high, shines more straight down, and stays up longer each day, so the ground and air get much warmer.",
+  "check": "Summer brings higher sun angle and longer days; winter the opposite."
+ },
+ {
+  "id": "en-qa-070",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "Why does it get dark so early in winter?",
+  "alt": [
+   "Why are winter days so short?",
+   "Why is it still dark when I wake up in winter?",
+   "dark early winter"
+  ],
+  "a": "In winter, our part of Earth leans away from the sun. The sun takes a shorter, lower path across the sky, so it rises later and sets earlier.",
+  "check": "In winter the sun's path is lower and shorter, so daylight hours are fewer."
+ },
+ {
+  "id": "en-qa-071",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "Why is it winter in some countries when it's summer here?",
+  "alt": [
+   "Why are seasons upside down on the other side of the world?",
+   "Why do some kids have summer at Christmas?",
+   "opposite seasons"
+  ],
+  "a": "Earth is tilted. When the top half of Earth leans toward the sun and has summer, the bottom half leans away and has winter. Half a year later, they switch.",
+  "check": "Northern and Southern Hemispheres have opposite seasons due to axial tilt."
+ },
+ {
+  "id": "en-qa-072",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "Is summer hot because Earth is closer to the sun?",
+  "alt": [
+   "Are we closer to the sun in summer?",
+   "Is winter cold because the sun is far away?",
+   "summer closer to sun"
+  ],
+  "a": "No! Seasons come from Earth's tilt, not its distance from the sun. In fact, Earth is a little closer to the sun in January, which is winter for the top half of Earth.",
+  "check": "Earth's perihelion is in early January, during Northern Hemisphere winter; seasons come from tilt."
+ },
+ {
+  "id": "en-qa-073",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "What is gravity?",
+  "alt": [
+   "Why do things fall down?",
+   "Why don't we float away?",
+   "what gravity"
+  ],
+  "a": "Gravity is an invisible pull. Earth pulls everything toward its middle, which is why things fall down and why we stay on the ground instead of floating away.",
+  "check": "Gravity is Earth's attraction pulling objects toward its center."
+ },
+ {
+  "id": "en-qa-074",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why does water flow downhill?",
+  "alt": [
+   "Why don't rivers flow up?",
+   "Why does water run down?",
+   "water downhill"
+  ],
+  "a": "Gravity pulls water down, just like it pulls everything else. So water always runs from high places to lower places, which is why rivers flow down from hills and mountains.",
+  "check": "Gravity makes water flow from higher to lower places."
+ },
+ {
+  "id": "en-qa-075",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why don't people on the bottom of the world fall off?",
+  "alt": [
+   "Are people on the other side of Earth upside down?",
+   "Why don't we fall off the Earth?",
+   "fall off earth"
+  ],
+  "a": "Gravity pulls everything toward the middle of Earth. So wherever people stand, down is toward the ground under their feet. Nobody is upside down, and nobody falls off.",
+  "check": "Gravity pulls toward Earth's center, so 'down' is toward the ground everywhere."
+ },
+ {
+  "id": "en-qa-076",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why does a feather fall slower than a ball?",
+  "alt": [
+   "Do heavy things fall faster?",
+   "Why does paper float down slowly?",
+   "feather falls slow"
+  ],
+  "a": "Air pushes against things as they fall. A feather is light and wide, so the air slows it a lot. A ball cuts through the air easily. Without any air, they would fall at the same speed.",
+  "check": "Air resistance slows light, wide objects; in a vacuum all objects fall at the same rate."
+ },
+ {
+  "id": "en-qa-077",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why do magnets stick together?",
+  "alt": [
+   "How do magnets work?",
+   "Why do magnets snap together?",
+   "magnets stick"
+  ],
+  "a": "Every magnet has two ends, called north and south. A north end and a south end pull toward each other, so the magnets snap together.",
+  "check": "Opposite magnetic poles attract."
+ },
+ {
+  "id": "en-qa-078",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why do magnets push each other away sometimes?",
+  "alt": [
+   "Why won't my magnets stick together?",
+   "Why do magnets push back?",
+   "magnets push"
+  ],
+  "a": "When you put two north ends together, or two south ends, the magnets push each other away. Opposite ends pull together, and same ends push apart.",
+  "check": "Like magnetic poles repel; opposite poles attract."
+ },
+ {
+  "id": "en-qa-079",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "What do magnets stick to?",
+  "alt": [
+   "Do magnets stick to wood?",
+   "Why won't my magnet stick to plastic?",
+   "what magnets pick up"
+  ],
+  "a": "Magnets stick to things made of iron, like nails, paper clips, and some fridge doors. They don't stick to wood, plastic, paper, or glass.",
+  "check": "Iron and steel are attracted to magnets; wood, plastic, paper, and glass are not noticeably."
+ },
+ {
+  "id": "en-qa-080",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why does a compass point north?",
+  "alt": [
+   "How does a compass know where north is?",
+   "Why does the compass needle turn?",
+   "compass north"
+  ],
+  "a": "Earth acts like a giant magnet. A compass has a tiny magnet needle that can spin freely, and Earth's magnetism turns it so one end points north.",
+  "check": "Earth's magnetic field aligns a freely turning magnetic needle north-south."
+ },
+ {
+  "id": "en-qa-081",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why do some balloons float up?",
+  "alt": [
+   "Why does my party balloon fly away?",
+   "Why doesn't my blown-up balloon float?",
+   "balloon float"
+  ],
+  "a": "Floating balloons are filled with a gas called helium, which is lighter than air. The air pushes them up, like a ball popping up in a pool. Your breath isn't lighter than air, so balloons you blow up don't float.",
+  "check": "Helium is less dense than air, so buoyancy lifts the balloon; exhaled air is not lighter than air."
+ },
+ {
+  "id": "en-qa-082",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "How does a hot air balloon go up?",
+  "alt": [
+   "Why does a hot air balloon fly?",
+   "Why do hot air balloons have fire?",
+   "hot air balloon"
+  ],
+  "a": "Hot air is lighter than the same amount of cool air, so it rises. A hot air balloon has a burner that heats the air inside, and the light, warm air lifts the balloon up.",
+  "check": "Heated air is less dense than surrounding cool air, giving lift."
+ },
+ {
+  "id": "en-qa-083",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "Why does a ball bounce?",
+  "alt": [
+   "How does a ball jump back up?",
+   "Why do bouncy balls bounce so high?",
+   "ball bounce"
+  ],
+  "a": "When a ball hits the ground, it squishes a little. Then it springs back into shape, pushing against the ground, and that push sends it back up into the air.",
+  "check": "An elastic ball deforms on impact and springs back, pushing off the ground."
+ },
+ {
+  "id": "en-qa-084",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "Why does a balloon stick to the wall after I rub it on my hair?",
+  "alt": [
+   "What is static electricity?",
+   "Why does a balloon make my hair stick up?",
+   "balloon sticks"
+  ],
+  "a": "Rubbing a balloon on your hair moves tiny bits of electricity onto the balloon. This is called static electricity. The charged balloon pulls on the wall, so it sticks.",
+  "check": "Rubbing transfers charge (static electricity); a charged balloon attracts a neutral wall."
+ },
+ {
+  "id": "en-qa-085",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "Why do I get a tiny shock when I touch a doorknob?",
+  "alt": [
+   "Why did the doorknob zap me?",
+   "Why do I get shocked in winter?",
+   "doorknob shock"
+  ],
+  "a": "Walking, especially on carpet, can build up static electricity on your body. When you touch a metal doorknob, it jumps off all at once in a tiny zap. It's surprising, but harmless.",
+  "check": "Static charge builds on the body and discharges harmlessly on touching metal."
+ },
+ {
+  "id": "en-qa-086",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "Why does iron rust?",
+  "alt": [
+   "What is rust?",
+   "Why did my bike chain turn orange?",
+   "why rust"
+  ],
+  "a": "Rust happens when iron stays wet and touches air for a long time. The iron slowly joins with oxygen, a gas in the air, and turns into crumbly reddish-brown rust.",
+  "check": "Rust forms when iron reacts with oxygen in the presence of water."
+ },
+ {
+  "id": "en-qa-087",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "Why doesn't gold rust?",
+  "alt": [
+   "Does gold ever rust?",
+   "Why is old gold still shiny?",
+   "gold rust"
+  ],
+  "a": "Gold doesn't join with air or water the way iron does, so it doesn't rust. That's why very old gold things can still look shiny today.",
+  "check": "Gold is chemically unreactive and does not corrode in air or water."
+ },
+ {
+  "id": "en-qa-088",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "Why does metal feel colder than wood?",
+  "alt": [
+   "Why is the metal slide cold?",
+   "Why does a metal spoon feel colder than a wooden one?",
+   "metal feels cold"
+  ],
+  "a": "If they're in the same room, they're really the same temperature! But metal pulls warmth out of your hand very quickly, so it feels cold. Wood takes warmth slowly, so it feels warmer.",
+  "check": "Metals conduct heat away from skin much faster than wood at the same temperature."
+ },
+ {
+  "id": "en-qa-089",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "Why does chocolate melt in my hand?",
+  "alt": [
+   "Why did my chocolate get gooey?",
+   "Why does chocolate melt so easily?",
+   "chocolate melts"
+  ],
+  "a": "Chocolate melts at a fairly low temperature, a bit cooler than your body. So the warmth of your hand is enough to make it soft and gooey.",
+  "check": "Cocoa butter melts at roughly 34 C, slightly below body temperature."
+ },
+ {
+  "id": "en-qa-090",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "Why does popcorn pop?",
+  "alt": [
+   "How does corn turn into popcorn?",
+   "What makes popcorn go pop?",
+   "why popcorn"
+  ],
+  "a": "Each popcorn kernel has a little water inside a hard shell. When it's heated, the water turns into steam and pushes harder and harder until the shell bursts, and the soft inside puffs out.",
+  "check": "Water in the kernel turns to steam, pressure builds, and the hull bursts."
+ },
+ {
+  "id": "en-qa-091",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why do cats purr?",
+  "alt": [
+   "why does my cat purr",
+   "What's that rumbly sound cats make?",
+   "Do cats purr when they're happy?"
+  ],
+  "a": "Cats usually purr when they feel cozy and happy. The rumbly sound comes from fast vibrations in their throat. Sometimes cats purr to calm themselves, too.",
+  "check": "Cats purr mostly when content (sometimes when stressed); sound comes from vibration in the larynx."
+ },
+ {
+  "id": "en-qa-092",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why do dogs wag their tails?",
+  "alt": [
+   "why do dogs wag",
+   "Does a wagging tail mean a dog is happy?",
+   "What does tail wagging mean?"
+  ],
+  "a": "Dogs use their tails to talk. A loose, wiggly wag often means happy and friendly. But dogs also wag when nervous, so look at the whole dog too.",
+  "check": "Tail wagging is communication; context and body posture matter."
+ },
+ {
+  "id": "en-qa-093",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why do cats push their paws up and down on blankets?",
+  "alt": [
+   "why do cats knead",
+   "Why does my cat make biscuits?",
+   "Why do cats squish soft things with their paws?"
+  ],
+  "a": "Kittens push their paws on their mom to help the milk flow. Grown-up cats keep doing it when they feel happy and safe, like a cozy memory.",
+  "check": "Kneading originates in nursing behavior and persists in adult cats when content."
+ },
+ {
+  "id": "en-qa-094",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why do cats have whiskers?",
+  "alt": [
+   "what are whiskers for",
+   "Why do cats have long whiskers?",
+   "Do whiskers help cats?"
+  ],
+  "a": "Whiskers are super-sensitive hairs. They help a cat feel what's around it, even in the dark, and tell it whether a gap is wide enough to squeeze through.",
+  "check": "Vibrissae are sensory hairs that detect nearby objects and air movement."
+ },
+ {
+  "id": "en-qa-095",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why do dogs pant?",
+  "alt": [
+   "why do dogs stick their tongues out",
+   "Why is my dog breathing so fast?",
+   "How do dogs cool down?"
+  ],
+  "a": "Dogs can't sweat all over like we do. They only sweat a little from their paws. So they pant with their tongue out to let heat escape and cool down.",
+  "check": "Dogs thermoregulate mainly by panting; eccrine sweat glands mostly in paw pads."
+ },
+ {
+  "id": "en-qa-096",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Why are dogs so good at smelling?",
+  "alt": [
+   "why do dogs sniff everything",
+   "How good is a dog's nose?",
+   "Why do dogs smell stuff all the time?"
+  ],
+  "a": "A dog's nose has many, many more smell sensors than ours. Dogs can smell things we can't notice at all, so sniffing is how they learn about the world.",
+  "check": "Dogs have far more olfactory receptors and a larger olfactory brain region than humans."
+ },
+ {
+  "id": "en-qa-097",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Can dogs see colors?",
+  "alt": [
+   "are dogs color blind",
+   "What colors can dogs see?",
+   "Do dogs see in black and white?"
+  ],
+  "a": "Yes, but fewer than we do. Dogs see blues and yellows well. Reds and greens look more brownish or grayish to them.",
+  "check": "Dogs are dichromats, seeing blue and yellow ranges."
+ },
+ {
+  "id": "en-qa-098",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "How do cats land on their feet?",
+  "alt": [
+   "why do cats always land on their feet",
+   "How do cats flip in the air?",
+   "Why don't cats fall over?"
+  ],
+  "a": "Cats have great balance and a very bendy back. When they fall, they twist quickly so their feet point down. Very high falls can still hurt them, though.",
+  "check": "Cat righting reflex relies on vestibular sense and flexible spine."
+ },
+ {
+  "id": "en-qa-099",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "Can goldfish remember things?",
+  "alt": [
+   "do goldfish have good memories",
+   "Will my goldfish remember me?",
+   "Are goldfish smart?"
+  ],
+  "a": "Yes! Scientists have shown goldfish can remember things for months. They can learn when feeding time is and even learn to push a little lever to get food.",
+  "check": "Experiments show goldfish learn tasks and retain them for months."
+ },
+ {
+  "id": "en-qa-100",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Why do cows chew all day?",
+  "alt": [
+   "why are cows always chewing",
+   "What are cows chewing?",
+   "Why do cows chew when they're not eating?"
+  ],
+  "a": "Cows have a stomach with four parts. They swallow grass, then bring it back up to chew again. This is called chewing the cud, and it helps them digest tough grass.",
+  "check": "Cattle are ruminants with a four-compartment stomach."
+ },
+ {
+  "id": "en-qa-101",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Where does milk come from?",
+  "alt": [
+   "how do cows make milk",
+   "Why do cows have milk?",
+   "Where does our milk come from?"
+  ],
+  "a": "Most of the milk we drink comes from cows. A mother cow makes milk after she has a calf, to feed her baby. Dairy cows make extra milk that people can drink.",
+  "check": "Cows lactate after calving; dairy breeds produce surplus milk."
+ },
+ {
+  "id": "en-qa-102",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Why do roosters crow in the morning?",
+  "alt": [
+   "why do roosters cock-a-doodle-doo",
+   "How do roosters know it's morning?",
+   "why do roosters crow"
+  ],
+  "a": "Roosters have a body clock that tells them when morning is coming. Crowing also tells other roosters this is my place. They crow at other times of day too.",
+  "check": "Rooster crowing is regulated by a circadian clock and is territorial."
+ },
+ {
+  "id": "en-qa-103",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Why do pigs roll in mud?",
+  "alt": [
+   "why do pigs like mud",
+   "Why are pigs so muddy?",
+   "Do pigs like being dirty?"
+  ],
+  "a": "Pigs can hardly sweat, so mud helps them cool off on hot days. A coat of mud also protects their skin from sunburn and bug bites.",
+  "check": "Pigs have few functional sweat glands; wallowing cools and protects skin."
+ },
+ {
+  "id": "en-qa-104",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Why do sheep have wool?",
+  "alt": [
+   "why do sheep get haircuts",
+   "Does shearing hurt sheep?",
+   "What is wool?"
+  ],
+  "a": "Wool is a thick, fluffy coat that keeps sheep warm. Farm sheep grow wool all the time, so they get a haircut called shearing. It doesn't hurt, just like our haircuts.",
+  "check": "Domestic wool sheep grow fleece continuously and need shearing; shearing is painless when done properly."
+ },
+ {
+  "id": "en-qa-105",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "How do chicks get out of their eggs?",
+  "alt": [
+   "how does a chick hatch",
+   "How do baby chicks break the shell?",
+   "How do chicks come out?"
+  ],
+  "a": "A chick has a tiny hard bump on its beak called an egg tooth. It pecks and pecks at the shell until it cracks, then wiggles out. The egg tooth falls off soon after.",
+  "check": "Chicks use an egg tooth to pip the shell; it drops off after hatching."
+ },
+ {
+  "id": "en-qa-106",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "Why don't ducks get wet?",
+  "alt": [
+   "how do ducks stay dry",
+   "Why does water roll off ducks?",
+   "Are duck feathers waterproof?"
+  ],
+  "a": "Ducks have a special spot near their tail that makes oil. They spread the oil on their feathers with their beak, so water just rolls off.",
+  "check": "Preening with oil from the uropygial gland plus feather structure keeps ducks waterproof."
+ },
+ {
+  "id": "en-qa-107",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do zebras have stripes?",
+  "alt": [
+   "why are zebras striped",
+   "What are zebra stripes for?",
+   "Why do zebras have black and white stripes?"
+  ],
+  "a": "Scientists aren't completely sure. Lots of studies show stripes make it hard for biting flies to land on zebras. Stripes might help in other ways too.",
+  "check": "Zebra stripe function is debated; fly deterrence has strongest support."
+ },
+ {
+  "id": "en-qa-108",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do giraffes have such long necks?",
+  "alt": [
+   "why are giraffe necks long",
+   "What do giraffes use their necks for?",
+   "Why is a giraffe so tall?"
+  ],
+  "a": "A long neck lets giraffes reach leaves high up in trees that other animals can't get. Male giraffes also swing their necks at each other to see who's stronger.",
+  "check": "Long necks permit high browsing; males engage in necking contests."
+ },
+ {
+  "id": "en-qa-109",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "What do elephants use their trunks for?",
+  "alt": [
+   "why do elephants have trunks",
+   "What can an elephant's trunk do?",
+   "How do elephants drink?"
+  ],
+  "a": "A trunk is a nose and upper lip joined together. Elephants use it to smell, grab food, suck up water to squirt into their mouths, spray baths and give hugs.",
+  "check": "The trunk is a fused nose and upper lip used for smelling, grasping, drinking and bathing."
+ },
+ {
+  "id": "en-qa-110",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "What's inside a camel's hump?",
+  "alt": [
+   "is there water in a camel's hump",
+   "Why do camels have humps?",
+   "What is a camel hump for?"
+  ],
+  "a": "A camel's hump is full of fat, not water. When food is hard to find, the camel uses that fat for energy, so it can travel far in the desert.",
+  "check": "Camel humps store fat."
+ },
+ {
+  "id": "en-qa-111",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why are polar bears white?",
+  "alt": [
+   "why is a polar bear white",
+   "What color is polar bear skin?",
+   "Why do polar bears have white fur?"
+  ],
+  "a": "Their white-looking fur helps polar bears blend in with snow and ice. Surprise: each hair is actually see-through, and their skin underneath is black.",
+  "check": "Polar bear guard hairs are translucent and skin is black."
+ },
+ {
+  "id": "en-qa-112",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do kangaroos have pouches?",
+  "alt": [
+   "what is a kangaroo pouch for",
+   "Where do baby kangaroos live?",
+   "What is a joey?"
+  ],
+  "a": "A baby kangaroo, called a joey, is born tiny, about the size of a jelly bean. It crawls into mom's pouch to drink milk and grow until it's big enough to hop.",
+  "check": "Newborn joeys are jelly-bean sized and develop in the pouch."
+ },
+ {
+  "id": "en-qa-113",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do snakes stick out their tongues?",
+  "alt": [
+   "why do snakes flick their tongues",
+   "Why is a snake's tongue split?",
+   "What are snakes doing with their tongues?"
+  ],
+  "a": "Snakes smell with their tongues! The forked tongue grabs smells from the air and brings them to a special smelling spot in the roof of the mouth.",
+  "check": "Snakes deliver chemical cues to the vomeronasal (Jacobson's) organ."
+ },
+ {
+  "id": "en-qa-114",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do bears sleep all winter?",
+  "alt": [
+   "why do bears hibernate",
+   "What do bears do in winter?",
+   "How do bears not get hungry in winter?"
+  ],
+  "a": "In winter it's cold and food is hard to find. So bears eat lots in the fall, then rest in a den all winter, using their body fat for energy.",
+  "check": "Bears fatten in autumn and enter winter dormancy living off fat."
+ },
+ {
+  "id": "en-qa-115",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "How do bats fly in the dark?",
+  "alt": [
+   "how do bats see at night",
+   "Why don't bats bump into things?",
+   "What is echolocation?"
+  ],
+  "a": "Many bats make high squeaky sounds and listen for the echoes bouncing back. That tells them where things are. This is called echolocation. Bats can see with their eyes too.",
+  "check": "Many bats echolocate; all bats have functional eyes."
+ },
+ {
+  "id": "en-qa-116",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "How do chameleons change color?",
+  "alt": [
+   "why do chameleons change color",
+   "Can chameleons turn any color?",
+   "How does a chameleon change colors?"
+  ],
+  "a": "Chameleons have special skin cells that change how light bounces off them. They mostly change color to show their mood to other chameleons, or to warm up or cool down.",
+  "check": "Color change via skin nanocrystal arrangement; mainly social signaling and thermoregulation."
+ },
+ {
+  "id": "en-qa-117",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do pandas eat bamboo?",
+  "alt": [
+   "what do pandas eat",
+   "Do pandas only eat bamboo?",
+   "Why do pandas eat so much?"
+  ],
+  "a": "Giant pandas live in mountain forests full of bamboo, so there's food all year. Bamboo isn't very filling, so pandas spend most of the day munching.",
+  "check": "Giant panda diet is ~99% bamboo, low in nutrients, eaten many hours daily."
+ },
+ {
+  "id": "en-qa-118",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why are frogs slimy?",
+  "alt": [
+   "why are frogs wet",
+   "Why do frogs feel slippery?",
+   "Why do frogs have slimy skin?"
+  ],
+  "a": "Frogs can breathe a little through their skin, but only when it stays wet. Their slime keeps their skin moist and helps protect it.",
+  "check": "Amphibians respire partly through moist skin; mucus keeps it moist."
+ },
+ {
+  "id": "en-qa-119",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "How does a tadpole turn into a frog?",
+  "alt": [
+   "what is a tadpole",
+   "Where does a tadpole's tail go?",
+   "How do tadpoles grow?"
+  ],
+  "a": "A tadpole lives in water and breathes with gills. Slowly it grows back legs, then front legs, and its tail shrinks away. Then it breathes with lungs and hops onto land.",
+  "check": "Frog metamorphosis: legs develop, tail resorbed, lungs replace gills."
+ },
+ {
+  "id": "en-qa-120",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "Why do turtles have shells?",
+  "alt": [
+   "can a turtle come out of its shell",
+   "What is a turtle shell for?",
+   "Is a turtle's shell its house?"
+  ],
+  "a": "A turtle's shell is part of its body, joined to its backbone and ribs. It can't take it off. The hard shell keeps the turtle safe, and many turtles can tuck inside.",
+  "check": "Turtle shells are fused with ribs and vertebrae."
+ },
+ {
+  "id": "en-qa-121",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "How do squirrels find their buried nuts?",
+  "alt": [
+   "why do squirrels bury nuts",
+   "Do squirrels remember where they hide food?",
+   "What do squirrels eat in winter?"
+  ],
+  "a": "Squirrels bury nuts in lots of places in the fall. They remember many spots and use their great sense of smell. Nuts they forget can sprout into new trees.",
+  "check": "Squirrels use spatial memory and smell to recover caches; uncollected nuts germinate."
+ },
+ {
+  "id": "en-qa-122",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "How do birds fly?",
+  "alt": [
+   "why can birds fly",
+   "How do birds stay up in the air?",
+   "Why can birds fly but people can't?"
+  ],
+  "a": "Birds have wings, light feathers, and many bones that are hollow inside, so their bodies are very light. Strong chest muscles flap their wings to lift them into the sky.",
+  "check": "Birds have pneumatized bones, feathers and large flight muscles."
+ },
+ {
+  "id": "en-qa-123",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why do birds fly south for the winter?",
+  "alt": [
+   "why do birds migrate",
+   "Where do birds go in winter?",
+   "What is migration?"
+  ],
+  "a": "In winter, cold places have fewer bugs and berries. So many birds fly to warmer places with more food, then come back in spring. This trip is called migration.",
+  "check": "Migration tracks seasonal food availability."
+ },
+ {
+  "id": "en-qa-124",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "How do birds know where to fly when they migrate?",
+  "alt": [
+   "how do birds not get lost",
+   "How do birds find their way?",
+   "Do birds have a map?"
+  ],
+  "a": "Scientists found that birds use the sun and stars, and can even sense Earth's magnetism, like a compass inside them. They also remember mountains and rivers.",
+  "check": "Birds navigate using sun and star compasses, magnetoreception and landmarks."
+ },
+ {
+  "id": "en-qa-125",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why do birds build nests?",
+  "alt": [
+   "what are nests for",
+   "How do birds make nests?",
+   "why do birds make nests"
+  ],
+  "a": "A nest is a cozy home for eggs and baby birds. Parents weave twigs, grass and even mud together. The nest keeps babies warm and hidden.",
+  "check": "Nests contain eggs and chicks, providing insulation and concealment."
+ },
+ {
+  "id": "en-qa-126",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why can't penguins fly?",
+  "alt": [
+   "are penguins birds",
+   "Why don't penguins fly?",
+   "Do penguins have wings?"
+  ],
+  "a": "Penguins are birds, but their wings are shaped like flippers, perfect for swimming. In the water they zoom so fast it looks like they're flying underwater.",
+  "check": "Penguins are flightless birds with flipper wings."
+ },
+ {
+  "id": "en-qa-127",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "How do penguins stay warm?",
+  "alt": [
+   "why don't penguins get cold",
+   "Do penguins get cold?",
+   "How do penguins live on ice?"
+  ],
+  "a": "Penguins have thick, tightly packed feathers and a layer of fat under their skin. Emperor penguins also huddle together in a big group to share warmth.",
+  "check": "Penguins have dense plumage and blubber; emperor penguins huddle."
+ },
+ {
+  "id": "en-qa-128",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why do birds sing in the morning?",
+  "alt": [
+   "why are birds so loud in the morning",
+   "What is the dawn chorus?",
+   "why do birds sing"
+  ],
+  "a": "Many birds sing loudly at sunrise. Scientists think the calm morning air helps songs travel far. Birds sing to find a mate and to say this is my home.",
+  "check": "Dawn chorus functions in mate attraction and territory; acoustic-transmission explanation is a hypothesis."
+ },
+ {
+  "id": "en-qa-129",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "How do hummingbirds hover?",
+  "alt": [
+   "can hummingbirds fly backwards",
+   "How do hummingbirds stay still in the air?",
+   "Why do hummingbirds hum?"
+  ],
+  "a": "Hummingbirds flap their wings super fast, in a figure-eight shape. That lets them stay still in the air while sipping nectar, and even fly backward. The hum is their wings.",
+  "check": "Hummingbird figure-eight wing strokes allow hovering and backward flight; wingbeats produce the hum."
+ },
+ {
+  "id": "en-qa-130",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why do woodpeckers peck on trees?",
+  "alt": [
+   "why do woodpeckers knock",
+   "Doesn't pecking hurt a woodpecker's head?",
+   "What are woodpeckers looking for?"
+  ],
+  "a": "Woodpeckers peck to find bugs hiding in wood, to dig holes for nests, and to drum messages to other woodpeckers. Scientists are still studying how their heads stay safe.",
+  "check": "Woodpeckers peck to forage, excavate and drum; head protection mechanisms are still debated."
+ },
+ {
+  "id": "en-qa-131",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "Why are flamingos pink?",
+  "alt": [
+   "why is a flamingo pink",
+   "Are baby flamingos pink?",
+   "What makes flamingos pink?"
+  ],
+  "a": "Flamingos eat tiny shrimp and algae that have a reddish-orange color in them. That color turns their feathers pink. Baby flamingos are gray or white at first.",
+  "check": "Flamingo color comes from dietary carotenoids; chicks are grey/white."
+ },
+ {
+  "id": "en-qa-132",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "How do parrots talk?",
+  "alt": [
+   "why can parrots talk",
+   "Do parrots know what they're saying?",
+   "Why do parrots copy people?"
+  ],
+  "a": "Parrots are clever copycats. In the wild they copy the calls of their flock. When they live with people, they copy our words. They don't always understand what the words mean.",
+  "check": "Parrots are vocal learners mimicking their social group."
+ },
+ {
+  "id": "en-qa-133",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "How do fish breathe underwater?",
+  "alt": [
+   "how do fish breathe",
+   "What are gills?",
+   "Do fish breathe air?"
+  ],
+  "a": "Fish breathe with gills. Water has tiny bits of oxygen mixed in. As water flows over the gills, they catch the oxygen so the fish can breathe.",
+  "check": "Gills extract dissolved oxygen from water."
+ },
+ {
+  "id": "en-qa-134",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Do fish sleep?",
+  "alt": [
+   "how do fish sleep",
+   "Do fish close their eyes?",
+   "Do fish sleep at night?"
+  ],
+  "a": "Yes, fish rest too! Most fish have no eyelids, so they sleep with their eyes open. They stay very still or swim slowly while they rest.",
+  "check": "Fish show sleep-like rest; most lack eyelids."
+ },
+ {
+  "id": "en-qa-135",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Do fish drink water?",
+  "alt": [
+   "do fish get thirsty",
+   "Do ocean fish drink salt water?",
+   "Do fish drink?"
+  ],
+  "a": "Ocean fish do sip seawater, because salty water pulls water out of their bodies. River and lake fish hardly drink at all, because water slowly soaks into them.",
+  "check": "Marine teleosts drink seawater; freshwater fish gain water osmotically."
+ },
+ {
+  "id": "en-qa-136",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Why do fish swim in big groups?",
+  "alt": [
+   "what is a school of fish",
+   "Why do fish stay together?",
+   "why do fish swim together"
+  ],
+  "a": "A big group of fish swimming together is called a school. Lots of eyes can spot danger sooner, and being in a crowd makes each fish safer. It helps them find food, too.",
+  "check": "Schooling improves predator detection and foraging."
+ },
+ {
+  "id": "en-qa-137",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Why do clownfish live in sea anemones?",
+  "alt": [
+   "why don't anemones sting clownfish",
+   "Where do clownfish live?",
+   "Are clownfish and anemones friends?"
+  ],
+  "a": "Sea anemones sting most fish, but clownfish have a special slimy coat that protects them. The anemone gives them a safe home, and clownfish help keep the anemone clean.",
+  "check": "Clownfish mucus prevents stinging; mutualism with anemones."
+ },
+ {
+  "id": "en-qa-138",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Why do sharks have so many teeth?",
+  "alt": [
+   "do sharks lose their teeth",
+   "Do shark teeth grow back?",
+   "How many teeth does a shark have?"
+  ],
+  "a": "Sharks have rows and rows of teeth. When a front tooth falls out, a new one from the row behind moves up to take its place. They get new teeth all their lives.",
+  "check": "Sharks continuously replace teeth from rows behind."
+ },
+ {
+  "id": "en-qa-139",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "Why do pufferfish puff up?",
+  "alt": [
+   "how does a pufferfish blow up",
+   "why do puffer fish get big",
+   "What makes a pufferfish round?"
+  ],
+  "a": "When a pufferfish feels scared, it quickly gulps lots of water and puffs up into a big round ball. That makes it too big and prickly for other fish to swallow.",
+  "check": "Pufferfish inflate with water as defense; many have spines."
+ },
+ {
+  "id": "en-qa-140",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Is a whale a fish?",
+  "alt": [
+   "are whales fish",
+   "Why do whales come up for air?",
+   "Do whales breathe air?"
+  ],
+  "a": "No! Whales are mammals, like us. They breathe air with lungs, so they swim up to the surface to breathe. Their babies drink milk from their moms.",
+  "check": "Whales are air-breathing mammals that nurse young."
+ },
+ {
+  "id": "en-qa-141",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "How many hearts does an octopus have?",
+  "alt": [
+   "does an octopus have three hearts",
+   "What color is octopus blood?",
+   "Is it true octopuses have blue blood?"
+  ],
+  "a": "An octopus has three hearts! Two pump blood to its gills and one pumps blood to the rest of its body. Its blood is even blue.",
+  "check": "Octopuses have two branchial hearts and one systemic heart; hemocyanin makes blood blue."
+ },
+ {
+  "id": "en-qa-142",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why do octopuses squirt ink?",
+  "alt": [
+   "what is octopus ink for",
+   "Why does an octopus make a black cloud?",
+   "why do squids squirt ink"
+  ],
+  "a": "When an octopus feels in danger, it squirts a dark cloud of ink, like a smoke screen. While the other animal is confused, the octopus zooms away.",
+  "check": "Cephalopod ink creates a cloud that distracts predators."
+ },
+ {
+  "id": "en-qa-143",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Can starfish grow back their arms?",
+  "alt": [
+   "do starfish have eyes",
+   "Are starfish fish?",
+   "Can sea stars regrow arms?"
+  ],
+  "a": "Yes! Many sea stars can slowly grow back an arm. They aren't fish, and they have no brain, but many have a tiny eye spot at the tip of each arm.",
+  "check": "Sea stars regenerate arms, are echinoderms, lack a brain, and have eyespots at arm tips."
+ },
+ {
+  "id": "en-qa-144",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why are dolphins so smart?",
+  "alt": [
+   "are dolphins smart",
+   "Can dolphins talk to each other?",
+   "Do dolphins have names?"
+  ],
+  "a": "Dolphins have big brains. They talk with clicks and whistles, play games and work as a team. Each dolphin even has its own special whistle, like a name.",
+  "check": "Dolphins have large brains and signature whistles functioning like names."
+ },
+ {
+  "id": "en-qa-145",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why do crabs walk sideways?",
+  "alt": [
+   "can crabs walk forward",
+   "How do crabs walk?",
+   "why do crabs walk funny"
+  ],
+  "a": "A crab's legs are on the sides of its body and bend out to the sides. So walking sideways is the quickest, easiest way for it to move. Some crabs can walk forward too.",
+  "check": "Crab leg articulation favors lateral walking; some species walk forward."
+ },
+ {
+  "id": "en-qa-146",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Do seahorse dads have babies?",
+  "alt": [
+   "do boy seahorses get pregnant",
+   "Who has the baby seahorses?",
+   "How are seahorses born?"
+  ],
+  "a": "Yes! A seahorse mom puts her eggs into a pouch on the dad's tummy. The dad carries them until the babies are ready, then they swim out of his pouch.",
+  "check": "Male seahorses brood eggs in a pouch and release live young."
+ },
+ {
+  "id": "en-qa-147",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Is coral alive?",
+  "alt": [
+   "is coral a plant or a rock",
+   "What is coral made of?",
+   "is coral an animal"
+  ],
+  "a": "Yes! Coral is made of lots of tiny animals called polyps living together. They build hard skeletons that slowly pile up into big coral reefs.",
+  "check": "Corals are colonial animal polyps building calcium carbonate skeletons."
+ },
+ {
+  "id": "en-qa-148",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why do jellyfish sting?",
+  "alt": [
+   "do jellyfish have brains",
+   "How do jellyfish sting?",
+   "Why do jellyfish have tentacles?"
+  ],
+  "a": "Jellyfish have tiny stingers on their long tentacles to catch food and protect themselves. They have no brain, so they don't sting on purpose. They just drift and touch.",
+  "check": "Jellyfish nematocysts fire on contact; jellyfish lack a brain."
+ },
+ {
+  "id": "en-qa-149",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do bees make honey?",
+  "alt": [
+   "how do bees make honey",
+   "What is honey made of?",
+   "why do bees collect nectar"
+  ],
+  "a": "Bees turn sweet flower nectar into honey and store it in the hive. Honey is the food their whole family eats in winter when there are no flowers.",
+  "check": "Honeybees convert nectar to honey as stored winter food."
+ },
+ {
+  "id": "en-qa-150",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do bees buzz?",
+  "alt": [
+   "what makes the buzzing sound",
+   "How do bees buzz?",
+   "why are bees noisy"
+  ],
+  "a": "The buzz is the sound of a bee's wings flapping super fast, hundreds of times every second. Flapping that fast makes the air hum.",
+  "check": "Honeybee wingbeat ~200+ Hz produces the buzz."
+ },
+ {
+  "id": "en-qa-151",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do bees go to flowers?",
+  "alt": [
+   "why do bees like flowers",
+   "How do bees help flowers?",
+   "What is pollen?"
+  ],
+  "a": "Bees visit flowers to drink sweet nectar. Yellow powder called pollen sticks to their fuzzy bodies. When they fly to the next flower, they carry pollen along, which helps flowers make seeds.",
+  "check": "Bees forage for nectar and pollen, pollinating flowers."
+ },
+ {
+  "id": "en-qa-152",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "How do ants know where to go?",
+  "alt": [
+   "why do ants walk in a line",
+   "How do ants find food?",
+   "why do ants follow each other"
+  ],
+  "a": "When an ant finds food, it leaves an invisible smell trail on its way home. Other ants follow the smell, so they march in a long line.",
+  "check": "Ants follow pheromone trails."
+ },
+ {
+  "id": "en-qa-153",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "How does a caterpillar turn into a butterfly?",
+  "alt": [
+   "where do butterflies come from",
+   "What is a chrysalis?",
+   "What does a caterpillar become?"
+  ],
+  "a": "A caterpillar eats and eats leaves until it's big. Then it makes a hard case called a chrysalis. Inside, its body changes, and a butterfly comes out.",
+  "check": "Complete metamorphosis: larva, pupa (chrysalis), adult."
+ },
+ {
+  "id": "en-qa-154",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Can butterflies taste with their feet?",
+  "alt": [
+   "how do butterflies taste",
+   "Do butterflies have tongues?",
+   "How does a butterfly eat?"
+  ],
+  "a": "Yes! Butterflies have taste sensors on their feet. When they land on a leaf, they can taste whether it's a good place to lay eggs. They sip nectar through a long, curly straw-like tongue.",
+  "check": "Butterflies have tarsal chemoreceptors and a proboscis."
+ },
+ {
+  "id": "en-qa-155",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do fireflies glow?",
+  "alt": [
+   "how do fireflies light up",
+   "Why do lightning bugs blink?",
+   "What makes fireflies glow?"
+  ],
+  "a": "Fireflies have a special spot near their tail where chemicals mix with air to make cool light, not hot like a light bulb. They flash to talk to each other and find a mate.",
+  "check": "Firefly bioluminescence is cold light used in courtship signals."
+ },
+ {
+  "id": "en-qa-156",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Is a spider an insect?",
+  "alt": [
+   "how many legs does a spider have",
+   "Are spiders bugs?",
+   "Why isn't a spider an insect?"
+  ],
+  "a": "No, spiders are not insects. Insects have six legs and three body parts. Spiders have eight legs, two body parts, and no wings or antennas.",
+  "check": "Spiders are arachnids with eight legs and two tagmata."
+ },
+ {
+  "id": "en-qa-157",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "How do spiders make webs?",
+  "alt": [
+   "where does spider silk come from",
+   "Why don't spiders stick to their webs?",
+   "How do spiders spin webs?"
+  ],
+  "a": "Spiders make silk inside their bodies and pull it out from tiny parts near their back end called spinnerets. Not every thread is sticky, and spiders know which ones to walk on.",
+  "check": "Silk extruded from spinnerets; orb webs have non-sticky radial threads."
+ },
+ {
+  "id": "en-qa-158",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do ladybugs have spots?",
+  "alt": [
+   "why are ladybugs red",
+   "What are ladybug spots for?",
+   "Are ladybugs good bugs?"
+  ],
+  "a": "Bright colors and spots are a warning that says I taste bad, so leave me alone. Many ladybugs eat tiny bugs called aphids that harm plants, so gardeners love them.",
+  "check": "Ladybird aposematic coloration; many species prey on aphids."
+ },
+ {
+  "id": "en-qa-159",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "Why do mosquitoes bite?",
+  "alt": [
+   "why do mosquitoes bite me",
+   "Do all mosquitoes bite?",
+   "Why do mosquitoes like people?"
+  ],
+  "a": "Only mother mosquitoes bite. They need a little blood to help make their eggs. They find us by smelling the air we breathe out.",
+  "check": "Only female mosquitoes take blood meals for egg production; attracted by CO2."
+ },
+ {
+  "id": "en-qa-160",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "Are dinosaurs still alive?",
+  "alt": [
+   "are there any dinosaurs today",
+   "Are birds dinosaurs?",
+   "Can I see a real dinosaur?"
+  ],
+  "a": "The big dinosaurs disappeared a very long time ago. But scientists found that birds came from a group of dinosaurs. So the birds outside your window are dinosaur relatives.",
+  "check": "Non-avian dinosaurs are extinct; birds are descended from theropods."
+ },
+ {
+  "id": "en-qa-161",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "What happened to the dinosaurs?",
+  "alt": [
+   "why did dinosaurs go away",
+   "Where did the dinosaurs go?",
+   "why are there no more dinosaurs"
+  ],
+  "a": "Scientists think a giant space rock hit Earth about 66 million years ago. It changed the weather a lot, and most dinosaurs slowly disappeared.",
+  "check": "Chicxulub asteroid impact ~66 million years ago is the leading explanation."
+ },
+ {
+  "id": "en-qa-162",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "How do we know what dinosaurs looked like?",
+  "alt": [
+   "what is a fossil",
+   "How do scientists find dinosaurs?",
+   "Did anyone ever see a dinosaur?"
+  ],
+  "a": "No person ever saw a dinosaur. Scientists study fossils, which are bones, footprints and eggs that turned to stone over a very long time. They fit the bones together like a puzzle.",
+  "check": "Dinosaurs predate humans; knowledge comes from fossils."
+ },
+ {
+  "id": "en-qa-163",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "Did dinosaurs have feathers?",
+  "alt": [
+   "were some dinosaurs fluffy",
+   "Did dinosaurs have fur?",
+   "Were there feathered dinosaurs?"
+  ],
+  "a": "Some did! Scientists have found fossils of dinosaurs with feathers, like little Microraptor. Even Velociraptor had feathers. Feathers helped keep them warm and may have helped them show off.",
+  "check": "Many theropods are preserved with feathers; Velociraptor had quill knobs."
+ },
+ {
+  "id": "en-qa-164",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "Why did T. rex have such tiny arms?",
+  "alt": [
+   "why are T. rex arms so short",
+   "What did T. rex use its arms for?",
+   "why does T rex have small arms"
+  ],
+  "a": "Scientists aren't sure yet. T. rex had a huge, heavy head, and short arms may have helped it balance. Its little arms were actually very strong.",
+  "check": "T. rex forelimb function is debated; arms were short but muscular."
+ },
+ {
+  "id": "en-qa-165",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "Did all dinosaurs eat meat?",
+  "alt": [
+   "what did dinosaurs eat",
+   "Were there plant-eating dinosaurs?",
+   "Which dinosaurs ate plants?"
+  ],
+  "a": "No! Lots of dinosaurs ate plants, like long-necked Brachiosaurus and Triceratops with its three horns. Others, like T. rex, ate meat.",
+  "check": "Brachiosaurus and Triceratops were herbivores; T. rex carnivore."
+ },
+ {
+  "id": "en-qa-166",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "Did dinosaurs lay eggs?",
+  "alt": [
+   "did baby dinosaurs hatch from eggs",
+   "How big were dinosaur eggs?",
+   "Where did baby dinosaurs come from?"
+  ],
+  "a": "Yes! Baby dinosaurs hatched from eggs. Scientists have found lots of fossil eggs and nests. Some dinosaurs even sat on their nests, like birds do.",
+  "check": "Dinosaurs were oviparous; fossils show brooding (e.g., Oviraptor relatives)."
+ },
+ {
+  "id": "en-qa-167",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why are leaves green?",
+  "alt": [
+   "why is grass green",
+   "What makes leaves green?",
+   "why are plants green"
+  ],
+  "a": "Leaves have a green material inside called chlorophyll. It catches sunlight and helps the plant make its own food from water and air.",
+  "check": "Chlorophyll reflects green and captures light for photosynthesis."
+ },
+ {
+  "id": "en-qa-168",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do leaves change color in fall?",
+  "alt": [
+   "why do leaves turn red and yellow",
+   "Why do leaves turn orange?",
+   "what makes leaves change color"
+  ],
+  "a": "In fall, trees stop making the green stuff in their leaves. As the green fades, yellows and oranges that were hiding underneath show up. Some leaves also make new reds.",
+  "check": "Chlorophyll breakdown reveals carotenoids; anthocyanins produced in some species."
+ },
+ {
+  "id": "en-qa-169",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do leaves fall off trees?",
+  "alt": [
+   "why do trees lose their leaves",
+   "Why are trees bare in winter?",
+   "where do leaves go in winter"
+  ],
+  "a": "Winter is cold, and water can freeze. Many trees drop their leaves to save water and rest during winter. In spring, they grow brand-new leaves.",
+  "check": "Deciduous trees shed leaves to conserve water over winter."
+ },
+ {
+  "id": "en-qa-170",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "How does a seed grow into a plant?",
+  "alt": [
+   "how do seeds grow",
+   "What does a seed need to grow?",
+   "What's inside a seed?"
+  ],
+  "a": "A seed has a tiny baby plant and a snack packed inside. When it gets water and warmth, it cracks open. A root grows down first, then a little shoot pushes up toward the light.",
+  "check": "Seeds contain embryo and stored food; germination needs water and warmth; radicle emerges first."
+ },
+ {
+  "id": "en-qa-171",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do plants need sunlight?",
+  "alt": [
+   "what happens if a plant gets no sun",
+   "Do plants eat?",
+   "How do plants make food?"
+  ],
+  "a": "Plants make their own food using sunlight, water and air. This is called photosynthesis, a big word for making food from light. Without sunlight, they can't make food.",
+  "check": "Photosynthesis requires light, water and carbon dioxide."
+ },
+ {
+  "id": "en-qa-172",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do flowers smell nice?",
+  "alt": [
+   "why are flowers colorful",
+   "Why do flowers have a smell?",
+   "what are flowers for"
+  ],
+  "a": "Flowers use sweet smells and bright colors to invite bees, butterflies and other visitors. The visitors carry pollen from flower to flower, which helps the plants make seeds.",
+  "check": "Floral scent and color attract pollinators."
+ },
+ {
+  "id": "en-qa-173",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do cactuses have spines?",
+  "alt": [
+   "why is a cactus prickly",
+   "What are cactus spines?",
+   "why do cacti have needles"
+  ],
+  "a": "A cactus's spines are actually its leaves, changed into sharp points. They keep thirsty animals from eating it and help the cactus lose less water in the hot desert.",
+  "check": "Cactus spines are modified leaves that deter herbivores and reduce water loss."
+ },
+ {
+  "id": "en-qa-174",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why are trees so tall?",
+  "alt": [
+   "why do trees grow so tall",
+   "How do trees get so big?",
+   "why are some trees giant"
+  ],
+  "a": "Growing tall helps a tree's leaves reach the sunlight above other plants. Every year the trunk grows a little thicker, so it's strong enough to hold the tree up.",
+  "check": "Trees compete for light; secondary growth thickens trunks."
+ },
+ {
+  "id": "en-qa-175",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "How can you tell how old a tree is?",
+  "alt": [
+   "what are tree rings",
+   "How old is a tree?",
+   "What are the circles inside a tree?"
+  ],
+  "a": "Inside a tree trunk are rings. In many places a tree adds one new ring each year. Count the rings, and you'll know about how old the tree is.",
+  "check": "Annual growth rings in seasonal climates indicate tree age."
+ },
+ {
+  "id": "en-qa-176",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "How do plants drink water?",
+  "alt": [
+   "do plants get thirsty",
+   "What do roots do?",
+   "Why do plants have roots?"
+  ],
+  "a": "Plants drink through their roots. Tiny root hairs soak up water from the soil, and it travels up the stem to the leaves. Roots also hold the plant tight in the ground.",
+  "check": "Root hairs absorb water transported via xylem; roots anchor plants."
+ },
+ {
+  "id": "en-qa-177",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do sunflowers face the sun?",
+  "alt": [
+   "do sunflowers follow the sun",
+   "Do sunflowers turn around?",
+   "why are they called sunflowers"
+  ],
+  "a": "Young sunflowers turn to follow the sun across the sky each day, then turn back at night. Once they bloom, most of them stay facing east.",
+  "check": "Young sunflowers show heliotropism; mature heads face east."
+ },
+ {
+  "id": "en-qa-178",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Is a mushroom a plant?",
+  "alt": [
+   "what is a mushroom",
+   "Are mushrooms plants?",
+   "Why aren't mushrooms green?"
+  ],
+  "a": "No! Mushrooms are not plants. They aren't green and can't make food from sunlight. They belong to their own group called fungi, which get food from things like old leaves and wood.",
+  "check": "Mushrooms are fungi, a separate kingdom; many are decomposers."
+ },
+ {
+  "id": "en-qa-179",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "Why do some trees stay green all winter?",
+  "alt": [
+   "why do pine trees keep their needles",
+   "What is an evergreen tree?",
+   "Why don't pine trees lose their leaves?"
+  ],
+  "a": "Trees like pines have skinny, needle-shaped leaves with a waxy coat. They don't lose much water and can handle the cold, so they stay green all winter.",
+  "check": "Conifer needles have small surface area and waxy cuticle."
+ },
+ {
+  "id": "en-qa-180",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "How do seeds travel to new places?",
+  "alt": [
+   "how do seeds move",
+   "How do dandelion seeds fly?",
+   "How do plants spread their seeds?"
+  ],
+  "a": "Seeds travel in clever ways. Dandelion seeds float on the wind, burrs hitch a ride on animal fur, and coconuts can float on water. Animals also carry seeds after eating fruit.",
+  "check": "Seed dispersal by wind, animal fur, water and animal ingestion."
+ },
+ {
+  "id": "en-qa-181",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why do we have to sleep?",
+  "alt": [
+   "why do we sleep",
+   "Do I really need to sleep?",
+   "What happens when we sleep?"
+  ],
+  "a": "While you sleep, your body rests and fixes itself, and your brain sorts out what you learned that day. That's why you wake up ready to play.",
+  "check": "Sleep supports bodily restoration and memory consolidation."
+ },
+ {
+  "id": "en-qa-182",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why do I get sleepy at night?",
+  "alt": [
+   "why do I get tired at night",
+   "Why does dark make me sleepy?",
+   "Why do we sleep at night?"
+  ],
+  "a": "When it gets dark, your brain makes more of a sleepy helper called melatonin. It tells your body it's time to rest.",
+  "check": "Melatonin secretion rises in darkness and promotes sleepiness."
+ },
+ {
+  "id": "en-qa-183",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why do we dream?",
+  "alt": [
+   "why do I have dreams",
+   "Where do dreams come from?",
+   "What are dreams?"
+  ],
+  "a": "Your brain keeps busy while you sleep, and dreams happen when it's extra active. Scientists are still studying exactly why we dream.",
+  "check": "Dreaming occurs during active brain states in sleep; its purpose is not settled."
+ },
+ {
+  "id": "en-qa-184",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why do kids need more sleep than grown-ups?",
+  "alt": [
+   "Why do I have to go to bed earlier?",
+   "Why do kids sleep so much?",
+   "why do grown-ups stay up late"
+  ],
+  "a": "Your body and brain are growing fast, and lots of that growing work happens while you sleep. So kids need more sleep than adults.",
+  "check": "Children need more sleep than adults; growth hormone is released largely during deep sleep."
+ },
+ {
+  "id": "en-qa-185",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why can't I use the tablet right before bed?",
+  "alt": [
+   "Why no screens before bed?",
+   "why can't I watch TV at bedtime",
+   "Do screens keep you awake?"
+  ],
+  "a": "Bright screens can trick your brain into thinking it's still daytime, so it's harder to fall asleep. Turning screens off earlier helps you drift off.",
+  "check": "Evening screen light can delay melatonin release and sleep onset."
+ },
+ {
+  "id": "en-qa-186",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "Why do I have crusty stuff in my eyes when I wake up?",
+  "alt": [
+   "What is eye sleep?",
+   "What's the crust in my eyes?",
+   "why do I get eye boogers"
+  ],
+  "a": "Your eyes make a little tear water and oil all the time. At night you don't blink, so it collects in the corners and dries into crust.",
+  "check": "Eye discharge (rheum) accumulates when blinking stops during sleep."
+ },
+ {
+  "id": "en-qa-187",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we yawn?",
+  "alt": [
+   "why do I yawn",
+   "What makes a yawn?",
+   "Why do we yawn when we're tired?"
+  ],
+  "a": "We often yawn when we're tired or bored. Scientists are still studying exactly why yawning happens.",
+  "check": "Yawning is common with tiredness or boredom; its cause is not settled."
+ },
+ {
+  "id": "en-qa-188",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do I yawn when someone else yawns?",
+  "alt": [
+   "Are yawns catching?",
+   "why are yawns contagious",
+   "Why do yawns spread?"
+  ],
+  "a": "Seeing, hearing, or even thinking about a yawn can make you yawn too. Scientists are still figuring out why yawns are so catching.",
+  "check": "Contagious yawning is well documented; the mechanism is still debated."
+ },
+ {
+  "id": "en-qa-189",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we sneeze?",
+  "alt": [
+   "why do I sneeze",
+   "What makes you sneeze?",
+   "Why does my nose sneeze?"
+  ],
+  "a": "When dust or something tickly gets into your nose, your body blasts it out with a big sneeze. It's your nose's way of cleaning itself.",
+  "check": "Sneezing is a reflex that expels irritants from the nose."
+ },
+ {
+  "id": "en-qa-190",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do my eyes close when I sneeze?",
+  "alt": [
+   "Can you sneeze with your eyes open?",
+   "why do we shut our eyes when we sneeze",
+   "Why do I blink when I sneeze?"
+  ],
+  "a": "Your eyes close by themselves almost every time you sneeze. It happens automatically, and scientists aren't completely sure why.",
+  "check": "Eye closure during sneezing is an automatic reflex; its purpose is not fully known."
+ },
+ {
+  "id": "en-qa-191",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we get hiccups?",
+  "alt": [
+   "why do we hiccup",
+   "What are hiccups?",
+   "Why can't I stop hiccuping?"
+  ],
+  "a": "Under your lungs is a big breathing muscle. Sometimes it jumps suddenly, and your throat snaps shut with a hic. Hiccups usually stop on their own.",
+  "check": "Hiccups are involuntary diaphragm spasms followed by closure of the vocal cords; usually self-limiting."
+ },
+ {
+  "id": "en-qa-192",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why do we burp?",
+  "alt": [
+   "why do I burp",
+   "What is a burp?",
+   "Why do fizzy drinks make me burp?"
+  ],
+  "a": "When you eat or drink, you swallow a little air too. When extra air builds up in your tummy, it comes back out as a burp. Fizzy drinks add even more.",
+  "check": "Burping releases swallowed air and gas from the stomach; carbonated drinks add gas."
+ },
+ {
+  "id": "en-qa-193",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we shiver when we're cold?",
+  "alt": [
+   "why do I shiver",
+   "Why do my teeth chatter?",
+   "Why do I shake when I'm cold?"
+  ],
+  "a": "Shivering is your muscles tightening and relaxing really fast. All that wiggling makes heat to warm you up.",
+  "check": "Shivering generates heat through rapid involuntary muscle contractions."
+ },
+ {
+  "id": "en-qa-194",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we sweat?",
+  "alt": [
+   "why do I get sweaty",
+   "What is sweat for?",
+   "Why do I sweat when I run?"
+  ],
+  "a": "When you get hot, your skin makes sweat. As the sweat dries off your skin, it carries heat away and cools you down.",
+  "check": "Evaporation of sweat cools the body."
+ },
+ {
+  "id": "en-qa-195",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do we get goosebumps?",
+  "alt": [
+   "what are goosebumps",
+   "Why does my skin get bumpy when I'm cold?",
+   "Why do my arm hairs stand up?"
+  ],
+  "a": "Tiny muscles in your skin pull your little hairs up straight, making small bumps. It happens when you're cold, or sometimes when you feel really excited.",
+  "check": "Tiny arrector pili muscles contract and raise hairs, producing goosebumps."
+ },
+ {
+  "id": "en-qa-196",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why do I get dizzy when I spin around?",
+  "alt": [
+   "why does spinning make me dizzy",
+   "Why does the room keep spinning?",
+   "What makes you dizzy?"
+  ],
+  "a": "Deep inside your ears are tiny tubes of liquid that help you balance. When you stop spinning, the liquid keeps swirling, so your brain thinks you're still turning.",
+  "check": "Fluid in the inner-ear semicircular canals keeps moving after spinning stops, causing dizziness."
+ },
+ {
+  "id": "en-qa-197",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why does my tummy growl?",
+  "alt": [
+   "why does my stomach rumble",
+   "What's that noise in my tummy?",
+   "Why does my belly gurgle when I'm hungry?"
+  ],
+  "a": "Your tummy and intestines squeeze all the time to push food, liquid, and air along. When your tummy is empty, those gurgles sound louder.",
+  "check": "Stomach rumbling comes from gut muscle contractions moving gas and fluid; louder when empty."
+ },
+ {
+  "id": "en-qa-198",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why does my foot fall asleep?",
+  "alt": [
+   "why does my leg get tingly",
+   "What are pins and needles?",
+   "Why does my foot feel fizzy?"
+  ],
+  "a": "When you sit on your leg, you squeeze the nerves that carry messages to your brain. The messages get mixed up, so it tingles. Moving around wakes it back up.",
+  "check": "Temporary pressure on nerves causes pins and needles that fade once pressure is relieved."
+ },
+ {
+  "id": "en-qa-199",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why can't I tickle myself?",
+  "alt": [
+   "why doesn't tickling myself work",
+   "Why am I ticklish?",
+   "Why do I laugh when someone tickles me?"
+  ],
+  "a": "When you tickle yourself, your brain already knows what's coming, so it doesn't feel tickly. When someone else does it, the surprise makes you giggle.",
+  "check": "The brain predicts self-produced touch and dampens it, so people cannot tickle themselves."
+ },
+ {
+  "id": "en-qa-200",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "Why does my hand jump away from something hot?",
+  "alt": [
+   "What is a reflex?",
+   "why do I pull my hand back so fast",
+   "How does my hand move before I think?"
+  ],
+  "a": "That's a reflex, a super-fast move your body makes on its own. Your hand pulls away before you even think about it, to keep you safe.",
+  "check": "The withdrawal reflex is routed through the spinal cord and happens before conscious awareness."
+ },
+ {
+  "id": "en-qa-201",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Why do my cheeks turn red?",
+  "alt": [
+   "why do I blush",
+   "Why does my face get red when I run?",
+   "Why do I go pink when I'm shy?"
+  ],
+  "a": "When you're hot, running around, or feeling shy, tiny blood tubes in your face get wider. More blood flows through, so your cheeks look pink.",
+  "check": "Blushing and flushing come from widening of small blood vessels in the face."
+ },
+ {
+  "id": "en-qa-202",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why do we blink?",
+  "alt": [
+   "why do I blink so much",
+   "What happens if I don't blink?",
+   "Why do eyes blink?"
+  ],
+  "a": "Each blink is like a tiny windshield wiper. It spreads tears over your eyes to keep them wet and wipes away bits of dust.",
+  "check": "Blinking spreads the tear film and clears debris from the eye surface."
+ },
+ {
+  "id": "en-qa-203",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why do we cry?",
+  "alt": [
+   "why do people cry",
+   "Why do tears come out?",
+   "Why do I cry when I'm sad?"
+  ],
+  "a": "People can cry when they're sad, hurt, or even super happy. Tears help show others how we feel, and crying can help us feel a bit better afterward.",
+  "check": "Emotional tears are a normal human way of expressing feelings."
+ },
+ {
+  "id": "en-qa-204",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why does cutting onions make you cry?",
+  "alt": [
+   "why do onions make my eyes water",
+   "Why do onions sting?",
+   "Do onions make everyone cry?"
+  ],
+  "a": "Cutting an onion lets out an invisible gas that stings your eyes a little. Your eyes make tears to wash it away.",
+  "check": "Cut onions release an irritating gas that triggers tears."
+ },
+ {
+  "id": "en-qa-205",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "How do my eyes see things?",
+  "alt": [
+   "how do we see",
+   "How do eyes work?",
+   "How can I see colors?"
+  ],
+  "a": "Light bounces off things and into your eyes. Your eyes turn that light into messages and send them to your brain, which figures out what you're looking at.",
+  "check": "Light enters the eye; the retina converts it into nerve signals that the brain interprets."
+ },
+ {
+  "id": "en-qa-206",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why can't I see when the lights first go off?",
+  "alt": [
+   "why is it so dark at first",
+   "How do my eyes get used to the dark?",
+   "Why can I see better in the dark after a while?"
+  ],
+  "a": "In the dark, the black dot in the middle of your eye, called the pupil, slowly gets bigger to let in more light. After a while you can see a bit better.",
+  "check": "Pupils dilate and the eyes adapt gradually to darkness."
+ },
+ {
+  "id": "en-qa-207",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "How do my ears hear?",
+  "alt": [
+   "how do we hear",
+   "How does sound get in my ears?",
+   "How do ears work?"
+  ],
+  "a": "Sounds make the air wiggle. The wiggles travel into your ear and make your eardrum shake. Your ear turns the shaking into messages for your brain, and you hear.",
+  "check": "Sound waves vibrate the eardrum; the inner ear converts vibrations into nerve signals."
+ },
+ {
+  "id": "en-qa-208",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why do we have two ears?",
+  "alt": [
+   "why not just one ear",
+   "What are two ears for?",
+   "Why do people have two ears?"
+  ],
+  "a": "With two ears, your brain can tell which side a sound reaches first and which side hears it louder. That helps you know where the sound is coming from.",
+  "check": "Two ears let the brain compare timing and loudness to locate sounds."
+ },
+ {
+  "id": "en-qa-209",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why do my ears pop on an airplane?",
+  "alt": [
+   "why do my ears feel funny on a plane",
+   "What is ear popping?",
+   "Why do my ears get plugged when we fly?"
+  ],
+  "a": "When a plane goes up or down, the air pressure inside and outside your ear gets uneven. Swallowing or yawning lets air even out, and your ears pop.",
+  "check": "Pressure difference across the eardrum; swallowing or yawning opens the Eustachian tube to equalize."
+ },
+ {
+  "id": "en-qa-210",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "What is earwax for?",
+  "alt": [
+   "why do we have earwax",
+   "Where does earwax come from?",
+   "Is earwax dirty?"
+  ],
+  "a": "Your ears make earwax to catch dust and keep themselves clean and safe. It usually moves out on its own, so you don't need to poke anything inside.",
+  "check": "Earwax protects the ear canal and usually clears on its own; inserting objects is discouraged."
+ },
+ {
+  "id": "en-qa-211",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "How does my tongue taste things?",
+  "alt": [
+   "how do we taste",
+   "What are taste buds?",
+   "What's on my tongue?"
+  ],
+  "a": "Your tongue is covered in tiny taste buds. They can tell sweet, sour, salty, bitter, and savory, and they send that news to your brain.",
+  "check": "Taste buds detect sweet, sour, salty, bitter, and umami (savory)."
+ },
+ {
+  "id": "en-qa-212",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Does each part of my tongue taste something different?",
+  "alt": [
+   "Is there a tongue map?",
+   "does the tip of my tongue only taste sweet",
+   "Where do I taste sour on my tongue?"
+  ],
+  "a": "No, that's an old mix-up. Every part of your tongue with taste buds can taste sweet, sour, salty, and bitter.",
+  "check": "The tongue map is a myth; all taste qualities are detected across the tongue."
+ },
+ {
+  "id": "en-qa-213",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why can't I taste food when I hold my nose?",
+  "alt": [
+   "why does food taste plain when I pinch my nose",
+   "Is smell part of taste?",
+   "Does your nose help you taste?"
+  ],
+  "a": "A lot of what we call taste really comes from smell. When you pinch your nose, you mostly get plain sweet, salty, sour, or bitter.",
+  "check": "Much of flavor comes from smell; blocking the nose leaves only basic tastes."
+ },
+ {
+  "id": "en-qa-214",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "How does my nose smell things?",
+  "alt": [
+   "how do we smell",
+   "How do smells get in my nose?",
+   "How does smelling work?"
+  ],
+  "a": "Things give off tiny invisible bits that float through the air. When they reach the top of your nose, special smell-catchers notice them and tell your brain.",
+  "check": "Odor molecules reach smell receptors in the nose, which signal the brain."
+ },
+ {
+  "id": "en-qa-215",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why does spicy food feel hot?",
+  "alt": [
+   "why does chili burn my mouth",
+   "Why is spicy food spicy?",
+   "What makes food spicy?"
+  ],
+  "a": "Chili peppers have something that tricks the heat-sensing parts of your mouth. Your brain thinks your mouth is hot, even though it isn't really burning.",
+  "check": "Capsaicin activates heat-sensing receptors without real burning."
+ },
+ {
+  "id": "en-qa-216",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why do I get brain freeze from ice cream?",
+  "alt": [
+   "what is brain freeze",
+   "Why does my head hurt when I eat cold stuff fast?",
+   "Why does a slushie freeze my head?"
+  ],
+  "a": "When something very cold touches the roof of your mouth, the blood tubes there change quickly, and you feel a sudden headache. It goes away fast, and eating slowly helps.",
+  "check": "Brain freeze is a brief headache from rapid cooling of the palate and blood-vessel changes."
+ },
+ {
+  "id": "en-qa-217",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "How can my skin feel hot and cold?",
+  "alt": [
+   "how do I feel things",
+   "How do I know something is hot?",
+   "What can skin feel?"
+  ],
+  "a": "Your skin has lots of tiny sensors that feel hot, cold, soft, rough, and ouch. They send messages to your brain about what you're touching.",
+  "check": "Skin receptors detect temperature, touch, and pain."
+ },
+ {
+  "id": "en-qa-218",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "Why does food taste boring when I have a cold?",
+  "alt": [
+   "why can't I taste when I'm stuffy",
+   "Why does a cold change how food tastes?",
+   "Why is dinner less yummy when my nose is blocked?"
+  ],
+  "a": "A stuffy nose can't smell well, and smell is a big part of flavor. When your nose clears up, food tastes yummy again.",
+  "check": "Nasal congestion from a cold blocks smell, which reduces flavor."
+ },
+ {
+  "id": "en-qa-219",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Why do baby teeth fall out?",
+  "alt": [
+   "why do we lose teeth",
+   "Why is my tooth wiggly?",
+   "Why do kids lose their teeth?"
+  ],
+  "a": "Your grown-up teeth are waiting under your baby teeth. As they push up, the baby tooth gets wiggly and falls out to make room.",
+  "check": "Erupting permanent teeth resorb baby-tooth roots, loosening them."
+ },
+ {
+  "id": "en-qa-220",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Do grown-ups get new teeth?",
+  "alt": [
+   "do adults lose teeth and grow new ones",
+   "How many sets of teeth do we get?",
+   "Will my big teeth fall out too?"
+  ],
+  "a": "No. People get just two sets of teeth, baby teeth and grown-up teeth. That's why it's important to take good care of your grown-up teeth.",
+  "check": "Humans have two sets of teeth; permanent teeth are not replaced."
+ },
+ {
+  "id": "en-qa-221",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Why do we have to brush our teeth?",
+  "alt": [
+   "why brush teeth",
+   "What happens if I don't brush?",
+   "Do I have to brush every day?"
+  ],
+  "a": "After you eat, bits of food and germs stick to your teeth. The germs can make holes in teeth. Brushing sweeps them away and keeps your teeth strong.",
+  "check": "Brushing removes plaque bacteria that cause tooth decay."
+ },
+ {
+  "id": "en-qa-222",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Why should I brush before bed?",
+  "alt": [
+   "why brush at night",
+   "Why do I brush twice a day?",
+   "Do I really have to brush at bedtime?"
+  ],
+  "a": "While you sleep, your mouth makes less spit, so germs have an easier time. Brushing before bed clears away the day's food so your teeth stay healthy all night.",
+  "check": "Saliva flow drops during sleep; brushing twice daily, including before bed, is standard dental guidance."
+ },
+ {
+  "id": "en-qa-223",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Why does candy give you cavities?",
+  "alt": [
+   "what is a cavity",
+   "Why is sugar bad for teeth?",
+   "How do teeth get holes?"
+  ],
+  "a": "Germs in your mouth love sugar. When they eat it, they make acid, and the acid can slowly make tiny holes in your teeth, called cavities.",
+  "check": "Oral bacteria turn sugar into acid that erodes enamel and causes cavities."
+ },
+ {
+  "id": "en-qa-224",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "How many baby teeth do kids have?",
+  "alt": [
+   "how many teeth do I have",
+   "How many teeth do grown-ups have?",
+   "How many baby teeth will I lose?"
+  ],
+  "a": "Kids usually have 20 baby teeth. Grown-ups usually end up with 28 to 32 teeth.",
+  "check": "There are 20 primary teeth; adults typically have 28 to 32 permanent teeth."
+ },
+ {
+  "id": "en-qa-225",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "Why are teeth so hard?",
+  "alt": [
+   "what are teeth made of",
+   "What's the hardest thing in my body?",
+   "What is enamel?"
+  ],
+  "a": "Teeth are covered with enamel, the hardest stuff in your whole body. It helps you bite and chew crunchy food.",
+  "check": "Tooth enamel is the hardest substance in the human body."
+ },
+ {
+  "id": "en-qa-226",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "Why do we have bones?",
+  "alt": [
+   "what are bones for",
+   "What if we had no bones?",
+   "Why is my body so bony?"
+  ],
+  "a": "Bones are like the frame of a house. They hold your body up, help you move, and protect soft important parts like your brain and heart.",
+  "check": "The skeleton supports the body, enables movement, and protects organs."
+ },
+ {
+  "id": "en-qa-227",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "How many bones do I have?",
+  "alt": [
+   "how many bones are in the body",
+   "Do babies have more bones?",
+   "How many bones do grown-ups have?"
+  ],
+  "a": "Grown-ups have 206 bones. Babies are born with more, and as they grow, some bones join together.",
+  "check": "Adults have about 206 bones; infants have more, and some fuse during growth."
+ },
+ {
+  "id": "en-qa-228",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "What's the smallest bone in my body?",
+  "alt": [
+   "what is the tiniest bone",
+   "Are there bones in my ears?",
+   "Where's the littlest bone?"
+  ],
+  "a": "The smallest bone is deep inside your ear. It's called the stirrup, it's smaller than a grain of rice, and it helps you hear.",
+  "check": "The stapes (stirrup) in the middle ear is the smallest bone, about 3 mm long."
+ },
+ {
+  "id": "en-qa-229",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "What's the biggest bone in my body?",
+  "alt": [
+   "what is the longest bone",
+   "What bone is in my thigh?",
+   "Where's the strongest bone?"
+  ],
+  "a": "The longest bone is in your thigh. It's called the femur, and it helps you stand, walk, and run.",
+  "check": "The femur (thigh bone) is the longest bone in the body."
+ },
+ {
+  "id": "en-qa-230",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "What do muscles do?",
+  "alt": [
+   "what are muscles for",
+   "How do I move?",
+   "Do I use muscles to smile?"
+  ],
+  "a": "Muscles pull on your bones so you can run, jump, and grab things. You even use muscles to smile, blink, and talk.",
+  "check": "Muscles move bones and also power facial movements and speech."
+ },
+ {
+  "id": "en-qa-231",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "Why do my muscles feel tired after playing?",
+  "alt": [
+   "why do I get tired when I run",
+   "Why do my legs feel heavy after soccer?",
+   "Why do muscles get tired?"
+  ],
+  "a": "Your muscles worked hard and used up lots of energy. After some rest, a drink of water, and a good meal, they're ready to go again.",
+  "check": "Muscle work uses energy; rest, fluids, and food help recovery."
+ },
+ {
+  "id": "en-qa-232",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why is milk good for my bones?",
+  "alt": [
+   "does milk make bones strong",
+   "What is calcium?",
+   "How do I make my bones strong?"
+  ],
+  "a": "Milk has lots of calcium, which is like building blocks for bones. Running and jumping help make bones strong too.",
+  "check": "Calcium is the main bone mineral; weight-bearing activity strengthens bones."
+ },
+ {
+  "id": "en-qa-233",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "Why is exercise good for me?",
+  "alt": [
+   "why should I play outside",
+   "What does exercise do?",
+   "Is running good for you?"
+  ],
+  "a": "Running and playing make your heart, muscles, and bones stronger. Moving your body can also help you feel happy and sleep well.",
+  "check": "Physical activity strengthens heart, muscles, and bones and improves mood and sleep."
+ },
+ {
+  "id": "en-qa-234",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Why does my heart beat?",
+  "alt": [
+   "what does my heart do",
+   "Why does my heart go thump thump?",
+   "What is a heartbeat?"
+  ],
+  "a": "Your heart is a strong pump. Each beat pushes blood all around your body, carrying oxygen and food to every part.",
+  "check": "The heart pumps blood carrying oxygen and nutrients around the body."
+ },
+ {
+  "id": "en-qa-235",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Why does my heart beat fast after running?",
+  "alt": [
+   "why is my heart pounding",
+   "Why does exercise make my heart race?",
+   "Why does my heartbeat speed up?"
+  ],
+  "a": "When you run, your muscles need more oxygen. Your heart beats faster to send them more blood. When you rest, it slows down again.",
+  "check": "Heart rate rises during exercise to deliver more oxygen, then returns toward resting."
+ },
+ {
+  "id": "en-qa-236",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "How big is my heart?",
+  "alt": [
+   "how big is a heart",
+   "What does my heart look like?",
+   "Is my heart shaped like a heart?"
+  ],
+  "a": "Your heart is about the size of your own fist. As you grow bigger, your heart grows too.",
+  "check": "A person's heart is roughly the size of their own fist."
+ },
+ {
+  "id": "en-qa-237",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Does my heart beat when I'm asleep?",
+  "alt": [
+   "does my heart ever rest",
+   "Does my heart stop at night?",
+   "Does the heart sleep?"
+  ],
+  "a": "Yes! Your heart keeps beating all day and all night. It just beats a little slower while you sleep.",
+  "check": "The heart beats continuously; heart rate is lower during sleep."
+ },
+ {
+  "id": "en-qa-238",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Why is blood red?",
+  "alt": [
+   "what makes blood red",
+   "What is blood made of?",
+   "Why isn't blood blue?"
+  ],
+  "a": "Blood is packed with red blood cells. They carry a red stuff that grabs oxygen, and that's what makes blood look red.",
+  "check": "Hemoglobin in red blood cells is red and carries oxygen."
+ },
+ {
+  "id": "en-qa-239",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "Why do my veins look blue?",
+  "alt": [
+   "is my blood blue",
+   "What are the blue lines on my wrist?",
+   "Why are veins blue?"
+  ],
+  "a": "Veins are blood tubes under your skin. The blood inside is always red. It just looks bluish because you're seeing it through your skin.",
+  "check": "Veins look bluish because of how skin scatters light; blood is always red."
+ },
+ {
+  "id": "en-qa-240",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "Why do we breathe?",
+  "alt": [
+   "why do I need air",
+   "What does breathing do?",
+   "Why can't we stop breathing?"
+  ],
+  "a": "Every part of your body needs oxygen from the air to work. Breathing in brings oxygen in, and breathing out lets used-up air go.",
+  "check": "Breathing brings in oxygen and removes carbon dioxide."
+ },
+ {
+  "id": "en-qa-241",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "Why can't I hold my breath forever?",
+  "alt": [
+   "why do I have to breathe again",
+   "How long can I hold my breath?",
+   "Why is holding my breath hard?"
+  ],
+  "a": "When you hold your breath, used-up air builds up inside you. Your brain notices and makes you take a breath, so you can only hold it a little while.",
+  "check": "Carbon dioxide build-up drives the urge to breathe."
+ },
+ {
+  "id": "en-qa-242",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "How do I breathe when I'm asleep?",
+  "alt": [
+   "do I forget to breathe when I sleep",
+   "Who makes me breathe at night?",
+   "Do I have to think about breathing?"
+  ],
+  "a": "Your brain runs your breathing automatically, so you don't have to think about it. It keeps you breathing all night long.",
+  "check": "Breathing is controlled automatically by the brainstem, including during sleep."
+ },
+ {
+  "id": "en-qa-243",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "What do my lungs look like?",
+  "alt": [
+   "what are lungs",
+   "Where are my lungs?",
+   "How many lungs do I have?"
+  ],
+  "a": "You have two lungs inside your chest. They're soft and spongy. They fill up when you breathe in and get smaller when you breathe out.",
+  "check": "Two spongy lungs in the chest expand on inhalation and shrink on exhalation."
+ },
+ {
+  "id": "en-qa-244",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "Why do I breathe so hard when I run?",
+  "alt": [
+   "why am I out of breath",
+   "Why do I pant after running?",
+   "Why do I breathe faster when I play?"
+  ],
+  "a": "Running muscles need extra oxygen. So you breathe faster and deeper to pull more air into your lungs.",
+  "check": "Breathing rate and depth increase during exercise to supply more oxygen."
+ },
+ {
+  "id": "en-qa-245",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "Why do we have boogers?",
+  "alt": [
+   "what are boogers",
+   "Why is there snot in my nose?",
+   "What is mucus for?"
+  ],
+  "a": "Your nose makes sticky slime, called mucus, that traps dust and germs before they reach your lungs. When that slime dries up with the dust, it becomes a booger.",
+  "check": "Nasal mucus traps particles and germs from inhaled air; dried mucus forms boogers."
+ },
+ {
+  "id": "en-qa-246",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why do I have to eat vegetables?",
+  "alt": [
+   "why are veggies good for me",
+   "Do I really need to eat broccoli?",
+   "What do vegetables do?"
+  ],
+  "a": "Vegetables are full of vitamins that help every part of your body work, plus fiber that helps your tummy do its job.",
+  "check": "Vegetables provide vitamins, minerals, and fiber."
+ },
+ {
+  "id": "en-qa-247",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why do I need to drink water?",
+  "alt": [
+   "why drink water",
+   "Why is water good for you?",
+   "What happens if I don't drink water?"
+  ],
+  "a": "Your body has lots of water inside. You lose some when you sweat, breathe, and go to the bathroom, so drinking water fills you back up.",
+  "check": "The body is largely water and loses it through sweat, breath, and urine."
+ },
+ {
+  "id": "en-qa-248",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why do I get thirsty?",
+  "alt": [
+   "what is thirst",
+   "Why is my mouth dry?",
+   "Why do I want water after playing?"
+  ],
+  "a": "When your body is getting low on water, your brain sends you a thirsty feeling. It's your body's way of saying it's time for a drink.",
+  "check": "Thirst is a brain signal triggered when body water runs low."
+ },
+ {
+  "id": "en-qa-249",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why do I get hungry?",
+  "alt": [
+   "why am I hungry again",
+   "What makes you hungry?",
+   "Why do I need food?"
+  ],
+  "a": "Your body uses energy all day, and food gives you that energy. When you need more, your tummy and brain tell you it's time to eat.",
+  "check": "Hunger signals that the body needs more energy from food."
+ },
+ {
+  "id": "en-qa-250",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Where does my food go after I eat it?",
+  "alt": [
+   "what happens to food in my tummy",
+   "How does food turn into poop?",
+   "Where does food go?"
+  ],
+  "a": "You chew food, then it slides down to your stomach to get mushed up. Next, your intestines soak up the good stuff, and the leftovers come out as poop.",
+  "check": "Food passes from mouth to stomach to intestines; nutrients are absorbed and waste is expelled."
+ },
+ {
+  "id": "en-qa-251",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why should I chew my food well?",
+  "alt": [
+   "why chew slowly",
+   "What happens if I eat too fast?",
+   "Why do I have to chew so much?"
+  ],
+  "a": "Chewing breaks food into small pieces, so your tummy can digest it more easily. It also helps food go down safely.",
+  "check": "Thorough chewing aids digestion and reduces choking risk."
+ },
+ {
+  "id": "en-qa-252",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Do carrots help you see in the dark?",
+  "alt": [
+   "are carrots good for your eyes",
+   "Will carrots give me night vision?",
+   "Why do people say carrots help eyes?"
+  ],
+  "a": "Carrots have something your body turns into vitamin A, and your eyes need vitamin A to see in dim light. But extra carrots won't give you super night vision.",
+  "check": "Beta-carotene becomes vitamin A, needed for vision in dim light; extra carrots do not give super vision."
+ },
+ {
+  "id": "en-qa-253",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "Why should I eat lots of different foods?",
+  "alt": [
+   "why can't I just eat pasta",
+   "Why do I have to try new foods?",
+   "Why eat all kinds of food?"
+  ],
+  "a": "Each food gives your body different helpers, called nutrients. Eating lots of kinds means your body gets everything it needs.",
+  "check": "A varied diet supplies the range of nutrients the body needs."
+ },
+ {
+  "id": "en-qa-254",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "How do I grow taller?",
+  "alt": [
+   "why do I get taller",
+   "How do kids grow?",
+   "Do my bones get longer?"
+  ],
+  "a": "Near the ends of your bones are special growing spots. Little by little, they make your bones longer, so you get taller. Good food, sleep, and play help.",
+  "check": "Growth plates near bone ends lengthen bones during childhood; nutrition, sleep, and activity support growth."
+ },
+ {
+  "id": "en-qa-255",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "Why doesn't a haircut hurt?",
+  "alt": [
+   "can hair feel things",
+   "Why does it hurt when my hair gets pulled?",
+   "Does cutting hair hurt?"
+  ],
+  "a": "The hair you can see has no feeling, so cutting it doesn't hurt. Pulling hair can hurt because it tugs on the roots under your skin.",
+  "check": "The hair shaft has no nerves; follicles under the skin do."
+ },
+ {
+  "id": "en-qa-256",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "Why does my hair keep growing?",
+  "alt": [
+   "how does hair grow",
+   "Where does hair come from?",
+   "Why do I need haircuts?"
+  ],
+  "a": "Under your skin, each hair grows from a tiny pocket called a follicle. It keeps making new hair and pushing it out, so your hair gets longer.",
+  "check": "Hair follicles produce new hair cells that push the hair outward."
+ },
+ {
+  "id": "en-qa-257",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "Why do my fingernails grow?",
+  "alt": [
+   "how do nails grow",
+   "Why doesn't clipping my nails hurt?",
+   "Where do nails come from?"
+  ],
+  "a": "Under the skin at the bottom of each nail, new nail is made all the time. It pushes the old nail forward. Clipping the ends doesn't hurt.",
+  "check": "The nail matrix under the skin produces nail; the nail plate has no nerves."
+ },
+ {
+  "id": "en-qa-258",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "Am I taller in the morning?",
+  "alt": [
+   "do I shrink during the day",
+   "Am I shorter at night?",
+   "Does my height change during the day?"
+  ],
+  "a": "Yes, a tiny bit! During the day, the soft cushions between the bones in your back get squished. At night they stretch out again.",
+  "check": "Spinal discs compress during the day and recover overnight, so people are slightly taller in the morning."
+ },
+ {
+  "id": "en-qa-259",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "What is my body made of?",
+  "alt": [
+   "what are cells",
+   "What are we made of?",
+   "What's inside my body?"
+  ],
+  "a": "Your body is made of tiny building blocks called cells. They're so small you need a microscope to see them, and you have trillions of them.",
+  "check": "The human body is made of trillions of microscopic cells."
+ },
+ {
+  "id": "en-qa-260",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why do we wash our hands?",
+  "alt": [
+   "why wash hands",
+   "Why do I wash before eating?",
+   "What happens if I don't wash my hands?"
+  ],
+  "a": "Hands touch lots of things and pick up germs you can't see. Washing with soap and water clears them away, so they don't get into your mouth.",
+  "check": "Handwashing with soap removes germs that can be swallowed."
+ },
+ {
+  "id": "en-qa-261",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "What are germs?",
+  "alt": [
+   "what do germs look like",
+   "Are all germs bad?",
+   "Why can't I see germs?"
+  ],
+  "a": "Germs are living things so tiny you can't see them. Some can make you sick, but lots of tiny living things are helpful, like the ones in your tummy.",
+  "check": "Microbes are microscopic; some cause illness and many are helpful, such as gut bacteria."
+ },
+ {
+  "id": "en-qa-262",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why do we need soap to wash our hands?",
+  "alt": [
+   "isn't water enough",
+   "What does soap do?",
+   "Why use soap?"
+  ],
+  "a": "Soap grabs onto oily dirt and germs so water can rinse them off. Water alone leaves lots of germs behind.",
+  "check": "Soap lifts oils and microbes off skin; it removes far more germs than water alone."
+ },
+ {
+  "id": "en-qa-263",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "How long should I wash my hands?",
+  "alt": [
+   "how do I wash my hands properly",
+   "How long do I scrub?",
+   "What's the right way to wash hands?"
+  ],
+  "a": "Scrub your palms, the backs, between your fingers, and under your nails for about 20 seconds. That's like humming the Happy Birthday song twice.",
+  "check": "Public health guidance recommends scrubbing with soap for at least 20 seconds."
+ },
+ {
+  "id": "en-qa-264",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why should I cover my sneeze?",
+  "alt": [
+   "why sneeze into my elbow",
+   "Why cover my mouth when I cough?",
+   "Why can't I sneeze on people?"
+  ],
+  "a": "A sneeze sprays out lots of tiny droplets that can carry germs. Sneezing into your elbow or a tissue keeps them from landing on other people.",
+  "check": "Covering sneezes and coughs reduces the spread of germ-carrying droplets."
+ },
+ {
+  "id": "en-qa-265",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why do we take baths?",
+  "alt": [
+   "why do I have to have a bath",
+   "Why do we shower?",
+   "Do I need a bath every day?"
+  ],
+  "a": "Every day your skin gets sweaty and dusty. A bath washes that away so you feel clean, fresh, and cozy for bed.",
+  "check": "Bathing removes sweat, dirt, and skin bacteria."
+ },
+ {
+  "id": "en-qa-266",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why do I wash my hands after using the bathroom?",
+  "alt": [
+   "why wash hands after the toilet",
+   "Are there germs in the bathroom?",
+   "Do I really have to wash after potty?"
+  ],
+  "a": "The bathroom has lots of germs. Washing your hands afterward keeps them from traveling onto your food, your toys, or into your mouth.",
+  "check": "Handwashing after using the toilet prevents spreading germs."
+ },
+ {
+  "id": "en-qa-267",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why shouldn't we share toothbrushes?",
+  "alt": [
+   "can I use my sister's toothbrush",
+   "Why do I have my own towel?",
+   "Why not share a toothbrush?"
+  ],
+  "a": "Your toothbrush holds germs from your own mouth. Using your own toothbrush and towel keeps everyone's germs where they belong.",
+  "check": "Sharing toothbrushes and towels can transfer germs between people."
+ },
+ {
+  "id": "en-qa-268",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why does sweat smell?",
+  "alt": [
+   "why do I get stinky",
+   "Does sweat smell bad?",
+   "Why do armpits smell?"
+  ],
+  "a": "Fresh sweat has almost no smell. The smell comes when tiny germs on your skin munch on the sweat. A bath washes them away.",
+  "check": "Body odor comes from skin bacteria breaking down sweat; fresh sweat is nearly odorless."
+ },
+ {
+  "id": "en-qa-269",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "Why does my nose run when I have a cold?",
+  "alt": [
+   "why do I get a runny nose",
+   "Why is there so much snot when I'm sick?",
+   "Why do colds make your nose drip?"
+  ],
+  "a": "When you have a cold, your nose makes extra mucus to trap the cold germs and wash them out. It's your body working hard to protect you.",
+  "check": "Nasal mucus increases during a cold to trap and flush out viruses."
+ },
+ {
+  "id": "en-qa-270",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "Why is the sun so hot?",
+  "alt": [
+   "How does the sun get hot?",
+   "why is the sun hot",
+   "What makes the sun burn?"
+  ],
+  "a": "Deep inside the Sun, tiny bits of matter squeeze together so hard that they give off huge amounts of energy. That energy pours out as light and heat.",
+  "check": "The Sun's energy comes from nuclear fusion in its core."
+ },
+ {
+  "id": "en-qa-271",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "Is the sun a star?",
+  "alt": [
+   "Is the sun a real star?",
+   "sun is a star?",
+   "Why does the sun look bigger than stars?"
+  ],
+  "a": "Yes! The Sun is a star, just like the ones you see at night. It looks much bigger and brighter because it is the closest star to us.",
+  "check": "The Sun is a star and the closest one to Earth."
+ },
+ {
+  "id": "en-qa-272",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "How big is the sun?",
+  "alt": [
+   "Is the sun bigger than Earth?",
+   "how big is the sun",
+   "Is the sun really small?"
+  ],
+  "a": "The Sun is enormous. More than a million Earths could fit inside it! It only looks small because it is very, very far away.",
+  "check": "The Sun's volume is about 1.3 million times Earth's."
+ },
+ {
+  "id": "en-qa-273",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "Where does the sun go at night?",
+  "alt": [
+   "Why does the sun go down?",
+   "where is the sun at night",
+   "Does the sun go to sleep?"
+  ],
+  "a": "The Sun doesn't go anywhere. The Earth spins, and at night your side of the Earth is facing away from the Sun. Somewhere else, kids are having daytime!",
+  "check": "Night occurs on the side of the rotating Earth facing away from the Sun."
+ },
+ {
+  "id": "en-qa-274",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "Will the sun ever burn out?",
+  "alt": [
+   "Will the sun stop shining?",
+   "will the sun go out",
+   "Does the sun last forever?"
+  ],
+  "a": "Not for a very, very long time. The Sun has enough fuel to keep shining for billions of years, so it will keep warming us.",
+  "check": "The Sun has billions of years of fuel left."
+ },
+ {
+  "id": "en-qa-275",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "Why shouldn't I look at the sun?",
+  "alt": [
+   "Can I look at the sun?",
+   "why can't you stare at the sun",
+   "Is it bad to look at the sun?"
+  ],
+  "a": "Sunlight is so strong that looking straight at the Sun can hurt your eyes. Never stare at it, not even with sunglasses on.",
+  "check": "Looking directly at the Sun can damage the eyes; ordinary sunglasses do not make it safe."
+ },
+ {
+  "id": "en-qa-276",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "What is the sun made of?",
+  "alt": [
+   "Is the sun made of fire?",
+   "what's the sun made of",
+   "Is the sun a ball of fire?"
+  ],
+  "a": "The Sun is made of very hot gases, mostly one called hydrogen. It is so hot that the gases glow and give off light.",
+  "check": "The Sun is mostly hydrogen and helium gas, hot enough to glow."
+ },
+ {
+  "id": "en-qa-277",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "How long does sunlight take to get here?",
+  "alt": [
+   "How fast does sunlight travel?",
+   "how long for sunlight to reach us",
+   "Does sunlight get here right away?"
+  ],
+  "a": "Light is super fast, but the Sun is very far away. Sunlight takes about eight minutes to travel from the Sun to Earth.",
+  "check": "Sunlight takes about 8 minutes to reach Earth."
+ },
+ {
+  "id": "en-qa-278",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Why does the moon change shape?",
+  "alt": [
+   "Why is the moon sometimes a banana?",
+   "why does the moon change",
+   "Why isn't the moon always round?"
+  ],
+  "a": "The Moon is always a round ball. Sunlight lights up half of it, and as the Moon circles the Earth, we see different amounts of that bright half.",
+  "check": "Moon phases come from how much of the sunlit half we see as the Moon orbits Earth."
+ },
+ {
+  "id": "en-qa-279",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Why can I see the moon in the daytime?",
+  "alt": [
+   "Why is the moon out in the day?",
+   "moon in the daytime",
+   "Isn't the moon only out at night?"
+  ],
+  "a": "The Moon goes around the Earth, so on many days it is up in the sky while the Sun is up too. It is bright enough to see even in daylight.",
+  "check": "For part of each month the Moon is above the horizon in daytime and is bright enough to see."
+ },
+ {
+  "id": "en-qa-280",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Does the moon make its own light?",
+  "alt": [
+   "Why does the moon shine?",
+   "where does moonlight come from",
+   "Is the moon a light?"
+  ],
+  "a": "No. Moonlight is really sunlight bouncing off the Moon's rocky ground and traveling to your eyes.",
+  "check": "Moonlight is reflected sunlight."
+ },
+ {
+  "id": "en-qa-281",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Why does the moon follow our car?",
+  "alt": [
+   "Why is the moon following me?",
+   "moon follows me",
+   "How does the moon keep up with us?"
+  ],
+  "a": "The Moon is so far away that it hardly seems to move as you travel. Trees and houses zoom past, but the Moon stays put, so it looks like it's following you.",
+  "check": "Very distant objects show almost no parallax, so the Moon seems to follow you."
+ },
+ {
+  "id": "en-qa-282",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Why does the moon have holes?",
+  "alt": [
+   "What are the circles on the moon?",
+   "moon craters",
+   "Why is the moon bumpy?"
+  ],
+  "a": "Those holes are called craters. Long ago, space rocks crashed into the Moon and made them. With no wind or rain there, the craters stay for ages.",
+  "check": "Lunar craters come from impacts and are preserved because the Moon has no weather."
+ },
+ {
+  "id": "en-qa-283",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Has anyone walked on the moon?",
+  "alt": [
+   "Did people go to the moon?",
+   "who went to the moon",
+   "Can people go to the moon?"
+  ],
+  "a": "Yes! Astronauts flew there in a rocket many years ago. They walked, hopped, drove a moon buggy, and brought moon rocks home.",
+  "check": "Apollo astronauts walked on the Moon (1969-1972), used a lunar rover, and returned samples."
+ },
+ {
+  "id": "en-qa-284",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Is the dark side of the moon always dark?",
+  "alt": [
+   "What's on the back of the moon?",
+   "dark side of the moon",
+   "Why can't we see the other side of the moon?"
+  ],
+  "a": "No! The far side of the Moon gets sunlight too. We just never see it from Earth, because the Moon always keeps the same side facing us.",
+  "check": "The Moon is tidally locked; its far side receives sunlight like the near side."
+ },
+ {
+  "id": "en-qa-285",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "Why can astronauts jump so high on the moon?",
+  "alt": [
+   "Why do astronauts bounce on the moon?",
+   "jumping on the moon",
+   "Could I jump higher on the moon?"
+  ],
+  "a": "The Moon is much smaller than Earth, so its pull is much weaker. Astronauts there could bounce and hop as if they were on a trampoline.",
+  "check": "The Moon's surface gravity is about one sixth of Earth's."
+ },
+ {
+  "id": "en-qa-286",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "Why do stars twinkle?",
+  "alt": [
+   "Why do stars sparkle?",
+   "why stars twinkle",
+   "Why do stars blink?"
+  ],
+  "a": "Starlight has to pass through the air around Earth. That air is always moving and wiggling, which makes the light shimmer, so stars seem to twinkle.",
+  "check": "Twinkling is caused by moving air (turbulence) in Earth's atmosphere."
+ },
+ {
+  "id": "en-qa-287",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "What are stars?",
+  "alt": [
+   "What are stars made of?",
+   "what is a star",
+   "Are stars tiny lights?"
+  ],
+  "a": "Stars are giant balls of hot, glowing gas, just like our Sun. They look like tiny dots because they are incredibly far away.",
+  "check": "Stars are suns like ours, appearing small because of distance."
+ },
+ {
+  "id": "en-qa-288",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "Where do the stars go in the daytime?",
+  "alt": [
+   "Why can't I see stars in the day?",
+   "stars in the daytime",
+   "Do stars disappear in the morning?"
+  ],
+  "a": "The stars are still there! The Sun makes the daytime sky so bright that their faint light gets hidden until night comes back.",
+  "check": "Stars are still present in daytime but are outshone by the bright sky."
+ },
+ {
+  "id": "en-qa-289",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "How many stars are there?",
+  "alt": [
+   "Can you count all the stars?",
+   "how many stars",
+   "Are there a million stars?"
+  ],
+  "a": "More than anyone can count! On a dark night you can see thousands with just your eyes, and telescopes show countless more.",
+  "check": "A few thousand stars are visible to the naked eye on a dark night; the total is uncountable."
+ },
+ {
+  "id": "en-qa-290",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "What is a shooting star?",
+  "alt": [
+   "Do stars fall down?",
+   "shooting star",
+   "Is a shooting star a falling star?"
+  ],
+  "a": "A shooting star isn't a star at all. It's a tiny space rock zooming into our air so fast that it gets hot and glows as a bright streak.",
+  "check": "Meteors are small space rocks that heat up and glow as they enter the atmosphere."
+ },
+ {
+  "id": "en-qa-291",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "Why are some stars different colors?",
+  "alt": [
+   "Are there red stars?",
+   "star colors",
+   "Are all stars white?"
+  ],
+  "a": "A star's color tells how hot it is. The hottest stars shine blue-white, and cooler stars glow orange or red.",
+  "check": "A star's color depends on its surface temperature."
+ },
+ {
+  "id": "en-qa-292",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "Why can't I see many stars in the city?",
+  "alt": [
+   "Where did the stars go in the city?",
+   "no stars in the city",
+   "Why are there more stars in the country?"
+  ],
+  "a": "City lights make the night sky glow, and that hides the fainter stars. Far from the city, the sky gets darker and many more stars appear.",
+  "check": "Light pollution hides faint stars."
+ },
+ {
+  "id": "en-qa-293",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "What is a constellation?",
+  "alt": [
+   "What are star pictures?",
+   "constellation",
+   "Why do stars make shapes?"
+  ],
+  "a": "A constellation is a picture people imagined by joining stars like a dot-to-dot. People long ago gave them names, like Orion the hunter.",
+  "check": "Constellations are named star patterns; Orion is a recognized constellation."
+ },
+ {
+  "id": "en-qa-294",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "Is the sun the biggest star?",
+  "alt": [
+   "Are other stars bigger than the sun?",
+   "biggest star",
+   "Is the sun a big star?"
+  ],
+  "a": "No! The Sun is a medium-sized star, and some stars are much, much bigger. The Sun just looks the biggest because it is the closest to us.",
+  "check": "The Sun is an average-sized star; many stars are far larger."
+ },
+ {
+  "id": "en-qa-295",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "How many planets are there?",
+  "alt": [
+   "What are the planets?",
+   "how many planets",
+   "Can you name the planets?"
+  ],
+  "a": "There are eight planets going around our Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.",
+  "check": "The solar system has eight planets."
+ },
+ {
+  "id": "en-qa-296",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "What is the biggest planet?",
+  "alt": [
+   "Which planet is the largest?",
+   "biggest planet",
+   "How big is Jupiter?"
+  ],
+  "a": "Jupiter is the biggest planet. More than a thousand Earths could fit inside it! It is made mostly of gas and has a giant storm called the Great Red Spot.",
+  "check": "Jupiter's volume is about 1,300 Earths; it is mostly gas and has the Great Red Spot storm."
+ },
+ {
+  "id": "en-qa-297",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Why is Mars red?",
+  "alt": [
+   "Why is Mars called the red planet?",
+   "why mars is red",
+   "Is Mars on fire?"
+  ],
+  "a": "Mars is covered in dust that has a lot of rust in it, a bit like an old rusty nail. That rusty dust makes the planet look red.",
+  "check": "Mars looks red because of iron oxide (rust) in its dust."
+ },
+ {
+  "id": "en-qa-298",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "What are Saturn's rings made of?",
+  "alt": [
+   "Why does Saturn have rings?",
+   "saturn rings",
+   "Are Saturn's rings solid?"
+  ],
+  "a": "Saturn's rings are made of countless chunks of ice and rock. Some are as small as grains of sand, and some are as big as a house.",
+  "check": "Saturn's rings are ice and rock particles ranging from dust to house-sized."
+ },
+ {
+  "id": "en-qa-299",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Why isn't Pluto a planet anymore?",
+  "alt": [
+   "Is Pluto a planet?",
+   "what happened to pluto",
+   "Why did Pluto get kicked out?"
+  ],
+  "a": "Pluto is quite small, and it shares its neighborhood with lots of other icy objects. So scientists now call it a dwarf planet, which means a small planet-like world.",
+  "check": "In 2006 Pluto was reclassified as a dwarf planet because it has not cleared its orbital neighborhood."
+ },
+ {
+  "id": "en-qa-300",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Which planet is the hottest?",
+  "alt": [
+   "What's the hottest planet?",
+   "hottest planet",
+   "Is Mercury the hottest planet?"
+  ],
+  "a": "Venus is the hottest, even hotter than Mercury, which is closer to the Sun. Venus has thick clouds and air that trap the heat like a blanket.",
+  "check": "Venus is the hottest planet because its thick atmosphere traps heat."
+ },
+ {
+  "id": "en-qa-301",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Can we live on Mars?",
+  "alt": [
+   "Can people live on Mars?",
+   "live on mars",
+   "Could I move to Mars?"
+  ],
+  "a": "Not right now. Mars is very cold, and its thin air is not the kind we can breathe. People would need special homes and suits to visit.",
+  "check": "Mars is very cold and has a thin, unbreathable atmosphere."
+ },
+ {
+  "id": "en-qa-302",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Why do planets go around the sun?",
+  "alt": [
+   "Why does Earth go around the sun?",
+   "why planets orbit",
+   "Why don't the planets fly away?"
+  ],
+  "a": "The Sun's pull, called gravity, keeps tugging the planets toward it. The planets are also zooming forward, so they keep circling instead of falling in.",
+  "check": "Orbits result from the Sun's gravity combined with the planets' forward motion."
+ },
+ {
+  "id": "en-qa-303",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Can you stand on Jupiter?",
+  "alt": [
+   "Does Jupiter have ground?",
+   "standing on jupiter",
+   "Could a spaceship land on Jupiter?"
+  ],
+  "a": "No, Jupiter doesn't have solid ground like Earth. It is a giant ball made mostly of gas, getting thicker and thicker deeper down.",
+  "check": "Jupiter is a gas giant with no solid surface to stand on."
+ },
+ {
+  "id": "en-qa-304",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Is there life on other planets?",
+  "alt": [
+   "Are there aliens?",
+   "life on other planets",
+   "Does anything live on Mars?"
+  ],
+  "a": "So far, Earth is the only place where we know life exists. Scientists are still searching other planets and moons for signs of life.",
+  "check": "No life has been confirmed beyond Earth."
+ },
+ {
+  "id": "en-qa-305",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Why do astronauts float?",
+  "alt": [
+   "Why do things float in space?",
+   "why astronauts float",
+   "Is there no gravity in space?"
+  ],
+  "a": "Astronauts and their spaceship are falling around the Earth together, always moving forward so they never hit the ground. Because they fall together, the astronauts float inside.",
+  "check": "Weightlessness in orbit is free fall around Earth, not an absence of gravity."
+ },
+ {
+  "id": "en-qa-306",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "How do astronauts go to the bathroom in space?",
+  "alt": [
+   "Is there a toilet in space?",
+   "space toilet",
+   "How do astronauts pee?"
+  ],
+  "a": "They use a special space toilet that sucks the waste away with moving air, like a gentle vacuum cleaner, so nothing floats around.",
+  "check": "Spacecraft toilets use airflow (suction) to collect waste."
+ },
+ {
+  "id": "en-qa-307",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "How do astronauts sleep in space?",
+  "alt": [
+   "Do astronauts have beds?",
+   "sleeping in space",
+   "Where do astronauts sleep?"
+  ],
+  "a": "They zip into sleeping bags attached to the wall, so they don't drift around while they sleep. In space, sleeping upright or upside down feels just the same.",
+  "check": "Astronauts sleep in sleeping bags attached to walls; in free fall there is no felt up or down."
+ },
+ {
+  "id": "en-qa-308",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "Why do astronauts wear space suits?",
+  "alt": [
+   "What does a space suit do?",
+   "why space suits",
+   "Can you go to space without a suit?"
+  ],
+  "a": "Space has no air to breathe, and it can be freezing cold or very hot. A space suit gives astronauts air and keeps them safe and comfortable.",
+  "check": "Spacesuits supply oxygen and protect against vacuum and temperature extremes."
+ },
+ {
+  "id": "en-qa-309",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How does a rocket get to space?",
+  "alt": [
+   "How do rockets fly?",
+   "how rockets work",
+   "Why does a rocket have fire at the bottom?"
+  ],
+  "a": "A rocket blasts hot gas out of its bottom very fast. That push shoves the rocket upward, faster and faster, until it reaches space.",
+  "check": "Rockets work by pushing exhaust gas down and being pushed up (action and reaction)."
+ },
+ {
+  "id": "en-qa-310",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "What is a space station?",
+  "alt": [
+   "Where do astronauts live?",
+   "space station",
+   "Is there a house in space?"
+  ],
+  "a": "A space station is a big home flying around the Earth. Astronauts live there for months, doing science experiments and looking down at our planet.",
+  "check": "Space stations orbit Earth and crews stay for months doing experiments."
+ },
+ {
+  "id": "en-qa-311",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why is there day and night?",
+  "alt": [
+   "Why does it get dark at night?",
+   "why is the sky dark at night",
+   "Why can't it be day all the time?"
+  ],
+  "a": "The Earth spins like a top. The side facing the Sun has daytime, and the side facing away has night. One full spin takes one day.",
+  "check": "Day and night are caused by Earth's rotation."
+ },
+ {
+  "id": "en-qa-312",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why does the Earth spin?",
+  "alt": [
+   "What makes the Earth spin?",
+   "why does earth spin",
+   "Will the Earth stop spinning?"
+  ],
+  "a": "The Earth started spinning when it was formed, long, long ago. Out in space there is hardly anything to slow it down, so it keeps on spinning.",
+  "check": "Earth's spin comes from its formation, and almost nothing in space slows it."
+ },
+ {
+  "id": "en-qa-313",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why don't we feel the Earth spinning?",
+  "alt": [
+   "Why don't we get dizzy from the Earth spinning?",
+   "can't feel earth spin",
+   "Is the Earth really moving?"
+  ],
+  "a": "The Earth spins very smoothly at a steady speed, and we spin along with it, together with the air and the houses. It's like riding in a very smooth car.",
+  "check": "Smooth, steady motion is not felt when everything moves together."
+ },
+ {
+  "id": "en-qa-314",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why don't people on the bottom of the Earth fall off?",
+  "alt": [
+   "Why don't we fall off the Earth?",
+   "people upside down on earth",
+   "Do people in other countries stand upside down?"
+  ],
+  "a": "There is no real bottom! Gravity pulls everyone toward the middle of the Earth, so wherever you stand, down is always under your feet.",
+  "check": "Gravity pulls everything toward Earth's center."
+ },
+ {
+  "id": "en-qa-315",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why is the Earth round?",
+  "alt": [
+   "Is the Earth really round?",
+   "why earth is round",
+   "Why isn't the Earth flat?"
+  ],
+  "a": "The Earth is so big that its own gravity pulls everything toward its middle from all sides. That squeezes it into a ball shape.",
+  "check": "Gravity pulls large bodies into a near-spherical shape."
+ },
+ {
+  "id": "en-qa-316",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why do we have seasons?",
+  "alt": [
+   "Why is summer hot and winter cold?",
+   "why seasons",
+   "Why does winter happen?"
+  ],
+  "a": "The Earth is tilted as it goes around the Sun. When our part leans toward the Sun, we get summer. When it leans away, we get winter.",
+  "check": "Seasons are caused by Earth's axial tilt, not its distance from the Sun."
+ },
+ {
+  "id": "en-qa-317",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why is Earth called the blue planet?",
+  "alt": [
+   "Why does Earth look blue from space?",
+   "blue planet",
+   "What color is Earth from space?"
+  ],
+  "a": "Most of the Earth is covered by oceans. From space, all that water makes our planet look bright blue.",
+  "check": "Most of Earth's surface (about 71%) is ocean."
+ },
+ {
+  "id": "en-qa-318",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "What is inside the Earth?",
+  "alt": [
+   "What's in the middle of the Earth?",
+   "inside the earth",
+   "What's under the ground, all the way down?"
+  ],
+  "a": "The Earth is a bit like a peach. It has a thin rocky skin called the crust, a thick hot middle called the mantle, and a very hot center called the core.",
+  "check": "Earth has a thin crust, a thick hot mantle and a very hot core."
+ },
+ {
+  "id": "en-qa-319",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Is the Earth moving?",
+  "alt": [
+   "Does the Earth move?",
+   "is earth moving",
+   "Does the Earth go around the sun?"
+  ],
+  "a": "Yes! The Earth spins around once every day, and it also travels all the way around the Sun once every year.",
+  "check": "Earth rotates once a day and orbits the Sun once a year."
+ },
+ {
+  "id": "en-qa-320",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Why is it so cold at the North Pole?",
+  "alt": [
+   "Why are the poles icy?",
+   "why is the north pole cold",
+   "Why is the South Pole so cold?"
+  ],
+  "a": "At the North and South Poles, sunlight arrives at a low slant, so it spreads out and gives less warmth. That keeps the poles icy cold.",
+  "check": "Sunlight reaches the poles at a low angle, delivering less heat."
+ },
+ {
+  "id": "en-qa-321",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "Can you see the Great Wall from space?",
+  "alt": [
+   "Can astronauts see the Great Wall?",
+   "great wall from space",
+   "Is the Great Wall visible from space?"
+  ],
+  "a": "Not with just your eyes from a spaceship. The wall is long but quite narrow, and it is a similar color to the land around it. Cameras that zoom in can spot it.",
+  "check": "The Great Wall is not visible to the naked eye from orbit; zoomed photos can show it."
+ },
+ {
+  "id": "en-qa-322",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "How old is the Earth?",
+  "alt": [
+   "How long has the Earth been here?",
+   "earth age",
+   "Is the Earth older than dinosaurs?"
+  ],
+  "a": "The Earth is about four and a half billion years old. That's so old that even the dinosaurs came along much, much later.",
+  "check": "Earth is about 4.5 billion years old; dinosaurs appeared roughly 230 million years ago."
+ },
+ {
+  "id": "en-qa-323",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "What makes waves?",
+  "alt": [
+   "Where do waves come from?",
+   "why are there waves",
+   "Why is the sea wavy?"
+  ],
+  "a": "Most waves are made by wind. When wind blows over the sea, it pushes the water into ripples, and stronger winds make bigger waves.",
+  "check": "Most ocean waves are made by wind."
+ },
+ {
+  "id": "en-qa-324",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why does the sea go in and out?",
+  "alt": [
+   "What are tides?",
+   "why tides",
+   "Why does the beach get bigger and smaller?"
+  ],
+  "a": "That's called the tide. The Moon's gravity gently pulls on the oceans, making the water rise and fall along the beach, usually twice a day.",
+  "check": "Tides are caused mainly by the Moon's gravity; most coasts have two high tides a day."
+ },
+ {
+  "id": "en-qa-325",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Can I drink seawater?",
+  "alt": [
+   "Why can't we drink the ocean?",
+   "drink sea water",
+   "Is sea water safe to drink?"
+  ],
+  "a": "No, seawater has far too much salt. Drinking it would make you even thirstier. That's why people bring fresh water to the beach.",
+  "check": "Seawater is too salty to drink and worsens thirst."
+ },
+ {
+  "id": "en-qa-326",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "How deep is the ocean?",
+  "alt": [
+   "How deep is the sea?",
+   "deepest ocean",
+   "Does the ocean have a bottom?"
+  ],
+  "a": "In some places the ocean is shallow, but in others it is very deep. Its deepest spot is deeper than the tallest mountain is tall.",
+  "check": "The deepest ocean point (about 11 km) is deeper than Everest is tall (about 8.8 km)."
+ },
+ {
+  "id": "en-qa-327",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why aren't rivers salty?",
+  "alt": [
+   "Is river water salty?",
+   "why rivers not salty",
+   "Why is only the sea salty?"
+  ],
+  "a": "River water has only a tiny bit of salt in it, and it keeps flowing to the sea. In the sea, the salt builds up over a very long time.",
+  "check": "River water has low dissolved salt; salt accumulates in the sea over long times."
+ },
+ {
+  "id": "en-qa-328",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Why doesn't the sea overflow?",
+  "alt": [
+   "Will the ocean get too full?",
+   "why ocean not full",
+   "Where does all the river water go?"
+  ],
+  "a": "Rivers keep pouring in, but the Sun keeps lifting water out of the sea as invisible vapor. It becomes clouds and rain, so the sea stays about the same.",
+  "check": "The water cycle balances river inflow with evaporation."
+ },
+ {
+  "id": "en-qa-329",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "Where does beach sand come from?",
+  "alt": [
+   "What is sand made of?",
+   "beach sand",
+   "Why is there sand at the beach?"
+  ],
+  "a": "Beach sand is made of tiny broken pieces of rock and shells. Waves and wind grind them down over a very, very long time.",
+  "check": "Beach sand forms from rock and shell fragments worn down by waves and wind."
+ },
+ {
+  "id": "en-qa-330",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "How are mountains made?",
+  "alt": [
+   "Where do mountains come from?",
+   "how mountains form",
+   "Why are mountains so tall?"
+  ],
+  "a": "The Earth's outer layer is made of huge pieces. Over a very long time, some pieces push against each other and crumple the land upward into mountains.",
+  "check": "Many mountains form where tectonic plates push together."
+ },
+ {
+  "id": "en-qa-331",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "Why do volcanoes erupt?",
+  "alt": [
+   "What is a volcano?",
+   "why volcanoes erupt",
+   "What comes out of a volcano?"
+  ],
+  "a": "Deep underground it is hot enough to melt rock. This melted rock, called magma, can push up through cracks in the ground. When it comes out, that's an eruption.",
+  "check": "Volcanoes erupt when molten rock (magma) reaches the surface."
+ },
+ {
+  "id": "en-qa-332",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "What is an earthquake?",
+  "alt": [
+   "Why does the ground shake?",
+   "what's an earthquake",
+   "What makes earthquakes happen?"
+  ],
+  "a": "The Earth's outer layer is made of giant pieces that slowly move. Sometimes they slip suddenly, and the ground shakes for a little while. That's an earthquake.",
+  "check": "Earthquakes happen when sections of Earth's crust suddenly slip."
+ },
+ {
+  "id": "en-qa-333",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "Where do rivers come from?",
+  "alt": [
+   "How does a river start?",
+   "where rivers come from",
+   "Where does river water go?"
+  ],
+  "a": "Rivers start with rain and melting snow high in hills and mountains. The water flows downhill, little streams join together, and they make a river that usually ends at the sea.",
+  "check": "Rivers are fed by rain and snowmelt flowing downhill; most reach the sea."
+ },
+ {
+  "id": "en-qa-334",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "Why are deserts so dry?",
+  "alt": [
+   "What is a desert?",
+   "why deserts are dry",
+   "Are all deserts hot?"
+  ],
+  "a": "Deserts are places that get very little rain. Not all deserts are hot and sandy, though. Antarctica is a desert too, a very cold one!",
+  "check": "Deserts are defined by low precipitation; Antarctica is a cold desert."
+ },
+ {
+  "id": "en-qa-335",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "How are caves made?",
+  "alt": [
+   "Who digs caves?",
+   "how caves form",
+   "Why are there holes in mountains?"
+  ],
+  "a": "Many caves are made by water. Rainwater slowly soaks into rock and dissolves it, bit by bit, until a big hollow space forms over a very long time.",
+  "check": "Many caves form when water dissolves limestone."
+ },
+ {
+  "id": "en-qa-336",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "What is the tallest mountain in the world?",
+  "alt": [
+   "Which mountain is the highest?",
+   "tallest mountain",
+   "How tall is Mount Everest?"
+  ],
+  "a": "The tallest mountain above the sea is Mount Everest. Its top is so high that it is covered in snow and ice all year.",
+  "check": "Mount Everest is the highest mountain above sea level, snow-covered year-round."
+ },
+ {
+  "id": "en-qa-337",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "Why is there snow on top of mountains?",
+  "alt": [
+   "Why are mountain tops white?",
+   "snow on mountains",
+   "Why is it cold on top of a mountain?"
+  ],
+  "a": "The higher you go up a mountain, the colder the air gets. Up at the top it can be cold enough for snow to stay, even when it's warm down below.",
+  "check": "Air temperature generally drops with altitude in the lower atmosphere."
+ },
+ {
+  "id": "en-qa-338",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How does a light bulb work?",
+  "alt": [
+   "Why do lights turn on?",
+   "how light bulbs work",
+   "What's inside a light bulb?"
+  ],
+  "a": "Electricity flows into the bulb. In old bulbs it heats a thin wire until it glows. Newer bulbs, called LEDs, have a tiny part that shines when electricity passes through.",
+  "check": "Incandescent filaments glow when heated by current; LEDs emit light when current passes."
+ },
+ {
+  "id": "en-qa-339",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "Why do cars need gas?",
+  "alt": [
+   "Why do cars need fuel?",
+   "why cars need electricity",
+   "What makes a car go?"
+  ],
+  "a": "A car's engine burns fuel to make the push that turns the wheels. Electric cars don't use fuel; they store electricity in a big battery that powers a motor.",
+  "check": "Combustion engines burn fuel; electric cars use battery-powered motors."
+ },
+ {
+  "id": "en-qa-340",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How do airplanes fly?",
+  "alt": [
+   "How can a heavy plane fly?",
+   "how planes fly",
+   "Why don't airplanes fall down?"
+  ],
+  "a": "Powerful engines push the plane forward fast. Air rushing over the specially shaped wings pushes them upward, and that lifts the whole plane into the sky.",
+  "check": "Engines give thrust; airflow over wings produces lift."
+ },
+ {
+  "id": "en-qa-341",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How do phones carry voices?",
+  "alt": [
+   "How can I hear Grandma on the phone?",
+   "how phones work",
+   "How does my voice get into the phone?"
+  ],
+  "a": "A phone turns your voice into invisible signals that zip through the air and wires to another phone. That phone turns the signals back into your voice.",
+  "check": "Phones convert sound to electrical/radio signals and back to sound."
+ },
+ {
+  "id": "en-qa-342",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How does a fridge keep food cold?",
+  "alt": [
+   "Why is the fridge cold?",
+   "how fridges work",
+   "Where does the cold in the fridge come from?"
+  ],
+  "a": "A fridge has a special liquid flowing through pipes. It soaks up heat from inside the fridge and lets it out at the back, so the inside stays cold.",
+  "check": "A refrigerant absorbs heat inside the fridge and releases it outside."
+ },
+ {
+  "id": "en-qa-343",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How does a microwave heat food?",
+  "alt": [
+   "How does a microwave work?",
+   "microwave",
+   "How does food get hot with no fire?"
+  ],
+  "a": "A microwave oven sends out invisible waves that make the water in food jiggle super fast. All that jiggling makes the food hot.",
+  "check": "Microwaves make water molecules in food move rapidly, heating it."
+ },
+ {
+  "id": "en-qa-344",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How do batteries work?",
+  "alt": [
+   "What's inside a battery?",
+   "how batteries work",
+   "Why do batteries run out?"
+  ],
+  "a": "Inside a battery are special materials that slowly change and make electricity. When they're used up, the battery stops working and needs to be recharged or replaced.",
+  "check": "Batteries produce electricity through chemical reactions."
+ },
+ {
+  "id": "en-qa-345",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "Where does electricity come from?",
+  "alt": [
+   "How is electricity made?",
+   "where electricity comes from",
+   "How does electricity get to our house?"
+  ],
+  "a": "Most electricity is made at power stations, using things like rushing water, wind, sunlight or burning fuel. Then it travels through wires to our homes.",
+  "check": "Electricity is generated at power plants (hydro, wind, solar, fuel) and sent through wires."
+ },
+ {
+  "id": "en-qa-346",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "How does an elevator go up and down?",
+  "alt": [
+   "How do elevators work?",
+   "elevator",
+   "What pulls the elevator up?"
+  ],
+  "a": "Many elevators hang from strong steel cables. A motor at the top pulls the cables to lift the elevator and lets it down gently.",
+  "check": "Traction elevators use motor-driven steel cables."
+ },
+ {
+  "id": "en-qa-347",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "Why does ice cream melt?",
+  "alt": [
+   "Why does my ice cream drip?",
+   "why ice cream melts",
+   "Why does ice cream get runny?"
+  ],
+  "a": "Ice cream is frozen. The warm air around it gives it heat, and the heat makes the frozen cream turn soft and runny.",
+  "check": "Heat flows from warmer air into ice cream and melts it."
+ },
+ {
+  "id": "en-qa-348",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "Why does bread get puffy?",
+  "alt": [
+   "Why does bread rise?",
+   "why dough gets bigger",
+   "What makes bread fluffy?"
+  ],
+  "a": "Bakers add yeast, which is made of tiny living things too small to see. They eat sugar in the dough and make gas bubbles that puff the bread up.",
+  "check": "Yeast ferments sugar and releases carbon dioxide gas, making dough rise."
+ },
+ {
+  "id": "en-qa-349",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "How does a thermos keep drinks hot?",
+  "alt": [
+   "Why does my water bottle stay cold?",
+   "how a thermos works",
+   "Why does soup stay hot in a thermos?"
+  ],
+  "a": "A thermos has two walls with almost no air between them. Heat can't escape easily through that empty gap, so hot drinks stay hot and cold drinks stay cold.",
+  "check": "A vacuum flask's near-vacuum gap greatly reduces heat transfer."
+ },
+ {
+  "id": "en-qa-350",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "How does soap clean?",
+  "alt": [
+   "Why do we use soap?",
+   "how soap works",
+   "How does soap get dirt off?"
+  ],
+  "a": "One end of each tiny bit of soap loves water, and the other end loves grease. Soap grabs onto dirt and oil, and then water washes it all away.",
+  "check": "Soap molecules have a water-loving end and an oil-loving end."
+ },
+ {
+  "id": "en-qa-351",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "Why are there 24 hours in a day?",
+  "alt": [
+   "How long is a day?",
+   "why 24 hours",
+   "Who decided a day has 24 hours?"
+  ],
+  "a": "One day is about the time it takes the Earth to spin around once. Long ago, people decided to split each day into 24 equal parts called hours.",
+  "check": "A solar day is about 24 hours, divided into 24 hours by convention."
+ },
+ {
+  "id": "en-qa-352",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "Why do we have calendars?",
+  "alt": [
+   "What is a calendar for?",
+   "why calendars",
+   "What is a year?"
+  ],
+  "a": "Calendars help us keep track of days, weeks and months, so we know when birthdays and holidays come. A year is how long the Earth takes to go around the Sun.",
+  "check": "Calendars track days; a year is about one orbit of Earth around the Sun."
+ },
+ {
+  "id": "en-qa-353",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "Why is it nighttime in other countries when it's day here?",
+  "alt": [
+   "What are time zones?",
+   "time zones",
+   "Why is Grandpa sleeping when I'm awake?"
+  ],
+  "a": "The Earth is a spinning ball, so the Sun lights only one side at a time. Places set their clocks differently, so it's morning somewhere while it's night somewhere else.",
+  "check": "Time zones exist because Earth's rotation lights different places at different times."
+ },
+ {
+  "id": "en-qa-354",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "What is a leap year?",
+  "alt": [
+   "Why does February sometimes have 29 days?",
+   "leap year",
+   "Why is there a February 29th?"
+  ],
+  "a": "The Earth takes a little more than 365 days to go around the Sun. To catch up, we add an extra day, February 29th, about every four years.",
+  "check": "A year is about 365.24 days, so a leap day is added roughly every four years."
+ },
+ {
+  "id": "en-qa-355",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "Why are there twelve months?",
+  "alt": [
+   "Why does a year have 12 months?",
+   "why 12 months",
+   "Where do months come from?"
+  ],
+  "a": "A long time ago, people noticed the Moon goes from full to full about twelve times in a year. So the year was split into twelve months.",
+  "check": "There are about 12.4 lunar cycles per year; months originated from the Moon's cycle."
+ },
+ {
+  "id": "en-qa-356",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "How do clocks keep time?",
+  "alt": [
+   "How does a clock work?",
+   "how clocks work",
+   "Why do clock hands move?"
+  ],
+  "a": "A clock has a battery or a wound-up spring that moves tiny gears at a steady speed. Once someone sets it to the right time, it keeps counting along.",
+  "check": "Clocks are driven by a battery or wound spring that turns gears at a steady rate."
+ }
+]

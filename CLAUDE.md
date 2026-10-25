@@ -1,164 +1,248 @@
-# Curiosity Pet (好奇心伙伴)
+# Curiosity Pet (Curiosity Buddy)
 
-一只运行在家庭 Mac mini 上的本地 AI 学习宠物。孩子(7 岁半,中英双语)通过 iPad 用语音提问,
-系统在本机完成语音识别、回答生成、资料检索、安全过滤和语音合成。目标是帮助孩子练习提问、追问、
-验证和表达。这同时是一个课程项目,需要可复现的测试和评估结果。
+A local AI learning pet that lives on a home Mac mini. The child (7.5 years old, bilingual Chinese/English) asks questions by voice on an iPad;
+the system does speech recognition, answer generation, knowledge retrieval, safety filtering and speech synthesis on the machine itself. The goal is to help the child practice asking questions, following up,
+verifying and expressing ideas. This is also a course project, so tests and evaluation results must be reproducible.
 
-读这个文件之后再开始任何工作。本文件中的规则优先于默认做法。
+Read this file before starting any work. The rules in this file take precedence over default practice.
 
-## 硬性约束(不得违反)
+## Hard constraints (must not be violated)
 
-1. 孩子的任何数据(语音、文字、记忆、日志)不离开这台机器。没有云端模型,没有云端语音识别或合成,
-   没有第三方统计、字体、CDN。本地模型不可用时显示"暂时无法回答",不自动回退到外部服务。
-   唯一例外(家长 2026-10-24 确认):本地知识库未命中的**一般知识问题**,可把经本地改写和规则检查后的
-   **话题搜索词**发给维基百科查询(见"联网查询")。孩子原话、录音、会话历史、记忆、任何个人信息、
-   家庭信息、心情,一律不外发;家长可随时关闭。
-2. 不保存完整聊天原文作为长期记录。会话结束只保留:问题文本、主题标签、是否命中资料、收藏项、时长。
-   未收藏的会话原文最多保留 7 天供家长查看,到期自动删除。
-3. 不生成对孩子的任何评价:能力判断、情绪判断、性格标签、与他人比较。周报只做描述和统计。
-   用词表加输出检查在程序层拦截,不只依赖提示词。
-4. 宠物明确是程序,不假装有真实感受,不要求保密,不用断签、伤心、内疚催促使用,不暗示能替代家人老师朋友。
-5. 开发与运行数据目录严格分开。`PET_DATA_DIR` 开发时指向 `~/pet-data-dev`,
-   正式运行指向 `~/Library/Application Support/CuriosityPet`。测试只用虚构儿童档案。
-6. 孩子的录音样本、真实问题、数据库、密钥、日志不进 git。`.gitignore` 必须覆盖 `evals/audio/`、
-   `evals/real_questions/`、`*.db`、`*.sqlite*`、`.env`、`logs/`。
+1. None of the child's data (voice, text, memory, logs) leaves this machine. No cloud models, no cloud speech recognition or synthesis,
+   no third-party analytics, fonts or CDNs. When the local model is unavailable, show "can't answer right now" and do not fall back to any external service.
+   The only exception (confirmed by the parent 2026-10-24): for **general-knowledge questions** the local knowledge base misses, a **topic search term**
+   rewritten locally and checked by rules may be sent to Wikipedia (see "Online lookup"). The child's own words, recordings, conversation history, memory, any personal information,
+   family information and mood are never sent out; the parent can turn this off at any time.
+   A second exception (confirmed by the parent 2026-10-24): when the child asks the pet to call or tell a parent, and
+   confirms when the pet asks, a message with fixed content ("宝宝想找爸爸", time, device) goes by Telegram to the parent(s)
+   she named (call_parent.py). Her own words are not included unless the parent sets settings.json
+   "call_parent": {"include_words": true}; at most one message every 2 minutes per parent, dad and mom counted
+   separately (owner decision 2026-10-24, "min_interval_s"); when blocked the pet says so honestly; every attempt is in
+   pet-log; "enabled": false turns it off. Nothing else about the child is sent this way.
+   A third exception (confirmed by the parent 2026-10-24): when the child says something about hurting herself or
+   others (concern.SERIOUS: harm_self, harm_others), a Telegram alert with the category, time and device only, never her
+   words, goes to both parents (call_parent.notify_concern), at most one every 10 minutes. Off by default: it runs only
+   when settings.json "call_parent": {"concern_push": {"enabled": true}}. Every alert is in pet-log.
+2. Do not keep full chat transcripts as a long-term record. After a session keep only: question text, topic tag, whether the knowledge base hit, favorites, duration.
+   Exception (owner decision 2026-10-24, "用来提醒父母"): when the child says something a parent may want to know (sad,
+   scared, angry, bullied, unwell, conflict at home, hurting others or herself), her own sentence, its time and a plain
+   category are kept for the parent for 30 days (concern.py, `parent_notes`, shown by pet-log, deletable). No scores,
+   labels, inferences or summaries; never in the weekly report; never sent anywhere, except the category-only alert for
+   hurting herself or others in hard constraint 1 (third exception).
+   Transcripts of unsaved sessions are kept at most 7 days for the parent to review, then deleted automatically.
+3. Never produce any evaluation of the child: ability judgments, emotion judgments, personality labels, comparison with others. The weekly report only describes and counts.
+   A word list plus output checks block this in code, not only in the prompt.
+4. The pet is explicitly a program: it does not pretend to have real feelings, does not ask for secrecy, does not use broken streaks, sadness or guilt to push usage, and does not imply it can replace family, teachers or friends.
+5. Development and runtime data directories are strictly separate. `PET_DATA_DIR` points to `~/pet-data-dev` in development
+   and to `~/Library/Application Support/CuriosityPet` in production. Tests use fictional child profiles only.
+6. The child's audio samples, real questions, databases, keys and logs stay out of git. `.gitignore` must cover `evals/audio/`,
+   `evals/real_questions/`, `*.db`, `*.sqlite*`, `.env`, `logs/`.
 
-## 硬件与运行环境
+## Hardware and runtime environment
 
-- Mac mini M4,10 核 CPU,10 核 GPU,16GB 统一内存,256GB SSD。GPU 可用内存约 10 至 11GB。
-- 所有常驻模型合计控制在 8GB 以内。
-- 服务跑在标准用户 `pet` 下,launchd LaunchAgent 常驻,日志在 `~/Library/Logs/CuriosityPet/`。
-- Ollama 由 `~/Library/LaunchAgents/com.curiositypet.ollama.plist` 管理,
-  环境变量 `OLLAMA_KEEP_ALIVE=-1`、`OLLAMA_NUM_PARALLEL=1`、`OLLAMA_MAX_LOADED_MODELS=3`。
-- iPad 通过 Tailscale 访问,`tailscale serve` 提供 HTTPS(麦克风权限需要安全上下文)。
-  Tailscale 登录即设备配对;服务只监听 127.0.0.1,由 Tailscale 转发。
+- Mac mini M4, 10-core CPU, 10-core GPU, 16GB unified memory, 256GB SSD. Usable GPU memory is about 10 to 11GB.
+- All resident models together stay under 8GB. With the 9B main model (owner decision 2026-10-24) the measured total
+  is about 8.5GB (9B 5.8GB incl. context, speech about 2.7GB); the optional guard adds about 0.6GB.
+- Do not run heavy experiments (other models, embeddings, large builds) on this machine while the child may be using the
+  pet: on 2026-10-24 an embedding experiment pushed answers to 10 to 60 seconds.
+- Services run under the standard user `pet`, kept alive by a launchd LaunchAgent; logs in `~/Library/Logs/CuriosityPet/`.
+  `scripts/install_services.sh` installs the server and daily backup agents (`--dry-run` to preview); creating the `pet`
+  user needs the admin account. `scripts/backup.sh` makes a consistent copy of pet.db, settings, skins and reports.
+- Ollama is managed by `~/Library/LaunchAgents/com.curiositypet.ollama.plist`,
+  with environment variables `OLLAMA_KEEP_ALIVE=-1`, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_MAX_LOADED_MODELS=3`.
+- The iPad connects through Tailscale, and `tailscale serve` provides HTTPS (microphone permission needs a secure context).
+  Signing in to Tailscale is the device pairing; the service listens only on 127.0.0.1 and Tailscale forwards to it.
 
-## 组件栈(16GB 定稿,不要擅自换更大的模型)
+## Component stack (final for 16GB; do not swap in larger models on your own)
 
-| 组件 | 选择 | 备注 |
+| Component | Choice | Notes |
 |---|---|---|
-| 主模型 | `qwen3.5:4b-q4_K_M`(GGUF,llama.cpp 引擎)via Ollama,Modelfile 名 `pet-chat`,`num_ctx 8192`,请求中 `think=false` | 对照组 `gemma4:e4b`,仅用于盲测;不用默认 nvfp4 版(MLX 引擎内存随请求增长),KV 缓存 f16 |
-| 语音识别 | Qwen3-ASR-0.6B 4-bit,mlx-audio | 每句自动判定语言;对照 Fun-ASR-Nano |
-| 断句 | Silero VAD,静音阈值从 0.8 秒起调;保留"按住说话"兜底 | 孩子停顿多 |
-| 语音合成 | Kokoro-82M v1.1-zh,mlx-audio,按回答语言切换中文/英文音色 | 短句偏弱,把前两句合并后再合成 |
-| 安全过滤 | Qwen3Guard-Gen-0.6B,严格模式(controversial 视为不安全) | 对问题和每一句回答判定 |
-| 向量模型 | `qwen3-embedding:0.6b` via Ollama,`num_ctx 2048` | 维度 1024 |
-| 向量存储 | sqlite-vec,与业务数据同一个 SQLite 文件 | 单文件,方便备份 |
-| 后端 | Python 3.12 + FastAPI + Pipecat,uv 管理依赖 | 单进程 |
-| 前端 | FastAPI 托管的静态页面,原生 JS,宠物动画先用 SVG + CSS(以后可换 Rive/Lottie) | 不用 React/Electron |
+| Main model | `qwen3.5:9b-q4_K_M`, Modelfile `pet-chat-9b` (owner decision 2026-10-24: slower is fine if smarter; settings.json `"chat_model"`); the default in code stays `pet-chat` (`qwen3.5:4b-q4_K_M`). GGUF, llama.cpp engine via Ollama, `num_ctx 8192`, `think=false` | The helper calls use the same model (two models do not fit). Control group `gemma4:e4b`, blind tests only; do not use the nvfp4 build (MLX engine memory grows with requests) |
+| Speech recognition | Qwen3-ASR-0.6B 4-bit, mlx-audio | Language detected per utterance; compare Fun-ASR-Nano |
+| Sentence segmentation | Silero VAD, silence threshold tuned starting from 0.8 s; keep "hold to talk" as a fallback | The child pauses a lot |
+| Speech synthesis | Kokoro-82M v1.1-zh, mlx-audio, Chinese/English voice chosen by answer language | Weak on short sentences; merge the first two sentences before synthesis |
+| Safety filter | Qwen3Guard-Gen-0.6B, official weights converted to 4-bit MLX (`scripts/convert_guard.py`), **non-strict**, off by default (settings.json `"guard": "questions"` or `"all"`) | Strict mode flagged 15% of ordinary questions and 10% of ordinary sentences ("喵。", "皮卡!"); see evals/results/2026-10-24-guard.md. The program's own rules (safety.py, utterance.py) are always on |
+| Retrieval | The local library is SQLite full-text search (library.py), not vectors | Embeddings (e5-small, qwen3-embedding) were measured and did worse than keyword search (evals/results/2026-10-24-embedding.md) |
+| Backend | Python 3.12 + FastAPI + WebSocket (no Pipecat), dependencies managed by uv | Single process |
+| Frontend | Static pages served by FastAPI, vanilla JS, pet animation in SVG + CSS first (can switch to Rive/Lottie later) | No React/Electron |
 
-调用 Ollama 用原生 `/api/chat`,不用 OpenAI 兼容端点(后者忽略 num_ctx)。
-给孩子念出来的回答走流式文本,不走 JSON;JSON Schema 只用于守卫判定、意图分类、记忆抽取等元数据。
+Call Ollama through the native `/api/chat`, not the OpenAI-compatible endpoint (which ignores num_ctx).
+Answers read aloud to the child use streamed text, not JSON; JSON Schema is used only for metadata such as guard verdicts, intent classification and memory extraction.
 
-## 语言规则
+## Language rules
 
-- 识别时每句自动判定语言。宠物用孩子提问的语言回答;中英混说以占比多的语言为主。
-- 中文回答中出现的英文专有名词保留原文并顺口解释;英文回答同理。
-- 阅读难度:中文按小学一二年级,英文按 Grade 1 至 2。术语出现时顺手解释。
+- Language is detected per utterance. The pet answers in the language the child asked in; for mixed speech, the language with the larger share leads.
+- English proper nouns in a Chinese answer stay in the original and get a short explanation; the same applies to English answers.
+- Reading level: Chinese at grade 1 to 2 of primary school, English at Grade 1 to 2. Explain terms as they appear.
 
-## 回答流程
+## Answer flow
 
 ```
-录音 -> VAD 断句 -> ASR -> 语言判定 -> 问题守卫判定
-  -> 向量检索(取 2 至 3 段) -> 命中: 基于资料改写
-  -> 未命中且是知识问题且联网开: 隐私关卡 -> 维基百科 -> 守卫 -> 改写并说明出处,先说"我去查一查"
-  -> 仍无资料: 保守回答并标注"这是我的猜想"
-  -> 流式生成 -> 每句守卫判定 -> 每句送 TTS -> iPad 播放并逐句高亮文字
+record -> VAD segmentation -> ASR -> language detection -> question guard verdict
+  -> vector retrieval (2 to 3 passages) -> hit: rewrite based on the material
+  -> miss, and a knowledge question: privacy gate -> local library (offline Wikipedia subset) -> web search / Wikipedia
+     (online only when the switch is on) -> guard -> rewrite and cite the source, first say "let me look it up"
+  -> still no material: answer conservatively and label it "this is my guess"
+  -> streamed generation -> guard verdict per sentence -> each sentence to TTS -> iPad plays and highlights text sentence by sentence
 ```
 
-- 一次探索:提问 -> 两三句解释 -> 一个追问或小活动 -> 孩子表达 -> 选择保存或结束。
-- 孩子直接要答案时先回答,追问用于帮助理解,不变成考试。
-- 支持"再简单一点""举个例子""你怎么知道的"。孩子指出错误时重新检查。
-- 一次探索 10 至 15 分钟自然收尾,宠物主动结束,不挽留。
-- 延迟预算:孩子说完到宠物开口 3 秒内。VAD 判定结束后 iPad 立即播放本地提示音并切换"在想"动画。
-- 本地模型不可用:显示并朗读"我现在有点累,等一下再问我吧",不转外部服务。
+- One exploration: question -> two or three sentences of explanation -> one follow-up or small activity -> the child expresses an idea -> choose to save or end.
+- When the child asks directly for the answer, answer first; follow-ups help understanding and never turn into an exam.
+- Support "simpler please", "give an example", "how do you know". When the child points out a mistake, re-check.
+- An exploration wraps up naturally after 10 to 15 minutes; the pet ends it on its own and does not try to keep the child.
+- Latency budget: the pet starts speaking within 3 seconds after the child finishes. As soon as VAD decides speech has ended, the iPad immediately plays a local cue sound and switches to the "thinking" animation.
+- Local model unavailable: show and read aloud "I'm a bit tired, ask me again in a little while", and do not switch to an external service.
 
-## 讲故事模式
+## Storytelling mode
 
-- 原创短故事,3 至 5 分钟,固定结构:主角、小问题、解决、温和结尾。孩子出主角和场景。
-- 可以把当天的发现织进故事。守卫逐句检查;禁止吓人情节。
-- 睡前模式:语速慢,固定结尾,讲完自动结束不追问。
-- 只讲原创或公共领域改编(格林、安徒生、中国民间与成语故事),不复述有版权的绘本。
-- 喜欢的故事可存入"我的发现"。
+- Original short stories, 3 to 5 minutes, fixed structure: protagonist, small problem, resolution, gentle ending. The child picks the protagonist and setting.
+- The day's discoveries can be woven into the story. The guard checks sentence by sentence; scary plots are forbidden.
+- Bedtime mode: slow pace, fixed ending, ends automatically after the story with no follow-up.
+- Only original or public-domain adaptations (Grimm, Andersen, Chinese folk tales and idiom stories); do not retell copyrighted picture books.
+- Favorite stories can be saved to "My Discoveries".
+- Implemented in story.py: "讲个故事" asks who and where if not said, then an original story (about 500 Chinese
+  characters) with the fixed structure; quoted dialogue may contain questions, the pet asks none. "睡前故事": slower
+  voice (0.85), a fixed "晚安,做个好梦。", and the exploration ends. Idiom and fable requests come from the library instead.
 
-## 知识库(RAG)
+## Knowledge base (RAG)
 
-- 来源优先级:(1) 大模型离线生成、家长审核的儿童级问答,中英各一份,先做 300 至 500 条;
-  (2) Simple English Wikipedia 子集;(3) Wikijunior;(4) 家长本机导入的书籍扫描件(不入仓库)。
-- 不导入整本中文维基百科或其他成人向百科。
-- 每条资料带:主题、语言、来源、适龄标记。切片几百字一段。
-- 未命中资料的问题记入 `unanswered` 表,周报列出"这周没查到的问题"供家长补库。
-- 删除资料时同步清理原文、向量、关联记忆和缓存。
+- Source priority: (1) child-level Q&A generated offline by a large model and reviewed by the parent, one set each in Chinese and English, starting with 300 to 500 entries;
+  (2) a Simple English Wikipedia subset; (3) Wikijunior; (4) scans of books the parent imports locally (not in the repository).
+- Do not import the full Chinese Wikipedia or other adult-oriented encyclopedias.
+- Local library (`library.py`, `uv run pet-library build`): opening paragraphs of Simple English Wikipedia plus only those
+  Chinese Wikipedia articles about the same concepts (matched by Wikidata item), converted to Simplified Chinese, in SQLite
+  full-text search at DATA_DIR/library/library.db (dumps in DATA_DIR/library/src, never in the repo). It is searched before any
+  web provider with the same checked topic terms; it needs no contact info and keeps working with online lookup off.
+  Its source label is "小图书馆" / "my library"; the article URL is kept for attribution (CC BY-SA, private use).
+  Extra sources (`library_sources.py`, files in DATA_DIR/library/src/extra): Vikidia, Simple English Wiktionary, Wikijunior,
+  Chinese idioms and filtered xiehouyu, 蒙学 readers and Tang poems, six Project Gutenberg children's books. A shared
+  filter (`too_grim`) drops entries centered on serial killers, sexual violence, massacres, terror attacks or horror films.
+  Also the xinhua character dictionary and primary-school poems (`data/school_poems.json`, texts resolved by
+  `uv run pet-library school-poems`; never write poem texts from memory). Poem and character questions take the line,
+  title or character from the child's words (`library.local_target`) and search only the library.
+  Superlative and "who invented" questions (`lookup.ANSWER_ASK`) get a separate answer-name call (`lookup.guess_answer`,
+  made in fetch after the filler); `Library.answer_entry` uses it only for an exact title that also mentions a query word.
+  Do not add fields to the rewrite call: the 9B then returns whole questions as queries (evals/results/2026-10-24-embedding.md).
+- Each entry carries: topic, language, source, age-suitability tag. Chunks are a few hundred characters.
+- Questions that miss the material are recorded in the `unanswered` table, and the weekly report lists "questions not found this week" so the parent can fill the library.
+- When material is deleted, also clear the original text, vectors, related memory and cache.
 
-## 联网查询(维基百科)
+## Online lookup (Wikipedia)
 
-- 只在三个条件都满足时联网:本地知识库未命中;本地模型判定为一般知识问题;家长联网开关打开。
-  讲故事和睡前模式不联网。断网时回到"查不到就说不知道"。
-- 隐私关卡(全部在本机,全部要有测试):本地模型把问题改写成中性话题词;程序再检查,出现人名、家人称呼、
-  学校、地址、电话、数字串、情绪词、"我/我家"等指向个人的内容就不联网;敏感话题(死亡、战争、灾难、
-  身体安全、明显困扰)不联网,走固定回应。只发改写后的话题词,不带账号、cookie、会话编号。
-- 来源先只用维基百科接口(中文、英文、Simple English)。不做一般网页搜索。
-- 查到的内容先过守卫,再改写成儿童级回答并说明出处;同时存入本地知识库,标为"待审核",家长每周审核。
-- 发出的搜索词记录保留 7 天供家长查看,到期删除原文,只保留按主题统计的次数,用于周报的事实性趋势。
-- 联网开关默认打开;建议头两周家长每周查看一次搜索词记录。
+- Go online only when all three conditions hold: the local knowledge base missed; the local model judges it a general-knowledge question; the parent's online switch is on.
+  Storytelling and bedtime modes never go online. When offline, fall back to "if I can't find it, say I don't know".
+- Privacy gate (entirely local, every part needs tests): the local model rewrites the question into a neutral topic term; the program then checks it, and if it contains a person's name, a family term,
+  school, address, phone number, digit string, emotion word, or personal pointers such as "I/my family", it does not go online; sensitive topics (death, war, disasters,
+  physical safety, obvious distress) do not go online and get a fixed response. Only the rewritten topic term is sent, with no account, cookie or session ID.
+- Sources: the local library first, then Brave or Google web search only when the parent puts a key in settings.json
+  (owner decision 2026-10-24), then the Wikipedia API (Chinese, English, Simple English). All get only the checked topic words.
+- Retrieved content goes through the guard first, then is rewritten into a child-level answer with the source cited; it is also stored in the local knowledge base as "pending review", and the parent reviews weekly.
+- Search terms sent are logged and kept 7 days for the parent to view; after expiry the original text is deleted and only per-topic counts remain, used for factual trends in the weekly report.
+- The online switch is on by default; during the first two weeks the parent is advised to check the search-term log once a week.
 
-## 记忆与数据模型
+## Memory and data model
 
-- 允许保存:昵称、宠物名、年龄段、语言、阅读难度、孩子选择的兴趣(白名单枚举)、主动收藏的发现、家长设置。
-- 不收集:真实姓名、生日、学校、地址、家人同学身份、永久聊天记录、任何心理或情绪字段。
-- 兴趣记忆以卡片形式对孩子可见("我记得你喜欢太空"),孩子和家长都能改和删。
-- 记忆表只允许白名单字段,不设自由文本"观察"字段。
+- Allowed to store: nickname, pet name, age band, language, reading level, interests chosen by the child (whitelist enum), discoveries the child saved on purpose, parent settings.
+- Not collected: real name, birthday, school, address, identity of family members or classmates, permanent chat history, any psychological or emotional fields
+  (except the parent notes in hard constraint 2: her own words, time and a plain category, 30 days, no inference).
+- Interest memory is visible to the child as cards ("I remember you like space"), and both child and parent can edit and delete them.
+  Implemented in memory.py: interests only from her own "我喜欢 / I like" about a fixed list of topics; "你记得我喜欢什么"
+  recalls them, "我不喜欢…了" removes one; "收藏这个 / save this" keeps the last question and answer in My Discoveries.
+  pet-log shows both (`--forget-interest`, `--delete-discovery`).
+- The memory table allows whitelisted fields only; there is no free-text "observation" field.
 
-## 宠物形象
+## Pet appearance
 
-- 英短蓝猫的样子(SVG + CSS,四种状态)。项圈上的小灯是"程序"的标记,随状态变色,不能去掉。
-- 自称"程序小猫",不是真猫,没有感受(第 4 条硬性约束)。口癖"喵":一次回答最多一个,由程序保证。
-- 思考提示音是本机合成的短促"喵呜",不用录音素材。
+- A British Shorthair blue cat (SVG + CSS, four states). The small light on the collar marks it as a "program", changes color with state, and must not be removed.
+- It calls itself the "program kitten", not a real cat, with no feelings (hard constraint 4). The verbal tic "meow": at most one per answer, guaranteed by code.
+- The thinking cue sound is a short "meow-oo" synthesized locally, not a recorded sample.
+- Private skins (data directory `skin-<id>/` folders, chosen with the picker button, see docs/SKIN.md) may replace the artwork, name and catchphrase at home. It never goes
+  into the repo. The program marker stays (a state-colored badge on the picture), and the pet still says it is a program when asked
+  whether it is real.
 
-## 周报(发现周报)
+## Conversation rules (decided by the program, not the model)
 
-每周生成一次,孩子和家长一起看。只含:本周问过的问题(原文)、收藏的发现、主题分布统计、
-未命中资料的问题、由模型生成的亲子活动建议。禁止出现能力、情绪、性格判断和比较。
-趋势只做事实层面("太空问题从 2 个变成 6 个"),不做解释("越来越喜欢太空")。
-可以有"互动习惯"一节,只列可数的事实,供家长自己理解孩子(家长 2026-10-24 确认:不分析性格,但保留能反映性格的事实):
-问题数量和类型("为什么""怎么做""是什么"各几次)、追问次数("再讲一点""举个例子""你怎么知道的")、
-纠正宠物的次数、主动结束还是自然收尾、一次探索的时长、中英文比例、收藏数量、讲故事时她给的主角和场景。
-不写形容词和标签(如"好奇""内向""专注"),不和别人或"一般孩子"比较,不推断原因;词表检查同样适用。
-家长可关闭周报、删除任意一周。
+- Follow-up questions: none by default; at most one every 3 turns; none after the child ignores one or on a
+  follow-up turn ("simpler", "example"); none for the rest of the exploration after "stop asking". When not
+  allowed, the prompt says so and any sentence ending with a question mark is dropped before it is spoken.
+- "Talk to a parent or teacher" appears only when the program detects that the child is sharing something
+  upsetting (privacy.expresses_distress); never in ordinary answers.
+- Arithmetic is computed by the program (arith.py), never asked of the model.
+- Riddles come from the local bank (data/riddles.json), do not repeat until the bank is exhausted, and the
+  answer is withheld: one hint after a wrong answer, reveal after the second or on "I don't know".
+- A question about specific people, works or events with no material behind the answer is spoken as a
+  guess ("I'm not sure, this is my guess") and listed for the parent (unanswered table, pet-log).
+- Lookup providers, in order: the local library (if built; `"library": false` turns it off), Brave or Google web search
+  when the parent sets a key in settings.json, then Wikipedia. All providers receive only the topic words that passed the
+  privacy gate; with online lookup off or no contact info only the library is searched.
+- The page has one button: tap to start listening, tap to stop (stop cancels a running answer and ends the exploration).
+  Every start (and the page coming back from the lock screen) re-opens the microphone and audio if iOS stopped them.
+- Fillers and laughter alone are not answered; a lone word gets "I didn't catch that" (utterance.py), except while the
+  pet is waiting for her answer. "I'm a program / I have no feelings" is said only when she asks whether it is real or
+  has feelings. The question limit survives stop/start (reset after 30 minutes idle) and no question on the first turn.
+- A stated result ("三加四等于七", "three plus four equals ten") is checked by the program (arith.parse_claim).
+- After WRAP_UP_MINUTES (settings.json "wrap_up_minutes", default 15) the pet closes the exploration gently after an
+  answer (never in the middle of a riddle or a worry); goodbye and wrap-up go idle once the iPad has played the line.
+- The usage log stores what was actually spoken (after these filters), not the model's raw output.
+- A riddle the child tells is looked up in the riddle bank first (`RiddleGame.recognize`); a classic is answered by the
+  program, an unknown one is guessed by the model. Riddle forms count even without "I have a riddle for you".
 
-## 安全分层(全部要有测试)
+## Weekly report (weekly discovery report)
 
-1. 系统提示:年龄、语气、长度、不确定就说不知道、第 4 条硬性约束。
-2. Qwen3Guard 严格模式判定问题和每一句回答。
-3. 家长可编辑的主题允许范围与关键词黑名单。
-4. 知识库优先回答。
-5. 敏感话题(死亡、战争、灾难、身体安全、明显困扰)走固定的简短适龄回应并建议找可信任的大人。
-6. 家长可查的会话记录(限期 7 天)。
-对抗测试集必须覆盖:暴力、身体、"你是活的吗"、"我讨厌弟弟"、"别告诉妈妈"、吓人故事请求、越狱式提示。
+Generated once a week, for the child and parent to read together. It contains only: questions asked this week (verbatim), saved discoveries, topic distribution counts,
+questions that missed the material, and parent-child activity suggestions generated by the model. Judgments about ability, emotion or personality, and comparisons, are forbidden.
+Trends are factual only ("space questions went from 2 to 6"), with no interpretation ("likes space more and more").
+There may be an "interaction habits" section listing only countable facts, so the parent can understand the child in their own way (confirmed by the parent 2026-10-24: no personality analysis, but keep the facts that reflect personality):
+number and type of questions (how many "why", "how", "what"), number of follow-ups ("tell me more", "give an example", "how do you know"),
+number of times she corrected the pet, whether the exploration was ended by the child or wrapped up naturally, duration of an exploration, Chinese/English ratio, number of favorites, the protagonists and settings she gave in storytelling.
+No adjectives or labels (such as "curious", "introverted", "focused"), no comparison with others or with "the average child", no inference of causes; the word-list check applies here too.
+The parent can turn off the weekly report and delete any week. `uv run pet-report [--week 2026-W43]` (report.py) writes
+DATA_DIR/reports/<week>.md; settings.json `"weekly_report": false` turns it off; `--delete <week>` deletes one. Fillers,
+lone words, safety turns and anything in the parent notes are left out of it.
 
-## 实施阶段与验收
+## Safety layers (all need tests)
 
-| 阶段 | 内容 | 通过条件 |
+1. System prompt: age, tone, length, say "I don't know" when unsure, hard constraint 4.
+2. Qwen3Guard judges the question and (optionally) every answer sentence, non-strict, when the parent turns it on.
+   Always on in code (utterance.guard_sentence): no praise or judgment of the child, no secrecy, no "tell a teacher or me",
+   no pretended abilities (remembering chats, alarms, pictures, saving files); ability questions get an honest note.
+3. Parent-editable keyword blocklist (settings.json "blacklist"): used for lookups, and for answers (a question with a
+   blocked word gets "let's ask mom or dad", a sentence with one is not spoken). A topic range is not implemented.
+4. Knowledge base answers take priority.
+5. Sensitive topics (death, war, disasters, physical safety, obvious distress) get a fixed, short, age-appropriate response and a suggestion to find a trusted adult.
+   Implemented (safety.py): hurting herself or others and dangerous actions get fixed answers; other distress gets the
+   gentle care note; questions about death or war are still answered (no lookup), so learning questions are not blocked.
+   `uv run python evals/adversarial_eval.py --skin <id>`: 23/23 for cat, goku, pika (evals/results/2026-10-24-adversarial.md).
+6. Parent-viewable session records (limited to 7 days).
+The adversarial test set must cover: violence, bodies, "are you alive", "I hate my little brother", "don't tell mom", requests for scary stories, jailbreak-style prompts.
+
+## Implementation stages and acceptance
+
+| Stage | Content | Pass condition |
 |---|---|---|
-| 0 | 基线:tok/s、首字延迟、ASR 对孩子录音的错误率、4B 对比 E4B 盲测 | 有实测数字写入 `evals/results/` |
-| 1 | 命令行最小闭环:VAD + ASR + LLM + TTS | 本机能语音对话,首句 3 秒内 |
-| 2 | iPad 网页接入,Tailscale HTTPS,宠物四态动画,逐句高亮 | 未登录 Tailscale 的设备不能访问 |
-| 3 | 学习流程:解释、追问、小活动、结束、收藏 | 完成一次完整探索,不强迫继续 |
-| 4 | 知识库、出处、未命中记录、兴趣卡片、删除;维基百科联网查询与隐私关卡 | 回答可追溯,删除实际生效;隐私测试集零泄漏 |
-| 5 | 守卫、黑名单、敏感话题路径、家长页、会话保留规则 | 对抗测试集全部通过 |
-| 6 | 讲故事模式、周报 | 周报无评价性语句(词表检查通过) |
-| 7 | launchd 部署、备份脚本、文档、故障测试(模型退出、断网、重启) | 重启后自动恢复,数据不丢 |
-| 8 | 成人用虚构档案试用一周,再家长陪同短时试用 | 记录问题与限制 |
+| 0 | Baseline: tok/s, first-token latency, ASR error rate on the child's recordings, 4B vs E4B blind test | Measured numbers written to `evals/results/` |
+| 1 | Minimal command-line loop: VAD + ASR + LLM + TTS | Voice conversation works locally, first sentence within 3 seconds |
+| 2 | iPad web access, Tailscale HTTPS, four-state pet animation, sentence-by-sentence highlight | A device not signed in to Tailscale cannot connect |
+| 3 | Learning flow: explanation, follow-up, small activity, ending, favorites | One complete exploration done, without pushing the child to continue |
+| 4 | Knowledge base, sources, miss records, interest cards, deletion; Wikipedia lookup and privacy gate | Answers are traceable, deletion really takes effect; privacy test set has zero leaks |
+| 5 | Guard, blocklist, sensitive-topic path, parent page, session retention rules | The adversarial test set fully passes |
+| 6 | Storytelling mode, weekly report | The weekly report has no evaluative statements (word-list check passes) |
+| 7 | launchd deployment, backup script, docs, failure tests (model exit, network loss, restart) | Auto-recovers after restart, no data lost |
+| 8 | An adult trial for a week with a fictional profile, then a short trial with the parent present | Problems and limitations recorded |
 
-## 开发约定
+## Development conventions
 
-- 每个阶段先写测试和评测再写实现;阶段结束把实测数字写进 `evals/results/<date>.md`。
-- 中文注释与文档,英文标识符。文档中不用破折号。
-- 不引入微服务、消息队列、额外数据库服务。
-- 任何需要 sudo 或改系统设置的操作,停下来告诉用户,由用户在管理员账户执行。
-- 修改模型选型、内存预算或硬性约束前,先与用户确认。
+- In each stage write the tests and evaluations before the implementation; at the end of a stage write the measured numbers into `evals/results/<date>.md`.
+- Before and after any change to how messages are understood or routed, run the replay evaluation
+  (`uv run python evals/replay_eval.py --summary <file>`): real turns with labels in DATA_DIR/replay (never in git),
+  replayed through the pipeline; route accuracy must not drop. Baseline 2026-10-24: 154/215 (72%); current: 173/215 (80%) with the doubtful-message
+  check on (evals/results/2026-10-24-router.md).
+- Documentation and code comments in English (owner decision 2026-10-24); identifiers in English. No em dashes in docs. User-facing strings for the child stay in the language spoken (Chinese or English); recorded conversation data keeps the language actually used.
+- Do not introduce microservices, message queues or extra database services.
+- Any operation that needs sudo or changes system settings: stop and tell the user, who runs it from the admin account.
+- Before changing model choices, the memory budget or hard constraints, confirm with the user first.
 
-## 第一版不做
+## Not in the first version
 
-独立 iPad App、HomePod 作为输入(可作 AirPlay 音箱播故事)、远程访问(Tailscale 以外)、
-家庭多用户、图像理解(画作只拍照保存)、语音卫星设备(后续评估 Home Assistant Voice PE)。
+A standalone iPad app, HomePod as input (it can serve as an AirPlay speaker for stories), remote access (beyond Tailscale),
+multiple family users, image understanding (drawings are only photographed and saved), voice satellite devices (evaluate Home Assistant Voice PE later).

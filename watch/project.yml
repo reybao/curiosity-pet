@@ -1,0 +1,38 @@
+# XcodeGen spec for the watch app. Generate the Xcode project with:  cd watch && xcodegen generate
+# The Mac's address is not in the repo: copy Config.example.xcconfig to Config.local.xcconfig and fill it in.
+name: CuriosityCat
+options:
+  bundleIdPrefix: local.curiositypet
+  deploymentTarget:
+    watchOS: "10.0"   # Series 5 tops out at watchOS 10
+  createIntermediateGroups: true
+configFiles:
+  Debug: Config.local.xcconfig
+  Release: Config.local.xcconfig
+targets:
+  CuriosityCat:
+    type: application
+    platform: watchOS
+    sources:
+      - path: CuriosityCat
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(PET_BUNDLE_ID)
+        MARKETING_VERSION: "0.1"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Curiosity Cat
+        INFOPLIST_KEY_WKWatchOnly: YES
+        INFOPLIST_KEY_WKApplication: YES
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "The cat listens while you hold the button, so it can answer your question."
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: $(PET_TEAM_ID)
+    info:
+      path: CuriosityCat/Info.plist
+      properties:
+        PetScheme: $(PET_SCHEME)
+        PetHost: $(PET_HOST)
+        PetPort: $(PET_PORT)
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true   # only for the simulator talking to 127.0.0.1; the real watch uses HTTPS

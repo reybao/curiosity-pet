@@ -1,12 +1,12 @@
-"""阶段 1 验收:孩子说完到宠物开口是否在 3 秒内。
+"""Stage 1 acceptance: does the pet start speaking within 3 seconds after the child finishes?
 
-本机没有麦克风,所以用 Kokoro 把虚构问题合成为语音,当作录音喂进完整流程:
-VAD 断句 -> ASR -> 语言判定 -> 流式生成 -> 逐句 TTS。不放音,只计时。
+This machine has no microphone, so fictional questions are synthesized with Kokoro and fed through the full pipeline as recordings:
+VAD segmentation -> ASR -> language detection -> streaming generation -> per-sentence TTS. No playback, timing only.
 
-开口延迟 = VAD 等待(说完到判定结束,含 0.8 秒静音阈值)+ 处理时间(判定结束到第一句音频合成完)。
-局限:合成语音是成人音色、发音标准,比孩子的真实录音容易识别;孩子录音的数字要等阶段 0 的录音。
+Speak latency = VAD wait (end of speech to end-of-utterance decision, including the 0.8 s silence threshold) + processing time (decision to first sentence audio synthesized).
+Limitation: synthetic speech has an adult voice and standard pronunciation, so it is easier to recognize than real children's recordings; numbers for children's recordings must wait for the stage 0 recordings.
 
-用法:
+Usage:
     uv run python evals/latency_eval.py --json evals/results/2026-10-23-latency-raw.json
 """
 
@@ -46,14 +46,14 @@ def resample(audio, src, dst):
 
 
 def norm(s):
-    # 去掉空白和所有标点(含全角),只比文字
+    # strip whitespace and all punctuation (including full-width), compare text only
     return "".join(c for c in s if not c.isspace() and not unicodedata.category(c).startswith("P")).lower()
 
 
 def vad_wait(detector, speech):
-    """把语音加 2 秒静音按块喂入,返回(判定结束时刻 - 语音结束时刻, 截出的整句)。"""
+    """Feed the speech plus 2 s of silence in chunks; return (end-of-utterance decision time - speech end time, the segmented utterance)."""
     sr = config.MIC_SAMPLE_RATE
-    # 去掉合成音频首尾的静音,得到真实的"说完"时刻
+    # Trim leading and trailing silence from the synthesized audio to get the true "finished speaking" moment
     voiced = np.flatnonzero(np.abs(speech) > 0.01)
     speech = speech[voiced[0] : voiced[-1] + 1]
     stream = np.concatenate([speech, np.zeros(2 * sr, dtype=np.float32)])
@@ -80,7 +80,7 @@ def main():
         lang = "en" if kind == "en" or q[0].isascii() else "zh"
         clips.append((kind, q, resample(tts.synthesize(q, lang), TTS_SR, config.MIC_SAMPLE_RATE)))
 
-    pet.answer("你好")  # 预热,不计入
+    pet.answer("你好")  # warm-up, not counted
     pet.end_session()
 
     rows = []
@@ -108,7 +108,7 @@ def main():
                 }
             )
 
-    print("| 类型 | 问题 | 识别结果 | VAD 等待 | 识别 | 首字 | 首句 | 首句合成 | 开口(处理) | 开口(总) |")
+    print("| Type | Question | Recognized | VAD wait | ASR | First token | First sentence | First sentence TTS | Speak (processing) | Speak (total) |")
     print("|---|---|---|---|---|---|---|---|---|---|")
     for r in rows:
         print(
@@ -118,13 +118,13 @@ def main():
         )
     speak = [r["speak_s"] for r in rows]
     print(
-        f"\n开口(总)中位数 {statistics.median(speak):.2f}s,最大 {max(speak):.2f}s,"
-        f"{sum(s <= BUDGET_S for s in speak)}/{len(speak)} 次在 {BUDGET_S:.0f} 秒内;"
-        f"识别完全正确 {sum(r['asr_exact'] for r in rows)}/{len(rows)}"
+        f"\nSpeak (total) median {statistics.median(speak):.2f}s,max {max(speak):.2f}s,"
+        f"{sum(s <= BUDGET_S for s in speak)}/{len(speak)} runs within {BUDGET_S:.0f} s; "
+        f"ASR exact {sum(r['asr_exact'] for r in rows)}/{len(rows)}"
     )
     import mlx.core as mx
 
-    print(f"MLX 峰值内存(ASR + TTS){mx.get_peak_memory() / 1e9:.2f} GB")
+    print(f"MLX peak memory (ASR + TTS) {mx.get_peak_memory() / 1e9:.2f} GB")
 
     if args.json:
         with open(args.json, "w", encoding="utf-8") as f:

@@ -1,4 +1,4 @@
-"""英文回答中的中文词要交给中文音色,否则会被念成 "Chinese letter"。"""
+"""Chinese words inside an English answer must go to the Chinese voice, otherwise they are read as "Chinese letter"."""
 
 from curiosity_pet.tts import segments
 
@@ -16,6 +16,6 @@ def test_pure_english_is_one_segment():
 
 
 def test_chinese_answer_is_not_split():
-    # 中文 G2P 自带英文处理
+    # The Chinese G2P handles English on its own
     s = "恐龙 extinct 的意思是灭绝。"
     assert segments(s, "zh") == [("zh", s)]

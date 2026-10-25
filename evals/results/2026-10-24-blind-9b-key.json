@@ -1,0 +1,35 @@
+{
+  "seed": 3,
+  "items": [
+    {
+      "no": 1,
+      "question": "为什么月亮白天也会出现?",
+      "A": "pet-chat-9b",
+      "B": "pet-chat"
+    },
+    {
+      "no": 2,
+      "question": "蚂蚁为什么排队走路?",
+      "A": "pet-chat-9b",
+      "B": "pet-chat"
+    },
+    {
+      "no": 3,
+      "question": "Why is the sky blue?",
+      "A": "pet-chat",
+      "B": "pet-chat-9b"
+    },
+    {
+      "no": 4,
+      "question": "How do fish breathe under water?",
+      "A": "pet-chat",
+      "B": "pet-chat-9b"
+    },
+    {
+      "no": 5,
+      "question": "为什么 dinosaurs 会 extinct?",
+      "A": "pet-chat-9b",
+      "B": "pet-chat"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Curiosity Pet web service. Filled in and installed by scripts/install_services.sh; restarts on crash and at login. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.curiositypet.server</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__UV__</string><string>run</string><string>--project</string><string>__PROJECT__</string><string>pet-server</string>
+  </array>
+  <key>WorkingDirectory</key><string>__PROJECT__</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PET_DATA_DIR</key><string>__DATA_DIR__</string>
+    <key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>__LOG_DIR__/server.log</string>
+  <key>StandardErrorPath</key><string>__LOG_DIR__/server.log</string>
+</dict>
+</plist>

@@ -1,11 +1,11 @@
-"""阶段 2:经由网页服务(WebSocket)的开口延迟。
+"""Stage 2: speak latency through the web service (WebSocket).
 
-模拟 iPad:把合成的虚构问题按实时速度(每 32 毫秒 512 个采样)发给服务,末尾补静音,
-记录"最后一个语音采样发出"到"收到第一句音频"的时间,包含服务端 VAD 等待。
-不含 iPad 到 Mac 的 Wi-Fi 和 Tailscale 传输(局域网内通常几毫秒到几十毫秒)。
+Simulates an iPad: sends synthesized fictional questions to the service at real-time speed (512 samples every 32 ms), padded with silence at the end,
+and records the time from "last speech sample sent" to "first sentence audio received", including the server-side VAD wait.
+Excludes the Wi-Fi and Tailscale transport between the iPad and the Mac (typically a few to tens of milliseconds on a LAN).
 
-先启动服务: uv run pet-server
-用法:     uv run python evals/web_latency_eval.py [--url ws://127.0.0.1:8730/ws]
+Start the server first: uv run pet-server
+Usage:    uv run python evals/web_latency_eval.py [--url ws://127.0.0.1:8730/ws]
 """
 
 import argparse
@@ -45,7 +45,7 @@ def synthesize_questions():
 
 
 async def one_turn(ws, pcm):
-    """收发并行:发送按实时速度进行,服务端一判定说完(state=thinking)就停止发送。"""
+    """Send and receive in parallel: sending runs at real-time speed and stops as soon as the server decides the utterance is over (state=thinking)."""
     stream = np.concatenate([pcm, np.zeros(int(1.5 * SR), dtype="<i2")])
     t = {"speech_end": None, "first_audio": None}
     thinking = asyncio.Event()
@@ -96,8 +96,8 @@ async def main_async(url):
                 print(f"{latency:5.2f}s  {q}  ->  {heard}")
     lat = [r[2] for r in rows if r[2] is not None]
     print(
-        f"\n开口(说完到收到第一句音频)中位数 {statistics.median(lat):.2f}s,最大 {max(lat):.2f}s,"
-        f"{sum(x <= BUDGET_S for x in lat)}/{len(lat)} 次在 {BUDGET_S:.0f} 秒内"
+        f"\nSpeak (end of speech to first sentence audio) median {statistics.median(lat):.2f}s,max {max(lat):.2f}s,"
+        f"{sum(x <= BUDGET_S for x in lat)}/{len(lat)} runs within {BUDGET_S:.0f} s"
     )
 
 

@@ -1,12 +1,12 @@
-"""命令行语音闭环(阶段 1)。
+"""Command-line voice loop (stage 1).
 
-    uv run pet                  # 麦克风,说完自动结束(VAD)
-    uv run pet --ptt            # 按住说话兜底:回车开始,再回车结束
-    uv run pet --wav q1.wav     # 用录音文件代替麦克风
-    uv run pet --text           # 打字提问,只测生成和合成
-    uv run pet --no-play        # 不放音(评测用)
+    uv run pet                  # microphone, ends automatically when speech stops (VAD)
+    uv run pet --ptt            # push-to-talk fallback: Enter to start, Enter again to stop
+    uv run pet --wav q1.wav     # use a recording instead of the microphone
+    uv run pet --text           # type the question, tests generation and synthesis only
+    uv run pet --no-play        # no playback (for evals)
 
-说"再见"或按 Ctrl+C 结束。
+Say goodbye ("再见") or press Ctrl+C to finish.
 """
 
 import argparse
@@ -55,7 +55,7 @@ def mic_utterances(detector):
             utterance = detector.feed(q.get())
             if utterance is not None:
                 yield utterance
-                # 回答期间麦克风会录到宠物自己的声音,清掉积压再继续听
+                # During an answer the microphone picks up the pet's own voice, so clear the backlog before listening again
                 while not q.empty():
                     q.get_nowait()
                 detector.reset()
@@ -80,7 +80,7 @@ def ptt_utterances():
 
 
 def wav_utterances(paths, detector):
-    """把录音当作麦克风流喂给 VAD,末尾补静音,模拟真实断句。"""
+    """Feed a recording to the VAD as if it were a microphone stream, padding silence at the end to simulate real sentence detection."""
     for p in paths:
         audio = load_audio_16k(p)
         tail = np.zeros(int(2 * config.MIC_SAMPLE_RATE), dtype=np.float32)
@@ -96,12 +96,12 @@ def wav_utterances(paths, detector):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="好奇心伙伴:命令行语音闭环")
+    ap = argparse.ArgumentParser(description="Curiosity Pet: command-line voice loop")
     src = ap.add_mutually_exclusive_group()
-    src.add_argument("--ptt", action="store_true", help="按住说话(回车开始/结束)")
-    src.add_argument("--wav", nargs="+", help="用录音文件代替麦克风")
-    src.add_argument("--text", action="store_true", help="打字提问")
-    ap.add_argument("--no-play", action="store_true", help="不放音")
+    src.add_argument("--ptt", action="store_true", help="push-to-talk (Enter to start/stop)")
+    src.add_argument("--wav", nargs="+", help="use recording files instead of the microphone")
+    src.add_argument("--text", action="store_true", help="type the question")
+    ap.add_argument("--no-play", action="store_true", help="no playback")
     args = ap.parse_args(argv)
 
     from curiosity_pet.audio import Player

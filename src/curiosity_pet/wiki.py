@@ -1,8 +1,8 @@
-"""维基百科查询(联网查询的唯一来源)。
+"""Wikipedia lookup (the only source for web lookups).
 
-只连维基百科;请求里唯一的自由文本是隐私关卡放行的搜索词;不保存、不发送 cookie;
-网络失败、超时、没找到都返回 None,不影响宠物继续回答。
-中文用 zh.wikipedia 并转成简体;英文先查 Simple English Wikipedia(更适合孩子),没有再查英文维基。
+Connects to Wikipedia only; the only free text in a request is the search term cleared by the privacy gate; no cookies are stored or sent;
+network failure, timeout, or no result all return None and do not stop the pet from answering.
+Chinese uses zh.wikipedia, converted to Simplified; English tries Simple English Wikipedia first (better for children), then English Wikipedia.
 """
 
 from dataclasses import dataclass
@@ -11,8 +11,8 @@ import httpx
 
 ALLOWED_HOSTS = {"zh.wikipedia.org", "en.wikipedia.org", "simple.wikipedia.org"}
 HOSTS_BY_LANG = {"zh": ["zh.wikipedia.org"], "en": ["simple.wikipedia.org", "en.wikipedia.org"]}
-# 维基媒体的 User-Agent 政策(https://w.wiki/4wJS)要求自动程序附联系方式,否则会被拦(实测 403)。
-# 联系方式由家长在配置里填(建议专用邮箱);没填时不联网。不用改请求头的办法绕过他们的机器人检测。
+# Wikimedia's User-Agent policy (https://w.wiki/4wJS) requires bots to include contact info, otherwise requests are blocked (measured: 403).
+# The parent fills in the contact info in the config (a dedicated email is recommended); without it there is no web access. We do not work around their bot detection by altering request headers.
 USER_AGENT_TEMPLATE = "CuriosityPet/0.1 (non-commercial home learning app; {contact})"
 
 
@@ -32,7 +32,7 @@ FIXED_PARAMS = {
     "inprop": "url",
     "redirects": "1",
 }
-# 按条目名直接取(搜索词里的每个词各取一次),补全文搜索的不足
+# Fetch directly by entry name (once per word in the search term), to make up for the shortcomings of full-text search
 TITLE_PARAMS = {
     "action": "query",
     "format": "json",
@@ -57,7 +57,7 @@ class WikiResult:
 
 def api_url(host: str) -> str:
     if host not in ALLOWED_HOSTS:
-        raise ValueError(f"只允许维基百科: {host}")
+        raise ValueError(f"Only Wikipedia is allowed: {host}")
     return f"https://{host}/w/api.php"
 
 
@@ -66,7 +66,7 @@ def trim(text: str, limit: int = MAX_CHARS) -> str:
     if len(text) <= limit:
         return text
     cut = text[:limit]
-    # 尽量在句末截断
+    # Truncate at a sentence end where possible
     for mark in ("。", ". ", "!", "?", "\n"):
         pos = cut.rfind(mark)
         if pos > limit // 2:
@@ -80,7 +80,7 @@ def _query_host(client: httpx.Client, host: str, query: str) -> list[WikiResult]
 
 
 def _title_host(client: httpx.Client, host: str, query: str) -> list[WikiResult]:
-    """把搜索词里的每个词当作条目名直接取,例如"天空 蓝色"取《天空》《蓝色》。"""
+    """Treat each word in the search term as an entry name and fetch it directly, e.g. "天空 蓝色" fetches the entries 天空 and 蓝色."""
     params = dict(TITLE_PARAMS, titles="|".join(query.split()[:3]))
     return [r for r in _fetch(client, host, params) if r.url]
 
@@ -108,7 +108,7 @@ def _fetch(client: httpx.Client, host: str, params: dict) -> list[WikiResult]:
 def search(
     query: str, lang: str, client: httpx.Client | None = None, contact: str | None = None
 ) -> WikiResult | None:
-    """返回排名第一的有效条目。"""
+    """Return the top-ranked valid entry."""
     results = search_all(query, lang, client=client, contact=contact)
     return results[0] if results else None
 
@@ -116,18 +116,18 @@ def search(
 def search_all(
     query: str, lang: str, client: httpx.Client | None = None, contact: str | None = None
 ) -> list[WikiResult]:
-    """返回前几个有效条目(按维基百科的搜索排名),由调用方挑最相关的。"""
+    """Return the first few valid entries (in Wikipedia search rank order) for the caller to pick the most relevant."""
     own = client is None
     if own:
         if not contact:
-            return []  # 没有联系方式就不联网,见 USER_AGENT_TEMPLATE
-        # 每次新建客户端:不留 cookie,不复用连接上的任何状态
+            return []  # no contact info means no web access, see USER_AGENT_TEMPLATE
+        # Create a new client each time: keep no cookies and reuse no state from earlier connections
         client = httpx.Client(headers={"User-Agent": user_agent(contact)}, follow_redirects=False)
     try:
         for host in HOSTS_BY_LANG.get(lang, HOSTS_BY_LANG["en"]):
             found = _query_host(client, host, query)
             titled = _title_host(client, host, query)
-            # 直接按条目名取到的排前面;同一条目去重
+            # Entries fetched directly by name come first; duplicates of the same entry are dropped
             seen, results = set(), []
             for r in titled + found:
                 if r.title not in seen:

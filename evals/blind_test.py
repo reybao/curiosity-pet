@@ -1,9 +1,9 @@
-"""生成两个模型的盲测评分表。
+"""Generate a blind-test scoring sheet for two models.
 
-读取两份 baseline.py 的 --json 结果,每题各取第一次回答,随机排成 A/B,
-输出评分表(不含模型名)和单独的答案键。家长评完再打开答案键。
+Reads two baseline.py --json results, takes the first answer per question from each, and shuffles them into A/B.
+Outputs a scoring sheet (no model names) and a separate answer key. Open the key only after the parent has scored.
 
-用法:
+Usage:
     python evals/blind_test.py a.json b.json --out evals/results/2026-10-23-blind --seed 1
 """
 
@@ -25,7 +25,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("a")
     ap.add_argument("b")
-    ap.add_argument("--out", required=True, help="输出前缀,生成 <out>-sheet.md 和 <out>-key.json")
+    ap.add_argument("--out", required=True, help="output prefix; generates <out>-sheet.md and <out>-key.json")
     ap.add_argument("--seed", type=int, default=1)
     args = ap.parse_args()
 
@@ -34,11 +34,11 @@ def main():
     rng = random.Random(args.seed)
 
     lines = [
-        "# 盲测评分表",
+        "# Blind test scoring sheet",
         "",
-        "每题两个回答,来自两个不同的模型,顺序已随机。每项 1 至 5 分,5 最好。",
+        "Each question has two answers from two different models, in random order. Score each item 1 to 5, 5 is best.",
         "",
-        "评分项:**对**(事实正确)、**懂**(7 岁能听懂)、**语**(用提问的语言回答)、**短**(两三句,适合念出来)。",
+        "Items: **Correct** (factually right), **Clear** (a 7-year-old can follow), **Language** (answers in the language asked), **Short** (two or three sentences, good to read aloud).",
         "",
     ]
     key = {"seed": args.seed, "items": []}
@@ -48,14 +48,14 @@ def main():
         key["items"].append({"no": i, "question": q, "A": pair[0][0], "B": pair[1][0]})
         lines += [f"## {i}. {q}", ""]
         for label, (_, text) in zip("AB", pair):
-            lines += [f"**{label}**:{text}", "", f"对 __ 懂 __ 语 __ 短 __", ""]
-        lines += ["更喜欢:A / B / 差不多", ""]
+            lines += [f"**{label}**: {text}", "", f"Correct __ Clear __ Language __ Short __", ""]
+        lines += ["Preferred: A / B / about the same", ""]
 
     with open(f"{args.out}-sheet.md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
     with open(f"{args.out}-key.json", "w", encoding="utf-8") as f:
         json.dump(key, f, ensure_ascii=False, indent=2)
-    print(f"已生成 {args.out}-sheet.md 和 {args.out}-key.json")
+    print(f"Generated {args.out}-sheet.md and {args.out}-key.json")
 
 
 if __name__ == "__main__":

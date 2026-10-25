@@ -1,4 +1,4 @@
-"""送 TTS 前清理:去掉 emoji、Markdown 符号,保留正常文字和标点。"""
+"""Cleanup before TTS: strip emoji and Markdown symbols, keep normal text and punctuation."""
 
 from curiosity_pet.textclean import clean_for_speech
 
@@ -46,5 +46,5 @@ def test_meow_limiter_leaves_other_words_alone():
     from curiosity_pet.textclean import MeowLimiter
 
     m = MeowLimiter()
-    assert m("猫咪叫起来是喵喵的声音吗?") == "猫咪叫起来是喵喵的声音吗?"  # 第一个保留
+    assert m("猫咪叫起来是喵喵的声音吗?") == "猫咪叫起来是喵喵的声音吗?"  # the first one is kept
     assert m("homeowner") == "homeowner"

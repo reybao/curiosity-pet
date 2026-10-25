@@ -1,7 +1,7 @@
-"""断句:Silero VAD 判定一句话的开始和结束。
+"""Sentence segmentation: Silero VAD detects where an utterance starts and ends.
 
-孩子说话停顿多,静音阈值从 0.8 秒起调(config.VAD_SILENCE_S)。
-音频按 512 采样点(16kHz 下 32 毫秒)一块喂入。
+Children pause a lot when speaking, so tune the silence threshold starting from 0.8 s (config.VAD_SILENCE_S).
+Audio is fed in blocks of 512 samples (32 ms at 16 kHz).
 """
 
 import numpy as np
@@ -11,7 +11,7 @@ from silero_vad import VADIterator, load_silero_vad
 from curiosity_pet import config
 
 CHUNK = 512
-PRE_ROLL_S = 0.3  # 判定开始前保留的音频,避免吃掉第一个字
+PRE_ROLL_S = 0.3  # audio kept from before the detected start, so the first word is not cut off
 MAX_UTTERANCE_S = 30
 
 
@@ -44,7 +44,7 @@ class UtteranceDetector:
         return self.speech is not None
 
     def feed(self, chunk: np.ndarray) -> np.ndarray | None:
-        """喂一块音频;一句话结束时返回整句(float32,16kHz),否则返回 None。"""
+        """Feed one block of audio; return the whole utterance (float32, 16 kHz) when it ends, otherwise None."""
         assert len(chunk) == CHUNK, len(chunk)
         self.samples_seen += CHUNK
         event = self.vad(torch.from_numpy(chunk.astype(np.float32)))
@@ -68,7 +68,7 @@ class UtteranceDetector:
 
 
 def chunks(audio: np.ndarray):
-    """把一段音频切成 VAD 需要的整块,末尾不足一块的补零。"""
+    """Split audio into the whole blocks the VAD needs, zero-padding a final partial block."""
     pad = (-len(audio)) % CHUNK
     audio = np.concatenate([audio, np.zeros(pad, dtype=np.float32)])
     for i in range(0, len(audio), CHUNK):

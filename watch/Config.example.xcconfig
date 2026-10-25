@@ -1,0 +1,16 @@
+// Copy to Config.local.xcconfig (not committed) and fill in.
+// xcconfig treats "//" as a comment, so the URL is given in parts.
+
+// The Funnel address of the Mac: the watch app talks to https://PET_HOST:PET_PORT
+PET_SCHEME = https
+PET_HOST = your-mac.your-tailnet.ts.net
+PET_PORT = 8443
+
+// For the simulator on the Mac itself use instead:
+// PET_SCHEME = http
+// PET_HOST = 127.0.0.1
+// PET_PORT = 8731
+
+// Signing: the Personal Team ID shown in Xcode > Settings > Accounts, and a bundle id unique to you
+PET_TEAM_ID =
+PET_BUNDLE_ID = local.curiositypet.watch

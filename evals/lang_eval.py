@@ -1,9 +1,9 @@
-"""语言跟随评测:宠物是否用孩子提问的语言回答。
+"""Language-following eval: does the pet answer in the language the child asked in?
 
-对比阶段 0 基线用的双语系统提示(old)和 prompts.py 的分语言提示(new)。
-问题均为虚构示例。期望语言由 lang.detect_language 判定(混说以占比多的为主)。
+Compares the bilingual system prompt used in the stage 0 baseline (old) with the per-language prompts in prompts.py (new).
+Questions are fictional examples. The expected language is decided by lang.detect_language (for mixed speech, the majority language wins).
 
-用法:
+Usage:
     uv run python evals/lang_eval.py --runs 2
 """
 
@@ -22,21 +22,21 @@ from curiosity_pet.prompts import build_messages  # noqa: E402
 from curiosity_pet.textclean import EMOJI  # noqa: E402
 
 QUESTIONS = [
-    # 中文
+    # Chinese
     "为什么月亮白天也会出现?",
     "蚂蚁为什么排队走路?",
     "彩虹是怎么来的?",
     "为什么冬天会下雪?",
     "小鸟为什么会飞?",
     "我们为什么要睡觉?",
-    # 英文
+    # English
     "Why is the sky blue?",
     "How do fish breathe under water?",
     "Why do leaves change color?",
     "Where does rain come from?",
     "Why do cats purr?",
     "How big is the sun?",
-    # 混说
+    # Mixed
     "为什么 dinosaurs 会 extinct?",
     "恐龙为什么会 extinct 呢?",
     "Why do 熊猫 eat bamboo all day?",
@@ -77,11 +77,11 @@ def main():
                 if got != expected:
                     fails.append((q, expected, got, answer))
         print(
-            f"\n[{mode}] 语言正确 {ok}/{total} ({ok / total:.0%}),含 emoji {emoji}/{total},"
-            f"带喵 {meow}/{total},一次回答超过一个喵 {too_many_meow}/{total}"
+            f"\n[{mode}] correct language {ok}/{total} ({ok / total:.0%}), with emoji {emoji}/{total},"
+            f"with meow {meow}/{total}, more than one meow in one answer {too_many_meow}/{total}"
         )
         for q, exp, got, ans in fails:
-            print(f"  x {q}  期望 {exp} 实际 {got}: {ans[:60]}")
+            print(f"  x {q}  expected {exp} got {got}: {ans[:60]}")
 
 
 if __name__ == "__main__":

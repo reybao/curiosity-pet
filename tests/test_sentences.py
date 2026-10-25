@@ -1,4 +1,4 @@
-"""流式断句:模型逐块吐字,每凑够一句就送 TTS;过短的第一句与第二句合并。"""
+"""Streaming sentence splitting: the model emits text in chunks, each complete sentence goes to TTS; a too-short first sentence is merged with the second."""
 
 from curiosity_pet.sentences import SentenceSplitter
 
@@ -39,7 +39,7 @@ def test_decimal_point_is_not_sentence_end():
 
 
 def test_short_first_sentence_is_merged_with_second():
-    # "嗯!" 太短,Kokoro 念短句效果差,与下一句合并
+    # "嗯!" is too short, Kokoro reads short sentences poorly, so merge with the next one
     pieces = ["嗯!", "月亮不会自己发光。", "它反射太阳光。"]
     assert feed_all(pieces) == ["嗯!月亮不会自己发光。", "它反射太阳光。"]
 
@@ -54,7 +54,7 @@ def test_flush_returns_unfinished_tail():
 
 
 def test_first_chunk_may_cut_at_comma_when_long_enough():
-    # 合成和生成抢 GPU,第一块越短越早开口;只对第一块生效,后面仍按句号断
+    # Synthesis and generation compete for the GPU, so the shorter the first chunk the earlier it speaks; only applies to the first chunk, later ones still split on sentence-ending punctuation
     pieces = ["月亮自己不会发光,", "它是反射太阳的光,", "所以白天也能看到。", "你看,", "到了吗?"]
     assert feed_all(pieces) == [
         "月亮自己不会发光,",
@@ -74,7 +74,7 @@ def test_english_first_chunk_cuts_at_comma():
 
 
 def test_full_width_punctuation_from_model():
-    # 模型实际输出全角标点;源码里用转义写,防止被编辑器换成半角
+    # The model actually emits full-width punctuation; written with escapes in the source so editors do not turn it into half-width
     pieces = ["月亮自己不会发光，", "它反射太阳的光！", "你看到了吗？"]
     assert feed_all(pieces) == [
         "月亮自己不会发光，",
@@ -93,7 +93,7 @@ def test_english_first_chunk_cuts_before_conjunction():
 
 
 def test_conjunction_cut_needs_enough_words():
-    # 连词前只有 2 个词,不在 "when" 前断
+    # Only 2 words before the conjunction, so do not split before "when"
     pieces = ["Cats purr when happy. ", "Cute."]
     assert feed_all(pieces) == ["Cats purr when happy.", "Cute."]
 

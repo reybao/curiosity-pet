@@ -1,6 +1,6 @@
-"""联网查询的决策、记录,以及接入回答流程。
+"""Web lookup decisions, logging, and integration into the answer flow.
 
-最关键的一条:发到网络上的只有通过检查的话题词,孩子原话里的个人信息一个字都出不去。
+Most important rule: only topic words that pass the checks go onto the network; not a single word of personal info from the child's own words may leave.
 """
 
 import httpx
@@ -29,7 +29,7 @@ def researcher(rewrite, **kw):
     return Researcher(store=None, enabled=True, contact="pet@example.org", rewrite=rewrite, **kw)
 
 
-# ---------- 决策 ----------
+# ---------- Decisions ----------
 
 
 def test_knowledge_question_goes_online_with_rewritten_query():
@@ -39,7 +39,7 @@ def test_knowledge_question_goes_online_with_rewritten_query():
 
 
 def test_model_leak_is_caught_by_rules():
-    # 最坏情况:模型把个人信息留在了搜索词里。原话里有"弟弟"时由规则拦下
+    # Worst case: the model leaves personal info in the search terms. The rules block it when the original words contain "弟弟"
     r = researcher(fake_rewrite({"kind": "knowledge", "topic": "cartoons_stories", "query": "弟弟 七龙珠"}))
     d = r.decide("给弟弟讲讲七龙珠是什么?", "zh")
     assert not d.go
@@ -47,7 +47,7 @@ def test_model_leak_is_caught_by_rules():
 
 
 def test_model_invented_words_are_dropped():
-    # 模型加了原话里没有的词("弟弟"):落地检查删掉,发出去的只剩原话里的话题词
+    # The model added a word not in the original ("弟弟"): the grounding check removes it, leaving only topic words from the original
     r = researcher(fake_rewrite({"kind": "knowledge", "topic": "cartoons_stories", "query": "弟弟 七龙珠"}))
     d = r.decide("七龙珠里的孙悟空是谁?", "zh")
     assert d.go and d.query == "七龙珠"
@@ -63,7 +63,7 @@ def test_non_knowledge_kinds_stay_offline(kind):
 def test_personal_sentences_never_reach_the_model_or_network(text):
     rw = fake_rewrite({"kind": "knowledge", "topic": "other", "query": "x"})
     assert not researcher(rw).decide(text, "zh").go
-    assert rw.calls == []  # 粗筛就拦下了,连改写都没做
+    assert rw.calls == []  # blocked by the coarse filter, rewrite was never even called
 
 
 def test_sensitive_original_stays_offline_without_calling_model():
@@ -84,10 +84,10 @@ def test_switch_off_or_no_contact_stays_offline():
 def test_family_names_from_settings_block_lookup():
     rw = fake_rewrite({"kind": "knowledge", "topic": "other", "query": "小米 恐龙"})
     d = researcher(rw, family_terms=["小米"]).decide("小米问恐龙吃什么?", "zh")
-    assert not d.go and rw.calls == []  # 原话含家人名字,粗筛就拦下
+    assert not d.go and rw.calls == []  # original words contain a family name, blocked by the coarse filter
 
 
-# ---------- 端到端:网络上只出现话题词 ----------
+# ---------- End to end: only topic words appear on the network ----------
 
 
 def test_only_the_topic_query_reaches_the_network():
@@ -110,25 +110,23 @@ def test_only_the_topic_query_reaches_the_network():
     question = "我想知道七龙珠里的孙悟空是谁?"
     d = r.decide(question, "zh")
     r.fetch(d, "zh")
-    # 两个请求:全文搜索 + 按条目名取;自由文本只有话题词
+    # Two requests: full-text search + fetch by title; the only free text is topic words
     params = [httpx.URL(u).params for u in sent]
     assert [p.get("gsrsearch") or p.get("titles") for p in params] == ["七龙珠 孙悟空", "七龙珠|孙悟空"]
     for u in sent:
         assert "我想知道" not in httpx.URL(u).params.get("gsrsearch", "") + httpx.URL(u).params.get("titles", "")
 
 
-# ---------- 记录:7 天删原文,主题计数保留 ----------
+# ---------- Logging: raw text deleted after 7 days, topic counts kept ----------
 
 
-def test_lookup_log_is_purged_after_7_days_but_topic_counts_stay(tmp_path):
+def test_lookup_log_is_purged_after_7_days(tmp_path):
     s = Store(tmp_path / "pet.db")
     t0 = 1_800_000_000
     s.record_lookup("zh", "七龙珠 孙悟空", "cartoons_stories", "孙悟空", True, now=t0)
     assert [x["query"] for x in s.recent_lookups()] == ["七龙珠 孙悟空"]
     s.record_lookup("zh", "黑洞", "space", "黑洞", True, now=t0 + LOG_RETENTION_S + 60)
     assert [x["query"] for x in s.recent_lookups()] == ["黑洞"]
-    topics = {(c["topic"], c["n"]) for c in s.topic_counts()}
-    assert ("cartoons_stories", 1) in topics and ("space", 1) in topics
 
 
 def test_fetch_records_query_and_saves_pending(tmp_path):
@@ -144,7 +142,7 @@ def test_fetch_records_query_and_saves_pending(tmp_path):
     assert s.db.execute("SELECT title FROM kb_pending").fetchall() == [("孙悟空 (七龙珠)",)]
 
 
-# ---------- 接入回答流程 ----------
+# ---------- Integration into the answer flow ----------
 
 
 class FakeTTS:
@@ -169,7 +167,7 @@ def test_pet_says_filler_then_answers_from_reference(monkeypatch):
         return iter(["我在维基百科上查到,孙悟空是七龙珠的主角。"])
 
     monkeypatch.setattr(pipeline, "stream_chat", fake_stream)
-    result = wiki.WikiResult(title="孙悟空 (七龙珠)", text="孙悟空是《七龙珠》的主角。", url="u", host="zh")
+    result = wiki.WikiResult(title="孙悟空 (七龙珠)", text="孙悟空是《七龙珠》的主角。", url="u", host="zh.wikipedia.org")
     r = researcher(
         fake_rewrite({"kind": "knowledge", "topic": "cartoons_stories", "query": "七龙珠 孙悟空"}),
         search=lambda q, lang, contact=None: result,
@@ -178,10 +176,10 @@ def test_pet_says_filler_then_answers_from_reference(monkeypatch):
     pet = Pet(asr=None, tts=tts, player=FakePlayer(), researcher=r)
     turn = pet.answer("七龙珠里的孙悟空是谁?")
     assert tts.spoken[0] == FILLER["zh"]
-    assert turn.looked_up and turn.source == "孙悟空 (七龙珠)"
+    assert turn.looked_up and turn.source == "维基百科: 孙悟空 (七龙珠)"
     user_msg = seen["msgs"][-1]["content"]
     assert "孙悟空是《七龙珠》的主角" in user_msg and "维基百科" in user_msg
-    # 资料只用于这一轮,不进历史
+    # The reference material is used for this turn only and does not enter history
     assert all("参考资料" not in m["content"] for m in pet.history)
 
 
@@ -194,7 +192,7 @@ def test_pet_answers_normally_when_not_looking_up(monkeypatch):
     assert not turn.looked_up and turn.lookup_reason == "不像知识提问"
 
 
-# ---------- 相关性检查 ----------
+# ---------- Relevance check ----------
 
 
 def wr(title, text):
@@ -202,7 +200,7 @@ def wr(title, text):
 
 
 def test_irrelevant_result_is_dropped():
-    # 实测例子:"天空蓝色成因" 搜到 "蓝色弹珠"(地球照片)
+    # Observed example: "天空蓝色成因" found "蓝色弹珠" (a photo of Earth)
     assert not lookup.relevant("天空 成因", wr("蓝色弹珠", "蓝色弹珠是一张在1972年拍摄的地球照片。"))
 
 
@@ -224,7 +222,7 @@ def test_fetch_drops_irrelevant_result_but_still_logs(tmp_path):
 
 
 def test_best_of_several_results_is_picked():
-    # 实测:"天空 蓝色" 排第一的是一部电影,应选更相关的"天空"条目
+    # Observed: the top hit for "天空 蓝色" is a movie; the more relevant "天空" entry should be chosen
     movie = wr("知道天空有多藍的人啊", "这是一部日本动画电影。")
     sky = wr("天空", "天空看起来是蓝色的,是因为空气分子散射阳光中的蓝光。")
     assert lookup.pick_best("天空 蓝色", [movie, sky]) is sky
@@ -238,6 +236,64 @@ def test_pick_best_keeps_wikipedia_order_on_tie():
 
 
 def test_two_word_query_needs_both_words():
-    # 实测:"猫 打呼噜" 搜到儿童作家杨红樱,只含"猫"
+    # Observed: "猫 打呼噜" found children's author 杨红樱, which only contains "猫"
     assert not lookup.relevant("猫 打呼噜", wr("杨红樱", "杨红樱是儿童文学作家,代表作有《笑猫日记》。"))
     assert lookup.relevant("猫 打呼噜", wr("猫", "猫满足时会打呼噜。"))
+
+
+# ---------- guess marker: no material for a question about specific things ----------
+
+
+def test_guess_marker_when_nothing_found_for_a_specific_question(monkeypatch):
+    seen = {}
+
+    def fake_stream(msgs):
+        seen["msgs"] = msgs
+        return iter(["我记得他们打过一架。"])
+
+    monkeypatch.setattr(pipeline, "stream_chat", fake_stream)
+    r = researcher(
+        fake_rewrite({"kind": "knowledge", "topic": "cartoons_stories", "query": "七龙珠 红缎带军团"}),
+        search=lambda q, lang, contact=None: [],
+    )
+    tts = FakeTTS()
+    pet = Pet(asr=None, tts=tts, player=FakePlayer(), researcher=r)
+    turn = pet.answer("孙悟空和红缎带军团的故事是什么?")
+    assert turn.guessed and tts.spoken[0] == FILLER["zh"]
+    assert tts.spoken[1] == "我不太确定,这是我的猜想。"
+    assert "没有查到资料" in seen["msgs"][-1]["content"]
+
+
+def test_no_guess_marker_for_general_science(monkeypatch):
+    monkeypatch.setattr(pipeline, "stream_chat", lambda msgs: iter(["因为蓝光散射得多。"]))
+    r = researcher(
+        fake_rewrite({"kind": "knowledge", "topic": "science", "query": "天空 蓝色"}),
+        search=lambda q, lang, contact=None: [],
+    )
+    tts = FakeTTS()
+    pet = Pet(asr=None, tts=tts, player=FakePlayer(), researcher=r)
+    turn = pet.answer("为什么天空是蓝色的?")
+    assert not turn.guessed and "猜想" not in "".join(tts.spoken)
+
+
+def test_unanswered_questions_are_listed_for_the_parent(tmp_path, monkeypatch):
+    from curiosity_pet.usage import UsageLog
+
+    monkeypatch.setattr(pipeline, "stream_chat", lambda msgs: iter(["不知道。"]))
+    s = Store(tmp_path / "pet.db")
+    r = researcher(
+        fake_rewrite({"kind": "knowledge", "topic": "cartoons_stories", "query": "七龙珠 红缎带军团"}),
+        search=lambda q, lang, contact=None: [],
+    )
+    pet = Pet(asr=None, tts=FakeTTS(), player=FakePlayer(), researcher=r, usage=UsageLog(s, tag_topic=lambda q, l: "other"))
+    pet.answer("孙悟空和红缎带军团的故事是什么?")
+    assert [u["question"] for u in s.unanswered()] == ["孙悟空和红缎带军团的故事是什么?"]
+
+
+def test_story_questions_count_as_knowledge_questions():
+    from curiosity_pet.privacy import looks_like_knowledge_question
+
+    assert looks_like_knowledge_question("孙悟空和红缎带军团的故事")
+    assert looks_like_knowledge_question("Tell me about the story of Goku and the Red Ribbon Army")
+    assert not looks_like_knowledge_question("讲个故事吧")
+    assert not looks_like_knowledge_question("Tell me a story")

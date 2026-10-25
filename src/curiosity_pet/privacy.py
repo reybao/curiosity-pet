@@ -1,22 +1,25 @@
-"""隐私关卡:决定一句话能不能联网,以及发出去的搜索词是否干净。
+"""Privacy gate: decides whether a sentence may go online, and whether the outgoing search term is clean.
 
-三道关,全部在本机:
-1. 粗筛(looks_like_knowledge_question):只有像一般知识提问的句子才考虑联网;
-   带"我/我家"、家人、情绪的句子直接不联网,也不调用模型,省下延迟。
-2. 模型改写(lookup.py):本地模型把问题改写成中性话题词。
-3. 规则检查(check_query):改写结果里只要出现个人、家庭、学校、地址、数字串、情绪、秘密、
-   敏感话题、联系方式,就不发。宁可少查,不可泄漏。
-另外,原话涉及敏感话题(original_is_sensitive)时整句不联网,交给固定回应(阶段 5)。
+Three gates, all local:
+1. Rough screen (looks_like_knowledge_question): only sentences that look like general knowledge questions are considered for web access;
+   sentences with "I/my family", family members, or emotions never go online and do not call the model, saving latency.
+2. Model rewrite (lookup.py): the local model rewrites the question into neutral topic terms.
+3. Rule check (check_query): if the rewritten result contains anything personal, family, school, address, digit string, emotion, secret,
+   sensitive topic, or contact info, it is not sent. Better to look up less than to leak.
+Also, when the original words touch a sensitive topic (original_is_sensitive), the whole sentence stays offline and a fixed response is used (stage 5).
 """
 
 import re
 
-# 想知道/想问 之类的开头不算"关于自己"
+# Openings like "I want to know" / "I want to ask" do not count as "about oneself"
 ASK_PREFIX = re.compile(
-    r"^\s*(我想知道|我想问(一下|问)?|我想了解|我很好奇|请问|你知道|"
-    r"i want to know|i wonder|i'm wondering|can you tell me|do you know)[,，:：\s]*",
+    r"^\s*(?:嗯|呃|那|那么|哎|好|但是|所以)?[,，\s]*(?:我想知道|我想问(?:一下|问)?(?:你)?|我问你|我想了解|我很好奇|请问|你知道不知道|你知不知道|你知道|"
+    r"你可以告诉我|你能告诉我|你可以给我说一说|你给我说说|给我说说|告诉我|你说说|说说|"
+    r"i want to know|i wonder|i'm wondering|can you tell me|could you tell me|tell me about|tell me|do you know)[,，:：\s“\"]*",
     re.IGNORECASE,
 )
+# A question about the pet itself ("你的名字是什么?", "你的数学水平怎么样?") is answered from its card, not looked up
+ABOUT_PET = re.compile(r"你的|你是|你叫|你会|你能|你喜欢|你有没有|\byour\b|\bare you\b|\bcan you\b", re.IGNORECASE)
 
 FIRST_PERSON_ZH = re.compile(r"[我咱俺]")
 FIRST_PERSON_EN = re.compile(r"\b(i|i'm|me|my|mine|myself|we|us|our|ours)\b", re.IGNORECASE)
@@ -49,10 +52,27 @@ SENSITIVE = re.compile(
     r"earthquake|tsunami|disaster|kidnap|sex|naked|drugs?|abuse|bully|bullied)\b",
     re.I,
 )
-QUESTION_ZH = re.compile(r"什么|为什么|为啥|怎么|怎样|谁|哪|多少|几|吗|呢|是不是|有没有|[?？]")
-QUESTION_EN = re.compile(r"^\s*(what|why|how|who|where|when|which|is|are|do|does|did|can|could)\b|\?\s*$", re.I)
+# "X的故事" (the story of X) is a question about X; a bare "讲个故事" (tell me a story) is a request, not a question
+QUESTION_ZH = re.compile(r"什么|为什么|为啥|怎么|怎样|谁|哪|多少|几|吗|呢|是不是|有没有|的故事|故事里|后来|结局|发生|介绍一下|讲讲|说说|[?？]")
+QUESTION_EN = re.compile(
+    r"^\s*(what|why|how|who|where|when|which|is|are|do|does|did|can|could|tell me about)\b|"
+    r"\b(story of|story about|in the story|happen|happened)\b|\?\s*$",
+    re.I,
+)
+# Questions about specific people, works or events: a wrong answer here is a hallucination, so when no
+# material backs the answer the pet says it is guessing
+SPECIFIC = re.compile(
+    r"《|》|故事|后来|结局|发生|是谁|谁是|哪一年|第几|\b(story|happened|who is|who was|which year|episode|chapter|character)\b|[A-Z][a-z]+\s+[A-Z][a-z]+",
+)
 
-# 关于提问者处境的时间、地点词:不算个人身份,但也不需要发出去,发之前删掉
+
+def about_specific_things(text: str) -> bool:
+    body = text.strip()
+    # Capitalized words other than the first word of an English sentence are names
+    names = re.findall(r"(?<!^)(?<![.!?]\s)\b[A-Z][a-z]+\b", body)
+    return bool(SPECIFIC.search(body) or names)
+
+# Time and place words about the asker's situation: not personal identity, but no need to send them, so delete before sending
 CONTEXT_WORD = re.compile(
     r"^(昨天|今天|明天|前天|刚才|刚刚|上周|这周|下周|周末|早上|晚上|公园|楼下|附近|路上|外面|超市|商场|医院|"
     r"动物园|博物馆|操场|yesterday|today|tomorrow|tonight|weekend|park|nearby|downstairs|outside|zoo|museum)$",
@@ -76,9 +96,14 @@ def _first_person(text: str) -> bool:
 
 
 def looks_like_knowledge_question(text: str, family_terms=()) -> bool:
-    """粗筛:像一般知识提问,且不涉及自己、家人、情绪、秘密。"""
-    body = ASK_PREFIX.sub("", text)
-    if not body.strip():
+    """Rough screen: looks like a general knowledge question and does not involve oneself, family, emotions, or secrets."""
+    body = text
+    for _ in range(3):  # "我问你:'你知道贝吉塔吗?'" has two lead-ins
+        stripped = ASK_PREFIX.sub("", body)
+        if stripped == body:
+            break
+        body = stripped
+    if not body.strip() or ABOUT_PET.search(body):
         return False
     if _first_person(body) or _family(body, family_terms) or EMOTION.search(body) or SECRET.search(body):
         return False
@@ -90,24 +115,44 @@ def original_is_sensitive(text: str) -> bool:
 
 
 def _grounded(token: str, original: str) -> bool:
-    """搜索词里的词必须来自原话,防止模型自己加内容(实测会把示例里的"七龙珠"加进来)。"""
+    """Words in the search term must come from the original, preventing the model from adding content (measured: it added "七龙珠" from the example)."""
     low = original.lower()
     if re.search(r"[\u4e00-\u9fff]", token):
-        # 中文词的每个字都要在原话里;原话中英混说时允许模型把英文词译成中文
+        # Every character of a Chinese word must be in the original; when the original mixes Chinese and English the model may translate English words into Chinese
         return all(ch in original for ch in token) or bool(re.search(r"[A-Za-z]{3,}", original))
-    # 英文词按前 3 个字母宽松匹配(make/making、fly/flying)
+    # English words match loosely on the first 3 letters (make/making, fly/flying)
     words = re.findall(r"[a-z]+", low)
     return any(w.startswith(token.lower()[:3]) for w in words) or token.lower() in low
 
 
+CONTEXT_INNER = re.compile(
+    r"昨天|今天|明天|前天|刚才|刚刚|上周|这周|下周|周末|早上|晚上|公园|楼下|附近|路上|外面|超市|商场|医院|动物园|博物馆|操场"
+)
+
+# Question words and particles carry no topic; a rewriter sometimes leaves them in ("火山 为什么 会 喷发")
+QUERY_STOPWORD = re.compile(
+    r"^(为什么|为啥|什么|怎么|怎样|如何|是谁|谁|哪|哪里|哪个|几|多少|会|能|是|的|了|吗|呢|里的|里|"
+    r"why|what|how|who|whom|which|where|when|is|are|was|were|do|does|did|can|could|the|a|an|of|in)$",
+    re.IGNORECASE,
+)
+
+
 def ground_and_scrub(query: str, original: str) -> str:
-    """只删词、不加词:去掉原话里没有的词,再去掉时间地点之类的处境词。"""
-    kept = [t for t in query.split() if _grounded(t, original) and not CONTEXT_WORD.match(t)]
+    """Only delete words, never add: drop words not in the original, situational words such as time and place,
+    and bare question words."""
+    kept = []
+    for t in query.split():
+        if not _grounded(t, original) or QUERY_STOPWORD.match(t):
+            continue
+        # Context words can also hide inside a joined Chinese token ("公园蘑菇"): cut them out
+        t = CONTEXT_INNER.sub("", t)
+        if t and not CONTEXT_WORD.match(t) and not QUERY_STOPWORD.match(t):
+            kept.append(t)
     return " ".join(kept)
 
 
 def check_query(query: str, family_terms=(), blacklist=()) -> tuple[bool, str]:
-    """检查改写后要发出的搜索词。返回(能否发出, 原因)。"""
+    """Check the rewritten search term about to be sent. Returns (can send, reason)."""
     q = query.strip()
     if not q:
         return False, "空"
@@ -122,10 +167,23 @@ def check_query(query: str, family_terms=(), blacklist=()) -> tuple[bool, str]:
         (bool(SECRET.search(q)), "秘密"),
         (bool(SENSITIVE.search(q)), "敏感话题"),
         (any(b and b.lower() in q.lower() for b in blacklist), "家长黑名单"),
-        (len(re.findall(r"[一-鿿]", q)) > MAX_QUERY_CJK, "太长"),
+        (len(re.findall(r"[\u4e00-\u9fff]", q)) > MAX_QUERY_CJK, "太长"),
         (len(re.findall(r"[A-Za-z]+", q)) > MAX_QUERY_WORDS, "太长"),
     ]
     for hit, reason in checks:
         if hit:
             return False, reason
     return True, ""
+
+
+# The child is sharing something upsetting (not asking about a topic): used for the gentle response path
+DISTRESS = re.compile(
+    r"(我|俺|咱).{0,12}(难过|伤心|害怕|被欺负|欺负我|讨厌我|不喜欢我|孤独|寂寞|生气|委屈|想哭|哭了|不开心|不高兴|担心|紧张)|"
+    r"\b(i|i'm|im|i am)\b.{0,20}\b(sad|scared|afraid|bullied|lonely|upset|angry|mad|worried|nervous|crying|unhappy)\b|"
+    r"\b(nobody|no one) (likes|plays with) me\b|\bthey (hate|bully|laugh at) me\b",
+    re.IGNORECASE,
+)
+
+
+def expresses_distress(text: str) -> bool:
+    return bool(DISTRESS.search(text))

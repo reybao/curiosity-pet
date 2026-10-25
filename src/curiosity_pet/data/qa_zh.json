@@ -1,0 +1,6902 @@
+[
+ {
+  "id": "zh-qa-001",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么天空是蓝色的?",
+  "alt": [
+   "天为什么是蓝的?",
+   "天空怎么是蓝色的呀?",
+   "为什么天是蓝色?"
+  ],
+  "a": "阳光看起来是白的，其实里面藏着各种颜色。阳光碰到空气时，蓝光最容易被弹来弹去，散满整个天空，所以天看起来是蓝的。",
+  "check": "Rayleigh scattering: air scatters short (blue) wavelengths much more than long ones."
+ },
+ {
+  "id": "zh-qa-002",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么晚霞是红色的?",
+  "alt": [
+   "太阳下山时天为什么变红?",
+   "为什么傍晚天空是橙色的?",
+   "晚霞怎么是红的?"
+  ],
+  "a": "傍晚太阳很低，阳光要穿过很厚很厚的空气才能到我们眼前。一路上蓝光被弹走了，剩下红光和橙光，天空就变得红彤彤的。",
+  "check": "At low sun angles light crosses more air; blue is scattered out, leaving red and orange."
+ },
+ {
+  "id": "zh-qa-003",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "彩虹是怎么来的?",
+  "alt": [
+   "为什么会有彩虹?",
+   "下雨后为什么有彩虹?",
+   "彩虹是什么?"
+  ],
+  "a": "雨后空中还飘着很多小水滴。阳光照进水滴，被分成红橙黄绿蓝紫好多颜色，就成了彩虹。背对太阳、前面有雨滴时最容易看到。",
+  "check": "Raindrops refract and disperse sunlight; rainbows appear opposite the sun."
+ },
+ {
+  "id": "zh-qa-004",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "彩虹为什么是弯的?",
+  "alt": [
+   "彩虹怎么是弯弯的?",
+   "为什么彩虹像个拱桥?",
+   "彩虹为什么不是直的?"
+  ],
+  "a": "彩虹其实是一个圆圈！因为地面挡住了下面一半，我们通常只能看到上面的弧形。从飞机上往下看，有时能看到完整的圆形彩虹。",
+  "check": "A rainbow is a circle centered opposite the sun; the ground usually hides the lower part."
+ },
+ {
+  "id": "zh-qa-005",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么有时候会有两道彩虹?",
+  "alt": [
+   "双彩虹是怎么回事?",
+   "为什么天上有两个彩虹?",
+   "两道彩虹是怎么来的?"
+  ],
+  "a": "有时阳光在水滴里反射两次，就会在第一道彩虹外面再出现一道更淡的彩虹。第二道彩虹的颜色顺序正好是反过来的。",
+  "check": "Secondary rainbow comes from two internal reflections; it is fainter, outside, with reversed colors."
+ },
+ {
+  "id": "zh-qa-006",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么会有影子?",
+  "alt": [
+   "影子是怎么来的?",
+   "我为什么有影子?",
+   "影子是什么?"
+  ],
+  "a": "光是沿着直线走的。你的身体挡住了光，光照不到你身后的地面，那里就暗下来，形成一个和你形状一样的影子。",
+  "check": "Light travels in straight lines; an opaque object blocks it, creating a shadow."
+ },
+ {
+  "id": "zh-qa-007",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么早上和傍晚影子特别长?",
+  "alt": [
+   "影子为什么一会长一会短?",
+   "为什么中午影子短?",
+   "为什么下午影子变长了?"
+  ],
+  "a": "早上和傍晚太阳低低的，光从侧面斜着照过来，把影子拉得长长的。中午太阳高高在头顶，影子就变得短短的。",
+  "check": "Shadow length depends on sun height: low sun gives long shadows, high sun short ones."
+ },
+ {
+  "id": "zh-qa-008",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "镜子为什么能照出我?",
+  "alt": [
+   "为什么镜子里有我?",
+   "镜子是怎么照人的?",
+   "为什么能在镜子里看到自己?"
+  ],
+  "a": "镜子表面又平又亮，光照上去会整整齐齐地弹回来。你脸上的光碰到镜子，再弹回到你的眼睛里，你就看到自己啦。",
+  "check": "A smooth shiny surface gives regular (specular) reflection, forming an image."
+ },
+ {
+  "id": "zh-qa-009",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么镜子里的字是反的?",
+  "alt": [
+   "镜子里的字怎么反过来了?",
+   "为什么在镜子里字看不懂?",
+   "镜子为什么把字反过来?"
+  ],
+  "a": "镜子会把前后颠倒过来，镜子里的你是面对着你的。所以把字放在镜子前面，它看起来就左右反过来了。",
+  "check": "A plane mirror reverses front-to-back, which makes text appear left-right reversed."
+ },
+ {
+  "id": "zh-qa-010",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么勺子里的我是倒着的?",
+  "alt": [
+   "勺子里的人为什么倒过来?",
+   "为什么在勺子里我头朝下?",
+   "勺子照人怎么是反的?"
+  ],
+  "a": "勺子里面往里凹，像个小山洞。光碰到它弹回来时会交叉，所以你看起来倒过来了。翻过来看勺子背面，你又是正着的啦。",
+  "check": "A concave mirror forms an inverted image of distant objects; a convex one forms an upright image."
+ },
+ {
+  "id": "zh-qa-011",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么筷子放进水里看起来像折断了?",
+  "alt": [
+   "筷子在水里为什么变弯了?",
+   "吸管放水里怎么断了?",
+   "为什么东西在水里看起来歪了?"
+  ],
+  "a": "光从水里跑到空气里时，会稍微拐个弯。这样水下那段筷子看起来位置变了，好像折断了一样，其实筷子好好的。",
+  "check": "Refraction: light bends when passing between water and air."
+ },
+ {
+  "id": "zh-qa-012",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么东西有不同的颜色?",
+  "alt": [
+   "苹果为什么是红色的?",
+   "颜色是怎么来的?",
+   "为什么东西有颜色?"
+  ],
+  "a": "阳光里有各种颜色。红苹果把别的颜色吸走，只把红光弹回我们眼睛里，所以看起来是红的。白色的东西把所有颜色都弹回来。",
+  "check": "Objects absorb some wavelengths and reflect others; the reflected light is the color we see."
+ },
+ {
+  "id": "zh-qa-013",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么黑衣服在太阳下更热?",
+  "alt": [
+   "穿黑衣服为什么热?",
+   "为什么夏天穿白衣服凉快?",
+   "黑色为什么吸热?"
+  ],
+  "a": "黑色几乎把照到的光全吸进去，光变成了热，所以穿着热乎乎的。白色会把大部分光弹走，所以夏天穿浅色衣服更凉快。",
+  "check": "Dark surfaces absorb more light and convert it to heat; light surfaces reflect more."
+ },
+ {
+  "id": "zh-qa-014",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "为什么玻璃能看透?",
+  "alt": [
+   "玻璃为什么是透明的?",
+   "为什么隔着玻璃能看到外面?",
+   "为什么墙看不透?"
+  ],
+  "a": "玻璃能让光直接穿过去，不怎么挡住它。光能穿过的东西叫透明的。木头和墙会挡住光，所以看不透。",
+  "check": "Transparent materials transmit visible light; opaque materials block it."
+ },
+ {
+  "id": "zh-qa-015",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "云为什么是白色的?",
+  "alt": [
+   "云怎么是白的?",
+   "为什么白云是白色?",
+   "云为什么白白的?"
+  ],
+  "a": "云是由很多很多小水滴组成的。小水滴把阳光里的各种颜色差不多一样地弹出来，所有颜色混在一起，看起来就是白色。",
+  "check": "Cloud droplets scatter all visible wavelengths about equally, so clouds look white."
+ },
+ {
+  "id": "zh-qa-016",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "乌云为什么是黑的?",
+  "alt": [
+   "下雨前云为什么变黑?",
+   "为什么有的云是灰色的?",
+   "乌云怎么那么黑?"
+  ],
+  "a": "要下雨的云又厚又装满了水滴，阳光很难穿过去。从下面往上看，云底就显得灰灰暗暗的，像黑色一样。",
+  "check": "Thick, dense clouds let little sunlight through, so their bases look dark gray."
+ },
+ {
+  "id": "zh-qa-017",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "大海为什么是蓝色的?",
+  "alt": [
+   "海水为什么是蓝的?",
+   "海怎么是蓝色的?",
+   "为什么大海蓝蓝的?"
+  ],
+  "a": "海水会吸走阳光里的一点点红光，水越深越明显，剩下的蓝色就更多。海面还会像镜子一样映出蓝天。",
+  "check": "Water absorbs red light slightly more than blue; the sea surface also reflects the sky."
+ },
+ {
+  "id": "zh-qa-018",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "雪为什么是白色的?",
+  "alt": [
+   "雪怎么是白的?",
+   "为什么雪白白的?",
+   "雪是冰做的为什么是白色?"
+  ],
+  "a": "雪是由数不清的小冰晶组成的。光照在它们许多小小的面上，往四面八方弹开，所有颜色一起弹回来，看起来就是白白的。",
+  "check": "Many ice crystal surfaces scatter all wavelengths, so snow appears white."
+ },
+ {
+  "id": "zh-qa-019",
+  "kind": "qa",
+  "topic": "light",
+  "ref": "",
+  "q": "泡泡为什么有彩色?",
+  "alt": [
+   "肥皂泡为什么五颜六色?",
+   "泡泡上为什么有彩虹?",
+   "泡泡怎么会变颜色?"
+  ],
+  "a": "泡泡的皮非常非常薄。光从泡泡皮的外面和里面各弹回来一次，两束光混在一起，就变出了彩色花纹。皮越来越薄，颜色还会变。",
+  "check": "Thin-film interference between reflections from the two surfaces of the soap film."
+ },
+ {
+  "id": "zh-qa-020",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "声音是怎么来的?",
+  "alt": [
+   "声音是什么?",
+   "为什么会有声音?",
+   "东西为什么会响?"
+  ],
+  "a": "东西飞快地来回抖动，就会发出声音，这叫振动。振动推着空气一起抖，一直传到你的耳朵里，你就听到了。",
+  "check": "Sound is produced by vibration and travels as vibrations through air."
+ },
+ {
+  "id": "zh-qa-021",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "为什么会有回声?",
+  "alt": [
+   "回声是怎么来的?",
+   "为什么在山里喊话会有回音?",
+   "回音是什么?"
+  ],
+  "a": "回声就是声音弹回来了。你对着大山或很高的墙大喊，声音碰到它们又弹回来，过一小会儿你就又听到自己的声音。",
+  "check": "An echo is sound reflected from a large hard surface."
+ },
+ {
+  "id": "zh-qa-022",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么会打雷?",
+  "alt": [
+   "打雷是怎么回事?",
+   "雷声是怎么来的?",
+   "为什么打雷?"
+  ],
+  "a": "闪电特别特别热，一下子把周围的空气加热，空气猛地向四周撑开，就发出「轰隆」一声巨响，这就是雷声。",
+  "check": "Thunder is caused by rapid heating and expansion of air along a lightning channel."
+ },
+ {
+  "id": "zh-qa-023",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么先看到闪电，后听到雷声?",
+  "alt": [
+   "闪电和打雷为什么不一起来?",
+   "为什么闪电比雷快?",
+   "为什么先闪后响?"
+  ],
+  "a": "闪电和雷声其实是同时发生的。但是光跑得比声音快得多，闪光一下就到了，声音要慢一些才能传到你耳朵里。",
+  "check": "Light travels far faster than sound in air."
+ },
+ {
+  "id": "zh-qa-024",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "雷声为什么轰隆隆响那么久?",
+  "alt": [
+   "打雷为什么响好长时间?",
+   "雷声为什么是一串的?",
+   "为什么雷声会轰隆隆?"
+  ],
+  "a": "闪电很长很长，近处发出的声音先到，远处的后到。声音还会在云和山之间弹来弹去，就变成长长的轰隆声。",
+  "check": "Sound from different parts of a long lightning channel arrives at different times and echoes."
+ },
+ {
+  "id": "zh-qa-025",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "为什么贝壳里能听到海浪声?",
+  "alt": [
+   "贝壳里真的有大海吗?",
+   "把贝壳放耳边为什么呼呼响?",
+   "海螺里为什么有声音?"
+  ],
+  "a": "其实那不是大海的声音！贝壳收集了你周围轻轻的声音，它弯弯的内部让一些声音变响，听起来呼呼的，就像海浪一样。",
+  "check": "The shell's cavity resonates and amplifies ambient noise; it is not the sea."
+ },
+ {
+  "id": "zh-qa-026",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "为什么大鼓的声音很低沉?",
+  "alt": [
+   "大鼓为什么咚咚响?",
+   "为什么小鼓声音高?",
+   "大鼓小鼓声音为什么不一样?"
+  ],
+  "a": "大鼓的鼓面大，振动得比较慢，慢的振动发出低低的「咚咚」声。小鼓振动得快，声音就又高又脆。",
+  "check": "Larger drumheads vibrate at lower frequencies, producing lower pitch."
+ },
+ {
+  "id": "zh-qa-027",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "纸杯电话为什么能听到声音?",
+  "alt": [
+   "线连的纸杯怎么能打电话?",
+   "纸杯传话是怎么回事?",
+   "为什么拉直的线能传声音?"
+  ],
+  "a": "对着一个纸杯说话，杯底就跟着振动。拉紧的线把振动传到另一个纸杯，那个杯子也振动起来，朋友就听到啦。线松了就不灵了。",
+  "check": "Vibrations travel along a taut string from one cup to the other."
+ },
+ {
+  "id": "zh-qa-028",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "为什么在卫生间唱歌声音特别响?",
+  "alt": [
+   "为什么在浴室说话有回音?",
+   "卫生间里唱歌为什么好听?",
+   "为什么洗澡时唱歌声音大?"
+  ],
+  "a": "卫生间的墙又硬又光滑，比如瓷砖。声音在墙上来回弹，没有被吸走，所以听起来又响又饱满。",
+  "check": "Hard smooth surfaces reflect sound instead of absorbing it, causing reverberation."
+ },
+ {
+  "id": "zh-qa-029",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "为什么下雪后外面特别安静?",
+  "alt": [
+   "下雪天为什么静悄悄的?",
+   "雪会吸声音吗?",
+   "为什么雪后很安静?"
+  ],
+  "a": "刚下的蓬松白雪里有很多小空隙，这些空隙能像海绵吸水一样把声音吸走，所以四周显得静悄悄的。",
+  "check": "Fresh porous snow absorbs sound."
+ },
+ {
+  "id": "zh-qa-030",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "水壶为什么会「呜呜」叫?",
+  "alt": [
+   "水开了壶为什么会响?",
+   "烧水壶为什么吹哨子?",
+   "水壶为什么会叫?"
+  ],
+  "a": "水烧开后变成水蒸气往外冲。壶嘴的哨子上有个小孔，水蒸气快速挤过小孔，让空气飞快地振动，就发出尖尖的叫声。",
+  "check": "Steam forced through a whistle's small opening sets air vibrating, producing a tone."
+ },
+ {
+  "id": "zh-qa-031",
+  "kind": "qa",
+  "topic": "sound",
+  "ref": "",
+  "q": "声音能在水里传吗?",
+  "alt": [
+   "在水里能听到声音吗?",
+   "水里有声音吗?",
+   "声音能穿过水吗?"
+  ],
+  "a": "能！声音在水里也能传，而且比在空气里跑得还快。把耳朵放进水里，你还是能听到敲东西的声音。",
+  "check": "Sound travels through water, faster than through air."
+ },
+ {
+  "id": "zh-qa-032",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "冰为什么能浮在水上?",
+  "alt": [
+   "冰块为什么不沉?",
+   "为什么冰会漂起来?",
+   "冰为什么浮在水面?"
+  ],
+  "a": "水结成冰的时候会稍微变胖，占的地方更大了。所以同样大小的冰比水轻，就浮在水面上啦。",
+  "check": "Water expands when it freezes, so ice is less dense than liquid water."
+ },
+ {
+  "id": "zh-qa-033",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "冰为什么会化?",
+  "alt": [
+   "冰块为什么会融化?",
+   "冰怎么变成水了?",
+   "雪人为什么会化掉?"
+  ],
+  "a": "冰就是冻住的水。周围的空气比冰暖和时，冰吸收了热量，就慢慢变回流动的水了。",
+  "check": "Ice absorbs heat from warmer surroundings and melts above 0 C."
+ },
+ {
+  "id": "zh-qa-034",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "水为什么会结冰?",
+  "alt": [
+   "水怎么变成冰的?",
+   "冰箱为什么能把水冻成冰?",
+   "为什么冬天会结冰?"
+  ],
+  "a": "水冷到零摄氏度就会开始结冰。冰箱的冷冻室比这还冷，所以放进去的水会慢慢变得硬邦邦的。",
+  "check": "Pure water freezes at 0 C at normal pressure; freezers are colder than that."
+ },
+ {
+  "id": "zh-qa-035",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "烧水时冒出的白气是什么?",
+  "alt": [
+   "锅里冒的白烟是什么?",
+   "水开了为什么冒白气?",
+   "水蒸气是什么?"
+  ],
+  "a": "水烧热后会变成看不见的水蒸气。水蒸气一碰到外面较凉的空气，又变回许许多多小水珠，这些小水珠就是我们看到的白气。",
+  "check": "Water vapor is invisible; the visible white plume is condensed droplets."
+ },
+ {
+  "id": "zh-qa-036",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "水为什么会烧开?",
+  "alt": [
+   "水开了为什么冒泡泡?",
+   "烧开水是怎么回事?",
+   "水为什么会咕嘟咕嘟响?"
+  ],
+  "a": "给水加热，水越来越热。到了大约100摄氏度，锅里的水开始变成水蒸气，一个个气泡冒上来，咕嘟咕嘟的，这就是烧开了。",
+  "check": "Water boils at about 100 C at sea level; bubbles are water vapor."
+ },
+ {
+  "id": "zh-qa-037",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "地上的水坑为什么不见了?",
+  "alt": [
+   "水坑里的水去哪了?",
+   "为什么地上的水会干?",
+   "水为什么会变没?"
+  ],
+  "a": "太阳和风让水坑里的水慢慢变成看不见的水蒸气，飘到空气里去了，这叫蒸发。水没有消失，只是跑到空气里了。",
+  "check": "Evaporation turns liquid water into water vapor; sun and wind speed it up."
+ },
+ {
+  "id": "zh-qa-038",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "为什么冰饮料的杯子外面会有水珠?",
+  "alt": [
+   "冰水杯子为什么出汗?",
+   "杯子外面的水是哪来的?",
+   "冷杯子为什么湿了?"
+  ],
+  "a": "空气里有看不见的水蒸气。它碰到冰凉的杯子，就变成小水珠挂在杯子外面。这些水是从空气里来的，不是从杯子里渗出来的。",
+  "check": "Condensation: water vapor in air turns to liquid on a cold surface."
+ },
+ {
+  "id": "zh-qa-039",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "冬天窗户上为什么有一层雾?",
+  "alt": [
+   "窗户为什么雾蒙蒙的?",
+   "玻璃上的水汽是哪来的?",
+   "为什么窗户上能画画?"
+  ],
+  "a": "屋里暖暖的空气里有看不见的水蒸气，碰到冰冷的玻璃，就变成了很多小水珠贴在窗户上，看起来就雾蒙蒙的。",
+  "check": "Warm indoor air's water vapor condenses on cold glass."
+ },
+ {
+  "id": "zh-qa-040",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "糖放进水里为什么不见了?",
+  "alt": [
+   "糖去哪了?",
+   "糖为什么会化在水里?",
+   "为什么盐放水里看不见了?"
+  ],
+  "a": "糖分成了非常非常小的颗粒，小到眼睛看不见，散在了水里，这叫溶解。糖其实还在，尝一口水就知道是甜的。",
+  "check": "Dissolving: sugar disperses as particles too small to see; it is still present."
+ },
+ {
+  "id": "zh-qa-041",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "海水为什么是咸的?",
+  "alt": [
+   "大海为什么咸?",
+   "海水里为什么有盐?",
+   "为什么海水不能喝?"
+  ],
+  "a": "雨水和河水会把石头里的一点点盐冲进大海。太阳晒的时候，水变成水蒸气飞走了，盐却留下来。很久很久以后，大海就变咸了。",
+  "check": "Rivers carry dissolved minerals to the sea; evaporation leaves salts behind."
+ },
+ {
+  "id": "zh-qa-042",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "为什么在海里比在泳池里容易浮起来?",
+  "alt": [
+   "人在海里为什么更容易漂?",
+   "盐水为什么能让人浮起来?",
+   "海水为什么托得住人?"
+  ],
+  "a": "海水里有盐，比同样多的普通水更重。更重的水往上托的力气更大，所以人在海里更容易浮起来。",
+  "check": "Salt water is denser than fresh water, giving more buoyancy."
+ },
+ {
+  "id": "zh-qa-043",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "大铁船为什么不会沉?",
+  "alt": [
+   "船为什么能浮在水上?",
+   "铁那么重船为什么不沉?",
+   "为什么轮船能漂着?"
+  ],
+  "a": "船造得像一个大碗，里面有很多空气。它把很多水推开，水就用力往上托住它。托的力气够大，再大的铁船也能浮起来。",
+  "check": "Buoyancy: a hull displaces a weight of water equal to the ship's weight."
+ },
+ {
+  "id": "zh-qa-044",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "油为什么浮在水上?",
+  "alt": [
+   "油和水为什么不混在一起?",
+   "汤上面为什么有一层油?",
+   "油为什么在水上面?"
+  ],
+  "a": "油比同样多的水轻，而且油和水不会混在一起。所以油总是浮在上面，像给水盖了一层薄薄的被子。",
+  "check": "Oil is less dense than water and does not mix with it."
+ },
+ {
+  "id": "zh-qa-045",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "泡泡为什么会破?",
+  "alt": [
+   "肥皂泡为什么一会儿就破了?",
+   "泡泡怎么会爆?",
+   "为什么泡泡飞不远就破?"
+  ],
+  "a": "泡泡的皮是一层很薄的肥皂水。水慢慢往下流、慢慢变干，皮越来越薄，最后就破了。碰到干的东西也容易破。",
+  "check": "Soap films thin by drainage and evaporation until they rupture; dry surfaces pop them."
+ },
+ {
+  "id": "zh-qa-046",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "泡泡为什么是圆的?",
+  "alt": [
+   "肥皂泡为什么圆圆的?",
+   "为什么吹不出方的泡泡?",
+   "泡泡怎么都是球形?"
+  ],
+  "a": "泡泡的肥皂皮会往里收紧，像有弹性的气球。圆球形能用最少的皮包住里面的空气，所以泡泡总是圆圆的。",
+  "check": "Surface tension minimizes surface area; a sphere encloses a volume with the least area."
+ },
+ {
+  "id": "zh-qa-047",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "为什么下雪后路上要撒盐?",
+  "alt": [
+   "撒盐为什么能化冰?",
+   "盐为什么能让冰化掉?",
+   "路上为什么撒盐?"
+  ],
+  "a": "盐和冰上的水混在一起变成盐水。盐水要比普通水冷得多才会结冰，所以冰就化了，路面不容易结冰打滑。",
+  "check": "Salt lowers the freezing point of water."
+ },
+ {
+  "id": "zh-qa-048",
+  "kind": "qa",
+  "topic": "water",
+  "ref": "",
+  "q": "装满水的瓶子放冷冻室为什么会胀裂?",
+  "alt": [
+   "冻冰的瓶子为什么鼓起来了?",
+   "水结冰为什么会撑破瓶子?",
+   "瓶子冻了为什么裂了?"
+  ],
+  "a": "水变成冰的时候会占更大的地方。如果瓶子装满了还拧紧，冰长大时就用力挤瓶子，瓶子就会鼓起来甚至裂开。",
+  "check": "Water expands by about a tenth in volume when it freezes."
+ },
+ {
+  "id": "zh-qa-049",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么会下雨?",
+  "alt": [
+   "雨是从哪来的?",
+   "天上为什么会掉水?",
+   "为什么下雨?"
+  ],
+  "a": "太阳把海里、湖里的水晒成看不见的水蒸气，飘到天上。高处冷，水蒸气变成小水滴组成云。小水滴越聚越大，太重了就掉下来。",
+  "check": "Water cycle: evaporation, condensation into clouds, droplets grow and fall as rain."
+ },
+ {
+  "id": "zh-qa-050",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "云是什么做的?",
+  "alt": [
+   "云是棉花吗?",
+   "云里面有什么?",
+   "白云是什么?"
+  ],
+  "a": "云是由很多很多小水滴做的，天上特别冷的地方还有小冰粒。它们又小又轻，所以能飘在空中。",
+  "check": "Clouds consist of tiny water droplets and/or ice crystals."
+ },
+ {
+  "id": "zh-qa-051",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "云为什么会动?",
+  "alt": [
+   "云为什么会飘走?",
+   "云自己会走吗?",
+   "为什么云跑得那么快?"
+  ],
+  "a": "云是被风吹着走的。天上高处的风有时很大，云就跟着风飘呀飘，像树叶漂在河面上一样。",
+  "check": "Clouds are carried by winds aloft."
+ },
+ {
+  "id": "zh-qa-052",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么会刮风?",
+  "alt": [
+   "风是从哪来的?",
+   "风是怎么来的?",
+   "为什么刮风?"
+  ],
+  "a": "风就是流动的空气。太阳把有些地方晒得热，有些地方没那么热。热空气往上升，旁边的冷空气就跑过来补上，就刮风了。",
+  "check": "Uneven solar heating causes pressure differences; air moves, which is wind."
+ },
+ {
+  "id": "zh-qa-053",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "风为什么看不见?",
+  "alt": [
+   "为什么看不见空气?",
+   "风长什么样?",
+   "风是什么颜色的?"
+  ],
+  "a": "空气是透明的，没有颜色，所以我们看不见它。但是风吹动树叶、吹起风筝时，我们就知道风来了，还能感觉到它吹在脸上。",
+  "check": "Air is a transparent, colorless gas; wind is moving air."
+ },
+ {
+  "id": "zh-qa-054",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么会下雪?",
+  "alt": [
+   "雪是怎么来的?",
+   "天上为什么会掉雪?",
+   "为什么冬天下雪?"
+  ],
+  "a": "云里特别冷的时候，水蒸气会变成小冰晶。小冰晶粘在一起变成雪花，如果靠近地面的空气也很冷，它们就会一路飘下来，变成雪。",
+  "check": "Ice crystals form in cold clouds and aggregate into snowflakes that fall if air below is cold."
+ },
+ {
+  "id": "zh-qa-055",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "雪花为什么是六个角的?",
+  "alt": [
+   "雪花为什么有六个角?",
+   "雪花为什么那么好看?",
+   "为什么雪花是六角形?"
+  ],
+  "a": "雪花是冰做的。冰里面极小的水颗粒总是按照六边形的样子连在一起，所以雪花长大时，就长出六个角或六条枝杈。",
+  "check": "Ice has a hexagonal crystal structure, giving snowflakes six-fold symmetry."
+ },
+ {
+  "id": "zh-qa-056",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "闪电是什么?",
+  "alt": [
+   "闪电是怎么来的?",
+   "天上为什么会闪光?",
+   "为什么会有闪电?"
+  ],
+  "a": "闪电是一道巨大的电火花。雷雨云里的小冰粒互相碰撞摩擦，攒了很多电。电攒得太多，就会一下子放出来，变成一道亮光。",
+  "check": "Collisions of ice particles in storm clouds separate charge; lightning is the discharge."
+ },
+ {
+  "id": "zh-qa-057",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "冰雹是怎么来的?",
+  "alt": [
+   "冰雹是什么?",
+   "天上为什么会掉冰块?",
+   "为什么会下冰雹?"
+  ],
+  "a": "冰雹是从大雷雨云里掉下来的冰球。云里的大风把小冰粒一会儿吹上去、一会儿落下来，每次都裹上一层冰，太重了就掉下来。",
+  "check": "Hailstones grow in layers as updrafts carry them repeatedly through supercooled water."
+ },
+ {
+  "id": "zh-qa-058",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "雾是什么?",
+  "alt": [
+   "为什么会起雾?",
+   "雾是怎么来的?",
+   "大雾是云吗?"
+  ],
+  "a": "雾就是贴着地面的云。靠近地面的空气变冷时，里面看不见的水蒸气变成很多飘着的小水滴，就成了雾。走在雾里就像走在云里。",
+  "check": "Fog is a cloud at ground level formed when near-surface air cools and vapor condenses."
+ },
+ {
+  "id": "zh-qa-059",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "早上草叶上的水珠是哪来的?",
+  "alt": [
+   "露水是什么?",
+   "为什么早上草是湿的?",
+   "露水是怎么来的?"
+  ],
+  "a": "那叫露水。夜里草叶变得凉凉的，空气里看不见的水蒸气碰到它，就变成了小水珠。露水不是从天上掉下来的，是从空气里来的。",
+  "check": "Dew forms when water vapor condenses on surfaces cooled overnight."
+ },
+ {
+  "id": "zh-qa-060",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "霜是什么?",
+  "alt": [
+   "为什么早上草地上白白的?",
+   "霜是怎么来的?",
+   "车窗上的白霜是什么?"
+  ],
+  "a": "霜就像冻住的露水。特别冷的夜里，空气里的水蒸气直接在草地、车窗上变成小冰晶，亮晶晶、白花花的，就是霜。",
+  "check": "Frost forms when water vapor deposits directly as ice on surfaces below freezing."
+ },
+ {
+  "id": "zh-qa-061",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "冬天为什么能看到自己呼出的白气?",
+  "alt": [
+   "为什么冬天哈气是白的?",
+   "冬天说话为什么冒白烟?",
+   "为什么天冷能看到呼吸?"
+  ],
+  "a": "你呼出的气是暖的，里面有看不见的水蒸气。它碰到冷空气马上变凉，水蒸气变成很多小水珠，就像一小团白云。",
+  "check": "Warm moist breath condenses into droplets in cold air."
+ },
+ {
+  "id": "zh-qa-062",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么有时候下雨，有时候下雪?",
+  "alt": [
+   "什么时候下雪什么时候下雨?",
+   "为什么不是每次都下雪?",
+   "雨和雪有什么不一样?"
+  ],
+  "a": "要看空气有多冷。从云到地面一路都很冷，雪花就能落到地上。如果靠近地面的空气比较暖，雪花半路就化了，落下来就变成雨。",
+  "check": "Precipitation type depends on temperatures between the cloud and the ground."
+ },
+ {
+  "id": "zh-qa-063",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么山顶比山脚冷?",
+  "alt": [
+   "山上为什么那么冷?",
+   "高山上为什么有雪?",
+   "为什么越高越冷?"
+  ],
+  "a": "太阳主要先把地面晒热，地面再把附近的空气变暖。越往高处，空气越稀薄，也越冷。所以高山顶上很凉，有的还有积雪。",
+  "check": "In the lower atmosphere temperature decreases with altitude."
+ },
+ {
+  "id": "zh-qa-064",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "天气预报是怎么知道明天天气的?",
+  "alt": [
+   "天气预报为什么能猜到下雨?",
+   "怎么知道明天的天气?",
+   "天气预报是怎么做的?"
+  ],
+  "a": "气象科学家用很多特别的仪器，测量世界各地的空气、风和云。然后用大电脑算一算，就能推测接下来天气大概会怎么变。",
+  "check": "Forecasts combine global weather observations with computer models."
+ },
+ {
+  "id": "zh-qa-065",
+  "kind": "qa",
+  "topic": "weather",
+  "ref": "",
+  "q": "为什么海边经常有风?",
+  "alt": [
+   "海边风为什么大?",
+   "海风是怎么来的?",
+   "为什么在海边总吹风?"
+  ],
+  "a": "晴天时，陆地比海水热得快。陆地上的热空气往上升，海上凉一些的空气就吹过来补上，所以海边常常有凉爽的海风。",
+  "check": "Sea breeze: land heats faster than water by day; cooler sea air flows inland."
+ },
+ {
+  "id": "zh-qa-066",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "温度计是怎么知道冷热的?",
+  "alt": [
+   "温度计里面的红线为什么会动?",
+   "温度计怎么量温度?",
+   "为什么温度计会变?"
+  ],
+  "a": "有一种温度计，细细的管子里装着液体。天热时液体胀开，往上爬；天冷时缩回来，往下降。看看旁边的数字，就知道有多冷多热。",
+  "check": "Liquid-in-glass thermometers work because liquids expand when warmed and contract when cooled."
+ },
+ {
+  "id": "zh-qa-067",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "为什么会有春夏秋冬?",
+  "alt": [
+   "四季是怎么来的?",
+   "为什么有四个季节?",
+   "为什么会换季节?"
+  ],
+  "a": "地球是稍微歪着身子绕着太阳转的。一年里，我们这边有时斜向太阳，就是夏天；有时背着太阳，就是冬天；中间就是春天和秋天。",
+  "check": "Seasons are caused by Earth's axial tilt as it orbits the sun."
+ },
+ {
+  "id": "zh-qa-068",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "为什么夏天热，冬天冷?",
+  "alt": [
+   "夏天为什么那么热?",
+   "冬天为什么冷?",
+   "为什么夏天比冬天热?"
+  ],
+  "a": "夏天我们这边斜向太阳，太阳升得高，光比较直地照下来，照的时间也长，所以很热。冬天正好相反，所以冷。",
+  "check": "Summer brings higher sun angle and longer days; winter the opposite."
+ },
+ {
+  "id": "zh-qa-069",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "为什么冬天天黑得早?",
+  "alt": [
+   "冬天为什么五点就天黑了?",
+   "冬天白天为什么短?",
+   "为什么冬天早上天还黑?"
+  ],
+  "a": "冬天我们这边背着太阳，太阳在天上走的路又低又短，所以早上出来得晚，傍晚落得早，天就黑得早了。",
+  "check": "In winter the sun's path is lower and shorter, so daylight hours are fewer."
+ },
+ {
+  "id": "zh-qa-070",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "为什么我们这里是冬天时，有的国家是夏天?",
+  "alt": [
+   "为什么澳大利亚过年是夏天?",
+   "地球另一边的季节为什么和我们相反?",
+   "为什么别的地方现在是夏天?"
+  ],
+  "a": "地球是歪着的。北边一半斜向太阳过夏天时，南边一半正背着太阳过冬天，过半年再换过来。所以我们过冬天时，南边的国家正过夏天。",
+  "check": "Northern and Southern Hemispheres have opposite seasons due to axial tilt."
+ },
+ {
+  "id": "zh-qa-071",
+  "kind": "qa",
+  "topic": "seasons",
+  "ref": "",
+  "q": "夏天热是因为地球离太阳近吗?",
+  "alt": [
+   "离太阳近就是夏天吗?",
+   "冬天是因为离太阳远吗?",
+   "季节和离太阳远近有关吗?"
+  ],
+  "a": "不是哦！季节是因为地球歪着身子，不是因为离太阳远近。其实每年一月左右，地球离太阳还稍微近一点，那时北边正是冬天。",
+  "check": "Earth's perihelion is in early January, during Northern Hemisphere winter; seasons come from tilt."
+ },
+ {
+  "id": "zh-qa-072",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "东西为什么会往下掉?",
+  "alt": [
+   "为什么东西不往天上飞?",
+   "什么是重力?",
+   "为什么苹果会掉下来?"
+  ],
+  "a": "地球有一种看不见的拉力，叫重力。它把所有东西都往地面拉，所以手一松，东西就掉下来了，我们也能稳稳站在地上。",
+  "check": "Gravity is Earth's attraction pulling objects toward it."
+ },
+ {
+  "id": "zh-qa-073",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "地球另一边的人为什么不会掉下去?",
+  "alt": [
+   "地球是圆的，下面的人为什么不掉?",
+   "住在地球底下的人是倒着的吗?",
+   "为什么人不会从地球上掉下去?"
+  ],
+  "a": "地球的重力把所有东西都往地球中间拉。所以不管站在哪里，脚下的地面就是「下面」。没有人是倒着的，也不会掉下去。",
+  "check": "Gravity pulls toward Earth's center, so 'down' is toward the ground everywhere."
+ },
+ {
+  "id": "zh-qa-074",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "水为什么往低处流?",
+  "alt": [
+   "水为什么不往高处流?",
+   "河水为什么从山上流下来?",
+   "水为什么往下流?"
+  ],
+  "a": "重力把水往下拉，就像拉其他东西一样。所以水总是从高的地方流到低的地方，河水也是从山上流下来的。",
+  "check": "Gravity makes water flow from higher to lower places."
+ },
+ {
+  "id": "zh-qa-075",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "羽毛为什么比球落得慢?",
+  "alt": [
+   "羽毛为什么飘着往下落?",
+   "为什么重的东西掉得快?",
+   "纸为什么慢慢飘下来?"
+  ],
+  "a": "东西往下落时，空气会挡着它。羽毛又轻又宽，被空气挡得很厉害，就飘得很慢。如果没有空气，羽毛和球会落得一样快。",
+  "check": "Air resistance slows light, wide objects; in a vacuum all objects fall at the same rate."
+ },
+ {
+  "id": "zh-qa-076",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "磁铁为什么能吸住铁?",
+  "alt": [
+   "吸铁石为什么能吸东西?",
+   "磁铁是怎么吸的?",
+   "为什么磁铁有吸力?"
+  ],
+  "a": "磁铁周围有一种看不见的力，叫磁力。磁力能把铁做的东西拉过来，所以磁铁一靠近铁钉、回形针，就啪地吸住了。",
+  "check": "Magnets exert magnetic force that attracts iron and steel."
+ },
+ {
+  "id": "zh-qa-077",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "两块磁铁为什么有时吸在一起，有时推开?",
+  "alt": [
+   "磁铁为什么会互相推?",
+   "为什么两块磁铁吸不到一起?",
+   "磁铁为什么会打架?"
+  ],
+  "a": "每块磁铁都有两头，叫北极和南极。不一样的两头会互相吸引，一样的两头会互相推开。",
+  "check": "Opposite magnetic poles attract; like poles repel."
+ },
+ {
+  "id": "zh-qa-078",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "磁铁能吸什么东西?",
+  "alt": [
+   "磁铁能吸木头吗?",
+   "什么东西能被磁铁吸住?",
+   "磁铁为什么吸不住塑料?"
+  ],
+  "a": "磁铁能吸住铁做的东西，比如铁钉、回形针。木头、塑料、纸和玻璃，它就吸不住。",
+  "check": "Iron and steel are attracted to magnets; wood, plastic, paper, and glass are not noticeably."
+ },
+ {
+  "id": "zh-qa-079",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "指南针为什么能指方向?",
+  "alt": [
+   "指南针为什么总指着南边?",
+   "指南针是怎么认路的?",
+   "指南针为什么不会乱转?"
+  ],
+  "a": "地球就像一块巨大的磁铁。指南针里有一根能转动的小磁针，地球的磁力让它一头指向南，一头指向北。",
+  "check": "Earth's magnetic field aligns a freely turning magnetic needle north-south."
+ },
+ {
+  "id": "zh-qa-080",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "气球为什么能飞上天?",
+  "alt": [
+   "为什么有的气球会往上飘?",
+   "气球为什么会飞走?",
+   "为什么我吹的气球飞不起来?"
+  ],
+  "a": "能飞的气球里装着一种比空气轻的气体，叫氦气。周围的空气把它往上推，就像皮球在水里会往上浮。自己吹的气球就飞不起来。",
+  "check": "Helium is less dense than air, so buoyancy lifts the balloon; exhaled air is not lighter than air."
+ },
+ {
+  "id": "zh-qa-081",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "热气球为什么能飞起来?",
+  "alt": [
+   "热气球怎么升上天的?",
+   "热气球为什么要喷火?",
+   "热气球为什么会飘?"
+  ],
+  "a": "热空气比同样多的冷空气轻，会往上升。热气球下面有个喷火的装置，把球里的空气烧热，轻轻的热空气就把气球托上天了。",
+  "check": "Heated air is less dense than surrounding cool air, giving lift."
+ },
+ {
+  "id": "zh-qa-082",
+  "kind": "qa",
+  "topic": "forces",
+  "ref": "",
+  "q": "皮球为什么会弹起来?",
+  "alt": [
+   "球为什么能跳起来?",
+   "为什么球掉地上会蹦?",
+   "皮球怎么会弹?"
+  ],
+  "a": "皮球砸到地上时会被压扁一点点。接着它又弹回原来的样子，用力推一下地面，这一推就把它送回空中了。",
+  "check": "An elastic ball deforms on impact and springs back, pushing off the ground."
+ },
+ {
+  "id": "zh-qa-083",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "气球在头发上蹭一蹭为什么能粘在墙上?",
+  "alt": [
+   "气球为什么能吸头发?",
+   "什么是静电?",
+   "气球蹭头发后为什么能吸纸屑?"
+  ],
+  "a": "气球和头发摩擦，会让气球带上一种电，叫静电。带了静电的气球会去吸墙，所以就粘在墙上了。",
+  "check": "Rubbing transfers charge (static electricity); a charged balloon attracts a neutral wall."
+ },
+ {
+  "id": "zh-qa-084",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "为什么摸门把手有时候会被「电」一下?",
+  "alt": [
+   "为什么摸东西会被电到?",
+   "冬天为什么老被静电电?",
+   "手为什么会啪地麻一下?"
+  ],
+  "a": "走路时身上可能攒了静电，冬天天气干的时候更容易。一碰金属门把手，静电一下子跑掉，就会「啪」地麻一下，不会伤到你。",
+  "check": "Static charge builds on the body, especially in dry air, and discharges harmlessly on touching metal."
+ },
+ {
+  "id": "zh-qa-085",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "冬天脱毛衣为什么会噼啪响?",
+  "alt": [
+   "脱衣服为什么有火花?",
+   "毛衣为什么噼里啪啦的?",
+   "为什么脱毛衣头发会飘起来?"
+  ],
+  "a": "毛衣和身体、头发互相摩擦，会产生静电。脱毛衣的时候静电放出来，就会发出噼噼啪啪的声音，黑暗里还能看到小火花。",
+  "check": "Friction between fabrics builds static charge; small discharges crackle and spark."
+ },
+ {
+  "id": "zh-qa-086",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "铁为什么会生锈?",
+  "alt": [
+   "铁锈是怎么来的?",
+   "铁钉为什么会变红?",
+   "为什么铁会生锈?"
+  ],
+  "a": "铁长时间碰到水和空气，会慢慢和空气里的氧气结合，变成红褐色、一碰就掉渣的铁锈。氧气是空气里的一种气体。",
+  "check": "Rust forms when iron reacts with oxygen in the presence of water."
+ },
+ {
+  "id": "zh-qa-087",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "金子为什么不会生锈?",
+  "alt": [
+   "金子为什么一直亮亮的?",
+   "金子会生锈吗?",
+   "为什么金子不变色?"
+  ],
+  "a": "金子不像铁那样容易和空气、水起变化，所以不会生锈。很久很久以前的金子，到现在还是亮闪闪的。",
+  "check": "Gold is chemically unreactive and does not corrode in air or water."
+ },
+ {
+  "id": "zh-qa-088",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "为什么铁的东西摸起来比木头凉?",
+  "alt": [
+   "铁勺为什么比木勺凉?",
+   "为什么金属摸着冰冰的?",
+   "铁为什么摸起来冷?"
+  ],
+  "a": "放在一起的铁和木头，其实温度一样！但是铁会很快把你手上的热量带走，所以摸起来凉凉的。木头带走热量很慢，就没那么凉。",
+  "check": "Metals conduct heat away from skin much faster than wood at the same temperature."
+ },
+ {
+  "id": "zh-qa-089",
+  "kind": "qa",
+  "topic": "materials",
+  "ref": "",
+  "q": "巧克力为什么在手里会化?",
+  "alt": [
+   "巧克力为什么会变软?",
+   "为什么巧克力放口袋里化了?",
+   "巧克力怎么会融化?"
+  ],
+  "a": "巧克力在不太高的温度下就会化，比我们的体温还低一点。所以手心的温度就足够让它变软、变得黏糊糊的。",
+  "check": "Cocoa butter melts at roughly 34 C, slightly below body temperature."
+ },
+ {
+  "id": "zh-qa-090",
+  "kind": "qa",
+  "topic": "everyday",
+  "ref": "",
+  "q": "爆米花为什么会爆开?",
+  "alt": [
+   "玉米粒为什么会变成爆米花?",
+   "爆米花为什么啪啪响?",
+   "爆米花是怎么做的?"
+  ],
+  "a": "每粒玉米里面都有一点点水，外面包着硬硬的壳。一加热，水变成水蒸气，越挤越厉害，最后把壳撑破，里面就膨开变成爆米花。",
+  "check": "Water in the kernel turns to steam, pressure builds, and the hull bursts."
+ },
+ {
+  "id": "zh-qa-091",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "猫咪为什么会发出呼噜呼噜的声音?",
+  "alt": [
+   "猫为什么打呼噜?",
+   "小猫为什么咕噜咕噜响?",
+   "猫呼噜是什么意思?"
+  ],
+  "a": "猫咪舒服、放松的时候常常会呼噜呼噜响,像在说「我很开心」。这个声音是从喉咙里发出来的。",
+  "check": "Cats purr mostly when content (sometimes when stressed); sound is produced in the larynx."
+ },
+ {
+  "id": "zh-qa-092",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "小狗为什么摇尾巴?",
+  "alt": [
+   "狗为什么摇尾巴?",
+   "狗狗摇尾巴是高兴吗?",
+   "狗摇尾巴什么意思?"
+  ],
+  "a": "狗狗用尾巴「说话」。尾巴放松地欢快摇摆,常常是高兴、想和你玩。不过狗狗紧张时也会摇尾巴,还要看它的表情和身体。",
+  "check": "Tail wagging is canine communication; loose wagging often signals friendliness, but stiff wagging can signal arousal or tension."
+ },
+ {
+  "id": "zh-qa-093",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "猫为什么总是舔自己的毛?",
+  "alt": [
+   "猫为什么舔毛?",
+   "猫咪为什么老是舔自己?",
+   "猫怎么洗澡?"
+  ],
+  "a": "猫咪的舌头上有很多小倒刺,像一把小梳子。它舔毛就是在洗澡、梳头,让自己干干净净。",
+  "check": "Cat tongues have backward-facing papillae that comb fur; grooming keeps cats clean."
+ },
+ {
+  "id": "zh-qa-094",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "猫的眼睛晚上为什么会发光?",
+  "alt": [
+   "猫眼睛为什么会亮?",
+   "晚上猫的眼睛怎么在发光?"
+  ],
+  "a": "猫的眼睛后面有一层像小镜子的东西,会把光反射回来。所以灯光照到时,它的眼睛看起来亮亮的,其实它自己不会发光。",
+  "check": "Tapetum lucidum behind the retina reflects light (eyeshine); eyes do not produce light."
+ },
+ {
+  "id": "zh-qa-095",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "兔子为什么一直在啃东西?",
+  "alt": [
+   "兔子为什么老动嘴巴?",
+   "兔子为什么要啃干草?"
+  ],
+  "a": "兔子的牙齿一辈子都在长。它不停地啃草和干草,就能把牙齿磨短,所以嘴巴总是动个不停。",
+  "check": "Rabbit teeth grow continuously and are worn down by chewing fibrous food."
+ },
+ {
+  "id": "zh-qa-096",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "仓鼠为什么把吃的塞进脸里?",
+  "alt": [
+   "仓鼠的脸为什么鼓鼓的?",
+   "仓鼠把食物藏在哪?"
+  ],
+  "a": "仓鼠脸颊里有像口袋一样的地方,叫颊囊。它把食物装进去,带回窝里慢慢吃。",
+  "check": "Hamsters have expandable cheek pouches used to carry food back to their burrow."
+ },
+ {
+  "id": "zh-qa-097",
+  "kind": "qa",
+  "topic": "pets",
+  "ref": "",
+  "q": "金鱼会记得我吗?",
+  "alt": [
+   "金鱼记性好吗?",
+   "金鱼能记住事情吗?"
+  ],
+  "a": "金鱼的记性挺好的!科学家发现,金鱼能记住每天喂食的时间,还能学会小本领,好几个月都不忘。",
+  "check": "Studies show goldfish can learn tasks and retain memories for months."
+ },
+ {
+  "id": "zh-qa-098",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "奶牛为什么会产奶?",
+  "alt": [
+   "牛奶是从哪来的?",
+   "为什么奶牛有奶?"
+  ],
+  "a": "奶牛妈妈生了小牛以后才会产奶,奶本来是给小牛宝宝喝的。农场的奶牛产奶很多,人们也能喝到。",
+  "check": "Cows lactate after giving birth; dairy cows produce more milk than a calf needs."
+ },
+ {
+  "id": "zh-qa-099",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "牛为什么一直在嚼东西?",
+  "alt": [
+   "牛为什么老嚼嘴?",
+   "牛没吃东西为什么还在嚼?"
+  ],
+  "a": "牛的胃分成好几个房间。它先把草吞下去,过一会儿再送回嘴里慢慢嚼,这叫反刍,这样草能消化得更好。",
+  "check": "Cattle are ruminants with a four-compartment stomach and chew cud."
+ },
+ {
+  "id": "zh-qa-100",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "母鸡为什么会下蛋?",
+  "alt": [
+   "鸡蛋是怎么来的?",
+   "母鸡每天都下蛋吗?"
+  ],
+  "a": "母鸡身体里会自己长出蛋,下蛋的母鸡差不多一天下一个。我们吃的鸡蛋不会孵出小鸡。",
+  "check": "Laying hens produce roughly one egg per day without a rooster; supermarket eggs are unfertilized."
+ },
+ {
+  "id": "zh-qa-101",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "公鸡为什么早上打鸣?",
+  "alt": [
+   "公鸡为什么喔喔叫?",
+   "公鸡怎么知道天亮了?"
+  ],
+  "a": "公鸡身体里有个「小闹钟」,天快亮时就会叫。打鸣也是在告诉别的公鸡:这里是我的地盘。它白天也会叫哦。",
+  "check": "Rooster crowing is driven by an internal circadian clock and serves territorial signaling; roosters crow at other times too."
+ },
+ {
+  "id": "zh-qa-102",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "绵羊的毛剪了还会长吗?",
+  "alt": [
+   "羊为什么要剪毛?",
+   "剪羊毛疼吗?"
+  ],
+  "a": "会的!绵羊的毛会一直长,剪毛就像我们理发一样,不会疼。剪下来的羊毛可以做成暖和的毛衣。",
+  "check": "Domestic wool sheep grow fleece continuously; shearing does not hurt when done properly."
+ },
+ {
+  "id": "zh-qa-103",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "猪为什么喜欢在泥里打滚?",
+  "alt": [
+   "猪为什么爱玩泥巴?",
+   "小猪为什么脏兮兮的?"
+  ],
+  "a": "猪几乎不会出汗。天热时在泥里打滚,能让身体凉快下来,泥巴还能防晒、防虫子咬。",
+  "check": "Pigs have few functional sweat glands; wallowing cools them and protects skin from sun and insects."
+ },
+ {
+  "id": "zh-qa-104",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "鸭子的羽毛为什么不怕湿?",
+  "alt": [
+   "鸭子游泳为什么不湿?",
+   "鸭子为什么能浮在水上?"
+  ],
+  "a": "鸭子尾巴附近能分泌油,它用嘴把油抹到羽毛上,羽毛就不容易湿。脚上的蹼像小船桨,帮它划水。",
+  "check": "Ducks spread oil from the preen (uropygial) gland and have webbed feet."
+ },
+ {
+  "id": "zh-qa-105",
+  "kind": "qa",
+  "topic": "farm",
+  "ref": "",
+  "q": "小鸡是怎么从蛋里出来的?",
+  "alt": [
+   "小鸡怎么出壳?",
+   "小鸡怎么把蛋壳弄破?"
+  ],
+  "a": "小鸡嘴巴尖上有个小硬尖,叫卵齿。它用卵齿一点一点啄破蛋壳,自己钻出来。卵齿过几天就掉了。",
+  "check": "Chicks use an egg tooth to pip the shell; it falls off shortly after hatching."
+ },
+ {
+  "id": "zh-qa-106",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "斑马为什么有黑白条纹?",
+  "alt": [
+   "斑马为什么有条纹?",
+   "斑马的条纹有什么用?"
+  ],
+  "a": "科学家还不完全确定。很多研究发现,条纹能让叮人的小飞虫不容易落到斑马身上。条纹也可能有别的用处。",
+  "check": "Function of zebra stripes is debated; strongest evidence is deterring biting flies."
+ },
+ {
+  "id": "zh-qa-107",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "长颈鹿的脖子为什么那么长?",
+  "alt": [
+   "长颈鹿为什么脖子长?",
+   "长颈鹿的长脖子有什么用?"
+  ],
+  "a": "长长的脖子能让长颈鹿吃到高高树上的叶子,别的动物够不着。公长颈鹿还会用脖子互相比力气。",
+  "check": "Long necks allow high browsing; males use necks in sparring ('necking')."
+ },
+ {
+  "id": "zh-qa-108",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "长颈鹿的脖子里有几块骨头?",
+  "alt": [
+   "长颈鹿脖子骨头多吗?",
+   "长颈鹿脖子有多少节?"
+  ],
+  "a": "和我们一样,只有七块!只不过长颈鹿的每一块都特别特别长。",
+  "check": "Giraffes, like nearly all mammals, have seven cervical vertebrae, each very elongated."
+ },
+ {
+  "id": "zh-qa-109",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "大象的鼻子有什么用?",
+  "alt": [
+   "大象鼻子为什么那么长?",
+   "大象怎么用鼻子喝水?"
+  ],
+  "a": "大象的鼻子很能干:能闻气味、拿食物、吸水送进嘴里,还能洗澡、打招呼。它的鼻子里有好多肌肉,特别灵活。",
+  "check": "Elephant trunks are muscular and used for smelling, grasping, drinking (sucking water then pouring it into the mouth), bathing and touching."
+ },
+ {
+  "id": "zh-qa-110",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "骆驼的驼峰里装的是水吗?",
+  "alt": [
+   "骆驼为什么有驼峰?",
+   "驼峰里面是什么?"
+  ],
+  "a": "不是水,是脂肪。找不到吃的时候,骆驼能用驼峰里的脂肪当能量,所以能在沙漠里走很久。",
+  "check": "Camel humps store fat, not water."
+ },
+ {
+  "id": "zh-qa-111",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "北极熊为什么是白色的?",
+  "alt": [
+   "北极熊为什么白白的?",
+   "北极熊的皮是什么颜色?"
+  ],
+  "a": "北极熊的毛看起来白白的,在冰雪里不容易被发现。其实它的毛是透明的,下面的皮肤是黑色的。",
+  "check": "Polar bear guard hairs are translucent and appear white; skin is black."
+ },
+ {
+  "id": "zh-qa-112",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "袋鼠为什么有个口袋?",
+  "alt": [
+   "袋鼠的口袋是干什么的?",
+   "袋鼠宝宝住在哪里?"
+  ],
+  "a": "袋鼠妈妈的口袋叫育儿袋。袋鼠宝宝刚出生时只有一点点大,要在袋子里喝奶长大,长大了才出来跳。",
+  "check": "Kangaroos are marsupials; tiny newborn joeys develop in the pouch while nursing."
+ },
+ {
+  "id": "zh-qa-113",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "熊为什么要冬眠?",
+  "alt": [
+   "熊冬天为什么睡觉?",
+   "熊冬眠吃什么?"
+  ],
+  "a": "冬天很冷,吃的东西也很少。熊在秋天吃得胖胖的,冬天躲进洞里睡大觉,靠身上的脂肪过冬。",
+  "check": "Bears fatten in autumn and enter winter dormancy, living off fat reserves."
+ },
+ {
+  "id": "zh-qa-114",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "大熊猫为什么爱吃竹子?",
+  "alt": [
+   "熊猫为什么吃竹子?",
+   "熊猫每天吃什么?"
+  ],
+  "a": "大熊猫住的山里有很多竹子,一年四季都有得吃。竹子营养不多,所以熊猫每天要吃很久很久。",
+  "check": "Giant panda diet is almost entirely bamboo, low in nutrients, so they feed many hours a day."
+ },
+ {
+  "id": "zh-qa-115",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "熊猫为什么是黑白的?",
+  "alt": [
+   "熊猫为什么有黑眼圈?",
+   "熊猫的颜色有什么用?"
+  ],
+  "a": "科学家认为,白色能让熊猫在雪地里藏起来,黑色能让它在树荫里藏起来。黑眼圈可能帮熊猫互相认出来。",
+  "check": "2017 study proposed camouflage (snow/shade) and communication for panda coloration; still a hypothesis."
+ },
+ {
+  "id": "zh-qa-116",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "变色龙为什么会变颜色?",
+  "alt": [
+   "变色龙怎么变色?",
+   "变色龙为什么变色?"
+  ],
+  "a": "变色龙的皮肤里有特别的细胞,能改变光的反射,颜色就变了。它变色多是为了和同伴「说话」,也跟冷热有关。",
+  "check": "Chameleons change color via skin cells (incl. guanine nanocrystals); mainly for social signaling and thermoregulation."
+ },
+ {
+  "id": "zh-qa-117",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "蛇没有脚怎么走路?",
+  "alt": [
+   "蛇怎么爬?",
+   "蛇为什么没有脚也能动?"
+  ],
+  "a": "蛇的身体里有很多骨头和肌肉。它扭动身体,用肚子上的鳞片推着地面,就能往前滑。",
+  "check": "Snakes have many vertebrae and move by muscular undulation, using belly scales for traction."
+ },
+ {
+  "id": "zh-qa-118",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "乌龟的壳能脱下来吗?",
+  "alt": [
+   "乌龟为什么背着壳?",
+   "乌龟能从壳里出来吗?"
+  ],
+  "a": "不能哦。乌龟的壳是身体的一部分,和它的骨头长在一起。遇到危险,很多乌龟会把头和脚缩进壳里。",
+  "check": "A turtle's shell is fused to its ribs and spine; many species retract head and limbs."
+ },
+ {
+  "id": "zh-qa-119",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "蝌蚪是怎么变成青蛙的?",
+  "alt": [
+   "蝌蚪会变成什么?",
+   "小蝌蚪的尾巴去哪了?"
+  ],
+  "a": "蝌蚪先长出后腿,再长出前腿,尾巴慢慢变短不见了。它也从用鳃呼吸变成用肺呼吸,就能上岸了。",
+  "check": "Frog metamorphosis: hind legs, then forelegs, tail absorbed, gills replaced by lungs."
+ },
+ {
+  "id": "zh-qa-120",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "蝙蝠晚上怎么飞来飞去?",
+  "alt": [
+   "蝙蝠在黑夜里怎么看路?",
+   "蝙蝠怎么不会撞到东西?"
+  ],
+  "a": "很多蝙蝠会发出很高的叫声,再听回声,就知道东西在哪里,这叫回声定位。蝙蝠的眼睛也能看见东西。",
+  "check": "Many bats use echolocation; all bats can see."
+ },
+ {
+  "id": "zh-qa-121",
+  "kind": "qa",
+  "topic": "wild",
+  "ref": "",
+  "q": "松鼠为什么要藏松果?",
+  "alt": [
+   "松鼠为什么把坚果埋起来?",
+   "松鼠冬天吃什么?"
+  ],
+  "a": "松鼠秋天把坚果藏在很多地方,冬天再找出来吃。有些忘了挖出来的种子,后来还会长成新的树。",
+  "check": "Squirrels cache nuts; uncollected caches can germinate, aiding seed dispersal."
+ },
+ {
+  "id": "zh-qa-122",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "鸟为什么会飞?",
+  "alt": [
+   "小鸟怎么飞起来的?",
+   "为什么鸟能飞我不能飞?"
+  ],
+  "a": "鸟有翅膀和轻轻的羽毛,很多骨头里面是空心的,身体很轻。它用力扇动翅膀,就能飞上天空。",
+  "check": "Birds have wings, feathers and many hollow (pneumatized) bones that reduce weight."
+ },
+ {
+  "id": "zh-qa-123",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "鸟为什么冬天要飞到南方?",
+  "alt": [
+   "燕子为什么秋天飞走?",
+   "什么是候鸟?"
+  ],
+  "a": "冬天北方冷,虫子和果子也少了。很多鸟就飞到暖和、食物多的地方,春天再飞回来,这叫迁徙。",
+  "check": "Migration is driven by seasonal food availability and climate."
+ },
+ {
+  "id": "zh-qa-124",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "鸟飞那么远为什么不会迷路?",
+  "alt": [
+   "候鸟怎么认路?",
+   "鸟怎么知道往哪飞?"
+  ],
+  "a": "科学家发现,鸟会看太阳和星星认方向,还能感觉到地球的磁力,就像身体里有个指南针。它们也会记住山和河。",
+  "check": "Birds navigate with sun compass, star compass, magnetic sense and landmarks."
+ },
+ {
+  "id": "zh-qa-125",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "鸟为什么要做窝?",
+  "alt": [
+   "鸟窝是干什么用的?",
+   "小鸟为什么要搭窝?"
+  ],
+  "a": "鸟窝是鸟宝宝的家。鸟妈妈在窝里下蛋、孵蛋,小鸟也在窝里长大。窝能保暖,还能把宝宝藏好。",
+  "check": "Nests hold eggs and chicks, provide insulation and concealment."
+ },
+ {
+  "id": "zh-qa-126",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "企鹅为什么不会飞?",
+  "alt": [
+   "企鹅是鸟吗?",
+   "企鹅有翅膀为什么不飞?"
+  ],
+  "a": "企鹅是鸟,但它的翅膀变得像船桨一样,特别适合游泳。它们在水里游得又快又好,就像在水里飞。",
+  "check": "Penguins are flightless birds whose wings are flippers adapted for swimming."
+ },
+ {
+  "id": "zh-qa-127",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "南极的企鹅为什么不怕冷?",
+  "alt": [
+   "企鹅冷不冷?",
+   "企鹅怎么取暖?"
+  ],
+  "a": "企鹅的羽毛又密又厚,皮下还有一层脂肪。天特别冷的时候,帝企鹅还会挤成一大团取暖。",
+  "check": "Penguins have dense feathers and blubber; emperor penguins huddle."
+ },
+ {
+  "id": "zh-qa-128",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "猫头鹰为什么晚上出来?",
+  "alt": [
+   "猫头鹰为什么白天睡觉?",
+   "猫头鹰晚上看得见吗?"
+  ],
+  "a": "猫头鹰的大眼睛在暗处也看得清,耳朵也特别灵。很多猫头鹰喜欢晚上出来找吃的,白天就休息。",
+  "check": "Most owls are nocturnal with large eyes and acute hearing."
+ },
+ {
+  "id": "zh-qa-129",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "啄木鸟为什么要啄树?",
+  "alt": [
+   "啄木鸟啄树头不疼吗?",
+   "啄木鸟在树上干什么?"
+  ],
+  "a": "啄木鸟啄树是在找藏在树里的虫子,也会挖洞做窝,还用敲击声和同伴「说话」。科学家还在研究它的头为什么不受伤。",
+  "check": "Woodpeckers drum/peck to forage, excavate nests and communicate; head-protection mechanism is still researched."
+ },
+ {
+  "id": "zh-qa-130",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "火烈鸟为什么是粉红色的?",
+  "alt": [
+   "火烈鸟为什么是红的?",
+   "火烈鸟生下来就是粉色的吗?"
+  ],
+  "a": "火烈鸟吃的小虾和藻类里有一种红色的色素,吃多了羽毛就变成粉红色。刚出生的小火烈鸟是灰白色的。",
+  "check": "Flamingo color comes from carotenoid pigments in diet; chicks are grey/white."
+ },
+ {
+  "id": "zh-qa-131",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "蜂鸟为什么能停在空中?",
+  "alt": [
+   "蜂鸟怎么悬停?",
+   "蜂鸟能倒着飞吗?"
+  ],
+  "a": "蜂鸟翅膀扇得飞快,快到我们几乎看不清。它的翅膀能像画「8」字一样摆动,所以能停在花前喝花蜜,还能往后飞。",
+  "check": "Hummingbirds hover via rapid figure-eight wing strokes and can fly backward."
+ },
+ {
+  "id": "zh-qa-132",
+  "kind": "qa",
+  "topic": "birds",
+  "ref": "",
+  "q": "小鸟为什么要唱歌?",
+  "alt": [
+   "鸟为什么叽叽喳喳叫?",
+   "鸟叫是在说话吗?"
+  ],
+  "a": "鸟唱歌多半是为了吸引伴侣,或者告诉别的鸟「这是我的地盘」。很多小鸟还要跟着大鸟学唱歌呢。",
+  "check": "Birdsong functions in mate attraction and territory defense; songbirds learn songs from adults."
+ },
+ {
+  "id": "zh-qa-133",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "鱼在水里怎么呼吸?",
+  "alt": [
+   "鱼怎么呼吸?",
+   "鱼鳃是干什么的?"
+  ],
+  "a": "鱼用鳃呼吸。水里溶着看不见的氧气,水流过鱼鳃时,鳃就把氧气留下来,鱼就能呼吸了。",
+  "check": "Fish extract dissolved oxygen from water through gills."
+ },
+ {
+  "id": "zh-qa-134",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "鱼会睡觉吗?",
+  "alt": [
+   "鱼睡觉闭眼睛吗?",
+   "鱼晚上睡觉吗?"
+  ],
+  "a": "会的,鱼也要休息。大多数鱼没有眼皮,所以睁着眼睛睡。睡觉时它们会一动不动,或者慢慢地游。",
+  "check": "Fish have rest states resembling sleep; most lack eyelids."
+ },
+ {
+  "id": "zh-qa-135",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "鱼要喝水吗?",
+  "alt": [
+   "鱼会口渴吗?",
+   "海里的鱼喝海水吗?"
+  ],
+  "a": "海里的鱼会喝海水,因为海水太咸,身体容易缺水。河里的鱼几乎不用喝,水会自己慢慢进到它身体里。",
+  "check": "Marine bony fish drink seawater; freshwater fish gain water by osmosis and drink little."
+ },
+ {
+  "id": "zh-qa-136",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "小丑鱼为什么住在海葵里?",
+  "alt": [
+   "小丑鱼不怕海葵吗?",
+   "小丑鱼的家在哪?"
+  ],
+  "a": "海葵的触手会蜇别的鱼,但小丑鱼身上有一层特别的黏液,不怕被蜇。住在海葵里很安全,它还会帮海葵打扫。",
+  "check": "Clownfish mucus protects them from anemone stings; mutualistic relationship."
+ },
+ {
+  "id": "zh-qa-137",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "河豚为什么会鼓起来?",
+  "alt": [
+   "河豚怎么变成球?",
+   "河豚为什么变圆?"
+  ],
+  "a": "河豚遇到危险时,会很快吞下好多水,把身子鼓成一个大圆球。这样别的鱼就很难吞下它了。",
+  "check": "Pufferfish inflate by gulping water as a defense."
+ },
+ {
+  "id": "zh-qa-138",
+  "kind": "qa",
+  "topic": "fish",
+  "ref": "",
+  "q": "鲨鱼的牙齿掉了怎么办?",
+  "alt": [
+   "鲨鱼会换牙吗?",
+   "鲨鱼有多少牙齿?"
+  ],
+  "a": "鲨鱼有好几排牙齿,前面的掉了,后面的新牙就会往前补上。它一辈子能换好多好多颗牙。",
+  "check": "Sharks have rows of replacement teeth and replace teeth continuously."
+ },
+ {
+  "id": "zh-qa-139",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "鲸鱼是鱼吗?",
+  "alt": [
+   "鲸鱼算鱼吗?",
+   "鲸鱼为什么要到水面上?"
+  ],
+  "a": "鲸鱼不是鱼!它和我们一样是哺乳动物,用肺呼吸,宝宝喝妈妈的奶。所以它要游到水面上换气。",
+  "check": "Whales are mammals that breathe air and nurse young."
+ },
+ {
+  "id": "zh-qa-140",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "章鱼有几条腿?",
+  "alt": [
+   "章鱼有几只脚?",
+   "章鱼有几颗心脏?"
+  ],
+  "a": "章鱼有八条腕,上面有很多吸盘,能抓东西,还能尝味道。章鱼还有三颗心脏呢!",
+  "check": "Octopuses have eight arms with chemosensory suckers and three hearts."
+ },
+ {
+  "id": "zh-qa-141",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "章鱼为什么喷墨汁?",
+  "alt": [
+   "章鱼的墨是干什么的?",
+   "章鱼为什么吐黑水?"
+  ],
+  "a": "章鱼遇到危险时会喷出一团黑墨,像放了一片烟雾。趁别的动物看不清,它就赶快游走了。",
+  "check": "Octopus ink forms a cloud that distracts predators while it escapes."
+ },
+ {
+  "id": "zh-qa-142",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海星有头吗?",
+  "alt": [
+   "海星有眼睛吗?",
+   "海星是鱼吗?"
+  ],
+  "a": "海星没有头,也没有脑子,但能感觉周围。很多海星的腕尖上有小眼点,能分清亮和暗。海星不是鱼哦。",
+  "check": "Sea stars lack a head and brain, have eyespots at arm tips, and are echinoderms, not fish."
+ },
+ {
+  "id": "zh-qa-143",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海豚为什么那么聪明?",
+  "alt": [
+   "海豚会说话吗?",
+   "海豚有名字吗?"
+  ],
+  "a": "海豚的大脑很大,会用叫声和口哨声交流,还会一起玩、一起合作。每只海豚都有自己的「名字口哨」。",
+  "check": "Dolphins have large brains, cooperate, and use individual signature whistles."
+ },
+ {
+  "id": "zh-qa-144",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海马爸爸会生宝宝吗?",
+  "alt": [
+   "海马是爸爸生宝宝吗?",
+   "小海马是谁生的?"
+  ],
+  "a": "会的!海马妈妈把卵放进海马爸爸肚子上的育儿袋里,爸爸带着它们,等小海马长好了再从袋子里出来。",
+  "check": "Male seahorses brood eggs in a pouch and give birth."
+ },
+ {
+  "id": "zh-qa-145",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "水母有脑子吗?",
+  "alt": [
+   "水母是什么做的?",
+   "水母有骨头吗?"
+  ],
+  "a": "水母没有脑子,也没有骨头和心脏,身体大部分是水。它靠一张神经网感觉周围,一张一合地游动。",
+  "check": "Jellyfish lack brain, bones and heart; ~95% water; nerve net."
+ },
+ {
+  "id": "zh-qa-146",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "珊瑚是植物还是动物?",
+  "alt": [
+   "珊瑚是活的吗?",
+   "珊瑚是石头吗?"
+  ],
+  "a": "珊瑚其实是小动物!很多很小的珊瑚虫住在一起,造出硬硬的外壳,慢慢堆成大大的珊瑚礁。",
+  "check": "Corals are colonies of animal polyps that build calcium carbonate skeletons."
+ },
+ {
+  "id": "zh-qa-147",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海龟为什么要爬到沙滩上?",
+  "alt": [
+   "海龟在哪里下蛋?",
+   "小海龟是怎么出生的?"
+  ],
+  "a": "海龟妈妈会爬到沙滩上挖洞下蛋。小海龟从蛋里出来后,会爬向大海,开始在海里生活。",
+  "check": "Sea turtles nest on beaches; hatchlings head to the sea."
+ },
+ {
+  "id": "zh-qa-148",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蜜蜂为什么要采花蜜?",
+  "alt": [
+   "蜂蜜是怎么来的?",
+   "蜜蜂为什么飞到花上?"
+  ],
+  "a": "蜜蜂把花蜜带回蜂巢,慢慢变成蜂蜜,留着冬天给全家吃。它在花间飞来飞去,还帮花传了花粉。",
+  "check": "Honeybees convert nectar to honey as stored food and pollinate flowers."
+ },
+ {
+  "id": "zh-qa-149",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蜜蜂为什么会跳舞?",
+  "alt": [
+   "蜜蜂跳舞是什么意思?",
+   "蜜蜂怎么告诉同伴哪里有花?"
+  ],
+  "a": "蜜蜂找到很多花,回到蜂巢会跳一种「摇摆舞」。舞的方向和长短,能告诉同伴花在哪里、有多远。",
+  "check": "Honeybee waggle dance encodes direction and distance to food."
+ },
+ {
+  "id": "zh-qa-150",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蜜蜂为什么会蜇人?",
+  "alt": [
+   "蜜蜂会咬人吗?",
+   "怎么不被蜜蜂蜇?"
+  ],
+  "a": "蜜蜂只有觉得自己或蜂巢有危险时才会蜇人。只要不拍它、不打扰它,它通常会自己飞走。",
+  "check": "Honeybees sting defensively; calm behavior reduces stings."
+ },
+ {
+  "id": "zh-qa-151",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蚂蚁为什么排着队走?",
+  "alt": [
+   "蚂蚁怎么认路?",
+   "蚂蚁为什么排成一条线?"
+  ],
+  "a": "蚂蚁找到食物后,会在路上留下一种看不见的气味。别的蚂蚁闻着气味走,就排成一条长队了。",
+  "check": "Ants lay pheromone trails that nestmates follow."
+ },
+ {
+  "id": "zh-qa-152",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蚂蚁住在哪里?",
+  "alt": [
+   "蚂蚁的家是什么样的?",
+   "蚁后是干什么的?"
+  ],
+  "a": "很多蚂蚁住在地下的蚁穴里,里面有好多小房间和通道,有的放食物,有的养宝宝。蚁后负责产卵。",
+  "check": "Many ant colonies live in underground nests with chambers; the queen lays eggs."
+ },
+ {
+  "id": "zh-qa-153",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "毛毛虫怎么变成蝴蝶?",
+  "alt": [
+   "蝴蝶是从哪来的?",
+   "毛毛虫会变成什么?"
+  ],
+  "a": "毛毛虫吃很多叶子长大,然后变成一个蛹。在蛹里它的身体慢慢改变,最后变成蝴蝶飞出来。",
+  "check": "Butterflies undergo complete metamorphosis: larva, pupa (chrysalis), adult."
+ },
+ {
+  "id": "zh-qa-154",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蝴蝶的翅膀为什么那么漂亮?",
+  "alt": [
+   "蝴蝶翅膀上是什么粉?",
+   "蝴蝶的翅膀为什么五颜六色?"
+  ],
+  "a": "蝴蝶的翅膀上盖着许多很小很小的鳞片,像屋顶上的瓦片。鳞片有不同颜色,有的还会反光,闪闪发亮。",
+  "check": "Butterfly wings are covered in tiny scales with pigments and light-reflecting structures."
+ },
+ {
+  "id": "zh-qa-155",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "萤火虫为什么会发光?",
+  "alt": [
+   "萤火虫的光是哪来的?",
+   "萤火虫为什么一闪一闪的?"
+  ],
+  "a": "萤火虫肚子尾部有会发光的地方,里面的特别物质遇到氧气就发出冷光。它们用闪光和同伴打招呼、找伴侣。",
+  "check": "Firefly bioluminescence: luciferin oxidation produces cold light used in courtship signaling."
+ },
+ {
+  "id": "zh-qa-156",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蜘蛛是昆虫吗?",
+  "alt": [
+   "蜘蛛有几条腿?",
+   "蜘蛛算虫子吗?"
+  ],
+  "a": "蜘蛛不是昆虫哦。昆虫有六条腿,蜘蛛有八条腿,身体分两节,也没有翅膀和触角。",
+  "check": "Spiders are arachnids: eight legs, two body parts, no wings or antennae."
+ },
+ {
+  "id": "zh-qa-157",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蜘蛛为什么不会被自己的网粘住?",
+  "alt": [
+   "蜘蛛网粘吗?",
+   "蜘蛛怎么在网上走?"
+  ],
+  "a": "蜘蛛网上不是每根丝都黏。蜘蛛知道走哪些不黏的丝,它的脚也很特别,不容易被粘住。",
+  "check": "Orb webs have non-sticky radial threads; spider legs have hairs/coatings reducing adhesion."
+ },
+ {
+  "id": "zh-qa-158",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "蚊子为什么要叮人?",
+  "alt": [
+   "蚊子为什么咬我?",
+   "所有蚊子都叮人吗?"
+  ],
+  "a": "只有蚊子妈妈会叮人,它需要血里的营养来生蚊子宝宝。它能闻到我们呼出的气和身上的味道。",
+  "check": "Only female mosquitoes bite, needing blood protein for eggs; attracted by CO2 and body odors."
+ },
+ {
+  "id": "zh-qa-159",
+  "kind": "qa",
+  "topic": "insects",
+  "ref": "",
+  "q": "瓢虫身上为什么有点点?",
+  "alt": [
+   "瓢虫为什么是红的?",
+   "瓢虫的点点有什么用?"
+  ],
+  "a": "瓢虫鲜艳的颜色和点点像在说「我不好吃」。很多瓢虫爱吃蚜虫,能帮助植物长得更好。",
+  "check": "Ladybird coloration is aposematic warning; many species eat aphids."
+ },
+ {
+  "id": "zh-qa-160",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "恐龙现在还有吗?",
+  "alt": [
+   "恐龙还活着吗?",
+   "现在还能看到恐龙吗?"
+  ],
+  "a": "大部分恐龙很久很久以前就不在了。不过科学家发现,鸟是从一类恐龙变来的,所以小鸟就是恐龙的亲戚呢。",
+  "check": "Non-avian dinosaurs are extinct; birds descend from theropod dinosaurs."
+ },
+ {
+  "id": "zh-qa-161",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "霸王龙的手为什么那么短?",
+  "alt": [
+   "霸王龙的手有什么用?",
+   "暴龙为什么小短手?"
+  ],
+  "a": "科学家还不确定。霸王龙的头又大又重,也许短手让身体更平衡。它的小短手其实很有力气。",
+  "check": "Function of T. rex forelimbs is debated; arms were short but muscular."
+ },
+ {
+  "id": "zh-qa-162",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "恐龙都吃肉吗?",
+  "alt": [
+   "恐龙吃什么?",
+   "有吃草的恐龙吗?"
+  ],
+  "a": "不是哦。很多恐龙吃植物,比如长脖子的梁龙和背上有骨板的剑龙。也有吃肉的,比如霸王龙。",
+  "check": "Diplodocus and Stegosaurus were herbivores; T. rex was a carnivore."
+ },
+ {
+  "id": "zh-qa-163",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "我们怎么知道恐龙长什么样?",
+  "alt": [
+   "没人见过恐龙怎么知道它的样子?",
+   "什么是化石?"
+  ],
+  "a": "科学家找到了恐龙化石,就是埋在地下很久、变成石头的骨头、脚印和蛋。把骨头拼起来,就知道它们的样子了。",
+  "check": "Dinosaur appearance is reconstructed from fossil bones, trackways and eggs."
+ },
+ {
+  "id": "zh-qa-164",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "恐龙有羽毛吗?",
+  "alt": [
+   "恐龙身上有毛吗?",
+   "有长羽毛的恐龙吗?"
+  ],
+  "a": "有些恐龙有羽毛!科学家在化石里发现了带羽毛的恐龙,比如小盗龙。羽毛能帮它们保暖。",
+  "check": "Many theropods, e.g. Microraptor, preserved with feathers."
+ },
+ {
+  "id": "zh-qa-165",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "恐龙宝宝是从蛋里出来的吗?",
+  "alt": [
+   "恐龙会下蛋吗?",
+   "恐龙蛋有多大?"
+  ],
+  "a": "是的,恐龙宝宝是从蛋里孵出来的。科学家找到过很多恐龙蛋化石,有的恐龙还会像鸟一样守着窝。",
+  "check": "Dinosaurs laid eggs; fossils show brooding (e.g. Oviraptor) and nesting colonies."
+ },
+ {
+  "id": "zh-qa-166",
+  "kind": "qa",
+  "topic": "dinosaurs",
+  "ref": "",
+  "q": "会飞的翼龙是恐龙吗?",
+  "alt": [
+   "翼龙是恐龙吗?",
+   "恐龙会飞吗?"
+  ],
+  "a": "翼龙和恐龙生活在同一个时代,是恐龙的近亲,但它不是恐龙。它用皮膜做的翅膀飞行。",
+  "check": "Pterosaurs are close relatives of dinosaurs but not dinosaurs; wings were skin membranes."
+ },
+ {
+  "id": "zh-qa-167",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "树叶为什么是绿色的?",
+  "alt": [
+   "叶子为什么是绿的?",
+   "草为什么是绿色的?"
+  ],
+  "a": "叶子里有一种绿色的东西,叫叶绿素。它能吸收阳光,帮植物用水和空气做「食物」。",
+  "check": "Chlorophyll reflects green light and captures light energy for photosynthesis."
+ },
+ {
+  "id": "zh-qa-168",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "秋天树叶为什么会变黄?",
+  "alt": [
+   "叶子为什么变黄了?",
+   "为什么有的叶子会变红?"
+  ],
+  "a": "秋天变冷了,叶子里的绿色慢慢褪掉,藏在里面的黄色和橙色就露出来了。有的叶子还会长出红色。",
+  "check": "Chlorophyll breaks down in autumn revealing carotenoids; some leaves produce red anthocyanins."
+ },
+ {
+  "id": "zh-qa-169",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "秋天树叶为什么会掉下来?",
+  "alt": [
+   "树为什么掉叶子?",
+   "落叶是怎么回事?"
+  ],
+  "a": "冬天太冷,水也少,很多树会让叶子掉下来,帮自己省水、过冬。到了春天,再长出新叶子。",
+  "check": "Deciduous trees shed leaves to conserve water and survive winter."
+ },
+ {
+  "id": "zh-qa-170",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "种子是怎么长成植物的?",
+  "alt": [
+   "种子怎么发芽?",
+   "种子埋进土里会怎样?"
+  ],
+  "a": "种子喝饱水,温度合适,就会裂开,先往下长出根,再往上长出小芽。小芽见到阳光,慢慢长大。",
+  "check": "Germination needs water and suitable temperature; radicle (root) emerges first, then shoot."
+ },
+ {
+  "id": "zh-qa-171",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "植物为什么需要阳光?",
+  "alt": [
+   "花为什么要晒太阳?",
+   "植物不晒太阳会怎样?"
+  ],
+  "a": "植物用阳光、水和空气,在叶子里给自己做食物,这叫光合作用。没有阳光,它就做不了食物。",
+  "check": "Photosynthesis uses light, water and carbon dioxide to make sugars."
+ },
+ {
+  "id": "zh-qa-172",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "花为什么那么香?",
+  "alt": [
+   "花为什么有香味?",
+   "为什么蜜蜂喜欢花?"
+  ],
+  "a": "很多花用香味和鲜艳的颜色吸引蜜蜂和蝴蝶。它们来吃花蜜时,会把花粉带到别的花上,花就能结出种子。",
+  "check": "Floral scent and color attract pollinators that transfer pollen."
+ },
+ {
+  "id": "zh-qa-173",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "仙人掌为什么有刺?",
+  "alt": [
+   "仙人掌的刺是什么?",
+   "仙人掌为什么扎手?"
+  ],
+  "a": "仙人掌的刺是它的叶子变的。刺能保护它不被动物吃掉,还能帮它少丢水分,在沙漠里活下来。",
+  "check": "Cactus spines are modified leaves; they deter herbivores and reduce water loss."
+ },
+ {
+  "id": "zh-qa-174",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "树为什么能长那么高?",
+  "alt": [
+   "树为什么那么高?",
+   "大树为什么高高的?"
+  ],
+  "a": "树长得高,叶子就能晒到更多阳光,不会被别的植物挡住。树干每年长粗一点,才撑得住高高的身体。",
+  "check": "Trees compete for light; secondary growth thickens trunks for support."
+ },
+ {
+  "id": "zh-qa-175",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "树的年轮是怎么来的?",
+  "alt": [
+   "怎么知道树几岁了?",
+   "树桩上的圈圈是什么?"
+  ],
+  "a": "树每年都会长粗一圈。春夏长得快,颜色浅;秋天长得慢,颜色深。数一数年轮,就知道树大约几岁。",
+  "check": "Annual growth rings: light earlywood and dark latewood in seasonal climates."
+ },
+ {
+  "id": "zh-qa-176",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "向日葵为什么跟着太阳转?",
+  "alt": [
+   "向日葵会转吗?",
+   "向日葵为什么叫向日葵?"
+  ],
+  "a": "小向日葵白天会跟着太阳从东转到西,晚上再转回东边。开花以后,它大多一直朝着东边。",
+  "check": "Young sunflowers track the sun (heliotropism); mature heads mostly face east."
+ },
+ {
+  "id": "zh-qa-177",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "蘑菇是植物吗?",
+  "alt": [
+   "蘑菇算不算植物?",
+   "蘑菇为什么不是绿色的?"
+  ],
+  "a": "蘑菇不是植物!它没有叶绿素,不能用阳光做食物。科学家把它分成单独的一类,叫真菌。",
+  "check": "Mushrooms are fungi, a separate kingdom; no chlorophyll."
+ },
+ {
+  "id": "zh-qa-178",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "蒲公英的种子怎么飞走?",
+  "alt": [
+   "蒲公英为什么一吹就飞?",
+   "蒲公英的小伞是什么?"
+  ],
+  "a": "蒲公英的每颗种子上都有一把白白的「小伞」。风一吹,小伞就带着种子飞到远处,在新地方安家。",
+  "check": "Dandelion seeds have a pappus that enables wind dispersal."
+ },
+ {
+  "id": "zh-qa-179",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "植物没有嘴怎么喝水?",
+  "alt": [
+   "植物怎么喝水?",
+   "根有什么用?"
+  ],
+  "a": "植物用根喝水。根上有很多细细的根毛,把土里的水吸进来,再顺着茎送到叶子和花那里。",
+  "check": "Root hairs absorb water, transported through xylem in the stem."
+ },
+ {
+  "id": "zh-qa-180",
+  "kind": "qa",
+  "topic": "plants",
+  "ref": "",
+  "q": "有会吃虫子的植物吗?",
+  "alt": [
+   "捕蝇草真的吃虫子吗?",
+   "植物会吃东西吗?"
+  ],
+  "a": "有的,比如捕蝇草。它的叶子像两片小夹子,虫子一碰就合上。它长在缺营养的土里,吃虫子能补充营养。",
+  "check": "Venus flytrap is carnivorous, trapping insects to supplement nutrients in poor soils."
+ },
+ {
+  "id": "zh-qa-181",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "我们为什么要睡觉?",
+  "alt": [
+   "为什么要睡觉?",
+   "人为什么每天都要睡觉?",
+   "不睡觉行不行?"
+  ],
+  "a": "睡觉的时候,身体在休息和修复,大脑还会整理白天学到的东西。睡饱了,第二天才有精神玩和学习。",
+  "check": "Sleep supports bodily restoration and memory consolidation."
+ },
+ {
+  "id": "zh-qa-182",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "为什么一到晚上就困了?",
+  "alt": [
+   "晚上为什么会犯困?",
+   "为什么天黑了就想睡觉?",
+   "为什么会困?"
+  ],
+  "a": "天黑以后,大脑会做出一种让人犯困的东西,叫褪黑素。它像一个小闹钟,提醒身体该休息啦。",
+  "check": "Melatonin secretion rises in darkness and promotes sleepiness."
+ },
+ {
+  "id": "zh-qa-183",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "人为什么会做梦?",
+  "alt": [
+   "为什么会做梦?",
+   "梦是从哪里来的?",
+   "睡觉为什么会看到梦?"
+  ],
+  "a": "睡觉时大脑没有完全关机,它还在忙着活动,所以会出现梦。人到底为什么做梦,科学家还在研究呢。",
+  "check": "Dreaming occurs during active brain states in sleep; its purpose is not settled."
+ },
+ {
+  "id": "zh-qa-184",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "为什么小孩要比大人睡得多?",
+  "alt": [
+   "小朋友为什么要早点睡?",
+   "为什么我要睡那么久?",
+   "大人为什么可以晚睡?"
+  ],
+  "a": "小朋友的身体和大脑正在长大,很多长大的工作是在睡觉时完成的,所以需要比大人多睡一会儿。",
+  "check": "Children need more sleep than adults; growth hormone is released largely during deep sleep."
+ },
+ {
+  "id": "zh-qa-185",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "为什么睡觉前不能看平板?",
+  "alt": [
+   "睡前为什么不能看手机?",
+   "睡觉前看电视会怎么样?",
+   "为什么睡前要关屏幕?"
+  ],
+  "a": "屏幕的亮光会让大脑以为还是白天,就不容易犯困。睡前早点关掉屏幕,更容易睡着。",
+  "check": "Evening screen light can delay melatonin release and sleep onset."
+ },
+ {
+  "id": "zh-qa-186",
+  "kind": "qa",
+  "topic": "sleep",
+  "ref": "",
+  "q": "睡着了为什么还会翻身?",
+  "alt": [
+   "为什么睡觉会翻来翻去?",
+   "睡觉时为什么会动?",
+   "我睡着了怎么会换姿势?"
+  ],
+  "a": "一个姿势躺久了,身体有些地方会被压得不舒服。所以睡着时,我们会自己翻个身,换个舒服的姿势。",
+  "check": "People naturally shift positions during sleep, which relieves pressure."
+ },
+ {
+  "id": "zh-qa-187",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么会打哈欠?",
+  "alt": [
+   "打哈欠是怎么回事?",
+   "为什么困了会打哈欠?",
+   "人为什么打哈欠?"
+  ],
+  "a": "困了、累了或者无聊的时候,我们常常会打哈欠。为什么会打哈欠,科学家还在研究呢。",
+  "check": "Yawning is common with tiredness or boredom; its cause is not settled."
+ },
+ {
+  "id": "zh-qa-188",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么看到别人打哈欠,我也想打?",
+  "alt": [
+   "打哈欠会传染吗?",
+   "为什么别人打哈欠我也打?",
+   "为什么哈欠会一个接一个?"
+  ],
+  "a": "打哈欠好像会传染,看到、听到,甚至只是想到打哈欠,都可能跟着打一个。原因科学家还在研究。",
+  "check": "Contagious yawning is well documented; the mechanism is still debated."
+ },
+ {
+  "id": "zh-qa-189",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么会打喷嚏?",
+  "alt": [
+   "打喷嚏是怎么回事?",
+   "鼻子为什么会打喷嚏?",
+   "为什么阿嚏阿嚏的?"
+  ],
+  "a": "灰尘或别的小东西跑进鼻子里,鼻子就会用力把它们喷出去,这就是打喷嚏。它是在保护你呢。",
+  "check": "Sneezing is a reflex that expels irritants from the nose."
+ },
+ {
+  "id": "zh-qa-190",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "打喷嚏的时候为什么会闭眼睛?",
+  "alt": [
+   "打喷嚏能睁着眼吗?",
+   "为什么打喷嚏眼睛会闭上?",
+   "打喷嚏为什么要闭眼?"
+  ],
+  "a": "打喷嚏时,眼睛几乎总是会自己闭上,这是身体自动做的动作。为什么会这样,科学家还没完全弄清楚。",
+  "check": "Eye closure during sneezing is an automatic reflex; its purpose is not fully known."
+ },
+ {
+  "id": "zh-qa-191",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么打嗝停不下来?",
+  "alt": [
+   "打嗝是怎么回事?",
+   "为什么会一直嗝嗝嗝?",
+   "怎么会突然打嗝?"
+  ],
+  "a": "胸口下面有一块帮我们呼吸的大肌肉,叫膈肌。它突然抽一下,喉咙就「嗝」地响一声。打嗝通常过一会儿就自己停了。",
+  "check": "Hiccups are involuntary diaphragm spasms followed by closure of the vocal cords; usually self-limiting."
+ },
+ {
+  "id": "zh-qa-192",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "吃饱了为什么会打饱嗝?",
+  "alt": [
+   "为什么会打饱嗝?",
+   "喝汽水为什么老打嗝?",
+   "饱嗝是从哪来的?"
+  ],
+  "a": "吃饭喝水时会吞进一些空气。肚子里的空气多了,就从嘴巴跑出来,这就是饱嗝。喝汽水更容易打饱嗝。",
+  "check": "Burping releases swallowed air and gas from the stomach; carbonated drinks add gas."
+ },
+ {
+  "id": "zh-qa-193",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么冷的时候会发抖?",
+  "alt": [
+   "冷了为什么会打哆嗦?",
+   "为什么会发抖?",
+   "身体为什么会抖?"
+  ],
+  "a": "发抖的时候,肌肉在飞快地一紧一松。肌肉这样忙起来会产生热量,帮身体暖和起来。",
+  "check": "Shivering generates heat through rapid involuntary muscle contractions."
+ },
+ {
+  "id": "zh-qa-194",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么会出汗?",
+  "alt": [
+   "人为什么会流汗?",
+   "跑步后为什么一身汗?",
+   "汗是做什么用的?"
+  ],
+  "a": "身体太热时,皮肤会冒出汗水。汗水慢慢变干的时候,会把热带走,让身体凉快下来。",
+  "check": "Evaporation of sweat cools the body."
+ },
+ {
+  "id": "zh-qa-195",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么会起鸡皮疙瘩?",
+  "alt": [
+   "鸡皮疙瘩是怎么来的?",
+   "冷了皮肤为什么起小点点?",
+   "为什么汗毛会竖起来?"
+  ],
+  "a": "冷的时候或者心里特别激动时,皮肤里的小肌肉会把汗毛拉得竖起来,汗毛根部鼓起小点点,就是鸡皮疙瘩。",
+  "check": "Tiny arrector pili muscles contract and raise hairs, producing goosebumps."
+ },
+ {
+  "id": "zh-qa-196",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么转圈圈会头晕?",
+  "alt": [
+   "转圈后为什么站不稳?",
+   "为什么转完会晕?",
+   "转圈为什么晕乎乎的?"
+  ],
+  "a": "耳朵深处有装着液体的小管子,帮我们保持平衡。停下来后液体还在晃,大脑以为你还在转,就晕乎乎的。",
+  "check": "Fluid in the inner-ear semicircular canals keeps moving after spinning stops, causing dizziness."
+ },
+ {
+  "id": "zh-qa-197",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么肚子会咕咕叫?",
+  "alt": [
+   "肚子饿了为什么会叫?",
+   "肚子为什么咕噜咕噜响?",
+   "为什么肚子会叫?"
+  ],
+  "a": "胃和肠子一直在挤一挤、动一动,推着食物、水和空气往前走。里面空空的时候,声音听起来更响。",
+  "check": "Stomach rumbling comes from gut muscle contractions moving gas and fluid; louder when empty."
+ },
+ {
+  "id": "zh-qa-198",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "为什么会脸红?",
+  "alt": [
+   "害羞为什么脸会红?",
+   "跑完步脸为什么红红的?",
+   "脸怎么变红了?"
+  ],
+  "a": "害羞的时候,或者跑得很热的时候,脸上的小血管会变宽,流过的血多了,脸就红红的。",
+  "check": "Blushing and flushing come from widening of small blood vessels in the face."
+ },
+ {
+  "id": "zh-qa-199",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么腿会麻?",
+  "alt": [
+   "坐久了腿为什么麻麻的?",
+   "脚为什么会麻?",
+   "腿麻是怎么回事?"
+  ],
+  "a": "坐久了压住腿,里面传消息的神经被压住了,消息传不好,腿就麻麻的。站起来动一动,很快就好了。",
+  "check": "Temporary pressure on nerves causes pins and needles that fade once pressure is relieved."
+ },
+ {
+  "id": "zh-qa-200",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "为什么别人挠我会痒,自己挠就不痒?",
+  "alt": [
+   "为什么自己挠自己不痒?",
+   "为什么被挠痒痒会笑?",
+   "怎么挠不了自己痒痒?"
+  ],
+  "a": "自己挠的时候,大脑早就知道会发生什么,所以不觉得痒。别人挠时你猜不到,就痒得哈哈笑。",
+  "check": "The brain predicts self-produced touch and dampens it, so people cannot tickle themselves."
+ },
+ {
+  "id": "zh-qa-201",
+  "kind": "qa",
+  "topic": "reflexes",
+  "ref": "",
+  "q": "手碰到烫的东西,为什么会马上缩回来?",
+  "alt": [
+   "为什么摸到烫的会缩手?",
+   "手为什么自己缩回来了?",
+   "什么是反射?"
+  ],
+  "a": "这是身体的保护本领,叫反射。你还没来得及想,手就已经自己缩回来了,这样能保护你不被烫伤。",
+  "check": "The withdrawal reflex is routed through the spinal cord and happens before conscious awareness."
+ },
+ {
+  "id": "zh-qa-202",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "为什么要眨眼睛?",
+  "alt": [
+   "眼睛为什么会眨?",
+   "为什么一直眨眼?",
+   "不眨眼会怎么样?"
+  ],
+  "a": "眨眼就像给眼睛擦玻璃,能把眼泪抹匀,让眼睛保持湿润,还能把小灰尘擦掉。",
+  "check": "Blinking spreads the tear film and clears debris from the eye surface."
+ },
+ {
+  "id": "zh-qa-203",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "人为什么会哭?",
+  "alt": [
+   "为什么会流眼泪?",
+   "伤心为什么会哭?",
+   "为什么开心也会哭?"
+  ],
+  "a": "伤心、疼,或者特别开心的时候,都可能流眼泪。哭能把心里的感觉表达出来,哭完常常会觉得好一点。",
+  "check": "Emotional tears are a normal human way of expressing feelings."
+ },
+ {
+  "id": "zh-qa-204",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "切洋葱为什么会流眼泪?",
+  "alt": [
+   "洋葱为什么辣眼睛?",
+   "为什么切洋葱想哭?",
+   "洋葱会让人哭吗?"
+  ],
+  "a": "切洋葱时,会飘出一种看不见的气体,碰到眼睛有点刺。眼睛就流出眼泪,把它冲走。",
+  "check": "Cut onions release an irritating gas that triggers tears."
+ },
+ {
+  "id": "zh-qa-205",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "眼睛为什么能看见东西?",
+  "alt": [
+   "我们是怎么看见的?",
+   "眼睛怎么看东西?",
+   "为什么能看见?"
+  ],
+  "a": "光照到东西上,再跑进我们的眼睛。眼睛把光变成信号送给大脑,大脑就知道你看到了什么。",
+  "check": "Light enters the eye; the retina converts it into nerve signals that the brain interprets."
+ },
+ {
+  "id": "zh-qa-206",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "为什么刚关灯什么都看不见,过一会儿又能看见一点?",
+  "alt": [
+   "为什么黑暗里慢慢能看见?",
+   "关灯后眼睛怎么了?",
+   "为什么刚进黑屋子看不见?"
+  ],
+  "a": "黑暗里,眼睛中间的小黑圆点叫瞳孔,它会慢慢变大,让更多的光进来,所以过一会儿就能看清一些了。",
+  "check": "Pupils dilate and the eyes adapt gradually to darkness."
+ },
+ {
+  "id": "zh-qa-207",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "耳朵为什么能听到声音?",
+  "alt": [
+   "我们是怎么听见的?",
+   "耳朵怎么听声音?",
+   "声音怎么进耳朵?"
+  ],
+  "a": "声音会让空气轻轻抖动。抖动跑进耳朵,让里面的耳膜也跟着动,耳朵再把它变成信号送给大脑,我们就听到了。",
+  "check": "Sound waves vibrate the eardrum; the inner ear converts vibrations into nerve signals."
+ },
+ {
+  "id": "zh-qa-208",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "为什么我们有两只耳朵?",
+  "alt": [
+   "一只耳朵不够吗?",
+   "为什么要长两只耳朵?",
+   "两只耳朵有什么用?"
+  ],
+  "a": "两只耳朵一起听,大脑能比较哪边的声音先到、哪边更响,就知道声音是从哪里来的。",
+  "check": "Two ears let the brain compare timing and loudness to locate sounds."
+ },
+ {
+  "id": "zh-qa-209",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "坐飞机的时候,耳朵为什么闷闷的?",
+  "alt": [
+   "飞机上耳朵为什么难受?",
+   "耳朵为什么会闷住?",
+   "为什么坐飞机耳朵会堵?"
+  ],
+  "a": "飞机上升或下降时,耳朵里面和外面的空气压力不一样,耳朵就闷闷的。咽口水或打哈欠,常常就好了。",
+  "check": "Pressure difference across the eardrum; swallowing or yawning opens the Eustachian tube to equalize."
+ },
+ {
+  "id": "zh-qa-210",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "为什么会有耳屎?",
+  "alt": [
+   "耳屎是做什么的?",
+   "耳朵里为什么有黄黄的东西?",
+   "耳屎从哪来?"
+  ],
+  "a": "耳屎是耳朵自己做出来的,能粘住灰尘,保护耳朵。它通常会自己慢慢跑出来,不用拿东西去掏。",
+  "check": "Earwax protects the ear canal and usually clears on its own; inserting objects is discouraged."
+ },
+ {
+  "id": "zh-qa-211",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "舌头为什么能尝出味道?",
+  "alt": [
+   "我们是怎么尝味道的?",
+   "舌头上有什么?",
+   "什么是味蕾?"
+  ],
+  "a": "舌头上有很多小小的味蕾,能尝出甜、酸、咸、苦,还有鲜味。它们会把尝到的味道告诉大脑。",
+  "check": "Taste buds detect sweet, sour, salty, bitter, and umami."
+ },
+ {
+  "id": "zh-qa-212",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "舌头不同的地方尝不同的味道吗?",
+  "alt": [
+   "舌尖只能尝甜的吗?",
+   "舌头分区是真的吗?",
+   "舌头哪里尝苦的?"
+  ],
+  "a": "不是的。舌头各个地方的味蕾,甜酸咸苦都能尝出来。「舌头分区」是一个流传很久的错误说法。",
+  "check": "The tongue map is a myth; all taste qualities are detected across the tongue."
+ },
+ {
+  "id": "zh-qa-213",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "捏住鼻子吃东西,为什么没什么味道?",
+  "alt": [
+   "为什么捏着鼻子尝不出味道?",
+   "鼻子和吃东西有关系吗?",
+   "捏鼻子吃饭会怎样?"
+  ],
+  "a": "我们觉得好吃的味道,很多是靠鼻子闻出来的。捏住鼻子,就只剩下甜酸咸苦这些简单的味道了。",
+  "check": "Much of flavor comes from smell; blocking the nose leaves only basic tastes."
+ },
+ {
+  "id": "zh-qa-214",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "感冒的时候,吃东西为什么没味道?",
+  "alt": [
+   "鼻子堵了为什么吃饭不香?",
+   "感冒了为什么尝不出味道?",
+   "为什么感冒吃什么都一样?"
+  ],
+  "a": "感冒时鼻子堵住了,闻不到气味,所以吃东西觉得没什么味道。等鼻子通了,饭菜又会香香的。",
+  "check": "Nasal congestion from a cold blocks smell, which reduces flavor."
+ },
+ {
+  "id": "zh-qa-215",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "鼻子为什么能闻到味道?",
+  "alt": [
+   "我们是怎么闻到香味的?",
+   "鼻子怎么闻东西?",
+   "气味是怎么跑进鼻子的?"
+  ],
+  "a": "东西会飘出看不见的小小颗粒,跑进鼻子里。鼻子里面的闻味小帮手认出它们,告诉大脑这是什么味道。",
+  "check": "Odor molecules reach smell receptors in the nose, which signal the brain."
+ },
+ {
+  "id": "zh-qa-216",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "手为什么能感觉到冷和热?",
+  "alt": [
+   "皮肤怎么知道烫不烫?",
+   "为什么摸冰块觉得冷?",
+   "皮肤能感觉什么?"
+  ],
+  "a": "皮肤里有很多小小的感觉器,能感觉冷、热、软、硬和疼,再把消息传给大脑。",
+  "check": "Skin receptors detect temperature, touch, and pain."
+ },
+ {
+  "id": "zh-qa-217",
+  "kind": "qa",
+  "topic": "senses",
+  "ref": "",
+  "q": "吃辣椒为什么嘴巴觉得烫?",
+  "alt": [
+   "为什么辣的东西像火烧?",
+   "辣是什么感觉?",
+   "吃辣为什么会热?"
+  ],
+  "a": "辣椒里有一种东西,会骗过嘴巴里管热的感觉器,让大脑以为嘴巴很烫,其实并没有真的烫伤。",
+  "check": "Capsaicin activates heat-sensing receptors without real burning."
+ },
+ {
+  "id": "zh-qa-218",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "为什么会换牙?",
+  "alt": [
+   "牙齿为什么会掉?",
+   "小孩为什么要掉牙?",
+   "乳牙为什么会松?"
+  ],
+  "a": "小时候的牙叫乳牙。嘴巴长大了,下面的新牙叫恒牙,它往上长,把乳牙推松,乳牙就掉了。",
+  "check": "Erupting permanent teeth resorb baby-tooth roots, loosening them."
+ },
+ {
+  "id": "zh-qa-219",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "大人为什么不换牙了?",
+  "alt": [
+   "大人还会掉牙再长吗?",
+   "恒牙掉了还长吗?",
+   "人一辈子换几次牙?"
+  ],
+  "a": "人一辈子只有两套牙:乳牙和恒牙。恒牙长好以后就不会再换了,所以要好好刷牙,保护它们。",
+  "check": "Humans have two sets of teeth; permanent teeth are not replaced."
+ },
+ {
+  "id": "zh-qa-220",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "为什么要刷牙?",
+  "alt": [
+   "不刷牙会怎么样?",
+   "每天都要刷牙吗?",
+   "刷牙有什么用?"
+  ],
+  "a": "吃完东西,牙齿上会留下食物渣和细菌。细菌会伤害牙齿,刷牙能把它们刷走,让牙齿干净又健康。",
+  "check": "Brushing removes plaque bacteria that cause tooth decay."
+ },
+ {
+  "id": "zh-qa-221",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "为什么早上和晚上都要刷牙?",
+  "alt": [
+   "为什么睡前一定要刷牙?",
+   "一天刷几次牙?",
+   "早上起来为什么要刷牙?"
+  ],
+  "a": "睡觉时嘴巴里的口水变少,细菌更容易捣乱。睡前把一天的食物渣刷掉,早上再刷一次,牙齿更健康。",
+  "check": "Saliva flow drops during sleep; brushing twice daily is standard dental guidance."
+ },
+ {
+  "id": "zh-qa-222",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "吃糖多了为什么会长蛀牙?",
+  "alt": [
+   "糖为什么对牙齿不好?",
+   "蛀牙是怎么来的?",
+   "牙齿为什么会有小洞?"
+  ],
+  "a": "嘴里的细菌最爱吃糖,吃完会做出一种酸。酸会慢慢在牙齿上弄出小洞,这就是蛀牙。",
+  "check": "Oral bacteria turn sugar into acid that erodes enamel and causes cavities."
+ },
+ {
+  "id": "zh-qa-223",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "小朋友一共有多少颗牙?",
+  "alt": [
+   "乳牙有几颗?",
+   "人有多少颗牙齿?",
+   "大人有几颗牙?"
+  ],
+  "a": "小朋友一般有二十颗乳牙。换成恒牙以后,大人一般有二十八到三十二颗牙。",
+  "check": "There are 20 primary teeth; adults typically have 28 to 32 permanent teeth."
+ },
+ {
+  "id": "zh-qa-224",
+  "kind": "qa",
+  "topic": "teeth",
+  "ref": "",
+  "q": "牙齿为什么那么硬?",
+  "alt": [
+   "牙齿是什么做的?",
+   "身体里最硬的是什么?",
+   "牙齿外面亮亮的是什么?"
+  ],
+  "a": "牙齿外面有一层亮亮的牙釉质,它是我们身体里最硬的东西,能帮我们咬碎食物。",
+  "check": "Tooth enamel is the hardest substance in the human body."
+ },
+ {
+  "id": "zh-qa-225",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "我们为什么有骨头?",
+  "alt": [
+   "骨头有什么用?",
+   "没有骨头会怎么样?",
+   "为什么身体里有骨头?"
+  ],
+  "a": "骨头像房子的架子,撑起我们的身体,让我们能站能走,还能保护大脑和心脏这些重要的地方。",
+  "check": "The skeleton supports the body, enables movement, and protects organs."
+ },
+ {
+  "id": "zh-qa-226",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "人身上有多少块骨头?",
+  "alt": [
+   "人有几块骨头?",
+   "骨头一共有多少?",
+   "小宝宝骨头多还是大人多?"
+  ],
+  "a": "大人一般有206块骨头。小宝宝的骨头还要多一些,长大时有些骨头会慢慢长在一起。",
+  "check": "Adults have about 206 bones; infants have more, and some fuse during growth."
+ },
+ {
+  "id": "zh-qa-227",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "身体里最小的骨头在哪里?",
+  "alt": [
+   "最小的骨头是哪块?",
+   "最小的骨头有多小?",
+   "耳朵里有骨头吗?"
+  ],
+  "a": "最小的骨头在耳朵里面,叫镫骨,比一粒米还小。它帮我们听见声音。",
+  "check": "The stapes in the middle ear is the smallest bone, about 3 mm long."
+ },
+ {
+  "id": "zh-qa-228",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "身体里最长的骨头是哪一根?",
+  "alt": [
+   "最大的骨头在哪里?",
+   "哪根骨头最长?",
+   "大腿里是什么骨头?"
+  ],
+  "a": "最长的骨头在大腿里,叫股骨。它又长又结实,帮我们站稳、走路和跑步。",
+  "check": "The femur (thigh bone) is the longest bone in the body."
+ },
+ {
+  "id": "zh-qa-229",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "肌肉是做什么的?",
+  "alt": [
+   "肌肉有什么用?",
+   "我们为什么能动?",
+   "什么是肌肉?"
+  ],
+  "a": "肌肉拉着骨头动,我们才能跑、跳、拿东西。连眨眼、说话、笑,都要靠肌肉帮忙。",
+  "check": "Muscles move bones and also power facial movements and speech."
+ },
+ {
+  "id": "zh-qa-230",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "为什么运动完会觉得累?",
+  "alt": [
+   "跑完步为什么没力气?",
+   "玩久了为什么累?",
+   "肌肉为什么会累?"
+  ],
+  "a": "运动时肌肉一直在用力干活,用掉了很多能量,所以会累。休息一下、喝点水,力气就慢慢回来了。",
+  "check": "Muscle work uses energy; rest and fluids help recovery."
+ },
+ {
+  "id": "zh-qa-231",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "喝牛奶为什么对骨头好?",
+  "alt": [
+   "牛奶能让骨头变硬吗?",
+   "什么是钙?",
+   "怎么让骨头更结实?"
+  ],
+  "a": "牛奶里有很多钙,钙就像骨头的建筑材料,能帮骨头长得结实。多跑多跳,骨头也会更强壮。",
+  "check": "Calcium is the main bone mineral; weight-bearing activity strengthens bones."
+ },
+ {
+  "id": "zh-qa-232",
+  "kind": "qa",
+  "topic": "bones",
+  "ref": "",
+  "q": "为什么要多运动?",
+  "alt": [
+   "运动有什么好处?",
+   "为什么要出去跑跑跳跳?",
+   "多玩对身体好吗?"
+  ],
+  "a": "多跑多跳能让心脏、肌肉和骨头都变得更强壮,还会让人心情变好,晚上睡得更香。",
+  "check": "Physical activity strengthens heart, muscles, and bones and improves mood and sleep."
+ },
+ {
+  "id": "zh-qa-233",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "心脏为什么一直在跳?",
+  "alt": [
+   "心脏是做什么的?",
+   "心为什么会怦怦跳?",
+   "心脏会停下来休息吗?"
+  ],
+  "a": "心脏像一个小水泵,每跳一下,就把血送到全身。血带着氧气和营养,让身体每个地方都有力气。",
+  "check": "The heart pumps blood carrying oxygen and nutrients around the body."
+ },
+ {
+  "id": "zh-qa-234",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "跑步以后心为什么跳得那么快?",
+  "alt": [
+   "运动完心为什么怦怦跳?",
+   "为什么跑步心跳变快?",
+   "心跳为什么会加速?"
+  ],
+  "a": "跑步时肌肉需要更多氧气,心脏就跳得快一点,送去更多带着氧气的血。休息一会儿,它就慢下来了。",
+  "check": "Heart rate rises during exercise to deliver more oxygen, then returns toward resting."
+ },
+ {
+  "id": "zh-qa-235",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "心脏有多大?",
+  "alt": [
+   "我的心脏有多大?",
+   "心脏长什么样?",
+   "心脏是爱心形状的吗?"
+  ],
+  "a": "你的心脏大概和你自己的拳头差不多大。你长大了,它也会跟着长大。",
+  "check": "A person's heart is roughly the size of their own fist."
+ },
+ {
+  "id": "zh-qa-236",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "睡觉的时候心脏也在跳吗?",
+  "alt": [
+   "睡着了心还跳吗?",
+   "心脏会睡觉吗?",
+   "晚上心脏休息吗?"
+  ],
+  "a": "在跳呀!心脏白天晚上一直跳,从不停下来,只是睡觉的时候会跳得慢一些。",
+  "check": "The heart beats continuously; heart rate is lower during sleep."
+ },
+ {
+  "id": "zh-qa-237",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "血为什么是红色的?",
+  "alt": [
+   "血怎么是红的?",
+   "血是什么做的?",
+   "为什么流的血是红的?"
+  ],
+  "a": "血里有很多很多红细胞,它们里面有一种红色的东西,能带着氧气跑遍全身,所以血看起来是红的。",
+  "check": "Hemoglobin in red blood cells is red and carries oxygen."
+ },
+ {
+  "id": "zh-qa-238",
+  "kind": "qa",
+  "topic": "heart",
+  "ref": "",
+  "q": "手上为什么能看到青色的线?",
+  "alt": [
+   "手腕上的蓝线是什么?",
+   "血是蓝色的吗?",
+   "皮肤下面青青的是什么?"
+  ],
+  "a": "那是皮肤下面的血管,叫静脉。里面的血其实是红色的,只是隔着皮肤看起来有点青。",
+  "check": "Veins look bluish because of how skin scatters light; blood is always red."
+ },
+ {
+  "id": "zh-qa-239",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "我们为什么要呼吸?",
+  "alt": [
+   "为什么要吸气?",
+   "人为什么要喘气?",
+   "不呼吸行不行?"
+  ],
+  "a": "身体每个地方都需要空气里的氧气才能工作。吸气把氧气带进来,呼气把用过的气体送出去。",
+  "check": "Breathing brings in oxygen and removes carbon dioxide."
+ },
+ {
+  "id": "zh-qa-240",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "为什么不能一直憋气?",
+  "alt": [
+   "憋气为什么憋不久?",
+   "为什么憋着憋着就要喘气?",
+   "能憋气多久?"
+  ],
+  "a": "憋气时,身体里用过的气体越来越多,大脑就会着急地让你赶快呼吸,所以憋不了太久。",
+  "check": "Carbon dioxide build-up drives the urge to breathe."
+ },
+ {
+  "id": "zh-qa-241",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "睡着了怎么还会呼吸?",
+  "alt": [
+   "睡觉时谁让我呼吸?",
+   "睡着了会忘记呼吸吗?",
+   "呼吸要自己想着吗?"
+  ],
+  "a": "呼吸是大脑自动管的,不用你去想。睡着了,大脑也会帮你一直呼吸。",
+  "check": "Breathing is controlled automatically by the brainstem, including during sleep."
+ },
+ {
+  "id": "zh-qa-242",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "冬天嘴里为什么会冒白气?",
+  "alt": [
+   "冷的时候为什么能看到哈气?",
+   "嘴里冒的白烟是什么?",
+   "为什么冬天哈气是白的?"
+  ],
+  "a": "我们呼出的气又暖又带着看不见的水汽。外面很冷时,水汽一下子变成很多小水珠,看起来就像白白的烟。",
+  "check": "Water vapor in warm breath condenses into droplets in cold air."
+ },
+ {
+  "id": "zh-qa-243",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "跑步的时候为什么会大口喘气?",
+  "alt": [
+   "运动时为什么呼吸变快?",
+   "为什么跑完气喘吁吁?",
+   "跑步为什么喘?"
+  ],
+  "a": "跑步时身体需要更多氧气,所以会呼吸得又快又深,把更多空气吸进肺里。",
+  "check": "Breathing rate and depth increase during exercise to supply more oxygen."
+ },
+ {
+  "id": "zh-qa-244",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "肺长什么样子?",
+  "alt": [
+   "肺在哪里?",
+   "肺是做什么的?",
+   "人有几个肺?"
+  ],
+  "a": "肺在胸口里面,左右各一个,像两块软软的海绵。吸气时它们鼓起来,呼气时又变小。",
+  "check": "Two spongy lungs in the chest expand on inhalation and shrink on exhalation."
+ },
+ {
+  "id": "zh-qa-245",
+  "kind": "qa",
+  "topic": "breathing",
+  "ref": "",
+  "q": "鼻子里为什么有鼻毛和鼻涕?",
+  "alt": [
+   "鼻涕有什么用?",
+   "为什么会有鼻屎?",
+   "鼻毛是做什么的?"
+  ],
+  "a": "鼻毛和鼻涕像一张网,能拦住空气里的灰尘和细菌,让吸进身体的空气更干净。",
+  "check": "Nasal hairs and mucus trap dust and germs from inhaled air."
+ },
+ {
+  "id": "zh-qa-246",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么要吃蔬菜?",
+  "alt": [
+   "不吃青菜行不行?",
+   "蔬菜有什么好处?",
+   "为什么妈妈让我吃青菜?"
+  ],
+  "a": "蔬菜里有很多维生素和纤维。纤维能帮肚子消化,维生素能让身体各个地方好好工作。",
+  "check": "Vegetables provide vitamins, minerals, and fiber."
+ },
+ {
+  "id": "zh-qa-247",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么要喝水?",
+  "alt": [
+   "每天都要喝水吗?",
+   "不喝水会怎么样?",
+   "喝水有什么用?"
+  ],
+  "a": "我们身体里有很多水。出汗、呼吸、上厕所都会用掉水,多喝水能把身体补满,人就有精神。",
+  "check": "The body is largely water and loses it through sweat, breath, and urine."
+ },
+ {
+  "id": "zh-qa-248",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么会口渴?",
+  "alt": [
+   "口渴是怎么回事?",
+   "为什么嘴巴会干干的想喝水?",
+   "人为什么会渴?"
+  ],
+  "a": "身体里的水变少了,大脑就会发出口渴的信号,提醒你该喝水啦。",
+  "check": "Thirst is a brain signal triggered when body water runs low."
+ },
+ {
+  "id": "zh-qa-249",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么会肚子饿?",
+  "alt": [
+   "人为什么会饿?",
+   "为什么吃了饭还会饿?",
+   "饿是什么感觉?"
+  ],
+  "a": "身体干活要用能量,能量来自食物。能量用得差不多了,肚子和大脑就会告诉你:该吃饭啦。",
+  "check": "Hunger signals that the body needs more energy from food."
+ },
+ {
+  "id": "zh-qa-250",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "吃下去的饭去哪里了?",
+  "alt": [
+   "食物到肚子里会怎么样?",
+   "饭是怎么变成便便的?",
+   "吃的东西去哪了?"
+  ],
+  "a": "饭先在嘴里嚼碎,再到胃里被搅一搅,然后进肠子。有用的营养被身体吸收,剩下的就变成便便排出去。",
+  "check": "Food passes from mouth to stomach to intestines; nutrients are absorbed and waste is expelled."
+ },
+ {
+  "id": "zh-qa-251",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "吃饭为什么要细嚼慢咽?",
+  "alt": [
+   "为什么吃饭要慢慢嚼?",
+   "吃太快会怎样?",
+   "为什么要多嚼几下?"
+  ],
+  "a": "把食物嚼得碎碎的,胃和肠子就更容易消化,吞下去也更安全,不容易噎着。",
+  "check": "Thorough chewing aids digestion and reduces choking risk."
+ },
+ {
+  "id": "zh-qa-252",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "为什么不能只吃喜欢吃的东西?",
+  "alt": [
+   "为什么不能挑食?",
+   "为什么什么都要吃一点?",
+   "只吃一样东西行不行?"
+  ],
+  "a": "不同的食物给身体不同的营养。什么都吃一点,身体才能拿到它需要的全部营养。",
+  "check": "A varied diet supplies the range of nutrients the body needs."
+ },
+ {
+  "id": "zh-qa-253",
+  "kind": "qa",
+  "topic": "food",
+  "ref": "",
+  "q": "吃胡萝卜对眼睛好吗?",
+  "alt": [
+   "胡萝卜能让眼睛变亮吗?",
+   "吃胡萝卜能在黑暗里看见吗?",
+   "为什么说胡萝卜护眼睛?"
+  ],
+  "a": "胡萝卜里的营养能在身体里变成维生素A,它帮眼睛在暗处看东西。不过多吃也不会让你有超能力哦。",
+  "check": "Beta-carotene becomes vitamin A, needed for vision in dim light; extra carrots do not give super vision."
+ },
+ {
+  "id": "zh-qa-254",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "人为什么会长高?",
+  "alt": [
+   "我怎么长高的?",
+   "为什么小朋友会长个子?",
+   "骨头会变长吗?"
+  ],
+  "a": "骨头两头有会生长的地方,让骨头一点点变长,人就长高了。吃得好、睡得香、多运动,都能帮身体好好长。",
+  "check": "Growth plates near bone ends lengthen bones during childhood; nutrition, sleep, and activity support growth."
+ },
+ {
+  "id": "zh-qa-255",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "剪头发为什么不疼?",
+  "alt": [
+   "头发剪了会疼吗?",
+   "为什么拉头发会疼?",
+   "头发有感觉吗?"
+  ],
+  "a": "我们看到的头发没有感觉,所以剪头发一点也不疼。拉头发会疼,是因为拉到了皮肤下面的发根。",
+  "check": "The hair shaft has no nerves; follicles under the skin do."
+ },
+ {
+  "id": "zh-qa-256",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "头发为什么会一直长?",
+  "alt": [
+   "头发怎么长长的?",
+   "头发是从哪里长出来的?",
+   "为什么要经常剪头发?"
+  ],
+  "a": "头皮下面有很多小小的头发工厂,叫毛囊。它们一直在做新头发,把头发往外推,头发就越来越长。",
+  "check": "Hair follicles produce new hair cells that push the hair outward."
+ },
+ {
+  "id": "zh-qa-257",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "指甲为什么会长长?",
+  "alt": [
+   "指甲是从哪里长的?",
+   "剪指甲为什么不疼?",
+   "指甲怎么一直长?"
+  ],
+  "a": "指甲根部藏在皮肤下面,那里一直在做新指甲,把旧的往前推,指甲就变长了。剪掉前面的部分一点也不疼。",
+  "check": "The nail matrix under the skin produces nail; the nail plate has no nerves."
+ },
+ {
+  "id": "zh-qa-258",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "为什么要剪指甲?",
+  "alt": [
+   "指甲长了为什么要剪?",
+   "不剪指甲会怎么样?",
+   "为什么指甲缝里黑黑的?"
+  ],
+  "a": "指甲太长,里面容易藏脏东西和细菌,也容易劈开。剪短一点,手更干净。",
+  "check": "Long nails trap dirt and germs and break more easily."
+ },
+ {
+  "id": "zh-qa-259",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "人早上为什么比晚上高一点?",
+  "alt": [
+   "早上真的会变高吗?",
+   "为什么晚上会矮一点?",
+   "身高一天会变吗?"
+  ],
+  "a": "白天站着走着,背上骨头中间的小软垫会被压扁一点点。睡觉时它们又松开,所以早上会稍微高一点。",
+  "check": "Spinal discs compress during the day and recover overnight, so people are slightly taller in the morning."
+ },
+ {
+  "id": "zh-qa-260",
+  "kind": "qa",
+  "topic": "growing",
+  "ref": "",
+  "q": "我们的身体是什么做的?",
+  "alt": [
+   "身体是由什么组成的?",
+   "什么是细胞?",
+   "人为什么会变大?"
+  ],
+  "a": "身体是由很多很多小小的细胞组成的,小到要用显微镜才能看见。我们长大的时候,细胞会变得越来越多。",
+  "check": "The body is made of microscopic cells; growth involves cells dividing and multiplying."
+ },
+ {
+  "id": "zh-qa-261",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "为什么要洗手?",
+  "alt": [
+   "吃饭前为什么要洗手?",
+   "不洗手会怎么样?",
+   "洗手有什么用?"
+  ],
+  "a": "手会摸很多东西,上面有看不见的细菌。用肥皂洗手,能把它们洗掉,不让它们跟着食物跑进肚子里。",
+  "check": "Handwashing with soap removes germs that can be swallowed."
+ },
+ {
+  "id": "zh-qa-262",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "细菌是什么?",
+  "alt": [
+   "细菌长什么样?",
+   "细菌都是坏的吗?",
+   "为什么看不见细菌?"
+  ],
+  "a": "细菌是非常非常小的生物,小到眼睛看不见。有的会让人生病,也有很多是好的,比如肚子里帮忙消化的细菌。",
+  "check": "Bacteria are microscopic; some cause illness and many are helpful, such as gut bacteria."
+ },
+ {
+  "id": "zh-qa-263",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "洗手为什么要用肥皂,光用水不行吗?",
+  "alt": [
+   "为什么要用洗手液?",
+   "只用水冲手行吗?",
+   "肥皂有什么用?"
+  ],
+  "a": "肥皂能把手上油油的脏东西和细菌抓起来,再让水冲走。光用水冲,很多细菌冲不掉。",
+  "check": "Soap lifts oils and microbes off skin; it removes far more germs than water alone."
+ },
+ {
+  "id": "zh-qa-264",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "洗手要洗多久?",
+  "alt": [
+   "怎么洗手才干净?",
+   "洗手要搓多久?",
+   "洗手的时候要洗哪里?"
+  ],
+  "a": "打上肥皂,手心、手背、指缝和指甲都要搓一搓,大约二十秒,差不多是唱两遍生日快乐歌那么久。",
+  "check": "Public health guidance recommends scrubbing with soap for at least 20 seconds."
+ },
+ {
+  "id": "zh-qa-265",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "打喷嚏为什么要捂住?",
+  "alt": [
+   "打喷嚏要用手肘挡吗?",
+   "为什么不能对着人打喷嚏?",
+   "咳嗽为什么要捂嘴?"
+  ],
+  "a": "打喷嚏会喷出很多小水珠,里面可能有细菌。用手肘或纸巾挡住,就不会喷到别人身上。",
+  "check": "Covering sneezes and coughs reduces the spread of germ-carrying droplets."
+ },
+ {
+  "id": "zh-qa-266",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "为什么要洗澡?",
+  "alt": [
+   "每天都要洗澡吗?",
+   "不洗澡会怎么样?",
+   "洗澡有什么好处?"
+  ],
+  "a": "每天身上会出汗,也会沾上灰尘。洗澡能把汗水和脏东西洗掉,身体干干净净,睡觉也更舒服。",
+  "check": "Bathing removes sweat, dirt, and skin bacteria."
+ },
+ {
+  "id": "zh-qa-267",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "出汗以后身上为什么会有味道?",
+  "alt": [
+   "汗为什么是臭的?",
+   "为什么身上有汗味?",
+   "汗本来有味道吗?"
+  ],
+  "a": "刚出的汗几乎没有味道,是皮肤上的细菌吃了汗水,才产生了味道。洗个澡就香香的啦。",
+  "check": "Body odor comes from skin bacteria breaking down sweat; fresh sweat is nearly odorless."
+ },
+ {
+  "id": "zh-qa-268",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "上完厕所为什么要洗手?",
+  "alt": [
+   "上厕所后一定要洗手吗?",
+   "为什么便便后要洗手?",
+   "厕所里有细菌吗?"
+  ],
+  "a": "厕所里有很多细菌。上完厕所洗手,就能把细菌洗掉,不会把它们带到别的地方,或者吃进嘴里。",
+  "check": "Handwashing after using the toilet prevents spreading germs."
+ },
+ {
+  "id": "zh-qa-269",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "为什么要用自己的牙刷和毛巾?",
+  "alt": [
+   "牙刷能和别人一起用吗?",
+   "为什么不能用别人的牙刷?",
+   "为什么每人一条毛巾?"
+  ],
+  "a": "牙刷和毛巾上会留着自己的细菌。各用各的,大家就不会互相传细菌啦。",
+  "check": "Sharing toothbrushes and towels can transfer germs between people."
+ },
+ {
+  "id": "zh-qa-270",
+  "kind": "qa",
+  "topic": "hygiene",
+  "ref": "",
+  "q": "感冒了为什么会流鼻涕?",
+  "alt": [
+   "为什么感冒老是流鼻涕?",
+   "鼻涕为什么变多了?",
+   "感冒时鼻子怎么了?"
+  ],
+  "a": "感冒时,鼻子会做出很多鼻涕,把病毒包住冲出去。病毒是让人感冒的小东西,小到看不见。流鼻涕是身体在努力保护自己。",
+  "check": "Nasal mucus increases during a cold to trap and flush out viruses."
+ },
+ {
+  "id": "zh-qa-271",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳是什么?",
+  "alt": [
+   "太阳是什么做的?",
+   "太阳是一颗星星吗?",
+   "太阳是啥?"
+  ],
+  "a": "太阳是离我们最近的一颗星星。它是一个巨大又滚烫的气体球，自己会发光发热。",
+  "check": "The Sun is a star, a ball of hot glowing gas, and the closest star to Earth."
+ },
+ {
+  "id": "zh-qa-272",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳为什么那么热?",
+  "alt": [
+   "太阳为什么会发热?",
+   "太阳为什么这么烫?"
+  ],
+  "a": "太阳的中心又挤又热，里面极小极小的粒子撞在一起，会放出巨大的能量，所以太阳一直发光发热。",
+  "check": "The Sun's energy comes from nuclear fusion in its core."
+ },
+ {
+  "id": "zh-qa-273",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳有多大?",
+  "alt": [
+   "太阳比地球大吗?",
+   "太阳大不大?"
+  ],
+  "a": "太阳非常非常大，里面能装下一百多万个地球！它看起来小，是因为离我们特别远。",
+  "check": "The Sun's volume is about 1.3 million times Earth's."
+ },
+ {
+  "id": "zh-qa-274",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳为什么从东边升起来?",
+  "alt": [
+   "太阳为什么会下山?",
+   "太阳为什么早上出来晚上回去?",
+   "太阳去哪儿了?"
+  ],
+  "a": "其实太阳没有跑来跑去，是地球自西向东在转。我们跟着地球转，就看到太阳从东边升起，从西边落下。",
+  "check": "Earth rotates west to east, so the Sun appears to rise in the east and set in the west."
+ },
+ {
+  "id": "zh-qa-275",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳光要多久才能照到地球?",
+  "alt": [
+   "太阳光跑得快吗?",
+   "阳光从太阳到这里要多久?"
+  ],
+  "a": "太阳光跑得特别快。从太阳出发，大约八分钟就能照到地球。",
+  "check": "Sunlight takes about 8 minutes to reach Earth."
+ },
+ {
+  "id": "zh-qa-276",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "太阳会不会熄灭?",
+  "alt": [
+   "太阳会烧完吗?",
+   "太阳会一直亮吗?"
+  ],
+  "a": "太阳还能再亮几十亿年，这是非常非常长的时间。我们可以放心，它会一直温暖地照着地球。",
+  "check": "The Sun has billions of years of fuel left."
+ },
+ {
+  "id": "zh-qa-277",
+  "kind": "qa",
+  "topic": "sun",
+  "ref": "",
+  "q": "为什么不能直接看太阳?",
+  "alt": [
+   "能盯着太阳看吗?",
+   "看太阳为什么眼睛疼?"
+  ],
+  "a": "太阳光太强了，直接看会伤害眼睛。所以千万不要盯着太阳看，也不要用望远镜看它。",
+  "check": "Looking directly at the Sun, especially through optics, can damage the eyes."
+ },
+ {
+  "id": "zh-qa-278",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "月亮为什么会变形状?",
+  "alt": [
+   "月亮为什么会变?",
+   "月亮为什么有时候是弯的?",
+   "为什么月亮有时圆有时不圆?"
+  ],
+  "a": "月亮自己不发光，太阳总是照亮它的一半。月亮绕着地球转，我们看到亮的部分有多有少，所以它看起来会变。",
+  "check": "Moon phases come from how much of the sunlit half we see as the Moon orbits Earth."
+ },
+ {
+  "id": "zh-qa-279",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "为什么白天也能看到月亮?",
+  "alt": [
+   "白天怎么会有月亮?",
+   "月亮白天也出来吗?"
+  ],
+  "a": "月亮绕着地球转，有些日子它白天也挂在天上。月亮被太阳照得很亮，所以白天也能看见它。",
+  "check": "For part of each month the Moon is above the horizon in daytime and is bright enough to see."
+ },
+ {
+  "id": "zh-qa-280",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "月亮自己会发光吗?",
+  "alt": [
+   "月光是哪里来的?",
+   "月亮为什么是亮的?"
+  ],
+  "a": "月亮自己不会发光。我们看到的月光，其实是太阳光照到月亮上，再反射到我们眼睛里的。",
+  "check": "Moonlight is reflected sunlight."
+ },
+ {
+  "id": "zh-qa-281",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "为什么月亮一直跟着我走?",
+  "alt": [
+   "月亮为什么跟着我?",
+   "坐车的时候月亮为什么跟着车跑?"
+  ],
+  "a": "月亮离我们特别特别远。你走路时，近处的树很快往后退，可月亮太远了，看起来好像一直在原地跟着你。",
+  "check": "Very distant objects show almost no parallax, so the Moon seems to follow you."
+ },
+ {
+  "id": "zh-qa-282",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "月亮上为什么有坑?",
+  "alt": [
+   "月亮上的坑是怎么来的?",
+   "月亮上的圆圈是什么?"
+  ],
+  "a": "很久很久以前，很多太空石头撞到月亮上，留下了坑。月亮上没有风也没有雨，这些坑就一直留着。",
+  "check": "Lunar craters come from impacts and are preserved because the Moon has no weather."
+ },
+ {
+  "id": "zh-qa-283",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "月亮上有空气吗?",
+  "alt": [
+   "能在月亮上呼吸吗?",
+   "月亮上能喘气吗?"
+  ],
+  "a": "月亮上几乎没有空气，所以人不能在上面呼吸。宇航员去月亮，要穿着带氧气的宇航服。",
+  "check": "The Moon has essentially no atmosphere."
+ },
+ {
+  "id": "zh-qa-284",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "有人去过月亮吗?",
+  "alt": [
+   "人能去月亮吗?",
+   "谁去过月亮?"
+  ],
+  "a": "去过！很多年前，宇航员坐火箭飞到月亮上，在上面走路、跳跃，还带回了月亮上的石头。",
+  "check": "Apollo astronauts walked on the Moon (1969-1972) and returned lunar samples."
+ },
+ {
+  "id": "zh-qa-285",
+  "kind": "qa",
+  "topic": "moon",
+  "ref": "",
+  "q": "为什么我们总是看到月亮的同一面?",
+  "alt": [
+   "月亮的背面是黑的吗?",
+   "月亮背面什么样?"
+  ],
+  "a": "月亮绕地球转一圈，自己也正好转一圈，所以总是同一面对着我们。背面也会被太阳照到，只是我们看不到。",
+  "check": "The Moon is tidally locked; its far side also receives sunlight."
+ },
+ {
+  "id": "zh-qa-286",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "星星为什么会眨眼睛?",
+  "alt": [
+   "星星为什么一闪一闪的?",
+   "星星为什么会闪?"
+  ],
+  "a": "星星的光要穿过地球上空的空气。空气一直在流动，把星光弄得晃来晃去，所以星星看起来一闪一闪的。",
+  "check": "Twinkling is caused by moving air (turbulence) in Earth's atmosphere."
+ },
+ {
+  "id": "zh-qa-287",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "星星是什么?",
+  "alt": [
+   "星星是什么做的?",
+   "星星是小灯吗?"
+  ],
+  "a": "星星和太阳一样，是巨大的发光气体球。它们离我们太远了，所以看起来只是一个个小亮点。",
+  "check": "Stars are suns like ours, appearing small because of distance."
+ },
+ {
+  "id": "zh-qa-288",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "白天为什么看不到星星?",
+  "alt": [
+   "星星白天去哪儿了?",
+   "白天有星星吗?"
+  ],
+  "a": "白天星星还在天上，只是太阳光太亮了，把天空照得亮亮的，星星的光就被盖住了。",
+  "check": "Stars are still there in daytime but are outshone by the bright sky."
+ },
+ {
+  "id": "zh-qa-289",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "天上有多少颗星星?",
+  "alt": [
+   "星星有多少?",
+   "星星数得完吗?"
+  ],
+  "a": "星星多得数也数不清！我们用眼睛只能看到一小部分，用望远镜能看到更多更多。",
+  "check": "Stars are too numerous to count; most are invisible to the naked eye."
+ },
+ {
+  "id": "zh-qa-290",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "流星是星星掉下来了吗?",
+  "alt": [
+   "流星是什么?",
+   "为什么会有流星?"
+  ],
+  "a": "流星不是星星掉下来。它是太空里的小石头冲进空气里，跑得太快，变得很热，发出光，划出一道亮线。",
+  "check": "Meteors are small space rocks that heat up and glow as they enter the atmosphere."
+ },
+ {
+  "id": "zh-qa-291",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "星星为什么颜色不一样?",
+  "alt": [
+   "有红色的星星吗?",
+   "星星都是白色的吗?"
+  ],
+  "a": "星星的颜色和它有多热有关。特别热的星星发蓝白色的光，没那么热的星星发橙色或红色的光。",
+  "check": "A star's color depends on its surface temperature."
+ },
+ {
+  "id": "zh-qa-292",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "为什么城市里看不到很多星星?",
+  "alt": [
+   "城里为什么星星少?",
+   "为什么乡下星星多?"
+  ],
+  "a": "城市晚上有很多灯，把天空照亮了，暗一点的星星就看不见了。到乡下或山上，就能看到更多星星。",
+  "check": "Light pollution hides faint stars."
+ },
+ {
+  "id": "zh-qa-293",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "北极星为什么不动?",
+  "alt": [
+   "北极星在哪里?",
+   "为什么北极星能指方向?"
+  ],
+  "a": "北极星差不多正好在地球北极的正上方。地球转的时候，它几乎待在原地，别的星星好像都绕着它转。",
+  "check": "Polaris lies almost on Earth's rotation axis, so it barely moves in the sky."
+ },
+ {
+  "id": "zh-qa-294",
+  "kind": "qa",
+  "topic": "stars",
+  "ref": "",
+  "q": "星座是什么?",
+  "alt": [
+   "什么是星座?",
+   "星座是怎么来的?"
+  ],
+  "a": "很久以前，人们把天上的星星像连线画一样连成图案，还给它们起了名字，这些图案就叫星座。",
+  "check": "Constellations are star patterns that people named."
+ },
+ {
+  "id": "zh-qa-295",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "太阳系有几颗行星?",
+  "alt": [
+   "有几个行星?",
+   "行星有哪些?"
+  ],
+  "a": "太阳系有八颗行星：水星、金星、地球、火星、木星、土星、天王星和海王星。它们都绕着太阳转。",
+  "check": "The solar system has eight planets."
+ },
+ {
+  "id": "zh-qa-296",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "哪颗行星最大?",
+  "alt": [
+   "最大的行星是哪个?",
+   "木星有多大?"
+  ],
+  "a": "木星是最大的行星，里面能装下一千多个地球！它主要是由气体组成的。",
+  "check": "Jupiter is the largest planet; its volume is about 1,300 Earths; it is mostly gas."
+ },
+ {
+  "id": "zh-qa-297",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "火星为什么是红色的?",
+  "alt": [
+   "火星为什么红红的?",
+   "火星上有火吗?"
+  ],
+  "a": "火星的地面上有很多像铁锈一样的红色尘土，所以从远处看，火星是红红的。",
+  "check": "Mars looks red because of iron oxide (rust) in its dust."
+ },
+ {
+  "id": "zh-qa-298",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "土星的环是什么做的?",
+  "alt": [
+   "土星为什么有圈圈?",
+   "土星的环是什么?"
+  ],
+  "a": "土星的环是由好多好多冰块和石头组成的，有的像沙粒那么小，有的像房子那么大。",
+  "check": "Saturn's rings are ice and rock particles ranging from dust to house-sized."
+ },
+ {
+  "id": "zh-qa-299",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "哪颗行星最热?",
+  "alt": [
+   "最热的行星是哪个?",
+   "离太阳最近的行星最热吗?"
+  ],
+  "a": "金星最热，比离太阳最近的水星还热！因为金星外面包着厚厚的云和空气，把热量关在了里面。",
+  "check": "Venus is the hottest planet because its thick atmosphere traps heat."
+ },
+ {
+  "id": "zh-qa-300",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "冥王星为什么不是行星了?",
+  "alt": [
+   "冥王星是行星吗?",
+   "冥王星去哪儿了?"
+  ],
+  "a": "冥王星比较小，它附近还有很多和它差不多的冰冷小天体，所以科学家现在把它叫做矮行星。",
+  "check": "In 2006 Pluto was reclassified as a dwarf planet because it has not cleared its orbital neighborhood."
+ },
+ {
+  "id": "zh-qa-301",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "我们能住在火星上吗?",
+  "alt": [
+   "人能去火星住吗?",
+   "火星上能生活吗?"
+  ],
+  "a": "现在还不行。火星特别冷，空气很稀薄，也不是我们能呼吸的那种空气。",
+  "check": "Mars is very cold and has a thin, unbreathable atmosphere."
+ },
+ {
+  "id": "zh-qa-302",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "行星为什么绕着太阳转?",
+  "alt": [
+   "地球为什么绕着太阳转?",
+   "行星为什么不飞走?"
+  ],
+  "a": "太阳的引力像一根看不见的绳子拉着行星。行星又一直往前跑，所以就绕着太阳转圈圈。",
+  "check": "Orbits result from the Sun's gravity combined with the planets' forward motion."
+ },
+ {
+  "id": "zh-qa-303",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "别的星球上有生命吗?",
+  "alt": [
+   "有外星人吗?",
+   "别的星球有小动物吗?"
+  ],
+  "a": "到现在为止，地球是我们知道的唯一有生命的星球。科学家还在努力寻找别的地方有没有生命。",
+  "check": "No life has been confirmed beyond Earth."
+ },
+ {
+  "id": "zh-qa-304",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "为什么会有白天和黑夜?",
+  "alt": [
+   "为什么天会黑?",
+   "为什么有晚上?",
+   "晚上天为什么是黑的?"
+  ],
+  "a": "地球像一个转动的球。朝着太阳的一面是白天，背着太阳的一面是黑夜。地球转一圈，就是一天。",
+  "check": "Day and night are caused by Earth's rotation."
+ },
+ {
+  "id": "zh-qa-305",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球为什么会转?",
+  "alt": [
+   "地球为什么一直转?",
+   "地球为什么不停下来?"
+  ],
+  "a": "地球很久以前形成的时候就开始转了。太空里几乎没有东西能让它停下来，所以它一直转到现在。",
+  "check": "Earth's spin comes from its formation, and almost nothing in space slows it."
+ },
+ {
+  "id": "zh-qa-306",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球在转，为什么我们感觉不到?",
+  "alt": [
+   "为什么不觉得晕?",
+   "地球转我们怎么不知道?"
+  ],
+  "a": "地球转得又平又稳，我们和房子、空气都跟着一起转，所以感觉不到。就像坐在很平稳的火车上一样。",
+  "check": "Smooth, steady motion is not felt when everything moves together."
+ },
+ {
+  "id": "zh-qa-307",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "我们为什么不会从地球上掉下去?",
+  "alt": [
+   "地球下面的人为什么不会掉下去?",
+   "为什么不会掉到太空里?"
+  ],
+  "a": "地球有一种看不见的力量叫引力，会把我们往地面拉，所以不管站在地球哪里，我们都稳稳地在地上。",
+  "check": "Gravity pulls everything toward Earth's center."
+ },
+ {
+  "id": "zh-qa-308",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球为什么是圆的?",
+  "alt": [
+   "地球是圆的吗?",
+   "地球为什么不是方的?"
+  ],
+  "a": "地球非常大，它的引力把所有东西都往中心拉，从各个方向拉得差不多，所以地球就变成了一个圆球。",
+  "check": "Gravity pulls large bodies into a near-spherical shape."
+ },
+ {
+  "id": "zh-qa-309",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球为什么是蓝色的?",
+  "alt": [
+   "为什么叫蓝色星球?",
+   "从太空看地球是什么颜色?"
+  ],
+  "a": "从太空看，地球大部分表面都是海洋，所以看起来是一个漂亮的蓝色星球。",
+  "check": "Most of Earth's surface (about 71%) is ocean."
+ },
+ {
+  "id": "zh-qa-310",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球里面是什么样的?",
+  "alt": [
+   "地球里面有什么?",
+   "地球中间是什么?"
+  ],
+  "a": "地球像一个鸡蛋。外面是薄薄的地壳，像蛋壳；中间是很厚很热的地幔；最中心是非常热的地核。",
+  "check": "Earth has a thin crust, a thick hot mantle and a very hot core."
+ },
+ {
+  "id": "zh-qa-311",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球有多少岁了?",
+  "alt": [
+   "地球有多老?",
+   "地球是什么时候有的?"
+  ],
+  "a": "地球非常非常老，已经有四十多亿岁了！比恐龙出现的时候还要早很多很多。",
+  "check": "Earth is about 4.5 billion years old."
+ },
+ {
+  "id": "zh-qa-312",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球在动吗?",
+  "alt": [
+   "地球会跑吗?",
+   "地球怎么绕太阳?"
+  ],
+  "a": "在动！地球一边自己转圈，一边绕着太阳跑大圈。绕太阳跑一整圈，就是一年。",
+  "check": "Earth rotates daily and orbits the Sun once a year."
+ },
+ {
+  "id": "zh-qa-313",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "南极和北极为什么那么冷?",
+  "alt": [
+   "北极为什么那么冷?",
+   "南极为什么都是冰?"
+  ],
+  "a": "南极和北极在地球的最上面和最下面，太阳光总是斜斜地照过去，带来的热量很少，所以那里特别冷。",
+  "check": "Sunlight reaches the poles at a low angle, delivering less heat."
+ },
+ {
+  "id": "zh-qa-314",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "地球外面为什么有空气?",
+  "alt": [
+   "空气为什么不会飞走?",
+   "地球外面包着什么?"
+  ],
+  "a": "地球的引力把空气拉住，像给地球盖了一层看不见的被子。它让我们能呼吸，还帮地球保暖。",
+  "check": "Gravity holds the atmosphere, which also keeps Earth warmer."
+ },
+ {
+  "id": "zh-qa-315",
+  "kind": "qa",
+  "topic": "earth",
+  "ref": "",
+  "q": "从太空能看到长城吗?",
+  "alt": [
+   "宇航员能看到长城吗?",
+   "在太空上看得见长城吗?"
+  ],
+  "a": "宇航员只用眼睛看，很难看到长城，因为它很窄，颜色又和周围的土地差不多。用能放大的相机拍才能看到。",
+  "check": "The Great Wall is not visible to the naked eye from orbit; zoomed photos can show it."
+ },
+ {
+  "id": "zh-qa-316",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "宇航员在太空为什么会飘起来?",
+  "alt": [
+   "太空里为什么会飘?",
+   "为什么在太空里飞来飞去?"
+  ],
+  "a": "宇航员和飞船一起绕着地球不停地「往下掉」，又一直往前飞。人和飞船掉得一样快，所以人就飘起来了。",
+  "check": "Weightlessness in orbit is free fall around Earth."
+ },
+ {
+  "id": "zh-qa-317",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "宇航员在太空怎么睡觉?",
+  "alt": [
+   "太空里怎么睡觉?",
+   "宇航员睡在床上吗?"
+  ],
+  "a": "宇航员钻进固定在墙上的睡袋里睡觉，这样睡着的时候就不会到处乱飘了。",
+  "check": "Astronauts sleep in sleeping bags attached to the wall."
+ },
+ {
+  "id": "zh-qa-318",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "宇航员在太空吃什么?",
+  "alt": [
+   "太空里怎么吃饭?",
+   "宇航员吃什么东西?"
+  ],
+  "a": "宇航员吃特别做的太空食物，很多装在袋子里，有的加点水就能吃，这样食物渣就不会到处飘。",
+  "check": "Space food is specially packaged; some is rehydrated with water."
+ },
+ {
+  "id": "zh-qa-319",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "宇航员为什么要穿宇航服?",
+  "alt": [
+   "宇航服有什么用?",
+   "去太空为什么要穿那么厚?"
+  ],
+  "a": "太空里没有可以呼吸的空气，还会特别冷或者特别热。宇航服能给宇航员氧气，还能保护他们。",
+  "check": "Spacesuits supply oxygen and protect against temperature extremes and vacuum."
+ },
+ {
+  "id": "zh-qa-320",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "火箭为什么能飞上天?",
+  "alt": [
+   "火箭怎么飞到太空?",
+   "火箭为什么喷火?"
+  ],
+  "a": "火箭向下猛烈地喷出很热的气体，气体往下推，火箭就被往上推，越飞越快，一直冲上太空。",
+  "check": "Rockets work by pushing exhaust gas down and being pushed up (action and reaction)."
+ },
+ {
+  "id": "zh-qa-321",
+  "kind": "qa",
+  "topic": "planets",
+  "ref": "",
+  "q": "太空站是什么?",
+  "alt": [
+   "空间站是什么?",
+   "宇航员住在哪里?"
+  ],
+  "a": "太空站是在地球上空绕着地球飞的大房子。宇航员可以在里面住好几个月，做各种科学实验。",
+  "check": "Space stations orbit Earth and crews stay for months doing experiments."
+ },
+ {
+  "id": "zh-qa-322",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海浪是怎么来的?",
+  "alt": [
+   "大海为什么有浪?",
+   "海浪为什么一层一层的?"
+  ],
+  "a": "风吹过海面，把水推起来，就形成了一层一层的海浪。风越大，海浪就越大。",
+  "check": "Most ocean waves are made by wind."
+ },
+ {
+  "id": "zh-qa-323",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "为什么会涨潮和退潮?",
+  "alt": [
+   "海水为什么一会儿多一会儿少?",
+   "什么是潮水?"
+  ],
+  "a": "月亮的引力会轻轻地拉地球上的海水，海水被拉得涨起来又落下去，就有了涨潮和退潮。",
+  "check": "Tides are caused mainly by the Moon's gravity."
+ },
+ {
+  "id": "zh-qa-324",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "大海有多深?",
+  "alt": [
+   "海底有多深?",
+   "大海最深的地方在哪?"
+  ],
+  "a": "大海有的地方很浅，有的地方特别特别深，最深的地方比世界上最高的山还要深。",
+  "check": "The deepest ocean point (about 11 km) is deeper than Everest is tall (about 8.8 km)."
+ },
+ {
+  "id": "zh-qa-325",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "海水能喝吗?",
+  "alt": [
+   "为什么不能喝海水?",
+   "渴了能喝海水吗?"
+  ],
+  "a": "海水不能喝，因为里面的盐太多了，喝了反而会更口渴。",
+  "check": "Seawater is too salty to drink and worsens thirst."
+ },
+ {
+  "id": "zh-qa-326",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "河水为什么不咸?",
+  "alt": [
+   "河里的水咸吗?",
+   "为什么只有海水是咸的?"
+  ],
+  "a": "河水里也有一点点盐，但是很少，而且河水一直往大海流。盐要在大海里攒很久很久，才会变得很咸。",
+  "check": "River water has low dissolved salt; salt accumulates in the sea over long times."
+ },
+ {
+  "id": "zh-qa-327",
+  "kind": "qa",
+  "topic": "sea",
+  "ref": "",
+  "q": "大海为什么不会满出来?",
+  "alt": [
+   "河水一直流进海里，海会满吗?",
+   "海水会越来越多吗?"
+  ],
+  "a": "河水不停地流进大海，可海水也在不停地被太阳晒成水汽，变成云，再下成雨。转来转去，大海就不会满。",
+  "check": "The water cycle balances river inflow with evaporation."
+ },
+ {
+  "id": "zh-qa-328",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "山是怎么来的?",
+  "alt": [
+   "高山是怎么长出来的?",
+   "山为什么那么高?"
+  ],
+  "a": "地球的外壳是一大块一大块的。它们非常慢地互相挤，地面就被挤得鼓起来，过了很久很久，就变成了高山。",
+  "check": "Many mountains form where tectonic plates push together."
+ },
+ {
+  "id": "zh-qa-329",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "火山为什么会喷发?",
+  "alt": [
+   "火山是什么?",
+   "火山为什么会喷火?"
+  ],
+  "a": "地下深处很热，有些石头会熔化成热热的岩浆。岩浆从地面的裂缝里冒出来，就是火山喷发。",
+  "check": "Volcanoes erupt when molten rock (magma) reaches the surface."
+ },
+ {
+  "id": "zh-qa-330",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "地震是怎么回事?",
+  "alt": [
+   "为什么会地震?",
+   "地面为什么会摇?"
+  ],
+  "a": "地球的外壳由很多大石板拼成。它们偶尔会突然动一下，地面就会摇晃一会儿，这就是地震。",
+  "check": "Earthquakes happen when sections of Earth's crust suddenly slip."
+ },
+ {
+  "id": "zh-qa-331",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "河水是从哪里来的?",
+  "alt": [
+   "河是怎么来的?",
+   "河水为什么流个不停?"
+  ],
+  "a": "雨水和山上融化的雪水往低处流，许多小溪汇在一起，就变成了河。河水最后大多流进大海。",
+  "check": "Rivers are fed by rain and snowmelt flowing downhill; most reach the sea."
+ },
+ {
+  "id": "zh-qa-332",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "沙漠为什么那么干?",
+  "alt": [
+   "沙漠是什么?",
+   "沙漠里为什么没有水?"
+  ],
+  "a": "沙漠是很少下雨的地方，所以特别干。沙漠不一定都很热，南极也算是一个很冷的沙漠呢。",
+  "check": "Deserts are defined by low precipitation; Antarctica is a cold desert."
+ },
+ {
+  "id": "zh-qa-333",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "沙子是怎么来的?",
+  "alt": [
+   "沙子是什么?",
+   "沙子是石头变的吗?"
+  ],
+  "a": "沙子是很小很小的石头碎块。大石头被风吹、被水冲，过了很久很久，慢慢碎成了沙子。",
+  "check": "Sand forms from weathering and erosion of rock."
+ },
+ {
+  "id": "zh-qa-334",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "山洞是怎么形成的?",
+  "alt": [
+   "山洞是谁挖的?",
+   "为什么山里有洞?"
+  ],
+  "a": "很多山洞是水做成的。水一点一点地溶掉石头，慢慢流了很久很久，就在石头里掏出了一个大洞。",
+  "check": "Many caves form when water dissolves limestone."
+ },
+ {
+  "id": "zh-qa-335",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "世界上最高的山是哪座?",
+  "alt": [
+   "最高的山是什么山?",
+   "珠穆朗玛峰有多高?"
+  ],
+  "a": "世界上最高的山是珠穆朗玛峰。它的山顶特别高，一年到头都盖着冰雪。",
+  "check": "Mount Everest is the highest mountain above sea level, snow-covered year-round."
+ },
+ {
+  "id": "zh-qa-336",
+  "kind": "qa",
+  "topic": "land",
+  "ref": "",
+  "q": "为什么山顶上有雪?",
+  "alt": [
+   "高山上为什么是白的?",
+   "山顶为什么那么冷?"
+  ],
+  "a": "山越高，空气就越冷。高高的山顶很冷，雪不容易融化，所以山顶常常是白白的。",
+  "check": "Air temperature generally drops with altitude in the lower atmosphere."
+ },
+ {
+  "id": "zh-qa-337",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "电灯为什么会亮?",
+  "alt": [
+   "灯泡怎么发光?",
+   "灯为什么一按就亮?"
+  ],
+  "a": "老式灯泡里有一根很细的金属丝，电流过去把它变得很烫，就发光了。现在很多灯里有个小零件，通电就会亮。",
+  "check": "Incandescent filaments glow when heated by current; LEDs emit light when current passes."
+ },
+ {
+  "id": "zh-qa-338",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "汽车为什么要加油?",
+  "alt": [
+   "车为什么要加油或者充电?",
+   "电动车为什么要充电?"
+  ],
+  "a": "汽车的发动机烧汽油，产生力气推动轮子转。电动车不用油，它用电池里的电带动电机，让车跑起来。",
+  "check": "Combustion engines burn fuel; electric cars use battery-powered motors."
+ },
+ {
+  "id": "zh-qa-339",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "飞机为什么能飞?",
+  "alt": [
+   "飞机那么重怎么飞起来?",
+   "飞机为什么不会掉下来?"
+  ],
+  "a": "发动机推着飞机往前冲，空气快速流过特别形状的机翼，就会把机翼往上托，飞机就飞起来了。",
+  "check": "Engines give thrust; airflow over wings produces lift."
+ },
+ {
+  "id": "zh-qa-340",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "打电话为什么能听到别人的声音?",
+  "alt": [
+   "手机怎么传声音?",
+   "电话怎么把声音送过去?"
+  ],
+  "a": "手机把你的声音变成看不见的信号，飞快地送到另一部手机，那部手机再把信号变回声音。",
+  "check": "Phones convert sound to electrical/radio signals and back to sound."
+ },
+ {
+  "id": "zh-qa-341",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "冰箱为什么是冷的?",
+  "alt": [
+   "冰箱怎么变冷?",
+   "冰箱里为什么凉凉的?"
+  ],
+  "a": "冰箱的管子里有一种特别的液体，它在冰箱里面吸走热量，再跑到冰箱后面把热量放出去，里面就变冷了。",
+  "check": "A refrigerant absorbs heat inside the fridge and releases it outside."
+ },
+ {
+  "id": "zh-qa-342",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "船为什么能浮在水上?",
+  "alt": [
+   "大船为什么不会沉?",
+   "船那么重为什么不沉?"
+  ],
+  "a": "船底又大又空，它把很多水推开，水就会往上托着船。所以很重的大船也能浮在水面上。",
+  "check": "Buoyancy: a floating ship displaces water equal to its weight."
+ },
+ {
+  "id": "zh-qa-343",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "电池里有什么?",
+  "alt": [
+   "电池为什么有电?",
+   "电池里装的是电吗?"
+  ],
+  "a": "电池里装着一些特别的材料，它们在里面慢慢起变化，就能产生电，让玩具和遥控器动起来。",
+  "check": "Batteries produce electricity through chemical reactions."
+ },
+ {
+  "id": "zh-qa-344",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "微波炉怎么把饭变热?",
+  "alt": [
+   "微波炉为什么能热饭?",
+   "微波炉里没有火怎么热?"
+  ],
+  "a": "微波炉会发出一种看不见的微波，让食物里的水快速晃动，晃得越快就越热，饭就热了。",
+  "check": "Microwaves make water molecules in food move rapidly, heating it."
+ },
+ {
+  "id": "zh-qa-345",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "洗衣机怎么洗衣服?",
+  "alt": [
+   "洗衣机为什么会转?",
+   "洗衣机怎么把衣服弄干净?"
+  ],
+  "a": "洗衣机的桶会一直转，带着衣服、水和洗衣液翻来翻去，把脏东西冲掉。最后转得飞快，把水甩出去。",
+  "check": "Washing machines agitate clothes in soapy water, then spin to remove water."
+ },
+ {
+  "id": "zh-qa-346",
+  "kind": "qa",
+  "topic": "machines",
+  "ref": "",
+  "q": "电是从哪里来的?",
+  "alt": [
+   "家里的电是哪来的?",
+   "电是怎么做出来的?"
+  ],
+  "a": "很多电是发电厂做出来的，有的靠水流，有的靠风，有的靠太阳光，然后顺着电线送到我们家里。",
+  "check": "Electricity is generated at power plants (hydro, wind, solar and others) and sent through wires."
+ },
+ {
+  "id": "zh-qa-347",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "冰淇淋为什么会化?",
+  "alt": [
+   "雪糕为什么会融化?",
+   "冰淇淋为什么会变成水?"
+  ],
+  "a": "冰淇淋是冻起来的。周围的空气比它暖和，热量跑进冰淇淋里，它就慢慢变软、化成水了。",
+  "check": "Heat flows from warmer air into ice cream and melts it."
+ },
+ {
+  "id": "zh-qa-348",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "面包为什么会发起来?",
+  "alt": [
+   "面团为什么会变大?",
+   "馒头为什么软软的?"
+  ],
+  "a": "面团里加了酵母，它们是非常小的小生物。酵母吃面团里的糖，放出很多气泡，面团就鼓起来了。",
+  "check": "Yeast ferments sugar and releases carbon dioxide gas, making dough rise."
+ },
+ {
+  "id": "zh-qa-349",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "水烧开了为什么会冒泡?",
+  "alt": [
+   "水开了为什么咕嘟咕嘟?",
+   "烧水为什么有泡泡?"
+  ],
+  "a": "水被烧得很热时，锅底的水变成了水蒸气，一个个气泡往上冒，咕嘟咕嘟的，这就是水开了。",
+  "check": "Boiling forms bubbles of water vapor that rise to the surface."
+ },
+ {
+  "id": "zh-qa-350",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "肥皂为什么能洗干净?",
+  "alt": [
+   "为什么要用肥皂洗手?",
+   "肥皂怎么把脏东西洗掉?"
+  ],
+  "a": "肥皂一头喜欢水，一头喜欢油。它把油和脏东西抓住，水一冲，就一起冲走了。",
+  "check": "Soap molecules have a water-loving end and an oil-loving end."
+ },
+ {
+  "id": "zh-qa-351",
+  "kind": "qa",
+  "topic": "home",
+  "ref": "",
+  "q": "保温杯为什么能保温?",
+  "alt": [
+   "保温杯里的水为什么一直热?",
+   "保温杯怎么不让水变凉?"
+  ],
+  "a": "保温杯有两层，中间几乎没有空气，热量很难跑出去，所以热水能热很久，冰水也能凉很久。",
+  "check": "A vacuum flask's near-vacuum gap greatly reduces heat transfer."
+ },
+ {
+  "id": "zh-qa-352",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "为什么一天有二十四小时?",
+  "alt": [
+   "一天为什么是24小时?",
+   "一天有多长?"
+  ],
+  "a": "地球自己转一圈，大约就是一天。人们把一天平均分成了二十四份，每一份叫一个小时。",
+  "check": "A solar day is about 24 hours, divided into 24 hours by convention."
+ },
+ {
+  "id": "zh-qa-353",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "为什么要有日历?",
+  "alt": [
+   "日历有什么用?",
+   "一年是怎么算的?"
+  ],
+  "a": "日历帮我们记住今天是几月几号，什么时候过生日、过节。一年就是地球绕太阳跑一圈的时间。",
+  "check": "Calendars track days; a year is about one orbit of Earth around the Sun."
+ },
+ {
+  "id": "zh-qa-354",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "为什么别的国家和我们时间不一样?",
+  "alt": [
+   "什么是时差?",
+   "为什么我们白天的时候，有的地方是晚上?"
+  ],
+  "a": "地球在转，我们这边是白天时，地球另一边是晚上。所以不同的地方要把钟表调成不一样的时间。",
+  "check": "Time zones exist because Earth's rotation lights different places at different times."
+ },
+ {
+  "id": "zh-qa-355",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "为什么有的年份有二月二十九日?",
+  "alt": [
+   "什么是闰年?",
+   "二月为什么有时候多一天?"
+  ],
+  "a": "地球绕太阳一圈比三百六十五天多一点点。大约每四年把多出来的凑成一天，加在二月，这一年就叫闰年。",
+  "check": "A year is about 365.24 days, so a leap day is added roughly every four years."
+ },
+ {
+  "id": "zh-qa-356",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "为什么一个月大约有三十天?",
+  "alt": [
+   "一个月是怎么来的?",
+   "为什么叫一个月?"
+  ],
+  "a": "很久以前，人们看月亮从圆变弯再变圆，大约要三十天，于是就把这段时间叫做一个月。",
+  "check": "The month originally came from the lunar cycle of about 29.5 days."
+ },
+ {
+  "id": "zh-qa-357",
+  "kind": "qa",
+  "topic": "time",
+  "ref": "",
+  "q": "钟表为什么会走?",
+  "alt": [
+   "钟表的指针为什么会动?",
+   "钟怎么知道几点了?"
+  ],
+  "a": "钟表里有电池或者发条，带着里面的小齿轮一下一下地转，指针就跟着慢慢走了。",
+  "check": "Clocks are driven by a battery or wound spring that turns gears at a steady rate."
+ },
+ {
+  "id": "zh-poem-001",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "江南",
+  "q": "《江南》讲的是什么?",
+  "alt": [
+   "江南是什么意思",
+   "江南想表达什么",
+   "江南这首诗写了什么"
+  ],
+  "a": "江南的池塘里可以采莲，莲叶又大又密。小鱼在莲叶中间游来游去，一会儿东，一会儿西，一会儿南，一会儿北。写出了采莲时的快乐。",
+  "check": "Standard reading: lotus picking scene, fish playing among leaves."
+ },
+ {
+  "id": "zh-poem-002",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "长歌行",
+  "q": "《长歌行》讲的是什么?",
+  "alt": [
+   "长歌行是什么意思",
+   "长歌行想表达什么",
+   "长歌行这首诗写了什么"
+  ],
+  "a": "园子里的葵菜沾着露水，在阳光下闪闪发光，可秋天一来叶子就会枯黄。河水向东流进大海，不会再流回来。诗人告诉我们：小时候不努力，长大了只能后悔。",
+  "check": "Textbook reading: time passes like water; work hard while young."
+ },
+ {
+  "id": "zh-poem-003",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "敕勒歌",
+  "q": "《敕勒歌》讲的是什么?",
+  "alt": [
+   "敕勒歌是什么意思",
+   "敕勒歌想表达什么",
+   "敕勒歌这首诗写了什么"
+  ],
+  "a": "阴山脚下的敕勒川，天空像一顶大帐篷，罩住了整片草原。天蓝蓝的，草原一眼望不到边。风一吹，草低下去，露出了一群群牛羊。",
+  "check": "Literal description of the northern grassland under the Yin Mountains."
+ },
+ {
+  "id": "zh-poem-004",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "七步诗",
+  "q": "《七步诗》讲的是什么?",
+  "alt": [
+   "七步诗是什么意思",
+   "七步诗想表达什么",
+   "七步诗这首诗写了什么"
+  ],
+  "a": "传说曹植的哥哥让他在七步之内作出一首诗。诗里说，煮豆子时烧的是豆秆，豆子在锅里哭泣：我们本是一条根上长出来的，何必这样着急地煎熬我。意思是亲兄弟不该互相伤害。",
+  "check": "Shishuo Xinyu legend; bean and stalk from one root = brothers."
+ },
+ {
+  "id": "zh-poem-005",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "迢迢牵牛星",
+  "q": "《迢迢牵牛星》讲的是什么?",
+  "alt": [
+   "迢迢牵牛星是什么意思",
+   "迢迢牵牛星想表达什么",
+   "迢迢牵牛星这首诗写了什么"
+  ],
+  "a": "夜空里，牵牛星和织女星隔着银河遥遥相望。织女一整天织布也织不成，难过得直掉眼泪。银河又清又浅，可他们隔着一条河，只能默默相望，说不上话。",
+  "check": "Standard reading: Weaver Girl pining for the Herd Boy across the Milky Way."
+ },
+ {
+  "id": "zh-poem-006",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "采薇（节选）",
+  "q": "《采薇（节选）》讲的是什么?",
+  "alt": [
+   "采薇（节选）是什么意思",
+   "采薇（节选）想表达什么",
+   "采薇（节选）这首诗写了什么"
+  ],
+  "a": "一个士兵回忆：当年离家去打仗时，杨柳轻轻飘动；如今回家，却下着大雪。他走得很慢，又渴又饿，心里很悲伤，却没有人知道他的难过。",
+  "check": "Textbook reading: returning soldier contrasts willows at departure with snow on return."
+ },
+ {
+  "id": "zh-poem-007",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "咏鹅",
+  "q": "《咏鹅》讲的是什么?",
+  "alt": [
+   "咏鹅是什么意思",
+   "咏鹅想表达什么",
+   "咏鹅这首诗写了什么"
+  ],
+  "a": "诗人看见白鹅弯着脖子，向着天空唱歌。白白的羽毛浮在绿水上，红红的脚掌拨动着清清的水波。相传这首诗是骆宾王七岁时写的。",
+  "check": "Literal description of a goose; traditional account that Luo Binwang wrote it at seven."
+ },
+ {
+  "id": "zh-poem-008",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "风",
+  "q": "《风》讲的是什么?",
+  "alt": [
+   "风是什么意思",
+   "风想表达什么",
+   "风这首诗写了什么"
+  ],
+  "a": "风能吹落秋天的树叶，能吹开春天的花朵。风刮过江面，掀起很高的浪；吹进竹林，让成千上万根竹子都歪斜了。整首诗没有一个「风」字，却处处在写风。",
+  "check": "Riddle-like poem describing wind through its effects."
+ },
+ {
+  "id": "zh-poem-009",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "蝉",
+  "q": "《蝉》讲的是什么?",
+  "alt": [
+   "蝉是什么意思",
+   "蝉想表达什么",
+   "蝉这首诗写了什么"
+  ],
+  "a": "蝉在高高的梧桐树上喝着清露，叫声传得很远。诗人说，蝉的声音传得远，是因为它站得高，不是靠秋风帮忙。意思是品格高洁的人，不用靠别人，名声自然传得远。",
+  "check": "Standard reading: the cicada's voice carries because it stands high, not because of the wind."
+ },
+ {
+  "id": "zh-poem-010",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "咏柳",
+  "q": "《咏柳》讲的是什么?",
+  "alt": [
+   "咏柳是什么意思",
+   "咏柳想表达什么",
+   "咏柳这首诗写了什么"
+  ],
+  "a": "春天的柳树像用碧玉打扮过一样，垂下千万条绿丝带。诗人好奇细细的柳叶是谁剪出来的，原来，二月的春风就像一把剪刀。",
+  "check": "Standard reading: spring willow; spring wind compared to scissors."
+ },
+ {
+  "id": "zh-poem-011",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "回乡偶书",
+  "q": "《回乡偶书》讲的是什么?",
+  "alt": [
+   "回乡偶书是什么意思",
+   "回乡偶书想表达什么",
+   "回乡偶书这首诗写了什么"
+  ],
+  "a": "诗人小时候离开家乡，老了才回来，口音没变，头发却白了。村里的孩子不认识他，笑着问他是从哪里来的客人。写出了久别回乡的感慨。",
+  "check": "Standard reading: returning home old, children take him for a guest."
+ },
+ {
+  "id": "zh-poem-012",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "凉州词",
+  "q": "《凉州词》(黄河远上白云间)讲的是什么?",
+  "alt": [
+   "凉州词(黄河远上白云间)是什么意思",
+   "凉州词(黄河远上白云间)想表达什么",
+   "凉州词(黄河远上白云间)这首诗写了什么"
+  ],
+  "a": "黄河远远流向白云之间，高山里有一座孤零零的城。有人吹起哀怨的笛子，可玉门关外连春风都吹不到。写出了守边战士思念家乡的心情。",
+  "check": "Textbook reading: remote frontier fort; soldiers' homesickness; no spring wind past Yumen Pass."
+ },
+ {
+  "id": "zh-poem-013",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "登鹳雀楼",
+  "q": "《登鹳雀楼》讲的是什么?",
+  "alt": [
+   "登鹳雀楼是什么意思",
+   "登鹳雀楼想表达什么",
+   "登鹳雀楼这首诗写了什么"
+  ],
+  "a": "太阳靠着西山慢慢落下，黄河向着大海奔流。想要看到千里之外的风景，就要再登上一层楼。意思是站得高才能看得远。",
+  "check": "Standard reading: climb higher to see farther."
+ },
+ {
+  "id": "zh-poem-014",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "春晓",
+  "q": "《春晓》讲的是什么?",
+  "alt": [
+   "春晓是什么意思",
+   "春晓想表达什么",
+   "春晓这首诗写了什么"
+  ],
+  "a": "春天的早晨，诗人睡得很香，天亮了都不知道，到处都能听到小鸟叫。他想起昨夜的风雨声，不知道有多少花被打落了。表达了对春天的喜爱和对落花的怜惜。",
+  "check": "Standard reading: spring morning, birdsong, fallen flowers after night rain."
+ },
+ {
+  "id": "zh-poem-015",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "宿建德江",
+  "q": "《宿建德江》讲的是什么?",
+  "alt": [
+   "宿建德江是什么意思",
+   "宿建德江想表达什么",
+   "宿建德江这首诗写了什么"
+  ],
+  "a": "傍晚，诗人把船停在烟雾笼罩的小洲边，想家的愁绪又涌上心头。原野空旷，天空好像比树还低；江水清清，月亮好像离人很近。",
+  "check": "Textbook reading: traveler's sorrow at dusk; wide plain, clear river, close moon."
+ },
+ {
+  "id": "zh-poem-016",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "过故人庄",
+  "q": "《过故人庄》讲的是什么?",
+  "alt": [
+   "过故人庄是什么意思",
+   "过故人庄想表达什么",
+   "过故人庄这首诗写了什么"
+  ],
+  "a": "老朋友准备了鸡和黄米饭，请诗人到农家做客。村子四周绿树环绕，城外青山连绵。他们开窗喝酒，聊着庄稼，约好重阳节再来赏菊花。",
+  "check": "Standard reading: visiting an old friend's farm; promise to return at Double Ninth."
+ },
+ {
+  "id": "zh-poem-017",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "凉州词",
+  "q": "《凉州词》(葡萄美酒夜光杯)讲的是什么?",
+  "alt": [
+   "凉州词(葡萄美酒夜光杯)是什么意思",
+   "凉州词(葡萄美酒夜光杯)想表达什么",
+   "凉州词(葡萄美酒夜光杯)这首诗写了什么"
+  ],
+  "a": "战士们端起夜光杯，正要喝葡萄美酒，琵琶声就催着出发了。诗人说，就算醉倒在战场上也请别笑，自古以来出征打仗的人，能回来的没有几个。",
+  "check": "Textbook reading: frontier feast cut short; bold yet sad view of war."
+ },
+ {
+  "id": "zh-poem-018",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "出塞",
+  "q": "《出塞》讲的是什么?",
+  "alt": [
+   "出塞是什么意思",
+   "出塞想表达什么",
+   "出塞这首诗写了什么"
+  ],
+  "a": "明月和关塞还是秦汉时的样子，可远征万里的人还没有回来。只要有像汉朝飞将军那样的好将领在，就不会让敌人的战马越过阴山。表达了盼望边疆太平的心愿。",
+  "check": "Textbook reading; 'flying general' (usually glossed as Li Guang) left unnamed since glosses differ."
+ },
+ {
+  "id": "zh-poem-019",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "芙蓉楼送辛渐",
+  "q": "《芙蓉楼送辛渐》讲的是什么?",
+  "alt": [
+   "芙蓉楼送辛渐是什么意思",
+   "芙蓉楼送辛渐想表达什么",
+   "芙蓉楼送辛渐这首诗写了什么"
+  ],
+  "a": "寒冷的夜雨洒满江面，天亮时诗人送别朋友辛渐，远处的楚山显得很孤单。他请朋友告诉洛阳的亲友：我的心像玉壶里的冰一样纯洁。",
+  "check": "Standard reading: farewell at dawn; 'ice heart in a jade pot' = pure, unchanged heart."
+ },
+ {
+  "id": "zh-poem-020",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "从军行",
+  "q": "《从军行》讲的是什么?",
+  "alt": [
+   "从军行是什么意思",
+   "从军行想表达什么",
+   "从军行这首诗写了什么"
+  ],
+  "a": "青海湖上空的长云遮暗了雪山，战士们在孤城里遥望远方的关口。他们身经百战，铠甲都被黄沙磨穿了，却发誓不打败敌人就决不回家。",
+  "check": "Textbook reading: soldiers' resolve. Note: input reads 雁门关; standard text is 玉门关, so the pass is not named."
+ },
+ {
+  "id": "zh-poem-021",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "采莲曲",
+  "q": "《采莲曲》讲的是什么?",
+  "alt": [
+   "采莲曲是什么意思",
+   "采莲曲想表达什么",
+   "采莲曲这首诗写了什么"
+  ],
+  "a": "采莲姑娘的绿裙子和荷叶一样颜色，她们的脸和荷花互相映衬。姑娘们走进荷塘就看不见了，听到歌声，才知道有人来了。",
+  "check": "Standard reading: girls blend into the lotus pond; heard before seen."
+ },
+ {
+  "id": "zh-poem-022",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "鹿柴",
+  "q": "《鹿柴》讲的是什么?",
+  "alt": [
+   "鹿柴是什么意思",
+   "鹿柴想表达什么",
+   "鹿柴这首诗写了什么"
+  ],
+  "a": "空空的山里看不到人，只听见有人说话的声音。夕阳的光照进深深的树林，又照在青苔上。写出了山林的幽静。",
+  "check": "Standard reading: quiet empty mountain, voices, evening light on moss."
+ },
+ {
+  "id": "zh-poem-023",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "送元二使安西",
+  "q": "《送元二使安西》讲的是什么?",
+  "alt": [
+   "送元二使安西是什么意思",
+   "送元二使安西想表达什么",
+   "送元二使安西这首诗写了什么"
+  ],
+  "a": "早晨，渭城下过小雨，路上的尘土湿了，客店旁的柳树格外青绿。诗人劝朋友再喝一杯酒，因为往西出了阳关，就再也没有老朋友了。表达了依依惜别的心情。",
+  "check": "Standard reading: farewell to Yuan Er heading west past Yangguan."
+ },
+ {
+  "id": "zh-poem-024",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "九月九日忆山东兄弟",
+  "q": "《九月九日忆山东兄弟》讲的是什么?",
+  "alt": [
+   "九月九日忆山东兄弟是什么意思",
+   "九月九日忆山东兄弟想表达什么",
+   "九月九日忆山东兄弟这首诗写了什么"
+  ],
+  "a": "诗人一个人在外地，每到节日就更加想念亲人。他想到重阳节这天，兄弟们登高插茱萸时，会发现少了自己一个。写出了浓浓的思乡之情。",
+  "check": "Standard reading: Double Ninth homesickness, brothers missing one person."
+ },
+ {
+  "id": "zh-poem-025",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "鸟鸣涧",
+  "q": "《鸟鸣涧》讲的是什么?",
+  "alt": [
+   "鸟鸣涧是什么意思",
+   "鸟鸣涧想表达什么",
+   "鸟鸣涧这首诗写了什么"
+  ],
+  "a": "春天的夜晚，山里非常安静，连桂花飘落都能感觉到。月亮升起来，惊动了山里的鸟儿，它们在山涧里不时叫几声。写出了春山夜晚的宁静。",
+  "check": "Standard reading: stillness of a spring night in the hills."
+ },
+ {
+  "id": "zh-poem-026",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "山居秋暝",
+  "q": "《山居秋暝》讲的是什么?",
+  "alt": [
+   "山居秋暝是什么意思",
+   "山居秋暝想表达什么",
+   "山居秋暝这首诗写了什么"
+  ],
+  "a": "一场新雨过后，空山里秋天的傍晚格外清爽。明月照在松林间，清泉在石头上流淌，洗衣姑娘说笑着回家，渔船划过荷花。诗人愿意留在这里。",
+  "check": "Standard reading: autumn evening after rain; poet chooses to stay in the hills."
+ },
+ {
+  "id": "zh-poem-027",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "竹里馆",
+  "q": "《竹里馆》讲的是什么?",
+  "alt": [
+   "竹里馆是什么意思",
+   "竹里馆想表达什么",
+   "竹里馆这首诗写了什么"
+  ],
+  "a": "诗人一个人坐在幽静的竹林里，一边弹琴，一边发出长长的啸声。竹林深深，没有人知道他在这里，只有明月来照着他。写出了诗人悠闲自在的心情。",
+  "check": "Standard reading: alone in the bamboo grove, moon as companion."
+ },
+ {
+  "id": "zh-poem-028",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "静夜思",
+  "q": "《静夜思》讲的是什么?",
+  "alt": [
+   "静夜思是什么意思",
+   "静夜思想表达什么",
+   "静夜思这首诗写了什么"
+  ],
+  "a": "夜里，明亮的月光照在床前，诗人以为地上结了一层霜。他抬头望着明月，又低下头思念起远方的家乡。",
+  "check": "Standard reading: moonlight like frost; homesickness."
+ },
+ {
+  "id": "zh-poem-029",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "古朗月行",
+  "q": "《古朗月行》讲的是什么?",
+  "alt": [
+   "古朗月行是什么意思",
+   "古朗月行想表达什么",
+   "古朗月行这首诗写了什么"
+  ],
+  "a": "诗人小时候不认识月亮，把它叫作白玉盘，又以为是仙人的镜子飞在云端。月亮里有仙人、桂树和捣药的白兔。后面写月亮被蟾蜍啃得残缺，诗人心里很忧愁。",
+  "check": "Textbook teaches the opening lines; later lines on the toad eating the moon and the poet's sorrow."
+ },
+ {
+  "id": "zh-poem-030",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "望庐山瀑布",
+  "q": "《望庐山瀑布》讲的是什么?",
+  "alt": [
+   "望庐山瀑布是什么意思",
+   "望庐山瀑布想表达什么",
+   "望庐山瀑布这首诗写了什么"
+  ],
+  "a": "阳光照在香炉峰上，升起紫色的烟雾，远远看去，瀑布像挂在山前。瀑布从高处飞奔直下，好像银河从天上落下来一样。写出了庐山瀑布的壮美。",
+  "check": "Standard reading: Lushan waterfall compared to the Milky Way falling."
+ },
+ {
+  "id": "zh-poem-031",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "赠汪伦",
+  "q": "《赠汪伦》讲的是什么?",
+  "alt": [
+   "赠汪伦是什么意思",
+   "赠汪伦想表达什么",
+   "赠汪伦这首诗写了什么"
+  ],
+  "a": "李白坐船正要离开，忽然听到岸上传来汪伦踏着拍子唱歌送行的声音。桃花潭的水有千尺深，也比不上汪伦送别他的情谊深。",
+  "check": "Standard reading: friendship deeper than the Peach Blossom Pool."
+ },
+ {
+  "id": "zh-poem-032",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "黄鹤楼送孟浩然之广陵",
+  "q": "《黄鹤楼送孟浩然之广陵》讲的是什么?",
+  "alt": [
+   "黄鹤楼送孟浩然之广陵是什么意思",
+   "黄鹤楼送孟浩然之广陵想表达什么",
+   "黄鹤楼送孟浩然之广陵这首诗写了什么"
+  ],
+  "a": "春天三月，李白在黄鹤楼送老朋友孟浩然坐船去扬州。小船越走越远，消失在蓝天尽头，只看见长江向天边流去。写出了对朋友的不舍。",
+  "check": "Standard reading: watching the friend's sail vanish; reluctance to part."
+ },
+ {
+  "id": "zh-poem-033",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "早发白帝城",
+  "q": "《早发白帝城》讲的是什么?",
+  "alt": [
+   "早发白帝城是什么意思",
+   "早发白帝城想表达什么",
+   "早发白帝城这首诗写了什么"
+  ],
+  "a": "早晨，诗人告别彩云中的白帝城，一天就回到千里外的江陵。两岸的猿猴还在不停地叫，轻快的小船已经穿过了万重高山。写出了诗人轻松愉快的心情。",
+  "check": "Standard reading: swift downstream journey; joyful mood."
+ },
+ {
+  "id": "zh-poem-034",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "望天门山",
+  "q": "《望天门山》讲的是什么?",
+  "alt": [
+   "望天门山是什么意思",
+   "望天门山想表达什么",
+   "望天门山这首诗写了什么"
+  ],
+  "a": "长江像把天门山从中间劈开，碧绿的江水向东流，到这里回旋转弯。两岸的青山相对着出现，一只小船从太阳那边驶来。写出了天门山的雄伟。",
+  "check": "Standard reading: river cuts through Tianmen Mountain; lone sail from the sun's direction."
+ },
+ {
+  "id": "zh-poem-035",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "夜宿山寺",
+  "q": "《夜宿山寺》讲的是什么?",
+  "alt": [
+   "夜宿山寺是什么意思",
+   "夜宿山寺想表达什么",
+   "夜宿山寺这首诗写了什么"
+  ],
+  "a": "山上寺庙的楼非常高，好像伸手就能摸到天上的星星。诗人在这里过夜，连大声说话都不敢，怕惊动了天上的神仙。",
+  "check": "Standard 危楼高百尺 reading; input is a two-line variant, meaning described from the standard poem."
+ },
+ {
+  "id": "zh-poem-036",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "独坐敬亭山",
+  "q": "《独坐敬亭山》讲的是什么?",
+  "alt": [
+   "独坐敬亭山是什么意思",
+   "独坐敬亭山想表达什么",
+   "独坐敬亭山这首诗写了什么"
+  ],
+  "a": "鸟儿都飞得没影了，一片白云也慢慢飘走了。诗人和敬亭山互相看着，怎么也看不够。写出了诗人的孤单，也写出了他对敬亭山的喜爱。",
+  "check": "Textbook reading: solitude; only the mountain keeps him company."
+ },
+ {
+  "id": "zh-poem-037",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "别董大",
+  "q": "《别董大》讲的是什么?",
+  "alt": [
+   "别董大是什么意思",
+   "别董大想表达什么",
+   "别董大这首诗写了什么"
+  ],
+  "a": "黄云遮住了太阳，北风吹着大雁，大雪纷纷飘落。诗人送别朋友董大，鼓励他不要担心前面的路上没有知心朋友，天下的人都知道他。",
+  "check": "Standard reading: encouraging farewell. Input variant 十里 for 千里; meaning unchanged."
+ },
+ {
+  "id": "zh-poem-038",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "绝句",
+  "q": "《绝句》(两个黄鹂鸣翠柳)讲的是什么?",
+  "alt": [
+   "绝句(两个黄鹂鸣翠柳)是什么意思",
+   "绝句(两个黄鹂鸣翠柳)想表达什么",
+   "绝句(两个黄鹂鸣翠柳)这首诗写了什么"
+  ],
+  "a": "两只黄鹂在翠绿的柳树上唱歌，一行白鹭飞上蓝天。窗口能看到西岭上常年不化的雪，门前停着从东吴远道而来的船。写出了春天的美景和诗人的好心情。",
+  "check": "Standard reading: four spring scenes seen from Du Fu's thatched cottage."
+ },
+ {
+  "id": "zh-poem-039",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "绝句",
+  "q": "《绝句》(迟日江山丽)讲的是什么?",
+  "alt": [
+   "绝句(迟日江山丽)是什么意思",
+   "绝句(迟日江山丽)想表达什么",
+   "绝句(迟日江山丽)这首诗写了什么"
+  ],
+  "a": "春天阳光明媚，江山多么美丽，春风送来花草的香味。泥土湿润，燕子飞来飞去衔泥筑巢；沙子暖和，鸳鸯在上面睡觉。",
+  "check": "Standard reading: four images of a bright spring day."
+ },
+ {
+  "id": "zh-poem-040",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "春夜喜雨",
+  "q": "《春夜喜雨》讲的是什么?",
+  "alt": [
+   "春夜喜雨是什么意思",
+   "春夜喜雨想表达什么",
+   "春夜喜雨这首诗写了什么"
+  ],
+  "a": "好雨知道时节，春天一到就下了起来，跟着风在夜里悄悄落下，无声地滋润万物。第二天早上，成都城里开满了沾着雨水的红花。诗人为这场雨感到高兴。",
+  "check": "Standard reading: joy at timely spring rain; Jinguancheng = Chengdu."
+ },
+ {
+  "id": "zh-poem-041",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "江畔独步寻花",
+  "q": "《江畔独步寻花》讲的是什么?",
+  "alt": [
+   "江畔独步寻花是什么意思",
+   "江畔独步寻花想表达什么",
+   "江畔独步寻花这首诗写了什么"
+  ],
+  "a": "黄四娘家门前的小路上开满了花，千朵万朵把树枝都压低了。蝴蝶舍不得离开，在花间飞舞，黄莺自由自在地唱歌。写出了春天的热闹。",
+  "check": "Standard reading: flowers, butterflies and orioles by Huang Siniang's house."
+ },
+ {
+  "id": "zh-poem-042",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "闻官军收河南河北",
+  "q": "《闻官军收河南河北》讲的是什么?",
+  "alt": [
+   "闻官军收河南河北是什么意思",
+   "闻官军收河南河北想表达什么",
+   "闻官军收河南河北这首诗写了什么"
+  ],
+  "a": "诗人在外地，忽然听说朝廷的军队收复了被叛军占领的地方，高兴得流下眼泪。妻子儿女也不发愁了，他胡乱卷起书本，想要放声高歌，赶快回家乡去。",
+  "check": "Textbook reading: joy at news of recovery (An Lushan rebellion); eager to go home."
+ },
+ {
+  "id": "zh-poem-043",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "枫桥夜泊",
+  "q": "《枫桥夜泊》讲的是什么?",
+  "alt": [
+   "枫桥夜泊是什么意思",
+   "枫桥夜泊想表达什么",
+   "枫桥夜泊这首诗写了什么"
+  ],
+  "a": "月亮落下，乌鸦啼叫，满天寒霜。诗人睡在船上，望着江边的枫树和渔火，心里发愁睡不着。半夜，寒山寺的钟声传到了他的船上。",
+  "check": "Standard reading: sleepless traveler, bell of Hanshan Temple at midnight."
+ },
+ {
+  "id": "zh-poem-044",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "滁州西涧",
+  "q": "《滁州西涧》讲的是什么?",
+  "alt": [
+   "滁州西涧是什么意思",
+   "滁州西涧想表达什么",
+   "滁州西涧这首诗写了什么"
+  ],
+  "a": "诗人最喜欢涧边幽静的小草，树林深处有黄鹂在叫。傍晚下起雨，春潮涨得很急，野外的渡口没有人，只有一只小船随意横在水面上。",
+  "check": "Standard reading: quiet stream, evening rain, empty ferry with drifting boat."
+ },
+ {
+  "id": "zh-poem-045",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "游子吟",
+  "q": "《游子吟》讲的是什么?",
+  "alt": [
+   "游子吟是什么意思",
+   "游子吟想表达什么",
+   "游子吟这首诗写了什么"
+  ],
+  "a": "孩子要出远门了，慈祥的母亲一针一线密密地缝着衣服，怕孩子很久才能回来。孩子像小草，母爱像春天的阳光，孩子的心意怎么也报答不完。",
+  "check": "Standard reading: mother sewing for departing son; a child cannot repay a mother's love."
+ },
+ {
+  "id": "zh-poem-046",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "早春呈水部张十八员外",
+  "q": "《早春呈水部张十八员外》讲的是什么?",
+  "alt": [
+   "早春呈水部张十八员外是什么意思",
+   "早春呈水部张十八员外想表达什么",
+   "早春呈水部张十八员外这首诗写了什么"
+  ],
+  "a": "早春的京城下着小雨，像酥油一样滋润。远看草地有一片淡淡的绿色，走近了却几乎看不见。诗人说，这是一年中春天最好的时候。",
+  "check": "Standard reading: faint early-spring green, better than the willows of late spring."
+ },
+ {
+  "id": "zh-poem-047",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "渔歌子",
+  "q": "《渔歌子》讲的是什么?",
+  "alt": [
+   "渔歌子是什么意思",
+   "渔歌子想表达什么",
+   "渔歌子这首诗写了什么"
+  ],
+  "a": "西塞山前白鹭飞翔，桃花盛开，河水流淌，鳜鱼长得正肥。渔翁戴着青斗笠，穿着绿蓑衣，在斜风细雨里钓鱼，不想回家。",
+  "check": "Standard reading: carefree fisherman in spring rain."
+ },
+ {
+  "id": "zh-poem-048",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "塞下曲",
+  "q": "《塞下曲》讲的是什么?",
+  "alt": [
+   "塞下曲是什么意思",
+   "塞下曲想表达什么",
+   "塞下曲这首诗写了什么"
+  ],
+  "a": "一个没有月亮的夜晚，大雁飞得很高，敌人的首领趁黑逃跑了。将军正要带着骑兵去追，大雪落满了弓和刀。写出了将士们不怕严寒的英勇。",
+  "check": "Standard reading: night pursuit in heavy snow; soldiers' courage."
+ },
+ {
+  "id": "zh-poem-049",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "望洞庭",
+  "q": "《望洞庭》讲的是什么?",
+  "alt": [
+   "望洞庭是什么意思",
+   "望洞庭想表达什么",
+   "望洞庭这首诗写了什么"
+  ],
+  "a": "秋夜，月光和洞庭湖的水光融在一起，湖面没有风，像一面没磨过的铜镜。远远望去，湖中的君山，就像白银盘里的一只青螺。",
+  "check": "Standard reading: lake as silver plate, Junshan island as a green snail."
+ },
+ {
+  "id": "zh-poem-050",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "浪淘沙",
+  "q": "《浪淘沙》讲的是什么?",
+  "alt": [
+   "浪淘沙是什么意思",
+   "浪淘沙想表达什么",
+   "浪淘沙这首诗写了什么"
+  ],
+  "a": "弯弯曲曲的黄河带着万里黄沙，从天边滚滚流来。诗人想象沿着黄河一直飞上银河，一起到牛郎织女的家里去。",
+  "check": "Standard reading: Yellow River flowing from the sky; imagined trip up to the Milky Way."
+ },
+ {
+  "id": "zh-poem-051",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "赋得古原草送别",
+  "q": "《赋得古原草送别》讲的是什么?",
+  "alt": [
+   "赋得古原草送别是什么意思",
+   "赋得古原草送别想表达什么",
+   "赋得古原草送别这首诗写了什么"
+  ],
+  "a": "原野上的草长得很茂盛，每年枯一次，又绿一次。野火烧不完它们，春风一吹又长出来了。诗人在这里送别朋友，满地青草好像也充满了离别的情意。",
+  "check": "Standard reading: tenacious grass; farewell feeling."
+ },
+ {
+  "id": "zh-poem-052",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "池上",
+  "q": "《池上》讲的是什么?",
+  "alt": [
+   "池上是什么意思",
+   "池上想表达什么",
+   "池上这首诗写了什么"
+  ],
+  "a": "一个小孩撑着小船，偷偷采了白莲回来。他不知道藏好自己的踪迹，水面的浮萍被小船分开，留下了一道痕迹。写出了小孩天真可爱的样子。",
+  "check": "Standard reading: child gives himself away by the trail in the duckweed."
+ },
+ {
+  "id": "zh-poem-053",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "忆江南",
+  "q": "《忆江南》讲的是什么?",
+  "alt": [
+   "忆江南是什么意思",
+   "忆江南想表达什么",
+   "忆江南这首诗写了什么"
+  ],
+  "a": "江南真好，那里的风景诗人从前很熟悉。太阳出来，江边的花比火还红；春天来了，江水绿得像蓝草一样。诗人怎么也忘不了江南。",
+  "check": "Standard reading: fond memory of Jiangnan scenery."
+ },
+ {
+  "id": "zh-poem-054",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "暮江吟",
+  "q": "《暮江吟》讲的是什么?",
+  "alt": [
+   "暮江吟是什么意思",
+   "暮江吟想表达什么",
+   "暮江吟这首诗写了什么"
+  ],
+  "a": "傍晚，夕阳铺在江面上，江水一半碧绿，一半红艳。到了九月初三的夜晚，露珠像珍珠一样，弯弯的月亮像一张弓。写出了江边美丽的景色。",
+  "check": "Standard reading: sunset on the river; dew like pearls, moon like a bow."
+ },
+ {
+  "id": "zh-poem-055",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "大林寺桃花",
+  "q": "《大林寺桃花》讲的是什么?",
+  "alt": [
+   "大林寺桃花是什么意思",
+   "大林寺桃花想表达什么",
+   "大林寺桃花这首诗写了什么"
+  ],
+  "a": "四月里，山下的花都谢了，山上大林寺的桃花才刚刚盛开。诗人一直遗憾春天走了找不到，没想到春天跑到这里来了。写出了诗人的惊喜。",
+  "check": "Standard reading: spring found again in the mountain temple."
+ },
+ {
+  "id": "zh-poem-056",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "小儿垂钓",
+  "q": "《小儿垂钓》讲的是什么?",
+  "alt": [
+   "小儿垂钓是什么意思",
+   "小儿垂钓想表达什么",
+   "小儿垂钓这首诗写了什么"
+  ],
+  "a": "一个头发乱蓬蓬的小孩在学钓鱼，侧身坐在长满青苔的地上，青草遮着他。有路人问路，他远远地摆摆手，怕把鱼吓跑了，不敢出声回答。",
+  "check": "Standard reading: child fishing, waves off a passer-by so the fish are not scared."
+ },
+ {
+  "id": "zh-poem-057",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "悯农",
+  "q": "《悯农》(锄禾日当午)讲的是什么?",
+  "alt": [
+   "悯农(锄禾日当午)是什么意思",
+   "悯农(锄禾日当午)想表达什么",
+   "悯农(锄禾日当午)这首诗写了什么"
+  ],
+  "a": "中午太阳火辣辣的，农民还在田里锄草，汗水滴进了泥土。盘子里的每一粒饭，都是农民辛辛苦苦种出来的。告诉我们要爱惜粮食。",
+  "check": "Standard reading: hard farm work; cherish every grain."
+ },
+ {
+  "id": "zh-poem-058",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "悯农",
+  "q": "《悯农》(春种一粒粟)讲的是什么?",
+  "alt": [
+   "悯农(春种一粒粟)是什么意思",
+   "悯农(春种一粒粟)想表达什么",
+   "悯农(春种一粒粟)这首诗写了什么"
+  ],
+  "a": "春天种下一粒种子，秋天就能收获很多粮食。天下没有一块空着的田地，可种田的农民还是在挨饿。诗人很同情农民。",
+  "check": "Standard reading: rich harvests yet farmers go hungry; sympathy for farmers."
+ },
+ {
+  "id": "zh-poem-059",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "寻隐者不遇",
+  "q": "《寻隐者不遇》讲的是什么?",
+  "alt": [
+   "寻隐者不遇是什么意思",
+   "寻隐者不遇想表达什么",
+   "寻隐者不遇这首诗写了什么"
+  ],
+  "a": "诗人到山里找一位隐士，在松树下问他的小徒弟。小徒弟说：师父采药去了，就在这座山里，可是云雾太浓，不知道他在哪儿。",
+  "check": "Standard reading: dialogue with the hermit's pupil; hermit lost in the clouds."
+ },
+ {
+  "id": "zh-poem-060",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "江雪",
+  "q": "《江雪》讲的是什么?",
+  "alt": [
+   "江雪是什么意思",
+   "江雪想表达什么",
+   "江雪这首诗写了什么"
+  ],
+  "a": "千山万岭不见一只飞鸟，所有的小路上都没有人的脚印。只有一位穿蓑衣、戴斗笠的老翁，坐在小船上，独自在下雪的寒江上钓鱼。",
+  "check": "Standard reading: lone fisherman in a silent snowy world."
+ },
+ {
+  "id": "zh-poem-061",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "山行",
+  "q": "《山行》讲的是什么?",
+  "alt": [
+   "山行是什么意思",
+   "山行想表达什么",
+   "山行这首诗写了什么"
+  ],
+  "a": "诗人沿着弯弯的石头小路走上深秋的山，白云飘浮的地方有几户人家。他停下车，是因为喜欢傍晚的枫林。经霜的枫叶比二月的春花还要红。",
+  "check": "Standard reading: autumn mountain walk; frosted maple leaves redder than spring flowers."
+ },
+ {
+  "id": "zh-poem-062",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "清明",
+  "q": "《清明》讲的是什么?",
+  "alt": [
+   "清明是什么意思",
+   "清明想表达什么",
+   "清明这首诗写了什么"
+  ],
+  "a": "清明节这天，细雨纷纷，路上的行人心情很低落。有人问哪里有酒家，放牛的孩子远远地指向杏花村。",
+  "check": "Standard reading: rainy Qingming, sad traveler, herd boy points to Apricot Blossom Village."
+ },
+ {
+  "id": "zh-poem-063",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "江南春",
+  "q": "《江南春》讲的是什么?",
+  "alt": [
+   "江南春是什么意思",
+   "江南春想表达什么",
+   "江南春这首诗写了什么"
+  ],
+  "a": "江南到处是黄莺的歌声，绿树红花互相映衬，水边村庄、山边城镇都飘着酒旗。南朝留下的许多寺庙楼台，都笼罩在蒙蒙烟雨中。",
+  "check": "Standard reading: Jiangnan spring scenery; temples in misty rain."
+ },
+ {
+  "id": "zh-poem-064",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "秋夕",
+  "q": "《秋夕》讲的是什么?",
+  "alt": [
+   "秋夕是什么意思",
+   "秋夕想表达什么",
+   "秋夕这首诗写了什么"
+  ],
+  "a": "秋天的夜晚，烛光映照着画屏，一位宫女拿着小扇子扑打萤火虫。夜深了，石阶凉得像水，她躺着看天上的牛郎星和织女星，显得有些孤单。",
+  "check": "Textbook reading: a palace maid on an autumn night; quiet loneliness."
+ },
+ {
+  "id": "zh-poem-065",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "蜂",
+  "q": "《蜂》讲的是什么?",
+  "alt": [
+   "蜂是什么意思",
+   "蜂想表达什么",
+   "蜂这首诗写了什么"
+  ],
+  "a": "不管平地还是山顶，开满鲜花的地方都有蜜蜂的身影。蜜蜂采遍百花酿成蜜，辛辛苦苦，甜蜜却给了别人。诗人借蜜蜂赞美辛勤劳动的人。",
+  "check": "Textbook reading: bee as symbol of hard work whose fruits go to others."
+ },
+ {
+  "id": "zh-poem-066",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "嫦娥",
+  "q": "《嫦娥》讲的是什么?",
+  "alt": [
+   "嫦娥是什么意思",
+   "嫦娥想表达什么",
+   "嫦娥这首诗写了什么"
+  ],
+  "a": "夜深了，烛光暗暗的，银河慢慢落下，晨星也看不见了。诗人想，嫦娥偷吃了灵药飞到月宫，一定很后悔，因为她每天晚上只能一个人对着碧海青天。",
+  "check": "Standard reading: Chang'e regrets the elixir, lonely every night."
+ },
+ {
+  "id": "zh-poem-067",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "马诗",
+  "q": "《马诗》讲的是什么?",
+  "alt": [
+   "马诗是什么意思",
+   "马诗想表达什么",
+   "马诗这首诗写了什么"
+  ],
+  "a": "月光下，大漠像铺了一层雪，燕山上的月亮像弯钩。诗人借骏马说出心愿：盼望有一天能戴上金笼头，在秋天的原野上飞快奔跑，为国家建立功业。",
+  "check": "Standard reading: horse as the poet longing to serve. Input variant 山如雪 for 沙如雪."
+ },
+ {
+  "id": "zh-poem-068",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "乞巧",
+  "q": "《乞巧》讲的是什么?",
+  "alt": [
+   "乞巧是什么意思",
+   "乞巧想表达什么",
+   "乞巧这首诗写了什么"
+  ],
+  "a": "七夕的晚上，人们抬头看碧蓝的天空，想象牛郎织女过鹊桥相会。家家户户一边望着月亮，一边穿针乞巧，穿过的红线有几万条。",
+  "check": "Standard reading: Qixi festival customs, threading needles to ask for skill."
+ },
+ {
+  "id": "zh-poem-069",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "十五夜望月",
+  "q": "《十五夜望月》讲的是什么?",
+  "alt": [
+   "十五夜望月是什么意思",
+   "十五夜望月想表达什么",
+   "十五夜望月这首诗写了什么"
+  ],
+  "a": "中秋夜，月光把院子照得白白的，乌鸦在树上歇息，冷冷的露水打湿了桂花。今晚大家都在看月亮，不知道这份秋天的思念会落到谁家。",
+  "check": "Standard reading: Mid-Autumn moon-gazing; longing for absent family."
+ },
+ {
+  "id": "zh-poem-070",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "寒食",
+  "q": "《寒食》讲的是什么?",
+  "alt": [
+   "寒食是什么意思",
+   "寒食想表达什么",
+   "寒食这首诗写了什么"
+  ],
+  "a": "寒食节时，长安城里到处飞舞着落花，东风吹斜了皇宫里的柳枝。傍晚，宫里传送蜡烛，轻烟飘进了王侯贵族的家里。",
+  "check": "Literal reading: Cold Food Festival in the capital; candles granted to noble houses."
+ },
+ {
+  "id": "zh-poem-071",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "江上渔者",
+  "q": "《江上渔者》讲的是什么?",
+  "alt": [
+   "江上渔者是什么意思",
+   "江上渔者想表达什么",
+   "江上渔者这首诗写了什么"
+  ],
+  "a": "江边来来往往的人，只喜欢鲈鱼的美味。可是你看那打鱼人的小船，在大风大浪里一会儿出现，一会儿消失。诗人同情渔民打鱼的辛苦和危险。",
+  "check": "Standard reading: sympathy for fishermen risking the waves."
+ },
+ {
+  "id": "zh-poem-072",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "元日",
+  "q": "《元日》讲的是什么?",
+  "alt": [
+   "元日是什么意思",
+   "元日想表达什么",
+   "元日这首诗写了什么"
+  ],
+  "a": "在噼噼啪啪的爆竹声中，旧的一年过去了，人们在春风里喝着屠苏酒。初升的太阳照着千家万户，大家都把旧桃符换成了新桃符。写出了过新年的喜气。",
+  "check": "Standard reading: Chinese New Year customs."
+ },
+ {
+  "id": "zh-poem-073",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "泊船瓜洲",
+  "q": "《泊船瓜洲》讲的是什么?",
+  "alt": [
+   "泊船瓜洲是什么意思",
+   "泊船瓜洲想表达什么",
+   "泊船瓜洲这首诗写了什么"
+  ],
+  "a": "诗人把船停在瓜洲，京口就在江对面，他住过的钟山也只隔着几座山。春风又吹绿了江南的岸边，诗人盼着明月早日照着他回家。",
+  "check": "Standard reading: homesickness at Guazhou. Input has 自绿 where the textbook has 又绿."
+ },
+ {
+  "id": "zh-poem-074",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "书湖阴先生壁",
+  "q": "《书湖阴先生壁》讲的是什么?",
+  "alt": [
+   "书湖阴先生壁是什么意思",
+   "书湖阴先生壁想表达什么",
+   "书湖阴先生壁这首诗写了什么"
+  ],
+  "a": "湖阴先生的茅屋常常打扫，干干净净，连青苔都没有；花木是他亲手种的，一行行很整齐。门外一条小河护着绿色的农田，两座青山好像推开门，把青翠送进来。",
+  "check": "Standard reading: tidy home of Mr Huyin; river and hills personified."
+ },
+ {
+  "id": "zh-poem-075",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "梅花",
+  "q": "《梅花》讲的是什么?",
+  "alt": [
+   "梅花是什么意思",
+   "梅花想表达什么",
+   "梅花这首诗写了什么"
+  ],
+  "a": "墙角有几枝梅花，冒着严寒独自开放。远远看去就知道那不是雪，因为有淡淡的香气飘来。诗人赞美梅花不怕寒冷。",
+  "check": "Standard reading: plum blossoms braving the cold, known by their fragrance."
+ },
+ {
+  "id": "zh-poem-076",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "六月二十七日望湖楼醉书",
+  "q": "《六月二十七日望湖楼醉书》讲的是什么?",
+  "alt": [
+   "六月二十七日望湖楼醉书是什么意思",
+   "六月二十七日望湖楼醉书想表达什么",
+   "六月二十七日望湖楼醉书这首诗写了什么"
+  ],
+  "a": "黑云像打翻的墨汁，还没遮住山，白亮亮的雨点像珍珠一样跳进船里。忽然一阵大风卷地而来，吹散了乌云，望湖楼下的湖水又平静得像天空一样。",
+  "check": "Standard reading: sudden summer storm over West Lake that quickly clears."
+ },
+ {
+  "id": "zh-poem-077",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "饮湖上初晴后雨",
+  "q": "《饮湖上初晴后雨》讲的是什么?",
+  "alt": [
+   "饮湖上初晴后雨是什么意思",
+   "饮湖上初晴后雨想表达什么",
+   "饮湖上初晴后雨这首诗写了什么"
+  ],
+  "a": "晴天时，西湖水波闪闪发光，十分美丽；下雨时，山色朦朦胧胧，也很奇妙。诗人把西湖比作美女西施，不管淡妆还是浓妆，都那么好看。",
+  "check": "Standard reading: West Lake beautiful in sun and rain, like Xi Shi."
+ },
+ {
+  "id": "zh-poem-078",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "惠崇春江晚景",
+  "q": "《惠崇春江晚景》讲的是什么?",
+  "alt": [
+   "惠崇春江晚景是什么意思",
+   "惠崇春江晚景想表达什么",
+   "惠崇春江晚景这首诗写了什么"
+  ],
+  "a": "竹林外有两三枝桃花开了，春天江水变暖，鸭子最先知道。地上长满蒌蒿，芦苇刚冒出短短的芽，正是河豚要游上来的时候。这是诗人为一幅画写的诗。",
+  "check": "Standard reading: poem inscribed on Huichong's painting of a spring river."
+ },
+ {
+  "id": "zh-poem-079",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "题西林壁",
+  "q": "《题西林壁》讲的是什么?",
+  "alt": [
+   "题西林壁是什么意思",
+   "题西林壁想表达什么",
+   "题西林壁这首诗写了什么"
+  ],
+  "a": "从正面看庐山是连绵的山岭，从侧面看是高高的山峰，从远近高低不同的地方看，样子都不一样。看不清庐山的样子，是因为自己就在山里。意思是看事情要跳出来看。",
+  "check": "Standard reading: different views of Lushan; insiders cannot see the whole."
+ },
+ {
+  "id": "zh-poem-080",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "赠刘景文",
+  "q": "《赠刘景文》讲的是什么?",
+  "alt": [
+   "赠刘景文是什么意思",
+   "赠刘景文想表达什么",
+   "赠刘景文这首诗写了什么"
+  ],
+  "a": "荷花谢了，像伞一样的荷叶也没了；菊花残了，枝干还不怕寒霜挺立着。诗人告诉朋友：一年中最美的景色，就是橙子黄、橘子绿的时候。",
+  "check": "Standard reading: late autumn still has beauty; encouraging a friend."
+ },
+ {
+  "id": "zh-poem-081",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "浣溪沙·游蕲水清泉寺",
+  "q": "《浣溪沙·游蕲水清泉寺》讲的是什么?",
+  "alt": [
+   "浣溪沙·游蕲水清泉寺是什么意思",
+   "浣溪沙·游蕲水清泉寺想表达什么",
+   "浣溪沙·游蕲水清泉寺这首诗写了什么"
+  ],
+  "a": "山下溪边的兰草刚冒芽，松林间的沙路干干净净，傍晚的细雨里杜鹃在叫。诗人看到门前溪水竟能向西流，就说人老了也能有年轻的心，不要因为头发白了就叹气。",
+  "check": "Standard reading: west-flowing stream as a sign one can stay young at heart."
+ },
+ {
+  "id": "zh-poem-082",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "夏日绝句",
+  "q": "《夏日绝句》讲的是什么?",
+  "alt": [
+   "夏日绝句是什么意思",
+   "夏日绝句想表达什么",
+   "夏日绝句这首诗写了什么"
+  ],
+  "a": "活着要做人中的豪杰，死了也要做鬼中的英雄。诗人至今怀念项羽，因为他打了败仗也不肯逃回江东。诗人赞美有骨气的英雄。",
+  "check": "Standard reading: praise for Xiang Yu's refusal to flee. Input variant 为 for 作."
+ },
+ {
+  "id": "zh-poem-083",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "三衢道中",
+  "q": "《三衢道中》讲的是什么?",
+  "alt": [
+   "三衢道中是什么意思",
+   "三衢道中想表达什么",
+   "三衢道中这首诗写了什么"
+  ],
+  "a": "梅子黄了的时候，天天都是晴天，诗人坐小船到了小溪尽头，又改走山路。路边的绿树和来时一样浓密，还多了几声黄鹂的歌声。写出了旅途的愉快。",
+  "check": "Standard reading: pleasant early-summer journey."
+ },
+ {
+  "id": "zh-poem-084",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "示儿",
+  "q": "《示儿》讲的是什么?",
+  "alt": [
+   "示儿是什么意思",
+   "示儿想表达什么",
+   "示儿这首诗写了什么"
+  ],
+  "a": "诗人临终前告诉儿子：人死了就什么都不知道了，只是难过没能看到国家统一。等到收复中原的那一天，祭祀时别忘了告诉他。表达了深深的爱国之情。",
+  "check": "Standard reading: Lu You's dying wish for reunification."
+ },
+ {
+  "id": "zh-poem-085",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "秋夜将晓出篱门迎凉有感",
+  "q": "《秋夜将晓出篱门迎凉有感》讲的是什么?",
+  "alt": [
+   "秋夜将晓出篱门迎凉有感是什么意思",
+   "秋夜将晓出篱门迎凉有感想表达什么",
+   "秋夜将晓出篱门迎凉有感这首诗写了什么"
+  ],
+  "a": "黄河向东流入大海，华山高高耸入云天，可这些大好河山被敌人占着。那里的百姓眼泪都流干了，一年又一年向南盼望朝廷的军队来收复家园。",
+  "check": "Standard reading: Yellow River and Mount Hua under Jin rule; people longing for Song armies."
+ },
+ {
+  "id": "zh-poem-086",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "四时田园杂兴",
+  "q": "《四时田园杂兴》(昼出耘田夜绩麻)讲的是什么?",
+  "alt": [
+   "四时田园杂兴(昼出耘田夜绩麻)是什么意思",
+   "四时田园杂兴(昼出耘田夜绩麻)想表达什么",
+   "四时田园杂兴(昼出耘田夜绩麻)这首诗写了什么"
+  ],
+  "a": "农民白天下田锄草，晚上搓麻线，村里的男男女女各有各的活儿。小孙子还不会种田织布，也在桑树荫下学着种瓜。写出了农家的勤劳和孩子的可爱。",
+  "check": "Standard reading: busy farm family; little grandchild imitates by planting melons."
+ },
+ {
+  "id": "zh-poem-087",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "四时田园杂兴",
+  "q": "《四时田园杂兴》(梅子金黄杏子肥)讲的是什么?",
+  "alt": [
+   "四时田园杂兴(梅子金黄杏子肥)是什么意思",
+   "四时田园杂兴(梅子金黄杏子肥)想表达什么",
+   "四时田园杂兴(梅子金黄杏子肥)这首诗写了什么"
+  ],
+  "a": "梅子黄了，杏子又大又圆，麦花雪白，菜花已经稀稀落落。夏天白天很长，篱笆边没有人经过，只有蜻蜓和蝴蝶飞来飞去。写出了初夏田园的宁静。",
+  "check": "Standard reading: quiet early-summer countryside."
+ },
+ {
+  "id": "zh-poem-088",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "小池",
+  "q": "《小池》讲的是什么?",
+  "alt": [
+   "小池是什么意思",
+   "小池想表达什么",
+   "小池这首诗写了什么"
+  ],
+  "a": "泉眼悄悄流出细细的水，好像舍不得似的；树荫映在水面上，好像喜欢这晴天柔和的风光。小荷叶刚露出尖尖的角，就有蜻蜓站在上面了。",
+  "check": "Standard reading: small pond, new lotus leaf tip, dragonfly."
+ },
+ {
+  "id": "zh-poem-089",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "晓出净慈寺送林子方",
+  "q": "《晓出净慈寺送林子方》讲的是什么?",
+  "alt": [
+   "晓出净慈寺送林子方是什么意思",
+   "晓出净慈寺送林子方想表达什么",
+   "晓出净慈寺送林子方这首诗写了什么"
+  ],
+  "a": "六月的西湖，风光和别的季节就是不一样。碧绿的莲叶一直连到天边，荷花在阳光照耀下红得格外鲜艳。这是诗人送朋友时写下的。",
+  "check": "Standard reading: West Lake lotuses in June, written while seeing off Lin Zifang."
+ },
+ {
+  "id": "zh-poem-090",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "宿新市徐公店",
+  "q": "《宿新市徐公店》讲的是什么?",
+  "alt": [
+   "宿新市徐公店是什么意思",
+   "宿新市徐公店想表达什么",
+   "宿新市徐公店这首诗写了什么"
+  ],
+  "a": "稀疏的篱笆旁，一条小路伸向远方，树上的新叶还没长成浓荫。孩子们飞快地跑着追黄蝴蝶，蝴蝶飞进黄色的菜花里，再也找不到了。",
+  "check": "Standard reading: children chasing a yellow butterfly into rape flowers."
+ },
+ {
+  "id": "zh-poem-091",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "舟过安仁",
+  "q": "《舟过安仁》讲的是什么?",
+  "alt": [
+   "舟过安仁是什么意思",
+   "舟过安仁想表达什么",
+   "舟过安仁这首诗写了什么"
+  ],
+  "a": "一条渔船上有两个小孩，他们收起竹篙，停下船桨，坐在船里。诗人奇怪没下雨他们怎么撑起了伞，原来不是为了遮头，是想让风吹着伞带船走。",
+  "check": "Standard reading: children use an umbrella as a sail."
+ },
+ {
+  "id": "zh-poem-092",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "稚子弄冰",
+  "q": "《稚子弄冰》讲的是什么?",
+  "alt": [
+   "稚子弄冰是什么意思",
+   "稚子弄冰想表达什么",
+   "稚子弄冰这首诗写了什么"
+  ],
+  "a": "一个小孩早上从铜盆里取出一块冰，用彩色丝线穿起来当锣敲。冰声清脆，像玉磬一样穿过树林，忽然冰掉在地上，发出像玻璃碎了一样的声音。",
+  "check": "Standard reading: child plays with ice as a gong until it shatters."
+ },
+ {
+  "id": "zh-poem-093",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "春日",
+  "q": "《春日》讲的是什么?",
+  "alt": [
+   "春日是什么意思",
+   "春日想表达什么",
+   "春日这首诗写了什么"
+  ],
+  "a": "一个晴好的日子，诗人到泗水边游春，到处的景色都焕然一新。春风的样子很容易认出来，万紫千红的花朵就是春天。",
+  "check": "Standard literal reading: spring outing; myriad colors show spring."
+ },
+ {
+  "id": "zh-poem-094",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "观书有感",
+  "q": "《观书有感》讲的是什么?",
+  "alt": [
+   "观书有感是什么意思",
+   "观书有感想表达什么",
+   "观书有感这首诗写了什么"
+  ],
+  "a": "半亩大的方形池塘像一面打开的镜子，天光和云影在水里一起晃动。池水这么清，是因为源头不断有活水流来。意思是要不断读书学习，头脑才会一直清亮。",
+  "check": "Standard reading: clear pond fed by living water = learning keeps the mind fresh."
+ },
+ {
+  "id": "zh-poem-095",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "题临安邸",
+  "q": "《题临安邸》讲的是什么?",
+  "alt": [
+   "题临安邸是什么意思",
+   "题临安邸想表达什么",
+   "题临安邸这首诗写了什么"
+  ],
+  "a": "青山外还有青山，楼外还有楼，西湖边的歌舞一直不停。暖风吹得游人像喝醉了一样，竟把杭州当成了从前的都城汴州。诗人批评只顾享乐、忘了收复国土的人。",
+  "check": "Standard reading: criticism of Southern Song pleasure-seekers who forgot Bianzhou."
+ },
+ {
+  "id": "zh-poem-096",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "游园不值",
+  "q": "《游园不值》讲的是什么?",
+  "alt": [
+   "游园不值是什么意思",
+   "游园不值想表达什么",
+   "游园不值这首诗写了什么"
+  ],
+  "a": "诗人去朋友家看花，敲了很久柴门也没人开，大概是主人怕木屐踩坏了青苔。可是满园春色是关不住的，一枝红杏已经伸出墙外来了。",
+  "check": "Standard reading: gate unopened, yet spring shows in a red apricot branch. Input variant 嫌 for 怜."
+ },
+ {
+  "id": "zh-poem-097",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "夜书所见",
+  "q": "《夜书所见》讲的是什么?",
+  "alt": [
+   "夜书所见是什么意思",
+   "夜书所见想表达什么",
+   "夜书所见这首诗写了什么"
+  ],
+  "a": "秋风吹动梧桐叶，发出萧萧的声音，江上的秋风让在外的诗人想起家乡。他看见远处篱笆边亮着一盏灯，知道是孩子们在夜里捉蟋蟀。",
+  "check": "Standard reading: autumn homesickness; children catching crickets at night."
+ },
+ {
+  "id": "zh-poem-098",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "乡村四月",
+  "q": "《乡村四月》讲的是什么?",
+  "alt": [
+   "乡村四月是什么意思",
+   "乡村四月想表达什么",
+   "乡村四月这首诗写了什么"
+  ],
+  "a": "四月里，山坡原野一片碧绿，河里的水映着天光，白茫茫的，杜鹃声声，细雨像烟雾一样。乡村四月没有闲着的人，刚忙完养蚕采桑，又要插秧了。",
+  "check": "Standard reading: busy farming season in April."
+ },
+ {
+  "id": "zh-poem-099",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "村晚",
+  "q": "《村晚》讲的是什么?",
+  "alt": [
+   "村晚是什么意思",
+   "村晚想表达什么",
+   "村晚这首诗写了什么"
+  ],
+  "a": "池塘里长满了草，水涨得满满的，山好像衔着落日，倒影浸在水波里。放牛的孩子横坐在牛背上回家，拿着短笛随口吹着不成调的曲子。",
+  "check": "Standard reading: evening village scene, herd boy on the buffalo."
+ },
+ {
+  "id": "zh-poem-100",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "雪梅",
+  "q": "《雪梅》讲的是什么?",
+  "alt": [
+   "雪梅是什么意思",
+   "雪梅想表达什么",
+   "雪梅这首诗写了什么"
+  ],
+  "a": "梅花和雪都说自己是春天最美的，谁也不服输，诗人也难以评判。最后诗人说：梅花比雪少了三分白，雪却比梅花少了一段香。意思是各有各的长处。",
+  "check": "Standard reading: plum and snow each have strengths."
+ },
+ {
+  "id": "zh-poem-101",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "寒菊",
+  "q": "《寒菊》讲的是什么?",
+  "alt": [
+   "寒菊是什么意思",
+   "寒菊想表达什么",
+   "寒菊这首诗写了什么"
+  ],
+  "a": "菊花不和百花一起开放，独自在稀疏的篱笆边，别有趣味。它宁可在枝头带着香气枯萎，也不会被北风吹落。诗人赞美菊花坚强不屈的品格。",
+  "check": "Standard reading: chrysanthemum's unyielding integrity."
+ },
+ {
+  "id": "zh-poem-102",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "清平乐·村居",
+  "q": "《清平乐·村居》讲的是什么?",
+  "alt": [
+   "清平乐·村居是什么意思",
+   "清平乐·村居想表达什么",
+   "清平乐·村居这首诗写了什么"
+  ],
+  "a": "低矮的茅屋旁，溪边长满青草，一对白发老夫妻带着醉意亲热地聊天。大儿子在溪东锄豆，二儿子在编鸡笼，最可爱的是调皮的小儿子，躺在溪边剥莲蓬。",
+  "check": "Standard reading: peaceful farm family scene."
+ },
+ {
+  "id": "zh-poem-103",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "西江月·夜行黄沙道中",
+  "q": "《西江月·夜行黄沙道中》讲的是什么?",
+  "alt": [
+   "西江月·夜行黄沙道中是什么意思",
+   "西江月·夜行黄沙道中想表达什么",
+   "西江月·夜行黄沙道中这首诗写了什么"
+  ],
+  "a": "夏夜，明月惊飞了枝头的喜鹊，清风里传来蝉鸣，稻花飘香，蛙声一片，好像在说今年会丰收。天边几颗星，山前几点雨，路一转，诗人看见了熟悉的小茅店。",
+  "check": "Standard reading: summer night walk, signs of a good harvest, familiar inn appears."
+ },
+ {
+  "id": "zh-poem-104",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "石灰吟",
+  "q": "《石灰吟》讲的是什么?",
+  "alt": [
+   "石灰吟是什么意思",
+   "石灰吟想表达什么",
+   "石灰吟这首诗写了什么"
+  ],
+  "a": "石灰石经过千锤万凿从深山里开采出来，被烈火焚烧也毫不在乎。就算粉身碎骨也不怕，只要把清白留在人间。诗人借石灰表明要做一个清清白白的人。",
+  "check": "Standard reading: limestone as symbol of integrity. Input has minor variant characters."
+ },
+ {
+  "id": "zh-poem-105",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "画鸡",
+  "q": "《画鸡》讲的是什么?",
+  "alt": [
+   "画鸡是什么意思",
+   "画鸡想表达什么",
+   "画鸡这首诗写了什么"
+  ],
+  "a": "公鸡头上的红冠不用裁剪，天生就有，它一身雪白地走过来。它平时不随便叫，可一叫起来，天亮了，千家万户都打开了门。写出了公鸡的神气。",
+  "check": "Standard reading: rooster's crow opens every door at dawn."
+ },
+ {
+  "id": "zh-poem-106",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "竹石",
+  "q": "《竹石》讲的是什么?",
+  "alt": [
+   "竹石是什么意思",
+   "竹石想表达什么",
+   "竹石这首诗写了什么"
+  ],
+  "a": "竹子紧紧咬住青山不放松，它的根原本就扎在岩石的裂缝里。经历了无数磨难，它还是那么坚韧，不管东南西北风怎么吹都不怕。诗人赞美竹子坚强的精神。",
+  "check": "Standard reading: bamboo rooted in rock, firm against every wind."
+ },
+ {
+  "id": "zh-poem-107",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "村居",
+  "q": "《村居》讲的是什么?",
+  "alt": [
+   "村居是什么意思",
+   "村居想表达什么",
+   "村居这首诗写了什么"
+  ],
+  "a": "二月的春天，草长得茂盛，黄莺飞来飞去，堤岸上的杨柳在春天的雾气里轻轻摇摆。孩子们放学早早回家，趁着东风放风筝。",
+  "check": "Standard reading: spring scene, children flying kites after school."
+ },
+ {
+  "id": "zh-poem-108",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "己亥杂诗",
+  "q": "《己亥杂诗》讲的是什么?",
+  "alt": [
+   "己亥杂诗是什么意思",
+   "己亥杂诗想表达什么",
+   "己亥杂诗这首诗写了什么"
+  ],
+  "a": "诗人说，要让国家充满生气，就要靠风雷一样的大力量，大家都不敢说话的样子实在让人难过。他劝老天爷重新振作，不拘一格地降下各种各样的人才。",
+  "check": "Standard reading: call for change and for talents of every kind."
+ },
+ {
+  "id": "zh-poem-109",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "舟夜书所见",
+  "q": "《舟夜书所见》讲的是什么?",
+  "alt": [
+   "舟夜书所见是什么意思",
+   "舟夜书所见想表达什么",
+   "舟夜书所见这首诗写了什么"
+  ],
+  "a": "没有月亮的黑夜，只看见一盏渔灯，孤零零的光像一只萤火虫。微风吹起细浪，灯光散开，好像满河的星星。",
+  "check": "Standard reading: single fishing lamp scattered into stars by ripples."
+ },
+ {
+  "id": "zh-poem-110",
+  "kind": "poem_note",
+  "topic": "",
+  "ref": "长相思",
+  "q": "《长相思》讲的是什么?",
+  "alt": [
+   "长相思是什么意思",
+   "长相思想表达什么",
+   "长相思这首诗写了什么"
+  ],
+  "a": "诗人跟着队伍翻山过河，向关外走去，深夜里千万个帐篷都亮着灯。风雪一阵又一阵，吵得他想家的梦也做不成，因为家乡没有这样的风雪声。",
+  "check": "Standard reading: homesickness on a journey beyond the pass. Input reads 逾关 where the standard text has 榆关."
+ },
+ {
+  "id": "zh-idiom-001",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "守株待兔",
+  "q": "守株待兔的故事是什么?",
+  "alt": [
+   "讲讲守株待兔",
+   "守株待兔是什么意思",
+   "守株待兔这个成语讲的什么故事"
+  ],
+  "a": "宋国有个农夫在田里干活，看见一只兔子跑得太急，撞在树桩上倒下了，他白捡了一只兔子。从此他不种地了，天天守在树桩旁等兔子。可是再也没有兔子撞上来，田地却荒了。这个成语比喻不想努力，只想靠运气得到好处。",
+  "check": "Han Feizi, Wu Du (五蠹)."
+ },
+ {
+  "id": "zh-idiom-002",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "画蛇添足",
+  "q": "画蛇添足的故事是什么?",
+  "alt": [
+   "讲讲画蛇添足",
+   "画蛇添足是什么意思",
+   "画蛇添足这个成语讲的什么故事"
+  ],
+  "a": "楚国有几个人分一壶酒，约好谁先在地上画好一条蛇，酒就归谁。有个人最先画完，得意地给蛇添上了脚。这时另一个人也画好了，说蛇本来没有脚，把酒拿走了。这个成语比喻做多余的事，反而把事情弄坏。",
+  "check": "Zhanguoce, Qi Ce 2 (战国策·齐策二)."
+ },
+ {
+  "id": "zh-idiom-003",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "亡羊补牢",
+  "q": "亡羊补牢的故事是什么?",
+  "alt": [
+   "讲讲亡羊补牢",
+   "亡羊补牢是什么意思",
+   "亡羊补牢这个成语讲的什么故事"
+  ],
+  "a": "从前有个人的羊圈破了个洞，狼钻进来叼走了一只羊。邻居劝他修羊圈，他没听，结果羊又少了一只。他这才赶紧把羊圈修好，后来羊再也没丢过。这个成语比喻出了问题赶快改正，还来得及。",
+  "check": "Saying from Zhanguoce, Chu Ce 4 (战国策·楚策四); the shepherd story is the standard textbook fable."
+ },
+ {
+  "id": "zh-idiom-004",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "刻舟求剑",
+  "q": "刻舟求剑的故事是什么?",
+  "alt": [
+   "讲讲刻舟求剑",
+   "刻舟求剑是什么意思",
+   "刻舟求剑这个成语讲的什么故事"
+  ],
+  "a": "楚国有个人坐船过江，剑掉进了水里。他在船边刻了个记号，说剑是从这里掉下去的。船停下后，他从记号的地方下水找剑，可船早就走远了，当然找不到。这个成语比喻做事死板，不知道情况已经变了。",
+  "check": "Lüshi Chunqiu, Cha Jin (吕氏春秋·察今)."
+ },
+ {
+  "id": "zh-idiom-005",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "揠苗助长",
+  "q": "揠苗助长的故事是什么?",
+  "alt": [
+   "讲讲揠苗助长",
+   "揠苗助长是什么意思",
+   "揠苗助长这个成语讲的什么故事"
+  ],
+  "a": "宋国有个农夫，嫌禾苗长得太慢，就到田里把禾苗一棵一棵往上拔。他回家说自己帮禾苗长高了，儿子跑去一看，禾苗全都枯了。这个成语比喻太着急，不按规律办事，反而把事情办坏。",
+  "check": "Mencius, Gongsun Chou I (孟子·公孙丑上)."
+ },
+ {
+  "id": "zh-idiom-006",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "井底之蛙",
+  "q": "井底之蛙的故事是什么?",
+  "alt": [
+   "讲讲井底之蛙",
+   "井底之蛙是什么意思",
+   "井底之蛙这个成语讲的什么故事"
+  ],
+  "a": "一只青蛙住在一口浅井里，觉得井里的生活快乐极了。它请东海的大鳖来看看，大鳖的一条腿还没伸进去就被卡住了。大鳖给青蛙讲大海有多宽、多深，青蛙听了惊呆了。这个成语比喻眼界小、见识少的人。",
+  "check": "Zhuangzi, Qiu Shui (庄子·秋水), frog of the shallow well and the turtle of the Eastern Sea."
+ },
+ {
+  "id": "zh-idiom-007",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "掩耳盗铃",
+  "q": "掩耳盗铃的故事是什么?",
+  "alt": [
+   "讲讲掩耳盗铃",
+   "掩耳盗铃是什么意思",
+   "掩耳盗铃这个成语讲的什么故事"
+  ],
+  "a": "有个人想偷走一口大钟，钟太大背不动，他就想把钟敲碎。可是一敲，钟就响了，他怕别人听见，赶紧捂住自己的耳朵，以为自己听不见，别人也听不见。后来人们把它说成掩耳盗铃，比喻自己骗自己。",
+  "check": "Lüshi Chunqiu, Zi Zhi (吕氏春秋·自知); original object is a bell 钟, later 铃."
+ },
+ {
+  "id": "zh-idiom-008",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "狐假虎威",
+  "q": "狐假虎威的故事是什么?",
+  "alt": [
+   "讲讲狐假虎威",
+   "狐假虎威是什么意思",
+   "狐假虎威这个成语讲的什么故事"
+  ],
+  "a": "老虎抓住了一只狐狸，要吃它。狐狸说：我是天帝派来管百兽的，不信你跟在我后面走走。野兽们看见它们都吓跑了，老虎以为大家怕狐狸，其实大家怕的是老虎。这个成语比喻依仗别人的势力吓唬人。",
+  "check": "Zhanguoce, Chu Ce 1 (战国策·楚策一)."
+ },
+ {
+  "id": "zh-idiom-009",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "叶公好龙",
+  "q": "叶公好龙的故事是什么?",
+  "alt": [
+   "讲讲叶公好龙",
+   "叶公好龙是什么意思",
+   "叶公好龙这个成语讲的什么故事"
+  ],
+  "a": "叶公说自己特别喜欢龙，家里的墙上、器物上都画着龙、刻着龙。天上的真龙知道了，就飞下来看他，从窗户探进头来。叶公一见，吓得转身就跑。这个成语比喻嘴上说喜欢，其实并不是真的喜欢。",
+  "check": "Liu Xiang, Xin Xu, Za Shi 5 (新序·杂事五)."
+ },
+ {
+  "id": "zh-idiom-010",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "自相矛盾",
+  "q": "自相矛盾的故事是什么?",
+  "alt": [
+   "讲讲自相矛盾",
+   "自相矛盾是什么意思",
+   "自相矛盾这个成语讲的什么故事"
+  ],
+  "a": "楚国有个人卖矛和盾。他夸自己的盾最结实，什么都刺不穿；又夸自己的矛最锋利，什么都能刺穿。有人问他，用你的矛刺你的盾会怎么样，他答不上来了。这个成语比喻说话做事前后不一致。",
+  "check": "Han Feizi, Nan Yi (韩非子·难一)."
+ },
+ {
+  "id": "zh-idiom-011",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "杯弓蛇影",
+  "q": "杯弓蛇影的故事是什么?",
+  "alt": [
+   "讲讲杯弓蛇影",
+   "杯弓蛇影是什么意思",
+   "杯弓蛇影这个成语讲的什么故事"
+  ],
+  "a": "有个人到朋友家喝酒，看见酒杯里好像有一条小蛇，心里害怕，回家就病了。朋友想了很久，发现是墙上挂的弓映在了酒杯里。客人知道真相后，病一下子就好了。这个成语比喻疑神疑鬼，自己吓自己。",
+  "check": "Ying Shao, Fengsu Tongyi, Guai Shen (风俗通义·怪神); also Jin Shu, biography of Yue Guang."
+ },
+ {
+  "id": "zh-idiom-012",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "塞翁失马",
+  "q": "塞翁失马的故事是什么?",
+  "alt": [
+   "讲讲塞翁失马",
+   "塞翁失马是什么意思",
+   "塞翁失马这个成语讲的什么故事"
+  ],
+  "a": "边塞有位老人丢了一匹马，邻居来安慰他，他说这不一定是坏事。过了几个月，那匹马带着一匹好马回来了。邻居来道喜，他又说这不一定是好事。这个成语比喻坏事有时会变成好事，好事也可能变成坏事。",
+  "check": "Huainanzi, Ren Jian Xun (淮南子·人间训); retold without the son's injury."
+ },
+ {
+  "id": "zh-idiom-013",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "鹬蚌相争",
+  "q": "鹬蚌相争的故事是什么?",
+  "alt": [
+   "讲讲鹬蚌相争",
+   "鹬蚌相争是什么意思",
+   "鹬蚌相争这个成语讲的什么故事"
+  ],
+  "a": "一只河蚌张开壳晒太阳，一只鹬鸟来啄它的肉，河蚌赶紧合上壳，夹住了鹬的嘴。它们谁也不让谁，一直僵持着。一个渔夫走过来，把它们俩一起捉走了。这个成语比喻双方争个不停，让别人得了好处。",
+  "check": "Zhanguoce, Yan Ce 2 (战国策·燕策二)."
+ },
+ {
+  "id": "zh-idiom-014",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "对牛弹琴",
+  "q": "对牛弹琴的故事是什么?",
+  "alt": [
+   "讲讲对牛弹琴",
+   "对牛弹琴是什么意思",
+   "对牛弹琴这个成语讲的什么故事"
+  ],
+  "a": "古代有个音乐家叫公明仪，他对着一头牛弹奏高雅的曲子，牛只顾低头吃草。后来他弹出像蚊子嗡嗡和小牛叫的声音，牛就摇着尾巴、竖起耳朵听起来。这个成语比喻对不懂的人讲道理，白费力气。",
+  "check": "Mou Rong, Li Huo Lun (牟子理惑论), story of Gongming Yi."
+ },
+ {
+  "id": "zh-idiom-015",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "画龙点睛",
+  "q": "画龙点睛的故事是什么?",
+  "alt": [
+   "讲讲画龙点睛",
+   "画龙点睛是什么意思",
+   "画龙点睛这个成语讲的什么故事"
+  ],
+  "a": "南北朝时有个画家叫张僧繇，他在寺庙的墙上画了四条龙，都没画眼睛，说画上眼睛龙就会飞走。大家不信，他就给两条龙点上了眼睛。一会儿电闪雷鸣，这两条龙飞上了天。这个成语比喻在关键的地方加上一笔，让整体更生动。",
+  "check": "Zhang Yanyuan, Lidai Minghua Ji (历代名画记), Zhang Sengyou of the Liang dynasty."
+ },
+ {
+  "id": "zh-idiom-016",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "滥竽充数",
+  "q": "滥竽充数的故事是什么?",
+  "alt": [
+   "讲讲滥竽充数",
+   "滥竽充数是什么意思",
+   "滥竽充数这个成语讲的什么故事"
+  ],
+  "a": "齐宣王爱听吹竽，总要三百人一起吹。南郭先生不会吹，也混在里面装样子。后来齐湣王继位，喜欢听乐师一个一个单独吹，南郭先生只好悄悄溜走了。这个成语比喻没有真本事的人混在行家里凑数。",
+  "check": "Han Feizi, Nei Chu Shuo I (韩非子·内储说上)."
+ },
+ {
+  "id": "zh-idiom-017",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "惊弓之鸟",
+  "q": "惊弓之鸟的故事是什么?",
+  "alt": [
+   "讲讲惊弓之鸟",
+   "惊弓之鸟是什么意思",
+   "惊弓之鸟这个成语讲的什么故事"
+  ],
+  "a": "魏国的更羸说，他不用箭，只拉一下弓弦，就能让大雁掉下来。一只大雁飞过，他一拉弦，大雁真的掉了下来。原来这只大雁以前受过伤，一听到弦响就害怕，拼命往高处飞，旧伤一痛就掉下来了。这个成语比喻受过惊吓，一点动静就害怕。",
+  "check": "Zhanguoce, Chu Ce 4 (战国策·楚策四), Geng Lei and the King of Wei."
+ },
+ {
+  "id": "zh-idiom-018",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "望梅止渴",
+  "q": "望梅止渴的故事是什么?",
+  "alt": [
+   "讲讲望梅止渴",
+   "望梅止渴是什么意思",
+   "望梅止渴这个成语讲的什么故事"
+  ],
+  "a": "曹操带兵行军，找不到水喝，士兵们都渴得受不了。曹操说：前面有一大片梅林，梅子又酸又甜。士兵们一听，嘴里都流出了口水，暂时不觉得渴了，终于走到了有水的地方。这个成语比喻用想象来安慰自己。",
+  "check": "Shishuo Xinyu, Jia Jue (世说新语·假谲)."
+ },
+ {
+  "id": "zh-idiom-019",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "胸有成竹",
+  "q": "胸有成竹的故事是什么?",
+  "alt": [
+   "讲讲胸有成竹",
+   "胸有成竹是什么意思",
+   "胸有成竹这个成语讲的什么故事"
+  ],
+  "a": "宋朝画家文与可特别爱画竹子。他常年仔细观察竹子，不同季节、不同天气里竹子的样子他都记得清清楚楚。所以画竹之前，他心里早就有了竹子的样子。这个成语比喻做事之前已经有了周全的打算。",
+  "check": "Su Shi, 文与可画筼筜谷偃竹记 (画竹必先得成竹于胸中)."
+ },
+ {
+  "id": "zh-idiom-020",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "铁杵成针",
+  "q": "铁杵成针的故事是什么?",
+  "alt": [
+   "讲讲铁杵成针",
+   "铁杵成针是什么意思",
+   "铁杵成针这个成语讲的什么故事"
+  ],
+  "a": "李白小时候不爱读书，有一天逃学出去玩，看见一位老婆婆在石头上磨一根铁杵。李白问她干什么，她说要把铁杵磨成针。李白很受感动，回去以后认真读书。这个成语比喻只要有恒心，再难的事也能做成。",
+  "check": "Zhu Mu, Fangyu Shenglan, Meizhou, Mozhen Stream (方舆胜览)."
+ },
+ {
+  "id": "zh-idiom-021",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "闻鸡起舞",
+  "q": "闻鸡起舞的故事是什么?",
+  "alt": [
+   "讲讲闻鸡起舞",
+   "闻鸡起舞是什么意思",
+   "闻鸡起舞这个成语讲的什么故事"
+  ],
+  "a": "晋朝的祖逖和好朋友刘琨都想为国家出力。半夜听到鸡叫，祖逖就叫醒刘琨，说这不是坏声音，两人就起床练剑。他们天天坚持，后来都成了有本领的人。这个成语比喻有志向的人及时发奋努力。",
+  "check": "Jin Shu, biography of Zu Ti (晋书·祖逖传)."
+ },
+ {
+  "id": "zh-idiom-022",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "愚公移山",
+  "q": "愚公移山的故事是什么?",
+  "alt": [
+   "讲讲愚公移山",
+   "愚公移山是什么意思",
+   "愚公移山这个成语讲的什么故事"
+  ],
+  "a": "愚公快九十岁了，家门前有太行、王屋两座大山挡路。他带着子孙挖山，把土石运到渤海边。智叟笑他，愚公说子子孙孙一直挖下去，山又不会长高，总能挖平。天帝被感动了，派神把两座山背走了。这个成语比喻做事有恒心，不怕困难。",
+  "check": "Liezi, Tang Wen (列子·汤问)."
+ },
+ {
+  "id": "zh-idiom-023",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "精卫填海",
+  "q": "精卫填海的故事是什么?",
+  "alt": [
+   "讲讲精卫填海",
+   "精卫填海是什么意思",
+   "精卫填海这个成语讲的什么故事"
+  ],
+  "a": "炎帝有个小女儿叫女娃，她到东海去玩，再也没有回来。她变成了一只叫精卫的小鸟，每天从西山衔来小树枝和小石子，要把东海填平。这个成语比喻意志坚定，不怕困难。",
+  "check": "Shanhaijing, Bei Shan Jing (山海经·北山经)."
+ },
+ {
+  "id": "zh-idiom-024",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "邯郸学步",
+  "q": "邯郸学步的故事是什么?",
+  "alt": [
+   "讲讲邯郸学步",
+   "邯郸学步是什么意思",
+   "邯郸学步这个成语讲的什么故事"
+  ],
+  "a": "燕国有个少年，听说赵国都城邯郸的人走路姿势很好看，就跑去学。结果他没学会邯郸人的走法，连自己原来怎么走路也忘了，只好爬着回家。这个成语比喻一味模仿别人，反而把自己原来的本领丢了。",
+  "check": "Zhuangzi, Qiu Shui (庄子·秋水), youth of Shouling."
+ },
+ {
+  "id": "zh-idiom-025",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "南辕北辙",
+  "q": "南辕北辙的故事是什么?",
+  "alt": [
+   "讲讲南辕北辙",
+   "南辕北辙是什么意思",
+   "南辕北辙这个成语讲的什么故事"
+  ],
+  "a": "有个人要去南方的楚国，却驾着车往北走。别人提醒他走反了，他说自己的马跑得快，路费带得多，车夫本领高。可是这些条件越好，他离楚国就越远。这个成语比喻行动和目标相反，越努力离目标越远。",
+  "check": "Zhanguoce, Wei Ce 4 (战国策·魏策四), Ji Liang's parable."
+ },
+ {
+  "id": "zh-idiom-026",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "买椟还珠",
+  "q": "买椟还珠的故事是什么?",
+  "alt": [
+   "讲讲买椟还珠",
+   "买椟还珠是什么意思",
+   "买椟还珠这个成语讲的什么故事"
+  ],
+  "a": "楚国人到郑国卖珍珠，他把珍珠装在一个用名贵木料做的盒子里，盒子装饰得非常漂亮。一个郑国人买下了盒子，却把里面的珍珠还给了他。这个成语比喻只看外表，不懂得什么才是真正宝贵的。",
+  "check": "Han Feizi, Wai Chu Shuo Zuo I (韩非子·外储说左上)."
+ },
+ {
+  "id": "zh-idiom-027",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "坐井观天",
+  "q": "坐井观天的故事是什么?",
+  "alt": [
+   "讲讲坐井观天",
+   "坐井观天是什么意思",
+   "坐井观天这个成语讲的什么故事"
+  ],
+  "a": "一只青蛙坐在井里，一只小鸟落在井沿上。小鸟说它飞了很远，天无边无际；青蛙却说天不过井口那么大。小鸟劝青蛙跳出井口来看看。这个成语比喻眼界小、见识少。",
+  "check": "Phrase from Han Yu, Yuan Dao (原道); story is the standard textbook fable of the frog and the bird."
+ },
+ {
+  "id": "zh-idiom-028",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "盲人摸象",
+  "q": "盲人摸象的故事是什么?",
+  "alt": [
+   "讲讲盲人摸象",
+   "盲人摸象是什么意思",
+   "盲人摸象这个成语讲的什么故事"
+  ],
+  "a": "几个看不见的人想知道大象长什么样，就用手去摸。摸到象牙的说大象像萝卜，摸到耳朵的说像簸箕，摸到尾巴的说像绳子。他们争个不停，谁也说不对。这个成语比喻只看到事情的一部分，就以为是全部。",
+  "check": "Mahaparinirvana Sutra (大般涅槃经), blind men and the elephant."
+ },
+ {
+  "id": "zh-idiom-029",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "三顾茅庐",
+  "q": "三顾茅庐的故事是什么?",
+  "alt": [
+   "讲讲三顾茅庐",
+   "三顾茅庐是什么意思",
+   "三顾茅庐这个成语讲的什么故事"
+  ],
+  "a": "刘备想请很有才能的诸葛亮来帮助自己，就到他住的茅草屋去拜访。前两次都没见到，第三次去时，诸葛亮正在睡觉，刘备就在门外静静地等他醒来。诸葛亮被他的诚心打动，答应出山帮他。这个成语比喻诚心诚意地一次次去请人。",
+  "check": "Zhuge Liang, Chu Shi Biao (三顾臣于草庐之中); visit details from Romance of the Three Kingdoms."
+ },
+ {
+  "id": "zh-idiom-030",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "完璧归赵",
+  "q": "完璧归赵的故事是什么?",
+  "alt": [
+   "讲讲完璧归赵",
+   "完璧归赵是什么意思",
+   "完璧归赵这个成语讲的什么故事"
+  ],
+  "a": "赵国有一块宝玉叫和氏璧，秦王说愿意用十五座城来换。蔺相如带着璧到了秦国，发现秦王根本不想给城。他机智地把璧要了回来，又派人悄悄把璧完好地送回了赵国。这个成语比喻把东西完好无损地还给主人。",
+  "check": "Shiji, biographies of Lian Po and Lin Xiangru (史记·廉颇蔺相如列传)."
+ },
+ {
+  "id": "zh-idiom-031",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "负荆请罪",
+  "q": "负荆请罪的故事是什么?",
+  "alt": [
+   "讲讲负荆请罪",
+   "负荆请罪是什么意思",
+   "负荆请罪这个成语讲的什么故事"
+  ],
+  "a": "蔺相如立了大功，官职比大将廉颇还高，廉颇很不服气。蔺相如处处让着他，说是怕两人不和，让国家吃亏。廉颇听说后很惭愧，背着荆条到蔺相如家请罪，两人成了好朋友。这个成语比喻主动承认错误、诚心道歉。",
+  "check": "Shiji, biographies of Lian Po and Lin Xiangru (史记·廉颇蔺相如列传)."
+ },
+ {
+  "id": "zh-idiom-032",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "凿壁偷光",
+  "q": "凿壁偷光的故事是什么?",
+  "alt": [
+   "讲讲凿壁偷光",
+   "凿壁偷光是什么意思",
+   "凿壁偷光这个成语讲的什么故事"
+  ],
+  "a": "汉朝的匡衡小时候很爱读书，可家里穷，晚上点不起蜡烛。邻居家有烛光，却照不过来，他就在墙上凿了一个小洞，借着透过来的光读书。后来他成了很有学问的人。这个成语比喻家里穷也刻苦读书。",
+  "check": "Xijing Zaji, juan 2 (西京杂记), Kuang Heng."
+ },
+ {
+  "id": "zh-idiom-033",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "囊萤映雪",
+  "q": "囊萤映雪的故事是什么?",
+  "alt": [
+   "讲讲囊萤映雪",
+   "囊萤映雪是什么意思",
+   "囊萤映雪这个成语讲的什么故事"
+  ],
+  "a": "晋朝的车胤家里穷，买不起灯油，夏天就捉来许多萤火虫装在纱袋里，借着萤光读书。还有个叫孙康的人，家里也穷，冬天就借着白雪映出的光读书。这个成语比喻家境贫苦，仍然刻苦学习。",
+  "check": "Che Yin: Jin Shu biography (晋书·车胤传); Sun Kang: traditional account cited in later compendia."
+ },
+ {
+  "id": "zh-idiom-034",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "程门立雪",
+  "q": "程门立雪的故事是什么?",
+  "alt": [
+   "讲讲程门立雪",
+   "程门立雪是什么意思",
+   "程门立雪这个成语讲的什么故事"
+  ],
+  "a": "宋朝的杨时和朋友游酢去拜见老师程颐，正好老师闭着眼睛坐着休息。他们不愿打扰，就恭恭敬敬地站在一旁等候。等程颐醒来，门外的雪已经积了一尺深。这个成语比喻尊敬老师、诚心求学。",
+  "check": "Song Shi, biography of Yang Shi (宋史·杨时传)."
+ },
+ {
+  "id": "zh-idiom-035",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "一鸣惊人",
+  "q": "一鸣惊人的故事是什么?",
+  "alt": [
+   "讲讲一鸣惊人",
+   "一鸣惊人是什么意思",
+   "一鸣惊人这个成语讲的什么故事"
+  ],
+  "a": "楚庄王当上国王后，三年都不发号令。有个大臣说：有一只大鸟停在山上，三年不飞也不叫。楚庄王明白他的意思，说这只鸟不飞则已，一飞冲天；不叫则已，一叫就会惊动大家。后来他果然把楚国治理得很强大。这个成语比喻平时不出声，一下子做出惊人的成绩。",
+  "check": "Shiji, Chu Shijia and Han Feizi, Yu Lao (King Zhuang of Chu); phrase also in Shiji, Huaji Liezhuan."
+ },
+ {
+  "id": "zh-idiom-036",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "班门弄斧",
+  "q": "班门弄斧的故事是什么?",
+  "alt": [
+   "讲讲班门弄斧",
+   "班门弄斧是什么意思",
+   "班门弄斧这个成语讲的什么故事"
+  ],
+  "a": "鲁班是古代有名的巧匠，木工活做得特别好。要是有人跑到鲁班家门口摆弄斧子，炫耀自己的手艺，那就显得很可笑了。这个成语比喻在行家面前卖弄本领。",
+  "check": "Liu Zongyuan, preface 王氏伯仲唱和诗序 (操斧于班郢之门); later Mei Zhihuan's poem on Li Bai's tomb."
+ },
+ {
+  "id": "zh-idiom-037",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "百发百中",
+  "q": "百发百中的故事是什么?",
+  "alt": [
+   "讲讲百发百中",
+   "百发百中是什么意思",
+   "百发百中这个成语讲的什么故事"
+  ],
+  "a": "楚国有个神箭手叫养由基。他站在离柳树一百步远的地方射柳叶，射一百次，每次都能射中。大家都称赞他的好本领。这个成语比喻射箭或做事很有把握，每次都能成功。",
+  "check": "Zhanguoce, Xi Zhou Ce (战国策·西周策); also Shiji, Zhou Benji."
+ },
+ {
+  "id": "zh-idiom-038",
+  "kind": "idiom_story",
+  "topic": "",
+  "ref": "卧薪尝胆",
+  "q": "卧薪尝胆的故事是什么?",
+  "alt": [
+   "讲讲卧薪尝胆",
+   "卧薪尝胆是什么意思",
+   "卧薪尝胆这个成语讲的什么故事"
+  ],
+  "a": "春秋时，越国被吴国打败，越王勾践很不甘心。为了记住让越国强大的目标，他晚上睡在柴草上，每天还要尝一尝苦胆。经过多年努力，越国终于强大起来，打败了吴国。这个成语比喻为了实现目标，吃苦也要发奋努力。",
+  "check": "Shiji, Yue Wang Goujian Shijia (tasting gall); 'sleeping on brushwood' added in later retellings (Song)."
+ }
+]

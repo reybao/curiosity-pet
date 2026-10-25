@@ -1,0 +1,713 @@
+{
+ "note": "Classic poems taught in Chinese primary schools: the 75 poems recommended for grades 1 to 6 by the national curriculum standard plus other common textbook poems. Compiled list, not an official complete catalogue. Texts are not stored here; `pet-library school-poems` looks each one up by its first line in chinese-poetry or Wikisource. \"alt\" holds the first line as printed in the classical sources when the school version differs; \"alt_author\" another name of the poet. \"textbook\" notes a known difference between the found text and the textbook wording.",
+ "poems": [
+  {
+   "title": "江南",
+   "author": "汉乐府",
+   "dynasty": "汉",
+   "first": "江南可采莲"
+  },
+  {
+   "title": "长歌行",
+   "author": "汉乐府",
+   "dynasty": "汉",
+   "first": "青青园中葵"
+  },
+  {
+   "title": "敕勒歌",
+   "author": "北朝民歌",
+   "dynasty": "南北朝",
+   "first": "敕勒川"
+  },
+  {
+   "title": "七步诗",
+   "author": "曹植",
+   "dynasty": "三国",
+   "first": "煮豆燃豆萁",
+   "alt": [
+    "煮豆持作羹"
+   ]
+  },
+  {
+   "title": "迢迢牵牛星",
+   "author": "古诗十九首",
+   "dynasty": "汉",
+   "first": "迢迢牵牛星"
+  },
+  {
+   "title": "采薇（节选）",
+   "author": "诗经",
+   "dynasty": "先秦",
+   "first": "昔我往矣"
+  },
+  {
+   "title": "咏鹅",
+   "author": "骆宾王",
+   "dynasty": "唐",
+   "first": "曲项向天歌"
+  },
+  {
+   "title": "风",
+   "author": "李峤",
+   "dynasty": "唐",
+   "first": "解落三秋叶"
+  },
+  {
+   "title": "蝉",
+   "author": "虞世南",
+   "dynasty": "唐",
+   "first": "垂緌饮清露"
+  },
+  {
+   "title": "咏柳",
+   "author": "贺知章",
+   "dynasty": "唐",
+   "first": "碧玉妆成一树高"
+  },
+  {
+   "title": "回乡偶书",
+   "author": "贺知章",
+   "dynasty": "唐",
+   "first": "少小离家老大回"
+  },
+  {
+   "title": "凉州词",
+   "author": "王之涣",
+   "dynasty": "唐",
+   "first": "黄河远上白云间"
+  },
+  {
+   "title": "登鹳雀楼",
+   "author": "王之涣",
+   "dynasty": "唐",
+   "first": "白日依山尽"
+  },
+  {
+   "title": "春晓",
+   "author": "孟浩然",
+   "dynasty": "唐",
+   "first": "春眠不觉晓"
+  },
+  {
+   "title": "宿建德江",
+   "author": "孟浩然",
+   "dynasty": "唐",
+   "first": "移舟泊烟渚"
+  },
+  {
+   "title": "过故人庄",
+   "author": "孟浩然",
+   "dynasty": "唐",
+   "first": "故人具鸡黍"
+  },
+  {
+   "title": "凉州词",
+   "author": "王翰",
+   "dynasty": "唐",
+   "first": "葡萄美酒夜光杯"
+  },
+  {
+   "title": "出塞",
+   "author": "王昌龄",
+   "dynasty": "唐",
+   "first": "秦时明月汉时关"
+  },
+  {
+   "title": "芙蓉楼送辛渐",
+   "author": "王昌龄",
+   "dynasty": "唐",
+   "first": "寒雨连江夜入吴"
+  },
+  {
+   "title": "从军行",
+   "author": "王昌龄",
+   "dynasty": "唐",
+   "first": "青海长云暗雪山",
+   "textbook": "课本里第二句是“孤城遥望玉门关”"
+  },
+  {
+   "title": "采莲曲",
+   "author": "王昌龄",
+   "dynasty": "唐",
+   "first": "荷叶罗裙一色裁"
+  },
+  {
+   "title": "鹿柴",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "空山不见人"
+  },
+  {
+   "title": "送元二使安西",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "渭城朝雨浥轻尘"
+  },
+  {
+   "title": "九月九日忆山东兄弟",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "独在异乡为异客"
+  },
+  {
+   "title": "鸟鸣涧",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "人闲桂花落"
+  },
+  {
+   "title": "山居秋暝",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "空山新雨后"
+  },
+  {
+   "title": "竹里馆",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "独坐幽篁里"
+  },
+  {
+   "title": "画",
+   "author": "王维",
+   "dynasty": "唐",
+   "first": "远看山有色"
+  },
+  {
+   "title": "静夜思",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "床前明月光"
+  },
+  {
+   "title": "古朗月行",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "小时不识月"
+  },
+  {
+   "title": "望庐山瀑布",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "日照香炉生紫烟"
+  },
+  {
+   "title": "赠汪伦",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "李白乘舟将欲行"
+  },
+  {
+   "title": "黄鹤楼送孟浩然之广陵",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "故人西辞黄鹤楼"
+  },
+  {
+   "title": "早发白帝城",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "朝辞白帝彩云间"
+  },
+  {
+   "title": "望天门山",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "天门中断楚江开"
+  },
+  {
+   "title": "夜宿山寺",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "危楼高百尺",
+   "alt": [
+    "夜宿乌牙寺"
+   ]
+  },
+  {
+   "title": "独坐敬亭山",
+   "author": "李白",
+   "dynasty": "唐",
+   "first": "众鸟高飞尽"
+  },
+  {
+   "title": "别董大",
+   "author": "高适",
+   "dynasty": "唐",
+   "first": "千里黄云白日曛",
+   "alt": [
+    "十里黄云白日曛"
+   ]
+  },
+  {
+   "title": "绝句",
+   "author": "杜甫",
+   "dynasty": "唐",
+   "first": "两个黄鹂鸣翠柳"
+  },
+  {
+   "title": "绝句",
+   "author": "杜甫",
+   "dynasty": "唐",
+   "first": "迟日江山丽"
+  },
+  {
+   "title": "春夜喜雨",
+   "author": "杜甫",
+   "dynasty": "唐",
+   "first": "好雨知时节"
+  },
+  {
+   "title": "江畔独步寻花",
+   "author": "杜甫",
+   "dynasty": "唐",
+   "first": "黄四娘家花满蹊"
+  },
+  {
+   "title": "闻官军收河南河北",
+   "author": "杜甫",
+   "dynasty": "唐",
+   "first": "剑外忽传收蓟北"
+  },
+  {
+   "title": "枫桥夜泊",
+   "author": "张继",
+   "dynasty": "唐",
+   "first": "月落乌啼霜满天"
+  },
+  {
+   "title": "滁州西涧",
+   "author": "韦应物",
+   "dynasty": "唐",
+   "first": "独怜幽草涧边生"
+  },
+  {
+   "title": "游子吟",
+   "author": "孟郊",
+   "dynasty": "唐",
+   "first": "慈母手中线"
+  },
+  {
+   "title": "早春呈水部张十八员外",
+   "author": "韩愈",
+   "dynasty": "唐",
+   "first": "天街小雨润如酥"
+  },
+  {
+   "title": "渔歌子",
+   "author": "张志和",
+   "dynasty": "唐",
+   "first": "西塞山前白鹭飞"
+  },
+  {
+   "title": "塞下曲",
+   "author": "卢纶",
+   "dynasty": "唐",
+   "first": "月黑雁飞高"
+  },
+  {
+   "title": "望洞庭",
+   "author": "刘禹锡",
+   "dynasty": "唐",
+   "first": "湖光秋月两相和"
+  },
+  {
+   "title": "浪淘沙",
+   "author": "刘禹锡",
+   "dynasty": "唐",
+   "first": "九曲黄河万里沙"
+  },
+  {
+   "title": "赋得古原草送别",
+   "author": "白居易",
+   "dynasty": "唐",
+   "first": "离离原上草"
+  },
+  {
+   "title": "池上",
+   "author": "白居易",
+   "dynasty": "唐",
+   "first": "小娃撑小艇"
+  },
+  {
+   "title": "忆江南",
+   "author": "白居易",
+   "dynasty": "唐",
+   "first": "风景旧曾谙"
+  },
+  {
+   "title": "暮江吟",
+   "author": "白居易",
+   "dynasty": "唐",
+   "first": "一道残阳铺水中"
+  },
+  {
+   "title": "大林寺桃花",
+   "author": "白居易",
+   "dynasty": "唐",
+   "first": "人间四月芳菲尽"
+  },
+  {
+   "title": "小儿垂钓",
+   "author": "胡令能",
+   "dynasty": "唐",
+   "first": "蓬头稚子学垂纶"
+  },
+  {
+   "title": "悯农",
+   "author": "李绅",
+   "dynasty": "唐",
+   "first": "锄禾日当午"
+  },
+  {
+   "title": "悯农",
+   "author": "李绅",
+   "dynasty": "唐",
+   "first": "春种一粒粟"
+  },
+  {
+   "title": "寻隐者不遇",
+   "author": "贾岛",
+   "dynasty": "唐",
+   "first": "松下问童子"
+  },
+  {
+   "title": "江雪",
+   "author": "柳宗元",
+   "dynasty": "唐",
+   "first": "千山鸟飞绝"
+  },
+  {
+   "title": "山行",
+   "author": "杜牧",
+   "dynasty": "唐",
+   "first": "远上寒山石径斜"
+  },
+  {
+   "title": "清明",
+   "author": "杜牧",
+   "dynasty": "唐",
+   "first": "清明时节雨纷纷"
+  },
+  {
+   "title": "江南春",
+   "author": "杜牧",
+   "dynasty": "唐",
+   "first": "千里莺啼绿映红"
+  },
+  {
+   "title": "秋夕",
+   "author": "杜牧",
+   "dynasty": "唐",
+   "first": "银烛秋光冷画屏"
+  },
+  {
+   "title": "蜂",
+   "author": "罗隐",
+   "dynasty": "唐",
+   "first": "不论平地与山尖"
+  },
+  {
+   "title": "嫦娥",
+   "author": "李商隐",
+   "dynasty": "唐",
+   "first": "云母屏风烛影深"
+  },
+  {
+   "title": "马诗",
+   "author": "李贺",
+   "dynasty": "唐",
+   "first": "大漠沙如雪",
+   "alt": [
+    "大漠山如雪"
+   ]
+  },
+  {
+   "title": "乞巧",
+   "author": "林杰",
+   "dynasty": "唐",
+   "first": "七夕今宵看碧霄"
+  },
+  {
+   "title": "十五夜望月",
+   "author": "王建",
+   "dynasty": "唐",
+   "first": "中庭地白树栖鸦"
+  },
+  {
+   "title": "寒食",
+   "author": "韩翃",
+   "dynasty": "唐",
+   "first": "春城无处不飞花"
+  },
+  {
+   "title": "江上渔者",
+   "author": "范仲淹",
+   "dynasty": "宋",
+   "first": "江上往来人"
+  },
+  {
+   "title": "元日",
+   "author": "王安石",
+   "dynasty": "宋",
+   "first": "爆竹声中一岁除"
+  },
+  {
+   "title": "泊船瓜洲",
+   "author": "王安石",
+   "dynasty": "宋",
+   "first": "京口瓜洲一水间",
+   "textbook": "课本里第三句是“春风又绿江南岸”"
+  },
+  {
+   "title": "书湖阴先生壁",
+   "author": "王安石",
+   "dynasty": "宋",
+   "first": "茅檐长扫净无苔",
+   "alt": [
+    "茆檐长扫静无苔"
+   ]
+  },
+  {
+   "title": "梅花",
+   "author": "王安石",
+   "dynasty": "宋",
+   "first": "墙角数枝梅"
+  },
+  {
+   "title": "六月二十七日望湖楼醉书",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "黑云翻墨未遮山"
+  },
+  {
+   "title": "饮湖上初晴后雨",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "水光潋滟晴方好"
+  },
+  {
+   "title": "惠崇春江晚景",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "竹外桃花三两枝"
+  },
+  {
+   "title": "题西林壁",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "横看成岭侧成峰"
+  },
+  {
+   "title": "赠刘景文",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "荷尽已无擎雨盖"
+  },
+  {
+   "title": "浣溪沙·游蕲水清泉寺",
+   "author": "苏轼",
+   "dynasty": "宋",
+   "first": "山下兰芽短浸溪"
+  },
+  {
+   "title": "夏日绝句",
+   "author": "李清照",
+   "dynasty": "宋",
+   "first": "生当作人杰",
+   "alt": [
+    "生当为人杰"
+   ]
+  },
+  {
+   "title": "三衢道中",
+   "author": "曾几",
+   "dynasty": "宋",
+   "first": "梅子黄时日日晴"
+  },
+  {
+   "title": "示儿",
+   "author": "陆游",
+   "dynasty": "宋",
+   "first": "死去元知万事空"
+  },
+  {
+   "title": "秋夜将晓出篱门迎凉有感",
+   "author": "陆游",
+   "dynasty": "宋",
+   "first": "三万里河东入海"
+  },
+  {
+   "title": "四时田园杂兴",
+   "author": "范成大",
+   "dynasty": "宋",
+   "first": "昼出耘田夜绩麻"
+  },
+  {
+   "title": "四时田园杂兴",
+   "author": "范成大",
+   "dynasty": "宋",
+   "first": "梅子金黄杏子肥"
+  },
+  {
+   "title": "小池",
+   "author": "杨万里",
+   "dynasty": "宋",
+   "first": "泉眼无声惜细流"
+  },
+  {
+   "title": "晓出净慈寺送林子方",
+   "author": "杨万里",
+   "dynasty": "宋",
+   "first": "毕竟西湖六月中"
+  },
+  {
+   "title": "宿新市徐公店",
+   "author": "杨万里",
+   "dynasty": "宋",
+   "first": "篱落疏疏一径深"
+  },
+  {
+   "title": "舟过安仁",
+   "author": "杨万里",
+   "dynasty": "宋",
+   "first": "一叶渔船两小童"
+  },
+  {
+   "title": "稚子弄冰",
+   "author": "杨万里",
+   "dynasty": "宋",
+   "first": "稚子金盆脱晓冰"
+  },
+  {
+   "title": "春日",
+   "author": "朱熹",
+   "dynasty": "宋",
+   "first": "胜日寻芳泗水滨"
+  },
+  {
+   "title": "观书有感",
+   "author": "朱熹",
+   "dynasty": "宋",
+   "first": "半亩方塘一鉴开"
+  },
+  {
+   "title": "题临安邸",
+   "author": "林升",
+   "dynasty": "宋",
+   "first": "山外青山楼外楼"
+  },
+  {
+   "title": "游园不值",
+   "author": "叶绍翁",
+   "dynasty": "宋",
+   "first": "应怜屐齿印苍苔",
+   "alt": [
+    "应嫌屐齿印苍苔"
+   ]
+  },
+  {
+   "title": "夜书所见",
+   "author": "叶绍翁",
+   "dynasty": "宋",
+   "first": "萧萧梧叶送寒声"
+  },
+  {
+   "title": "乡村四月",
+   "author": "翁卷",
+   "dynasty": "宋",
+   "first": "绿遍山原白满川"
+  },
+  {
+   "title": "村晚",
+   "author": "雷震",
+   "dynasty": "宋",
+   "first": "草满池塘水满陂"
+  },
+  {
+   "title": "雪梅",
+   "author": "卢钺",
+   "dynasty": "宋",
+   "first": "梅雪争春未肯降",
+   "alt_author": [
+    "卢梅坡"
+   ]
+  },
+  {
+   "title": "寒菊",
+   "author": "郑思肖",
+   "dynasty": "宋",
+   "first": "花开不并百花丛"
+  },
+  {
+   "title": "清平乐·村居",
+   "author": "辛弃疾",
+   "dynasty": "宋",
+   "first": "茅檐低小"
+  },
+  {
+   "title": "西江月·夜行黄沙道中",
+   "author": "辛弃疾",
+   "dynasty": "宋",
+   "first": "明月别枝惊鹊"
+  },
+  {
+   "title": "墨梅",
+   "author": "王冕",
+   "dynasty": "元",
+   "first": "吾家洗砚池头树"
+  },
+  {
+   "title": "石灰吟",
+   "author": "于谦",
+   "dynasty": "明",
+   "first": "千锤万凿出深山",
+   "alt": [
+    "千锤万击出深山"
+   ]
+  },
+  {
+   "title": "画鸡",
+   "author": "唐寅",
+   "dynasty": "明",
+   "first": "头上红冠不用裁"
+  },
+  {
+   "title": "竹石",
+   "author": "郑燮",
+   "dynasty": "清",
+   "first": "咬定青山不放松"
+  },
+  {
+   "title": "所见",
+   "author": "袁枚",
+   "dynasty": "清",
+   "first": "牧童骑黄牛"
+  },
+  {
+   "title": "村居",
+   "author": "高鼎",
+   "dynasty": "清",
+   "first": "草长莺飞二月天"
+  },
+  {
+   "title": "己亥杂诗",
+   "author": "龚自珍",
+   "dynasty": "清",
+   "first": "九州生气恃风雷"
+  },
+  {
+   "title": "舟夜书所见",
+   "author": "查慎行",
+   "dynasty": "清",
+   "first": "月黑见渔灯"
+  },
+  {
+   "title": "长相思",
+   "author": "纳兰性德",
+   "dynasty": "清",
+   "first": "山一程",
+   "textbook": "课本里是“身向榆关那畔行”"
+  }
+ ]
+}
