@@ -1,9 +1,14 @@
-# Curiosity Pet (Kit)
+# Kit
 
-A local, privacy-first voice learning companion for a bilingual 7-year-old, running entirely on a 16GB Mac mini.
-A local AI learning pet that lives on a home Mac mini: the child asks questions by voice on an iPad, and speech recognition, answer generation, knowledge retrieval, safety filtering and speech synthesis all happen on the machine itself.
+**A private AI agent for kids, run at home.**
 
-- **Proposal, architecture and flow diagrams**: [docs/PROPOSAL.md](docs/PROPOSAL.md)
+Kit is a program kitten on my daughter's iPad. She asks questions by voice in Chinese or English; speech recognition,
+the language model, the reviewed offline library, the safety rules and speech synthesis all run on a 16GB Mac mini at
+home. The model suggests, rules in code decide. A separate one-tap button reaches a parent.
+
+Internal names (`curiosity_pet`, `pet-server`, `com.curiositypet.*`) keep the project's earlier working title.
+
+- **Architecture and design (technical companion to the October 29 proposal)**: [docs/PROPOSAL.md](docs/PROPOSAL.md)
 - **Rules (hard constraints, component stack, stage acceptance)**: [CLAUDE.md](CLAUDE.md)
 - **Decision log and reasons for revisions**: [docs/DECISIONS.md](docs/DECISIONS.md)
 - **Measured data**: [evals/results/](evals/results/)
@@ -13,13 +18,14 @@ A local AI learning pet that lives on a home Mac mini: the child asks questions 
 
 Since October 24: a one-tap "Get Mom or Dad" button on the page (no model involved, rate limited, logged); fixed answers
 for questions about death and for requests to keep a secret from a parent; English harm-to-others matched like Chinese;
-a parent alert when she says she was bullied or hit (category only); the 9B model as the default after real use.
-Measurements: [evals/results/2026-11-17-midpoint.md](evals/results/2026-11-17-midpoint.md). Video outline:
+a parent alert when she says she was bullied or hit (category only). After real use the live setup runs the 9B model
+(settings.json `chat_model`; the code default is still the 4B). Measurements:
+[evals/results/2026-11-17-midpoint.md](evals/results/2026-11-17-midpoint.md). Midpoint video script:
 [docs/MIDPOINT_VIDEO.md](docs/MIDPOINT_VIDEO.md).
 
-Still open: median time to first audio is 3.1 s with the 9B model (target under 3 s); recognition accuracy on her own
-voice; more reviewed library entries; the action rules in one layer; privacy checked by watching network traffic and
-testing deletion.
+Still open: median time to first audio is 3.14 s with the 9B model (target under 3 s); the 100 reviewed library entries
+(861 written, parent review not finished); accurate retelling of library pages; recognition accuracy on her own voice;
+the action rules in one layer; privacy checked by watching network traffic, access and deletion.
 
 | What it does | Measured |
 |---|---|
@@ -32,7 +38,7 @@ testing deletion.
 | Private skin: replace the artwork, name and catchphrase from the data directory, never from the repo | [docs/SKIN.md](docs/SKIN.md) |
 | Program-run conversation rules: rationed follow-up questions, arithmetic computed, riddles from a local bank with the answer withheld, "this is my guess" when no material backs a specific question | `evals/behavior_eval.py` |
 | Characters (private skins) with a picker, each with its own tone, voice and cue sound | [docs/SKIN.md](docs/SKIN.md) |
-| Safety in code: no praise or judgment of the child, no secrecy, no pretended abilities, fixed answers for harm and danger | adversarial set 23/23 per character |
+| Safety in code: no praise or judgment of the child, no secrecy, no pretended abilities, fixed answers for harm, danger, death and secrecy | adversarial set 21 or 22 of 23 (2026-11-17, misses read one by one: the checks are too literal); 23/23 on 2026-10-24 |
 | Calling a parent over Telegram after the child confirms; category-only alerts for talk about harm (both parent-approved) | `evals/call_parent_eval.py` |
 | Memory the child chooses (interest cards, My Discoveries), stories and bedtime stories, natural wrap-up | |
 | Weekly discovery report, facts only | `uv run pet-report` |

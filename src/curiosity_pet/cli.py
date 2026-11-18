@@ -96,7 +96,7 @@ def wav_utterances(paths, detector):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Curiosity Pet: command-line voice loop")
+    ap = argparse.ArgumentParser(description="Kit: command-line voice loop")
     src = ap.add_mutually_exclusive_group()
     src.add_argument("--ptt", action="store_true", help="push-to-talk (Enter to start/stop)")
     src.add_argument("--wav", nargs="+", help="use recording files instead of the microphone")

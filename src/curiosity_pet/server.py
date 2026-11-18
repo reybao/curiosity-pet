@@ -608,7 +608,7 @@ def main():
 
     import uvicorn
 
-    ap = argparse.ArgumentParser(description="Curiosity Pet iPad web service")
+    ap = argparse.ArgumentParser(description="Kit iPad web service")
     ap.add_argument("--port", type=int, default=config.SERVER_PORT)
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")

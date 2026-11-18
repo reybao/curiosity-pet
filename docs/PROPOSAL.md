@@ -1,7 +1,12 @@
-# Curiosity Pet (Kit): Project Proposal and Architecture
+# Kit: Architecture and Design
 
-Version: v0.1 (matches the first version of the code), 2026-10-24
-Status (updated 2026-10-24 evening): stages 1 to 2 and 6 done; 3, 4, 5 mostly done; 7 prepared; 8 in progress; stage 0's recordings-based items pending
+Technical companion to the class proposal "Kit: A private AI agent for kids, run at home" (October 29, 2026).
+Version: v0.1, 2026-10-24; midpoint update 2026-11-18. Sections 7 and 8 record the state on October 24; the midpoint
+state is in [evals/results/2026-11-17-midpoint.md](../evals/results/2026-11-17-midpoint.md) and the README.
+Midpoint changes that affect this document: the live setup uses Qwen3.5 9B (`pet-chat-9b`, chosen after real use;
+the code default is still the 4B), median time to first audio is 3.14 s with it, the adversarial set passes 21 or 22
+of 23, and 724 tests pass. Internal names (`curiosity_pet`, `pet-server`, `com.curiositypet.*`) keep the earlier
+working title.
 
 ---
 
@@ -92,7 +97,7 @@ flowchart LR
 
 | Component | Choice | Reason |
 |---|---|---|
-| Main model | Qwen3.5-4B, GGUF q4_K_M, Ollama's llama.cpp engine, `num_ctx 8192`, `think=false` | One of the strongest small models for Chinese; measured: the MLX-engine build's resident memory grows with requests (60 requests, 4.1 -> 12.6GB), while the llama.cpp build stays at 3.4GB and is faster end to end |
+| Main model | Qwen3.5-4B (code default) or Qwen3.5 9B (live setup since 2026-10-24, settings.json `chat_model`), GGUF q4_K_M, Ollama's llama.cpp engine, `num_ctx 8192`, `think=false` | One of the strongest small models for Chinese; measured: the MLX-engine build's resident memory grows with requests (60 requests, 4.1 -> 12.6GB), while the llama.cpp build stays at 3.4GB and is faster end to end |
 | Speech recognition | Qwen3-ASR-0.6B 4-bit (mlx-audio) | Far lower Chinese error rate than Whisper, language detected per utterance, about 0.12 s per utterance |
 | Sentence segmentation | Silero VAD, 0.8 s silence threshold, keep "hold to talk" as a fallback | The child pauses a lot |
 | Speech synthesis | Kokoro-82M v1.1-zh (mlx-audio), official weights converted locally | Under 0.5GB, about 0.4 s per sentence; Chinese/English voice chosen by answer language |
@@ -220,7 +225,7 @@ stateDiagram-v2
 | 7 | launchd deployment, backup, failure tests | **Prepared**: agent templates, installer, backup script, failure tests; installing and the `pet` user need the admin account | |
 | 8 | A week of adult trial, trial with the parent present | **In progress**: the child's real use since 2026-10-24, reviewed daily | |
 
-Tests: `uv run pytest`, 203 passing (unit, server protocol, privacy gate, Wikipedia client, flow).
+Tests: `uv run pytest`, 203 passing on 2026-10-24 (unit, server protocol, privacy gate, Wikipedia client, flow); 724 at the midpoint.
 
 ## 8. Evaluation method and results
 
@@ -279,7 +284,7 @@ when Ollama runs Qwen3.5 the prompt cache cannot be reused, so with history the 
 bash setup_mac_mini.sh                 # install dependencies, pull models, baseline test (Tailscale must be installed manually)
 uv sync                                # Python environment
 uv run python scripts/convert_kokoro.py # convert Kokoro v1.1-zh weights
-uv run pytest                          # 203 tests
+uv run pytest                          # 724 tests at the midpoint
 uv run pet --text                      # chat by typing in the terminal; uv run pet uses the microphone
 uv run pet-server                      # iPad web service; tailscale serve --bg 8730 provides HTTPS
 uv run python evals/latency_eval.py    # time to speak

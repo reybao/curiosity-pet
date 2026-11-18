@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Curiosity Pet web service. Filled in and installed by scripts/install_services.sh; restarts on crash and at login. -->
+<!-- Kit web service. Filled in and installed by scripts/install_services.sh; restarts on crash and at login. -->
 <plist version="1.0">
 <dict>
   <key>Label</key><string>com.curiositypet.server</string>

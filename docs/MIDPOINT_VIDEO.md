@@ -1,61 +1,51 @@
-# Midpoint check-in video: script and shot list
+# Kit midpoint check-in video (November 19, 2026)
 
-About 4 minutes (hard limit 5), played to the class on Thursday, November 19. The narration is about 530 words.
-It follows the proposal of October 29 (Kit): what was promised, what is done, what is left.
+The video as made in Google Vids: 4:28, 21 scenes. Slide scenes carry a 10-second talking clip of the author; the six
+demo scenes are screen recordings from the iPad with their own sound. No child's voice, face or name appears.
 
-Draft: check it against the course's video guidelines before recording.
+## Scenes
 
-## Before recording
+| # | Scene | Visual | Spoken line or sound |
+|---|---|---|---|
+| 1 | Title | "Kit, Midpoint check-in" | This is Kit, a private AI agent for my seven-year-old daughter, running on a Mac mini at home. |
+| 2 | What I promised | Proposal slide 4, "One complete flow" | In October I promised one complete flow: a spoken question, a sourced answer, and a separate way to reach a parent. |
+| 3 | How Kit is built | Architecture: proposal diagram, models, library | Her iPad is only the screen. Everything runs on a Mac mini at home, and rules in code decide, not the model. |
+| 4 | How Kit is built | same | Four local models: Qwen3.5 9B for language, Qwen ASR for listening, Kokoro for speaking, Silero for voice detection. |
+| 5 | How Kit is built | same | The library is downloaded: half a million entries from Simple English and Chinese Wikipedia, Wikijunior, dictionaries, idioms, poems, and children's books. |
+| 6 | How her iPad reaches Kit | iPad, tailnet, Mac mini; who cannot reach it; what leaves the house | How does her iPad reach Kit? Through Tailscale, a private, encrypted network with only our family's devices on it. |
+| 7 | How her iPad reaches Kit | same | The server listens only on the Mac mini itself, and public access is off. Knowing the address is not enough to use Kit. |
+| 8 | How her iPad reaches Kit | same | Only two things leave the house: a cleaned topic word to Wikipedia, and fixed messages to a parent's phone. |
+| 9 | Demo | "Who are you?" | Kit says it is a program kitten. |
+| 10 | Demo | "What do pandas eat?" | Answer from the local library, with its source. |
+| 11 | Demo | "为什么月亮白天也会出现?" | Chinese answer from the library page; the retelling is not accurate (shown as found). |
+| 12 | Demo | "What is twelve plus twenty-nine?" | The program computes 41, not the model. |
+| 13 | Demo | Matches; a secret from Mom | Fixed danger reply; fixed refusal to keep a secret from a parent. |
+| 14 | Demo | Help button | One tap sends the fixed message; a second request by voice is rate limited. |
+| 15 | What is done | Scoreboard, top half | Against the plan: the question-to-answer flow is complete. Danger, harm, death and secrets get fixed answers written in code. |
+| 16 | What is done | same | The privacy gate leaked zero of thirty-eight test sentences. Parent alerts and the weekly topic summary work. Seven hundred twenty-four tests pass. |
+| 17 | What real use taught me | Three findings | One thing came early: she has already used Kit for two days. A quarter of what the microphone heard was noise. |
+| 18 | What real use taught me | same | After fixes, correctly handled turns rose from seventy-two to eighty percent. I also moved to a larger model and accepted slower answers. |
+| 19 | What is left | Scoreboard, bottom half | What is left. First, answer quality: Kit found the right page about the moon, but retold it wrong. |
+| 20 | What is left | same | The median time to first word is three point one seconds, above my three-second target. My library review is not finished. |
+| 21 | What is left | same | I still have to measure recognition on her own voice, and verify privacy with network traffic and deletion tests. Thank you. |
 
-- Record the demo on the iPad with the built-in screen recording, microphone on.
-- A parent asks the questions. Do not record the child's voice, face or name.
-- Use only the built-in kitten. Do not show the private character skins.
-- Use only the made-up questions below. Do not open the usage log, parent notes or the weekly report on screen.
-- Hide or crop: the Tailscale address in the browser bar, the Telegram chat list and phone numbers.
-- The help button sends a real message to both parents: tell the other parent before recording.
-- Update the two cells marked "confirm" in the scoreboard on the day of recording.
+## Scoreboard (against the October 29 proposal)
 
-## Shot list and narration
-
-| Time | On screen | Narration |
+| Promised | State | Evidence |
 |---|---|---|
-| 0:00 to 0:25 | Proposal title slide, then proposal slide 4 with "One complete flow" highlighted. | "This is Kit, a private AI agent for my seven-year-old daughter, running on a Mac mini at home. In October I promised one complete flow: a spoken question, a sourced answer, and a separate way to reach a parent. Here is where that stands." |
-| 0:25 to 0:50 | iPad. Tap Start. Ask in Chinese: "为什么月亮白天也会出现?" Answer plays with highlighted sentences. | "She taps and asks, in Chinese or English. Speech recognition, the language model and speech synthesis all run on the Mac mini. The answer comes back sentence by sentence." |
-| 0:50 to 1:15 | Ask in English: "Who is Goku in Dragon Ball?" Zoom on the source line. | "Kit looks in a local library first and says where the answer came from. If the library has nothing, only a cleaned topic word goes to Wikipedia. Her sentence never leaves the house." |
-| 1:15 to 1:45 | Tap the red "Get Mom or Dad" button. The page shows the confirmation. Cut to the phone: the message arrives (chat list cropped). Then tap again to show the rate-limit line. | "This is the help button from the proposal. One tap sends a fixed message to my phone. The language model is not involved. It is rate limited, and every attempt is logged. She can also just say it." |
-| 1:45 to 2:40 | Scoreboard slide, top half ("Done"). Highlight rows as they are named. | "Against the plan. The question-to-answer flow is complete. The answer check is in code: every sentence is checked before it is spoken, and the adversarial set passes twenty-three of twenty-three. The privacy gate leaked zero of thirty-eight test sentences. The library ranks fifty-three of fifty-three test queries correctly. Parent alerts and the weekly topic summary both work. All of this is covered by six hundred forty-seven tests." |
-| 2:40 to 3:15 | Slide "What real use taught me", three bullets. | "One thing came early. The proposal put the trial at the end, but she has already used Kit for two days. I replayed those sessions, which stay on our machine. A quarter of what the microphone heard on day one was laughter, fillers, or other people talking. After the fixes, the share of turns handled correctly went from seventy-two to eighty percent. She also found the small model wrong too often, so I moved to a larger one and accepted slower answers." |
-| 3:15 to 4:00 | Scoreboard slide, bottom half ("Left"). | "What is left. Speed: the median time to first word is three point one seconds, above my three-second target. Recognition accuracy on her own voice is not measured yet. The library has about a hundred reviewed entries; I want more. The rules that limit actions are spread across modules, and I want them in one layer. And I still have to verify privacy by watching network traffic and testing deletion. Those are the work between now and the final. Thank you. Questions are welcome." |
-
-## Scoreboard slide
-
-| Promised in the proposal | State | Evidence |
-|---|---|---|
-| Complete question-to-answer flow (midpoint) | Done | Demo |
-| Answer check (core) | Done | 23/23 adversarial cases, `evals/results/2026-10-24-adversarial.md` |
-| Offline library, sourced answers (core) | Done | 53/53 ranking checks; privacy gate 0 leaks in 38 sentences |
-| Parent help request: button and voice (core) | Done | 25/25 spoken requests found; button rate limited and logged |
-| Parent alerts and topic summary (core) | Done | Category-only alerts; weekly report with facts only |
-| Trial with the child (planned for the final) | Early | Two days of use; routing 72% to 80% on 215 replayed turns |
-| 100 reviewed library entries (midpoint) | **confirm**: "Done, N approved" or "In progress, N of 100" | `uv run pet-library qa stats` |
-| Real child speech measured (midpoint) | Partly | Real sessions replayed; recognition accuracy not measured |
-| Speed: median under 3 s | Not met | 3.14 s median, 6 of 16 within 3 s, `evals/results/2026-11-17-midpoint.md` |
-| Approved tools and inputs as one layer (core) | Partly | Rules are in code but spread across modules |
+| Complete question-to-answer flow | Done | Voice in, sourced answer out, in Chinese and English |
+| Answer check | Done | Fixed answers for danger, harm, death, secrets; adversarial set 21 to 22 of 23 ([midpoint](../evals/results/2026-11-17-midpoint.md)) |
+| Offline library with sources | Done | 53/53 ranking checks; privacy gate: 0 leaks in 38 sentences |
+| Parent help request | Done | One-tap button and voice; rate limited and logged |
+| Parent alerts and topic summary | Done | Alerts for harm and bullying, category only; weekly report with facts only |
+| Trial with my daughter (planned for the final) | Early | Two days of real use; correct handling 72% to 80% on 215 replayed turns |
+| 100 reviewed library entries | In progress | 861 entries written; parent review not finished |
+| Accurate retelling of library pages | Partly | Right page found, retelling wrong in the moon demo |
+| Speed: median under 3 s | Not met | 3.14 s median to first word; 6 of 16 runs within 3 s |
+| Real child speech measured | Partly | Real sessions replayed; recognition accuracy not measured yet |
+| Approved tools and inputs | Partly | Rules are in code, but spread across modules, not one layer |
 | Privacy checks: network traffic, access, deletion | Left | For the final |
 | Supervised trial findings, reproducible demo | Left | For the final |
 
-Test count: **confirm** with `uv run pytest` on the day (647 on November 17).
-
-## Slide "What real use taught me"
-
-- A quarter of first-day microphone input was not a question (laughter, fillers, other voices): the program now
-  decides what counts as a message.
-- The 4B model was wrong too often for her: moved to 9B, at the cost of speed.
-- Behaviour moved from the prompt into code: follow-up questions rationed, arithmetic computed, no praise or
-  judgment of her.
-
-## If the 100 entries are not reviewed by Thursday
-
-Replace the sentence "The library has about a hundred reviewed entries; I want more." with:
-"Eight hundred library entries are written, but I have reviewed only N of them, so the hundred I promised are not
-done."
+Note on the proposal's wording "Only approved parent updates may leave the home server": the Wikipedia lookup (listed
+as a v0.1 prototype in the proposal) also sends a cleaned topic word, never her sentence. The video states both.

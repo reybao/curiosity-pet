@@ -1,4 +1,4 @@
-# Curiosity Pet: Development Thinking and Decision Log (2026-10-23)
+# Kit: Development Thinking and Decision Log (2026-10-23)
 
 CLAUDE.md holds the rules; this file holds the reasons and background. In a new session, read this file and CLAUDE.md first.
 
@@ -324,3 +324,11 @@ judges. Turned on because the parent prefers smarter over faster. Results: evals
 3. In a terminal, cd in and run claude, with the first sentence: "Read CLAUDE.md and docs/DECISIONS.md, run setup_mac_mini.sh to finish installation and the baseline test, write the numbers into evals/results/, then start Stage 1".
 4. Record 30 to 50 of my daughter's questions in Chinese, English and mixed speech, and put them in ~/pet-evals/audio.
 5. Install Tailscale on the Mac and iPad and sign in with the same account.
+
+## 10. Name (2026-11-18)
+
+The class proposal (October 29) and the midpoint video call the project only **Kit: a private AI agent for kids, run
+at home**. The repository, README and document titles now use the same name, and the GitHub repository is
+`kit-home-agent`. The Python package, commands, launchd labels and data directories keep the earlier working title
+(`curiosity_pet`, `pet-server`, `com.curiositypet.*`, `CuriosityPet`): renaming them touches the running service and
+the folder that holds the child's data, so it waits until after the final.

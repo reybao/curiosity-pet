@@ -132,7 +132,7 @@ def activity_ideas(counts_text: str) -> list[str]:
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Curiosity Pet: weekly discovery report (facts only)")
+    ap = argparse.ArgumentParser(description="Kit: weekly discovery report (facts only)")
     ap.add_argument("--week", help="ISO week like 2026-W43 (default: this week)")
     ap.add_argument("--db", help="database path")
     ap.add_argument("--no-ideas", action="store_true", help="skip the activity ideas (no model call)")

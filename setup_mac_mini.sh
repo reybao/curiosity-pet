@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Curiosity Pet: Mac mini (M4, 16GB) environment setup and baseline test
+# Kit: Mac mini (M4, 16GB) environment setup and baseline test
 # Run in the pet account's terminal:  bash setup_mac_mini.sh
 # Steps that need the admin password (power settings) are listed at the end of the script; run them from the admin account.
 set -euo pipefail

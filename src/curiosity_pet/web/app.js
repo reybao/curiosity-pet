@@ -1,4 +1,4 @@
-// Curiosity Pet iPad page: microphone -> WebSocket -> server; the server sends back text and audio sentence by sentence, and this page plays and highlights them.
+// Kit iPad page: microphone -> WebSocket -> server; the server sends back text and audio sentence by sentence, and this page plays and highlights them.
 // Loads no external resources. See server.py for the protocol.
 //
 // One button does everything: tap to start (microphone permission, connect, listen), tap again to stop

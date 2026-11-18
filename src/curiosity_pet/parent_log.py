@@ -50,7 +50,7 @@ def show_memory(store):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Curiosity Pet: usage log (facts only, no evaluation)")
+    ap = argparse.ArgumentParser(description="Kit: usage log (facts only, no evaluation)")
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--db", help="database path, default PET_DATA_DIR/pet.db")
     ap.add_argument("--answers", action="store_true", help="also show answer text (only available within 7 days)")

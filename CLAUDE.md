@@ -1,4 +1,4 @@
-# Curiosity Pet (Kit)
+# Kit
 
 A local AI learning pet that lives on a home Mac mini. The child (7.5 years old, bilingual Chinese/English) asks questions by voice on an iPad;
 the system does speech recognition, answer generation, knowledge retrieval, safety filtering and speech synthesis on the machine itself. The goal is to help the child practice asking questions, following up,

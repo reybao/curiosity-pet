@@ -1,7 +1,7 @@
 [project]
 name = "curiosity-pet"
 version = "0.1.0"
-description = "Local, privacy-first AI learning pet for a bilingual child (Curiosity Buddy)"
+description = "Kit: a private AI agent for kids, run at home"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "en-core-web-sm",
