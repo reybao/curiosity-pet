@@ -14,7 +14,7 @@
   <title>{{APP_NAME}}</title>
 </head>
 <body>
-  <main id="app" data-state="off">
+  <main id="app" data-state="off" data-rec="{{REC_MODE}}">
     <button id="lang" class="lang-toggle" type="button">EN</button>
     <!-- Skin picker: shows the current buddy; hidden when only the built-in kitten exists -->
     <button id="skin" class="skin-toggle" type="button" hidden><img alt=""></button>
@@ -27,7 +27,7 @@
     <section class="stage" aria-live="polite">
       <!-- The pet: a British Shorthair kitten. The collar light marks it as a program and changes
            color with state; the four states are driven by data-state on #app. -->
-      <svg class="pet" viewBox="0 0 240 270" role="img" aria-label="Curiosity Buddy, a program kitten">
+      <svg class="pet" viewBox="0 0 240 270" role="img" aria-label="Kit, a program kitten">
         <defs>
           <radialGradient id="fur-grad" cx="45%" cy="35%" r="70%">
             <stop offset="0" stop-color="var(--fur-hi)"/>
@@ -101,10 +101,16 @@
       <p id="answer" class="answer"></p>
     </section>
 
+    <p id="help-note" class="help-note" role="status" hidden></p>
     <nav class="controls">
       <button id="mic" class="mic" type="button">
         <span class="mic-icon" aria-hidden="true"></span>
         <span class="mic-label">开始</span>
+      </button>
+      <!-- Help button: one tap tells the parents she is asking for them. No model, works before the mic is on -->
+      <button id="help" class="help" type="button">
+        <span class="help-icon" aria-hidden="true"></span>
+        <span class="help-label">叫爸爸妈妈</span>
       </button>
     </nav>
   </main>

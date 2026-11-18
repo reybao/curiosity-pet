@@ -12,7 +12,9 @@ constraint 1, and the program keeps every decision that matters:
 - "爸爸" goes to dad's chat only, "妈妈" to mom's only, "爸爸妈妈" / "你们" / "parents" to both;
 - at most one message per `min_interval_s` (default 120 s) across all devices;
 - every attempt is written to the parent_calls table (text kept 7 days) and shown by pet-log;
-- "call_parent": {"enabled": false} turns it off; with no destination configured it is off as well.
+- "call_parent": {"enabled": false} turns it off; with no destination configured it is off as well;
+- the help button on the page (`CallParent.press`, POST /help) is the same message without the model and without the
+  spoken question: one tap sends to both parents. It works before a conversation has started.
 
 settings.json (in the data directory, never in the repo):
     "call_parent": {
@@ -24,9 +26,9 @@ Only sendMessage is ever called on the token: getUpdates or a webhook would brea
 Settings are read on every request, so the parent's switch works without a restart.
 
 Concern push (`notify_concern`, parent's choice 2026-10-24): when the child says something in a serious parent-note
-category (concern.SERIOUS: hurting herself or others), the parents get a fixed message with the category, time and
+category (concern.PUSHED: hurting herself or others, or being bullied or hit), the parents get a fixed message with the category, time and
 device, never her sentence unless the parent sets "include_words": true. It is its own switch, off unless set:
-    "call_parent": {"concern_push": {"enabled": true, "categories": ["harm_self", "harm_others"],
+    "call_parent": {"concern_push": {"enabled": true, "categories": ["harm_self", "harm_others", "bullied"],
                                      "include_words": false, "parents": "both", "min_interval_s": 600}}
 It has its own rate limit (default one per 10 minutes), so it never uses up the child's own call. Every attempt is a
 parent_calls row; the sentence itself stays in parent_notes on this machine either way.
@@ -284,13 +286,13 @@ def enabled(opts: dict, target: str) -> bool:
     return opts.get("enabled", True) is not False and bool(chats_for(opts, target))
 
 
-def message_text(req: Request, client: str, opts: dict, now: float | None = None) -> str:
+def message_text(req: Request, client: str, opts: dict, now: float | None = None, button: bool = False) -> str:
     """The fixed message; the child's words only when the parent turned include_words on."""
     who = NAMES[req.parent]
     stamp = time.strftime("%H:%M", time.localtime(now or time.time()))
     lines = [
         f"宝宝想找{who['zh']} / Your daughter is asking for {who['en']}",
-        f"{stamp} · {DEVICES.get(client, client)}",
+        f"{stamp} · {DEVICES.get(client, client)}" + (" · 求助按钮 help button" if button else ""),
     ]
     if opts.get("include_words") is True and req.words:
         lines.append(f"她说 / She said: “{req.words[:MAX_WORDS]}”")
@@ -501,17 +503,32 @@ class CallParent:
         self._record(req.parent, "declined", None, now)
         return self._say("declined", req.parent, lang)
 
+    def press(self, lang: str, parent: str = "both") -> tuple[str, str]:
+        """The help button on the page: one tap sends the fixed message at once. No model, no spoken confirmation
+        and never the child's words; the parent's switch, the shared rate limit and the log all still apply.
+        Returns (status, line to show): status is "sent", "limited", "failed" or "off"."""
+        lang = lang if lang in SAY else "zh"
+        parent = parent if parent in TARGETS else "both"
+        self.pending, self.asked_again = None, False  # a tap replaces a spoken question that was waiting
+        key, who = self._deliver(Request(parent=parent, words=""), self.clock(), button=True)
+        return key, self._say(key, who, lang)
+
     def _send(self, req: Request, lang: str, now: float) -> str:
+        key, who = self._deliver(req, now)
+        return self._say(key, who, lang)
+
+    def _deliver(self, req: Request, now: float, button: bool = False) -> tuple[str, str]:
+        """Send and log. Returns (SAY key, whom the line names)."""
         opts = self._opts()  # read again: the parent may have switched it off in between
         if not enabled(opts, req.parent):
             self._record(req.parent, "off", None, now)
-            return self._say("off", req.parent, lang)
+            return "off", req.parent
         interval = self._interval(opts)
         free = [k for k in PARENTS_OF[req.parent] if self.limit.take(interval, now, key=k)]
         if not free:
             self._record(req.parent, "limited", None, now)
-            return self._say("limited", req.parent, lang)
-        text = message_text(req, self.client, opts, now)
+            return "limited", req.parent
+        text = message_text(req, self.client, opts, now, button=button)
         # Each chat once ("both" with a single configured chat sends one message)
         chat_of = {k: chat_for(opts, k) for k in free}
         ok_chats = {c for c in dict.fromkeys(c for c in chat_of.values() if c) if self.send(opts, c, text)}
@@ -521,13 +538,12 @@ class CallParent:
                 self.limit.give_back(now, key=k)
         if not sent_to:
             self._record(req.parent, "failed", text, now)
-            return self._say("failed", req.parent, lang)
+            return "failed", req.parent
         if req.parent == "both" and len(sent_to) < 2:
-            got = sent_to[0]
             self._record(req.parent, "partial", text, now)
-            return self._say("sent", got, lang)
+            return "sent", sent_to[0]
         self._record(req.parent, "sent", text, now)
-        return self._say("sent", req.parent, lang)
+        return "sent", req.parent
 
     @staticmethod
     def _interval(opts: dict) -> float:
@@ -583,8 +599,8 @@ def notify_concern(categories: list[str], words: str, client: str = "ipad", stor
     push = concern_options(opts)
     if push.get("enabled") is not True:
         return None
-    chosen = push.get("categories", concern.SERIOUS)
-    chosen = chosen if isinstance(chosen, list) else list(concern.SERIOUS)
+    chosen = push.get("categories", concern.PUSHED)
+    chosen = chosen if isinstance(chosen, list) else list(concern.PUSHED)
     found = [c for c in categories if c in chosen and c in CONCERN_NAMES_EN]
     target = push.get("parents", "both")
     target = target if target in TARGETS else "both"

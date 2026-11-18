@@ -510,3 +510,58 @@ def test_short_refusals_are_no(text):
 @pytest.mark.parametrize("text", ["好不好?", "要不要", "不要吗?", "叫什么名字?", "不知道爸爸在哪"])
 def test_questions_and_other_sentences_are_not_no(text):
     assert answer_kind(text) is None
+
+
+# ---------- help button (one tap, no model, no spoken confirmation) ----------
+
+def test_button_sends_to_both_parents_at_once_without_asking():
+    calls, sent, _, _ = make(judge=Judge())
+    status, line = calls.press("zh")
+    assert status == "sent" and line == "好的,我已经告诉爸爸妈妈了。"
+    assert [c for c, _ in sent] == ["1", "2"]
+    assert calls.judge.asked == []  # the model is never consulted
+
+
+def test_button_message_is_fixed_and_marked_as_button():
+    calls, sent, _, _ = make(settings={"call_parent": {"telegram": TG, "include_words": True}})
+    calls.press("en")
+    text = sent[0][1]
+    assert "help button" in text
+    assert "She said" not in text  # a tap carries no words, even when include_words is on
+
+
+def test_button_shares_the_rate_limit_with_voice_requests():
+    calls, sent, clock, _ = make()
+    assert calls.press("zh")[0] == "sent"
+    clock.t += 30
+    status, line = calls.press("zh")
+    assert status == "limited" and "过两分钟" in line
+    assert len(sent) == 2  # nothing more went out
+    assert calls.handle("叫爸爸来", "zh") == "刚才已经给爸爸发过一条消息了,过两分钟才能再发。"
+    clock.t += 121
+    assert calls.press("zh")[0] == "sent"
+
+
+def test_button_reports_failed_delivery_and_frees_the_slot():
+    calls, sent, _, _ = make(ok=False)
+    status, line = calls.press("en")
+    assert status == "failed" and "didn't go through" in line
+    calls.send = lambda opts, chat, text: True
+    assert calls.press("en")[0] == "sent"  # a failed send does not use up the two minutes
+
+
+def test_button_off_when_switched_off_or_unconfigured():
+    for settings in ({"call_parent": {"enabled": False, "telegram": TG}}, {}):
+        calls, sent, _, _ = make(settings=settings)
+        assert calls.press("zh")[0] == "off"
+        assert sent == []
+
+
+def test_button_cancels_a_pending_spoken_question_and_is_logged():
+    calls, sent, clock, store = make()
+    calls.handle("叫爸爸来", "zh")
+    calls.press("zh")
+    clock.t += 5
+    assert calls.handle("要", "zh") is None  # the earlier question is gone; "要" is an ordinary message again
+    rows = CallLog(store.db).recent(now=clock.t)
+    assert [r["status"] for r in rows] == ["sent"]

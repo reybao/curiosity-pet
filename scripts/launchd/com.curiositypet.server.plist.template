@@ -6,7 +6,9 @@
   <key>Label</key><string>com.curiositypet.server</string>
   <key>ProgramArguments</key>
   <array>
-    <string>__UV__</string><string>run</string><string>--project</string><string>__PROJECT__</string><string>pet-server</string>
+    <!-- Run the venv entry point directly so launchd supervises the server itself. With "uv run", killing uv left the
+         Python child alive holding the port, and the restarted copy could not bind. Run "uv sync" after pulling. -->
+    <string>__PROJECT__/.venv/bin/pet-server</string>
   </array>
   <key>WorkingDirectory</key><string>__PROJECT__</string>
   <key>EnvironmentVariables</key>

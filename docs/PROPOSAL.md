@@ -1,4 +1,4 @@
-# Curiosity Pet (Curiosity Buddy): Project Proposal and Architecture
+# Curiosity Pet (Kit): Project Proposal and Architecture
 
 Version: v0.1 (matches the first version of the code), 2026-10-24
 Status (updated 2026-10-24 evening): stages 1 to 2 and 6 done; 3, 4, 5 mostly done; 7 prepared; 8 in progress; stage 0's recordings-based items pending

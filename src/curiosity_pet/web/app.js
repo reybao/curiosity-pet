@@ -17,6 +17,7 @@ const STRINGS = {
     source: (t) => `资料来源:${t}`,
     toggle: "EN", toggleLabel: "Switch to English",
     chooseSkin: "选一个伙伴",
+    help: "叫爸爸妈妈", helpSending: "正在发...", helpError: "没发出去。你直接去找爸爸妈妈吧。",
   },
   en: {
     status: { off: "Tap to start", connecting: "Connecting...", listening: "I'm listening!", thinking: "Let me think", speaking: "", ended: "See you next time!" },
@@ -25,6 +26,7 @@ const STRINGS = {
     source: (t) => `Source: ${t}`,
     toggle: "中", toggleLabel: "切换到中文",
     chooseSkin: "Choose a buddy",
+    help: "Get Mom or Dad", helpSending: "Sending...", helpError: "It didn't go through. Please go find Mom or Dad.",
   },
 };
 
@@ -39,6 +41,7 @@ let uiLang = savedLang();
 const T = () => STRINGS[uiLang];
 
 const app = document.getElementById("app");
+const REC_MODE = app.dataset.rec === "1";
 const statusEl = document.getElementById("status");
 const heardEl = document.getElementById("heard");
 const answerEl = document.getElementById("answer");
@@ -265,7 +268,9 @@ async function openMic() {
   if (micSource) { try { micSource.disconnect(); } catch (e) { /* already gone */ } }
   if (stream) stream.getTracks().forEach((t) => t.stop());
   stream = await navigator.mediaDevices.getUserMedia({
-    audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
+    // Recording mode (parent setting, see server.py): no echo cancellation, so an iPad screen recording with the
+    // microphone on also picks up the pet's voice. Safe because the page sends no audio while the pet speaks.
+    audio: { echoCancellation: !REC_MODE, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
   });
   if (!workletReady) {
     await ctx.audioWorklet.addModule("/static/mic-worklet.js");
@@ -354,6 +359,38 @@ if (new URLSearchParams(location.search).has("text")) {
   document.querySelector(".controls").after(form);
 }
 
+// Help button: one tap asks the server to tell the parents. Plain HTTP, so it works before the microphone and the
+// socket are set up, and whatever the conversation is doing. The server decides everything (switch, rate limit, text).
+const helpBtn = document.getElementById("help");
+const helpLabel = helpBtn.querySelector(".help-label");
+const helpNote = document.getElementById("help-note");
+let helpNoteTimer = null;
+function showHelpNote(text, status) {
+  helpNote.textContent = text;
+  helpNote.dataset.status = status;
+  helpNote.hidden = false;
+  clearTimeout(helpNoteTimer);
+  helpNoteTimer = setTimeout(() => { helpNote.hidden = true; }, 8000);
+}
+helpBtn.addEventListener("click", async () => {
+  helpBtn.disabled = true;
+  showHelpNote(T().helpSending, "sending");
+  try {
+    const r = await fetch("/help", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ lang: uiLang }),
+    });
+    if (!r.ok) throw new Error(String(r.status));
+    const res = await r.json();
+    showHelpNote(res.text, res.status);
+  } catch (e) {
+    showHelpNote(T().helpError, "failed");
+  }
+  // A short pause against double taps; the real limit (two minutes) is the server's
+  setTimeout(() => { helpBtn.disabled = false; }, 3000);
+});
+
 // UI language switch
 const langBtn = document.getElementById("lang");
 function applyLang() {
@@ -363,6 +400,7 @@ function applyLang() {
   langBtn.setAttribute("aria-label", t.toggleLabel);
   statusEl.textContent = t.status[state] ?? "";
   micLabel.textContent = ACTIVE.has(state) ? t.stop : t.start;
+  helpLabel.textContent = t.help;
   const q = document.getElementById("q");
   if (q) {
     q.placeholder = t.ask;

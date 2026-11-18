@@ -1,4 +1,4 @@
-# Curiosity Pet (Curiosity Buddy)
+# Curiosity Pet (Kit)
 
 A local, privacy-first voice learning companion for a bilingual 7-year-old, running entirely on a 16GB Mac mini.
 A local AI learning pet that lives on a home Mac mini: the child asks questions by voice on an iPad, and speech recognition, answer generation, knowledge retrieval, safety filtering and speech synthesis all happen on the machine itself.
@@ -9,11 +9,21 @@ A local AI learning pet that lives on a home Mac mini: the child asks questions 
 - **Measured data**: [evals/results/](evals/results/)
 - **Changes**: [CHANGELOG.md](CHANGELOG.md)
 
-## Status (2026-10-24)
+## Status (midpoint, 2026-11-18)
+
+Since October 24: a one-tap "Get Mom or Dad" button on the page (no model involved, rate limited, logged); fixed answers
+for questions about death and for requests to keep a secret from a parent; English harm-to-others matched like Chinese;
+a parent alert when she says she was bullied or hit (category only); the 9B model as the default after real use.
+Measurements: [evals/results/2026-11-17-midpoint.md](evals/results/2026-11-17-midpoint.md). Video outline:
+[docs/MIDPOINT_VIDEO.md](docs/MIDPOINT_VIDEO.md).
+
+Still open: median time to first audio is 3.1 s with the 9B model (target under 3 s); recognition accuracy on her own
+voice; more reviewed library entries; the action rules in one layer; privacy checked by watching network traffic and
+testing deletion.
 
 | What it does | Measured |
 |---|---|
-| Tap on the iPad, talk to the kitten, answers play sentence by sentence with highlighted text | Median 2.3 s (local) / 2.8 s (via web) from end of speech to the pet speaking |
+| Tap on the iPad, talk to the kitten, answers play sentence by sentence with highlighted text | Median 3.1 s with the 9B model (2026-11-17); 2.3 s with the 4B model (2026-10-24), end of speech to first audio |
 | Answers in the language the child asked in (Chinese, English, mixed) | 36/36 |
 | When there is no local material, sends only a topic term stripped of personal information to Wikipedia, and cites the source | 0 leaks in the privacy test of 38 utterances |
 | Local library: Simple English and Chinese Wikipedia opening paragraphs, Vikidia, Simple Wiktionary, Wikijunior, Chinese idioms, xiehouyu, a character dictionary, primary-school poems, classic readers, Gutenberg children's books; searched offline before going online (`uv run pet-library build`) | 53/53 ranking check, about 1 ms per search |
@@ -27,7 +37,7 @@ A local AI learning pet that lives on a home Mac mini: the child asks questions 
 | Memory the child chooses (interest cards, My Discoveries), stories and bedtime stories, natural wrap-up | |
 | Weekly discovery report, facts only | `uv run pet-report` |
 | Replay evaluation on real (local, never committed) conversations | 154/215 baseline route accuracy |
-| 637 tests | `uv run pytest` |
+| 724 tests | `uv run pytest` |
 
 Not done yet: daily planning and reminders, speech recognition accuracy on the child's recordings, installing the services under a dedicated user. See [CHANGELOG.md](CHANGELOG.md).
 
@@ -35,6 +45,11 @@ Not done yet: daily planning and reminders, speech recognition accuracy on the c
 
 The child's voice, own words, conversation history, memory and mood never leave this machine. The repository contains no child data, recordings, databases or keys;
 parent settings (contact info, family names, blocklist, Telegram bot settings) live in `settings.json` in the local data directory and are not committed. See section 11 of [docs/PROPOSAL.md](docs/PROPOSAL.md).
+
+Who can reach Kit: the server listens on `127.0.0.1` only, so nothing on the home network or the internet can connect
+to it. The iPad reaches it through `tailscale serve`, which gives HTTPS inside the family's own tailnet (private,
+encrypted, only devices signed in to the family account). Tailscale Funnel (public access) is off. Knowing the address
+is not enough to use Kit.
 
 ## Run
 

@@ -303,3 +303,52 @@ def test_opening_the_page_without_asking_creates_no_session(client):
         ws.receive_text()
         st = server.current_session().pet.usage.store
     assert st.recent_sessions(days=1) == []
+
+
+# ---------- help button: POST /help ----------
+
+@pytest.fixture
+def help_client(client, monkeypatch):
+    """The app with call-parent configured and a fake sender; returns (client, sent list)."""
+    from curiosity_pet import call_parent
+
+    sent = []
+    tg = {"bot_token": "t", "chat_ids": {"dad": "1", "mom": "2"}}
+    monkeypatch.setattr(call_parent, "options", lambda settings=None: {"telegram": tg})
+    monkeypatch.setattr(call_parent, "telegram_send", lambda opts, chat, text, client=None: sent.append(chat) or True)
+    monkeypatch.setattr(call_parent, "LIMIT", call_parent.RateLimit())
+    return client, sent
+
+
+def test_help_button_sends_without_a_conversation(help_client):
+    client, sent = help_client
+    r = client.post("/help", json={"lang": "en"}, headers=ORIGIN)
+    assert r.status_code == 200
+    assert r.json() == {"status": "sent", "text": "Okay, I told Mommy and Daddy."}
+    assert sent == ["1", "2"]
+
+
+def test_help_button_is_rate_limited(help_client):
+    client, sent = help_client
+    client.post("/help", json={"lang": "zh"}, headers=ORIGIN)
+    r = client.post("/help", json={"lang": "zh"}, headers=ORIGIN)
+    assert r.json()["status"] == "limited"
+    assert len(sent) == 2
+
+
+def test_help_button_rejects_other_origins(help_client):
+    client, sent = help_client
+    assert client.post("/help", json={"lang": "zh"}, headers={"origin": "https://evil.example.com"}).status_code == 403
+    assert client.post("/help", json={"lang": "zh"}).status_code == 403
+    assert sent == []
+
+
+def test_help_button_is_on_the_page(client):
+    assert 'id="help"' in client.get("/").text
+
+
+def test_recording_mode_is_off_by_default_and_follows_the_parent_setting(client, monkeypatch):
+    assert 'data-rec="0"' in client.get("/").text
+    monkeypatch.setattr(server.config, "load_settings", lambda path=None: {"recording_mode": True})
+    page = client.get("/").text
+    assert 'data-rec="1"' in page and "{{REC_MODE}}" not in page

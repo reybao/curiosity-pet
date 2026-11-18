@@ -176,7 +176,7 @@ def test_picker_lists_skins_with_thumbnails(skins):
     c = client()
     m = c.get("/skins.json").json()
     assert m["active"] == "cat"
-    assert [(s["id"], s["name"]["zh"]) for s in m["skins"]] == [("cat", "好奇心伙伴"), ("goku", "悟空"), ("pika", "皮卡丘")]
+    assert [(s["id"], s["name"]["zh"]) for s in m["skins"]] == [("cat", "Kit"), ("goku", "悟空"), ("pika", "皮卡丘")]
     assert m["skins"][0]["thumb"] == "/static/icon.png"
     thumb = c.get("/skins/goku/thumb.png")
     assert thumb.status_code == 200 and thumb.content[:4] == b"\x89PNG"

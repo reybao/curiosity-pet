@@ -41,7 +41,7 @@ from fastapi.responses import FileResponse, HTMLResponse, Response
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-from curiosity_pet import config
+from curiosity_pet import call_parent, config
 from curiosity_pet.pipeline import Pet
 from curiosity_pet.riddles import RiddleGame, judge_with_model
 from curiosity_pet.usage import UsageLog
@@ -473,6 +473,28 @@ def create_app(
             await asyncio.to_thread(locked_apply)
         return {"ok": True, "active": config.SKIN_ID}
 
+    @app.post("/help")
+    async def help_button(request: Request):
+        """The help button: sends the fixed "she is asking for you" message to the parents at once. The model is not
+        involved and no conversation is needed; the parent's switch, rate limit and log are in call_parent.py."""
+        if not same_origin(request.headers):
+            return Response(status_code=403)
+        try:
+            lang = str((await request.json()).get("lang", "zh"))
+        except (ValueError, AttributeError):
+            lang = "zh"
+        engine = app.state.engine
+        calls = call_parent.CallParent(
+            client="ipad", store=getattr(engine, "store", None), send=call_parent.telegram_send,
+            limit=call_parent.LIMIT, judge=None,
+        )
+        session = current_session()
+        if session is not None:
+            session.pet.calls.reset()  # a spoken "should I tell Dad?" that was waiting is replaced by the tap
+        status, text = await asyncio.to_thread(calls.press, lang)
+        log.info("help button status=%s", status)
+        return {"status": status, "text": text}
+
     @app.get("/cue.wav")
     async def cue(lang: str = "zh"):
         lang = "en" if lang == "en" else "zh"
@@ -507,10 +529,13 @@ def create_app(
 
     @app.get("/")
     def index():
-        # The tab title and home-screen name are the pet's English name (default "Curiosity Buddy")
+        # The tab title and home-screen name are the pet's English name (default "Kit")
         app_name = current_persona()["name"]["en"]
         html = (WEB_DIR / "index.html").read_text(encoding="utf-8").replace("{{APP_NAME}}", app_name)
-        return HTMLResponse(html)
+        # settings.json "recording_mode": true is for making a screen recording of the page on an iPad: with echo
+        # cancellation on, iOS leaves the pet's voice out of the recording. Read per request, so no restart is needed.
+        rec = config.load_settings(config.SETTINGS_FILE).get("recording_mode") is True
+        return HTMLResponse(html.replace("{{REC_MODE}}", "1" if rec else "0"))
 
     @app.get("/manifest.webmanifest")
     def manifest():

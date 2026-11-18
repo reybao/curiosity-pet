@@ -206,6 +206,8 @@ class Pet:
         if not ends_with_question(question) and not care:
             self.followup.answered()
         meow = MeowLimiter()
+        if care or worries:
+            meow.used = True  # she shared something hard: no catchphrase at all in this answer ("...stay safe. Meow.")
         riddle_note = None  # set below when the child poses a riddle
         story_mode = None  # set below for a story or bedtime story
 
@@ -274,6 +276,12 @@ class Pet:
             text = config.phrase("not_heard", turn.lang, utterance.NOT_HEARD[turn.lang])
             turn.route = "clarify"
             return self._say_fixed(turn, text, t0, topic="other", speak=speak)
+
+        # A request to keep something from a parent is answered by the program, before anything else can claim the
+        # sentence ("keep this a secret" once matched the save command). Serious messages keep their own fixed answer.
+        if safety.asks_for_secrecy(question) and not any(w in worries for w in concern.SERIOUS):
+            turn.route = "safety"
+            return self._say_fixed(turn, safety.FIXED["secret"][turn.lang], t0, topic="safety", speak=speak)
 
         # Memory the child chose (memory.py): keep a discovery, recall or forget interests
         store = getattr(self.usage, "store", None)

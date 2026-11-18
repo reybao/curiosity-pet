@@ -73,7 +73,7 @@ BLACKLIST = list(_settings.get("blacklist", []))
 LEGACY_SKIN_DIR = DATA_DIR / "skin"
 DEFAULT_SKIN_ID = "cat"
 DEFAULT_PERSONA = {
-    "name": {"zh": "好奇心伙伴", "en": "Curiosity Buddy"},
+    "name": {"zh": "Kit", "en": "Kit"},  # the name in the proposal; one name in both languages
     "look": {"zh": "长得像英短蓝猫的程序小猫", "en": "a program kitten that looks like a British Shorthair cat"},
     "not_real": {"zh": "真猫", "en": "a real cat"},
     "sound": {"zh": "喵", "en": "meow"},

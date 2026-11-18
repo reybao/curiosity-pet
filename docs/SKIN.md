@@ -73,7 +73,7 @@ Images: front-facing, centered, transparent PNG (WebP or JPG also work), about 1
 ## Name and home-screen icon
 
 The browser tab, the "Add to Home Screen" name and the web app manifest use the skin's English name (`name.en`), default
-"Curiosity Buddy". The home-screen icon is built from the skin's `idle.png` on the page background; without a skin it is the
+"Kit". The home-screen icon is built from the skin's `idle.png` on the page background; without a skin it is the
 built-in cat icon. After changing a skin, remove the old icon from the iPad home screen and add the page again so iOS picks up
 the new name and icon.
 

@@ -31,6 +31,8 @@ for name in server backup; do
     echo "$out" > "$AGENTS/com.curiositypet.$name.plist"
     plutil -lint "$AGENTS/com.curiositypet.$name.plist" >/dev/null
     launchctl bootout "gui/$(id -u)/com.curiositypet.$name" 2>/dev/null || true
+    # bootout returns before the job is gone; bootstrapping too early fails with "Input/output error"
+    for _ in $(seq 1 30); do launchctl print "gui/$(id -u)/com.curiositypet.$name" >/dev/null 2>&1 || break; sleep 1; done
     launchctl bootstrap "gui/$(id -u)" "$AGENTS/com.curiositypet.$name.plist"
     echo "installed com.curiositypet.$name"
   fi

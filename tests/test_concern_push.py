@@ -47,7 +47,8 @@ def test_both_serious_categories_in_one_message():
 
 
 def test_other_categories_stay_home_by_default():
-    for categories in (["sad"], ["bullied", "scared"], []):
+    # sadness, fear, anger, family conflict and feeling unwell stay in the parent notes on this machine
+    for categories in (["sad"], ["family_conflict", "scared"], ["angry", "unwell"], []):
         assert push(categories) == (None, [])
 
 
@@ -102,3 +103,26 @@ def test_every_attempt_logged_and_shown_in_pet_log():
     lines = report_lines(store.db, days=36500)
     assert any("担心提醒已发送" in line for line in lines)
     assert any("担心提醒太频繁,未发" in line for line in lines)
+
+
+def test_being_bullied_or_hit_is_pushed_by_default_without_her_words():
+    status, sent = push(["bullied", "sad"], words="今天有同学打我,我很难过")
+    assert status == "concern_sent"
+    assert [chat for chat, _ in sent] == ["1", "2"]
+    text = sent[0][1]
+    assert text.startswith("宝宝说到被欺负 / Your daughter talked about being bullied")
+    assert "难过" not in text and "同学" not in text and "打我" not in text
+
+
+def test_parent_can_still_narrow_the_categories():
+    narrow = {"call_parent": {"telegram": TG, "concern_push": {"enabled": True, "categories": ["harm_self"]}}}
+    assert push(["bullied"], settings=narrow) == (None, [])
+
+
+def test_real_sentences_about_being_hit_are_in_the_pushed_category():
+    from curiosity_pet.concern import PUSHED, concerns
+
+    for said in ("今天有同学打我。", "A kid at school hit me today.", "他们都欺负我", "Nobody plays with me."):
+        assert any(c in PUSHED for c in concerns(said)), said
+    for said in ("为什么月亮白天也会出现?", "What do pandas eat?", "我想打羽毛球"):
+        assert not any(c in PUSHED for c in concerns(said)), said

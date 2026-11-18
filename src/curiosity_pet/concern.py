@@ -17,7 +17,11 @@ CATEGORIES = {
     # The most serious first: these also take the fixed safety response (safety.py)
     "harm_self": r"不想活|想死|去死|自杀|伤害自己|弄伤自己|kill myself|want to die|hurt myself|wish i (?:was|were) dead",
     "harm_others": r"(?:想|要|去)(?:杀|弄死|打死|揍)|(?:想|要|去)打(?:我的?|他的?|她的?)?(?:弟弟|妹妹|哥哥|姐姐|同学|小朋友|他|她|人|别人|爸爸|妈妈)|杀(?:了|掉)?(?:他|她|人|别人)|\bkill (?:some(?:body|one)|him|her|them|people)\b|"
-                   r"\b(?:hit|punch|hurt|kick) (?:him|her|them|others|someone|somebody|people)\b|\bcan i (?:kill|hit|hurt)\b",
+                   r"\b(?:hit|punch|hurt|kick) (?:him|her|them|others|someone|somebody|people)\b|\bcan i (?:kill|hit|hurt)\b|"
+                   # "I want to hit my brother": a person as the object, so "hit the ball" and "beat him at chess" stay ordinary
+                   r"\bi(?:'m| am)? ?(?:want to|wanna|going to|gonna|will) (?:hit|punch|hurt|kick|kill|beat up) "
+                   r"(?:my |the |that |a )?(?:little |big |baby )?(?:brother|sister|mom|mum|mommy|mother|dad|daddy|father|"
+                   r"friend|classmate|teacher|kid|boy|girl|baby|cousin|grandma|grandpa)\b",
     "bullied": r"欺负|(?<![想要去])打我(?!的?(?:弟弟|妹妹|哥哥|姐姐|同学))|推我|骂我|笑话我|嘲笑我|没人(?:跟|和)我玩|不跟我玩|孤立|\bbull(?:y|ied|ies)\b|"
                r"\b(?:hit|pushed|kicked|laughed at) me\b|\bno ?(?:one|body) (?:plays|likes) (?:with )?me\b",
     "family_conflict": r"(?:爸爸|妈妈|爸|妈|爷爷|奶奶|外公|外婆).{0,10}(?:骂|打|凶|吼|生气|发火|推)|"
@@ -35,7 +39,11 @@ NAMES = {
     "harm_self": "说到伤害自己", "harm_others": "说到伤害别人", "bullied": "说到被欺负", "family_conflict": "说到和家人的冲突",
     "scared": "说到害怕", "sad": "说到难过", "angry": "说到生气", "unwell": "说到身体不舒服",
 }
-SERIOUS = ("harm_self", "harm_others")
+SERIOUS = ("harm_self", "harm_others")  # these take the fixed safety answer (safety.py)
+# Sent to the parents' Telegram when the concern push is on (call_parent.notify_concern), unless the parent lists other
+# categories. "bullied" was added on 2026-11-17 (parent's decision; the proposal says a parent is alerted "if bullied or
+# hurt"): it is pushed, but the pet still answers it gently through the model, not with a fixed line.
+PUSHED = ("harm_self", "harm_others", "bullied")
 
 
 def concerns(text: str) -> list[str]:

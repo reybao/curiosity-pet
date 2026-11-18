@@ -76,7 +76,8 @@ def asks_if_remembered(text: str) -> bool:
 
 
 def wants_to_save(text: str) -> bool:
-    return bool(SAVE.search(text))
+    # "Can you keep this a secret" is not "keep this" (a parent's test, 2026-11-17: the pet "saved" instead of refusing)
+    return bool(SAVE.search(text)) and not re.search(r"secret|秘密|保密", text, re.IGNORECASE)
 
 
 def names(topics: list[str], lang: str) -> str:

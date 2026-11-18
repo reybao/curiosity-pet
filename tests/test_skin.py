@@ -45,7 +45,7 @@ def test_skin_overrides_only_the_keys_it_sets(tmp_path):
     skin = config.load_skin(write_skin(tmp_path, {"sound": {"zh": "皮卡"}}))
     persona = config.resolve_persona(skin)
     assert persona["sound"] == {"zh": "皮卡", "en": "meow"}  # en falls back
-    assert persona["name"]["zh"] == "好奇心伙伴"
+    assert persona["name"]["zh"] == "Kit"
 
 
 def test_broken_skin_json_is_ignored(tmp_path):
@@ -142,10 +142,10 @@ def test_pcm_helpers_still_work():
 def test_default_name_and_icon(tmp_path):
     c = make_client(tmp_path, tmp_path / "nope")
     page = c.get("/").text
-    assert "<title>Curiosity Buddy</title>" in page and 'content="Curiosity Buddy"' in page
+    assert "<title>Kit</title>" in page and 'content="Kit"' in page
     assert "{{APP_NAME}}" not in page and "好奇心伙伴" not in page
     m = c.get("/manifest.webmanifest").json()
-    assert m["name"] == "Curiosity Buddy" and m["icons"][0]["src"] == "/apple-touch-icon.png"
+    assert m["name"] == "Kit" and m["icons"][0]["src"] == "/apple-touch-icon.png"
     icon = c.get("/apple-touch-icon.png")
     assert icon.status_code == 200 and icon.headers["content-type"] == "image/png"
     assert icon.content[:8] == b"\x89PNG\r\n\x1a\n"
